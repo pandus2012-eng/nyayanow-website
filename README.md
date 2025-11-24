@@ -408,7 +408,7 @@ Update all `href` attributes with your actual links
 Need help implementing or customizing?
 
 **WhatsApp**: +91 9632786767  
-**Email**: help@nyayanow.com
+**Email**: info@nyayanow.com
 
 ---
 
