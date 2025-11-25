@@ -179,6 +179,38 @@
   <link rel="icon" href="/nyayanow-logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  /* Language Toggle Styles */
+.lang-btn {
+  color: #94a3b8;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.lang-btn:hover {
+  color: #e2e8f0;
+}
+
+.lang-btn.active-lang {
+  background: #d4af37;
+  color: #0f172a;
+}
+
+/* Hide inactive language content */
+.lang-content {
+  display: none;
+}
+
+.lang-content.active {
+  display: block;
+}
+
+/* For inline translations */
+.lang-en { display: inline; }
+.lang-kn { display: none; }
+
+body.kn-active .lang-en { display: none; }
+body.kn-active .lang-kn { display: inline; }
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
@@ -317,6 +349,23 @@
 
         <!-- CTA Buttons -->
         <div class="flex items-center gap-3">
+          <!-- Language Toggle -->
+<div class="flex items-center gap-1 bg-slate-800 rounded-full p-1">
+  <button 
+    id="langEN" 
+    class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold transition-all active-lang"
+    onclick="switchLanguage('en')"
+  >
+    EN
+  </button>
+  <button 
+    id="langKN" 
+    class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold transition-all"
+    onclick="switchLanguage('kn')"
+  >
+    ಕನ್ನಡ
+  </button>
+</div>
           <a
             href="https://wa.me/919632786767"
             target="_blank"
@@ -352,157 +401,238 @@
   </div>
 
   <!-- HERO SECTION -->
-  <section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50 pb-20 pt-12 overflow-hidden">
-    <!-- Background Decorations -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-[#d4af37] opacity-5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#f4d03f] opacity-5 rounded-full blur-3xl"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid gap-12 lg:grid-cols-2 items-center">
-        <!-- Left: Content -->
-        <div class="fade-in">
-          <!-- Trust Badge -->
-          <div class="inline-flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full text-xs font-medium mb-6 backdrop-blur">
-            <i class="fas fa-shield-alt text-[#d4af37]"></i>
-            <span>Trusted by 10,000+ Indians</span>
-          </div>
-          
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+<section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50 pb-20 pt-12 overflow-hidden">
+  <!-- Background Decorations -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-[#d4af37] opacity-5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#f4d03f] opacity-5 rounded-full blur-3xl"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid gap-12 lg:grid-cols-2 items-center">
+      <!-- Left: Content -->
+      <div class="fade-in">
+        <!-- Trust Badge -->
+        <div class="inline-flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full text-xs font-medium mb-6 backdrop-blur">
+          <i class="fas fa-shield-alt text-[#d4af37]"></i>
+          <span>
+            <span class="lang-en">Trusted by 10,000+ Indians</span>
+            <span class="lang-kn">10,000+ ಭಾರತೀಯರು ನಂಬಿದ್ದಾರೆ</span>
+          </span>
+        </div>
+        
+        <!-- Main Heading -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+          <span class="lang-en">
             Simple & Trusted Legal Guidance
             <span class="block text-[#d4af37] mt-2">for Every Indian.</span>
-          </h1>
-          
-          <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+          </span>
+          <span class="lang-kn">
+            ಸರಳ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ
+            <span class="block text-[#d4af37] mt-2">ಪ್ರತಿಯೊಬ್ಬ ಭಾರತೀಯರಿಗೆ.</span>
+          </span>
+        </h1>
+        
+        <!-- Description -->
+        <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+          <span class="lang-en">
             Get clear, practical answers for everyday legal problems — FIR, cyber fraud, tenants, consumer issues and more. Online and on the streets. No confusing jargon. No fear.
-          </p>
+          </span>
+          <span class="lang-kn">
+            ದೈನಂದಿನ ಕಾನೂನು ಸಮಸ್ಯೆಗಳಿಗೆ ಸ್ಪಷ್ಟ, ಪ್ರಾಯೋಗಿಕ ಉತ್ತರಗಳನ್ನು ಪಡೆಯಿರಿ - FIR, ಸೈಬರ್ ವಂಚನೆ, ಬಾಡಿಗೆದಾರರು, ಗ್ರಾಹಕ ಸಮಸ್ಯೆಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವು. ಆನ್‌ಲೈನ್ ಮತ್ತು ಬೀದಿಗಳಲ್ಲಿ. ಗೊಂದಲದ ಪರಿಭಾಷೆ ಇಲ್ಲ. ಭಯವಿಲ್ಲ.
+          </span>
+        </p>
 
-          <!-- Stats Row -->
-          <div class="grid grid-cols-3 gap-6 mb-8">
-            <div>
-              <div class="text-3xl font-bold text-[#d4af37]">10K+</div>
-              <div class="text-xs text-slate-400">Users Helped</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold text-[#d4af37]">24hrs</div>
-              <div class="text-xs text-slate-400">Response Time</div>
-            </div>
-            <div>
-              <div class="text-3xl font-bold text-[#d4af37]">Free</div>
-              <div class="text-xs text-slate-400">Basic Guidance</div>
+        <!-- Stats Row -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+          <div>
+            <div class="text-3xl font-bold text-[#d4af37]">10K+</div>
+            <div class="text-xs text-slate-400">
+              <span class="lang-en">Users Helped</span>
+              <span class="lang-kn">ಸಹಾಯ ಮಾಡಿದ ಬಳಕೆದಾರರು</span>
             </div>
           </div>
-
-          <!-- CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-4 mb-6">
-            <a
-              href="https://wa.me/919632786767"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 justify-center rounded-full bg-[#d4af37] px-6 py-3.5 text-base font-semibold text-slate-950 hover:bg-[#e6c45a] transition-all hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <i class="fab fa-whatsapp text-lg"></i>
-              Get Free 3-Minute Legal Help
-            </a>
-            <a
-              href="#templates"
-              class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-slate-500 px-6 py-3.5 text-base font-semibold text-slate-50 hover:border-[#d4af37] hover:text-[#d4af37] transition-all"
-            >
-              <i class="fas fa-file-download"></i>
-              View Legal Templates
-            </a>
+          <div>
+            <div class="text-3xl font-bold text-[#d4af37]">24hrs</div>
+            <div class="text-xs text-slate-400">
+              <span class="lang-en">Response Time</span>
+              <span class="lang-kn">ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ</span>
+            </div>
           </div>
-          
-          <p class="text-xs text-slate-400 flex items-center gap-2">
-            <i class="fas fa-lock text-[#d4af37]"></i>
-            100% confidential • Powered by NyayaNow
-          </p>
+          <div>
+            <div class="text-3xl font-bold text-[#d4af37]">
+              <span class="lang-en">Free</span>
+              <span class="lang-kn">ಉಚಿತ</span>
+            </div>
+            <div class="text-xs text-slate-400">
+              <span class="lang-en">Basic Guidance</span>
+              <span class="lang-kn">ಮೂಲಭೂತ ಮಾರ್ಗದರ್ಶನ</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Right: Interactive Card -->
-        <div class="fade-in">
-          <div class="bg-slate-900/90 border-2 border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur hover-lift">
-            <h2 class="text-lg font-bold mb-6 flex items-center gap-2">
-              <i class="fas fa-question-circle text-[#d4af37]"></i>
-              What can we help you with today?
-            </h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
-                  <i class="fas fa-file-alt"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold mb-1">Police & FIR</div>
-                  <div class="text-xs text-slate-400">File complaints, FIR doubts</div>
-                </div>
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 mb-6">
+          
+            href="https://wa.me/919632786767"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 justify-center rounded-full bg-[#d4af37] px-6 py-3.5 text-base font-semibold text-slate-950 hover:bg-[#e6c45a] transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span class="lang-en">Get Free 3-Minute Legal Help</span>
+            <span class="lang-kn">3 ನಿಮಿಷದ ಉಚಿತ ಕಾನೂನು ಸಹಾಯ ಪಡೆಯಿರಿ</span>
+          </a>
+          
+            href="#templates"
+            class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-slate-500 px-6 py-3.5 text-base font-semibold text-slate-50 hover:border-[#d4af37] hover:text-[#d4af37] transition-all"
+          >
+            <i class="fas fa-file-download"></i>
+            <span class="lang-en">View Legal Templates</span>
+            <span class="lang-kn">ಕಾನೂನು ಟೆಂಪ್ಲೇಟ್‌ಗಳನ್ನು ನೋಡಿ</span>
+          </a>
+        </div>
+        
+        <!-- Confidentiality Notice -->
+        <p class="text-xs text-slate-400 flex items-center gap-2">
+          <i class="fas fa-lock text-[#d4af37]"></i>
+          <span class="lang-en">100% confidential • Powered by NyayaNow</span>
+          <span class="lang-kn">100% ಗೌಪ್ಯ • NyayaNow ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತಿದೆ</span>
+        </p>
+      </div>
+
+      <!-- Right: Interactive Card -->
+      <div class="fade-in">
+        <div class="bg-slate-900/90 border-2 border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur hover-lift">
+          <h2 class="text-lg font-bold mb-6 flex items-center gap-2">
+            <i class="fas fa-question-circle text-[#d4af37]"></i>
+            <span class="lang-en">What can we help you with today?</span>
+            <span class="lang-kn">ಇಂದು ನಾವು ನಿಮಗೆ ಏನು ಸಹಾಯ ಮಾಡಬಹುದು?</span>
+          </h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <!-- Police & FIR -->
+            <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
+              <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
+                <i class="fas fa-file-alt"></i>
               </div>
-              
-              <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
-                  <i class="fas fa-shield-virus"></i>
+              <div>
+                <div class="text-sm font-semibold mb-1">
+                  <span class="lang-en">Police & FIR</span>
+                  <span class="lang-kn">ಪೊಲೀಸ್ & FIR</span>
                 </div>
-                <div>
-                  <div class="text-sm font-semibold mb-1">Cyber Fraud</div>
-                  <div class="text-xs text-slate-400">UPI scams, online fraud</div>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
-                  <i class="fas fa-home"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold mb-1">Tenant Rights</div>
-                  <div class="text-xs text-slate-400">Landlord disputes, agreements</div>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold mb-1">Consumer Issues</div>
-                  <div class="text-xs text-slate-400">Complaints, refunds</div>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
-                  <i class="fas fa-female"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold mb-1">Women Safety</div>
-                  <div class="text-xs text-slate-400">Rights, protection, laws</div>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
-                  <i class="fas fa-file-contract"></i>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold mb-1">Documents</div>
-                  <div class="text-xs text-slate-400">Templates, RTI, notices</div>
+                <div class="text-xs text-slate-400">
+                  <span class="lang-en">File complaints, FIR doubts</span>
+                  <span class="lang-kn">ದೂರುಗಳು, FIR ಸಂದೇಹಗಳು</span>
                 </div>
               </div>
             </div>
             
-            <div class="border-t border-slate-800 pt-5">
-              <p class="text-xs text-slate-400 mb-4">
-                <i class="fas fa-info-circle text-[#d4af37] mr-1"></i>
+            <!-- Cyber Fraud -->
+            <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
+              <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <div>
+                <div class="text-sm font-semibold mb-1">
+                  <span class="lang-en">Cyber Fraud</span>
+                  <span class="lang-kn">ಸೈಬರ್ ವಂಚನೆ</span>
+                </div>
+                <div class="text-xs text-slate-400">
+                  <span class="lang-en">UPI scams, online fraud</span>
+                  <span class="lang-kn">UPI ವಂಚನೆ, ಆನ್‌ಲೈನ್ ವಂಚನೆ</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Tenant Rights -->
+            <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
+              <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
+                <i class="fas fa-home"></i>
+              </div>
+              <div>
+                <div class="text-sm font-semibold mb-1">
+                  <span class="lang-en">Tenant Rights</span>
+                  <span class="lang-kn">ಬಾಡಿಗೆದಾರ ಹಕ್ಕುಗಳು</span>
+                </div>
+                <div class="text-xs text-slate-400">
+                  <span class="lang-en">Landlord disputes, agreements</span>
+                  <span class="lang-kn">ಮನೆಮಾಲೀಕರ ವಿವಾದಗಳು</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Consumer Issues -->
+            <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
+              <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div>
+                <div class="text-sm font-semibold mb-1">
+                  <span class="lang-en">Consumer Issues</span>
+                  <span class="lang-kn">ಗ್ರಾಹಕ ಸಮಸ್ಯೆಗಳು</span>
+                </div>
+                <div class="text-xs text-slate-400">
+                  <span class="lang-en">Complaints, refunds</span>
+                  <span class="lang-kn">ದೂರುಗಳು, ಮರುಪಾವತಿ</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Women Safety -->
+            <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
+              <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
+                <i class="fas fa-female"></i>
+              </div>
+              <div>
+                <div class="text-sm font-semibold mb-1">
+                  <span class="lang-en">Women Safety</span>
+                  <span class="lang-kn">ಮಹಿಳಾ ಸುರಕ್ಷತೆ</span>
+                </div>
+                <div class="text-xs text-slate-400">
+                  <span class="lang-en">Rights, protection, laws</span>
+                  <span class="lang-kn">ಹಕ್ಕುಗಳು, ರಕ್ಷಣೆ, ಕಾನೂನುಗಳು</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Documents -->
+            <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition cursor-pointer group">
+              <div class="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <div>
+                <div class="text-sm font-semibold mb-1">
+                  <span class="lang-en">Documents</span>
+                  <span class="lang-kn">ದಾಖಲೆಗಳು</span>
+                </div>
+                <div class="text-xs text-slate-400">
+                  <span class="lang-en">Templates, RTI, notices</span>
+                  <span class="lang-kn">ಟೆಂಪ್ಲೇಟ್‌ಗಳು, RTI, ನೋಟೀಸ್‌ಗಳು</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bottom Section -->
+          <div class="border-t border-slate-800 pt-5">
+            <p class="text-xs text-slate-400 mb-4">
+              <i class="fas fa-info-circle text-[#d4af37] mr-1"></i>
+              <span class="lang-en">
                 Free guidance for awareness. For complex matters, we help you connect with a lawyer when needed.
-              </p>
-              <a href="https://wa.me/919632786767" target="_blank" class="block w-full text-center bg-[#d4af37] hover:bg-[#e6c45a] text-slate-950 font-semibold py-3 rounded-full transition-all hover:scale-105">
-                Start Your Query Now →
-              </a>
-            </div>
+              </span>
+              <span class="lang-kn">
+                ಜಾಗೃತಿಗಾಗಿ ಉಚಿತ ಮಾರ್ಗದರ್ಶನ. ಸಂಕೀರ್ಣ ವಿಷಯಗಳಿಗೆ, ಅಗತ್ಯವಿದ್ದಾಗ ವಕೀಲರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಲು ನಾವು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.
+              </span>
+            </p>
+            <a href="https://wa.me/919632786767" target="_blank" class="block w-full text-center bg-[#d4af37] hover:bg-[#e6c45a] text-slate-950 font-semibold py-3 rounded-full transition-all hover:scale-105">
+              <span class="lang-en">Start Your Query Now →</span>
+              <span class="lang-kn">ಈಗ ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಪ್ರಾರಂಭಿಸಿ →</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- TRUST INDICATORS -->
   <section class="py-8 bg-white border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1634,6 +1764,56 @@
       const loadTime = performance.now();
       console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
     });
+    // Language Switching System
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+  setLanguage(currentLang);
+});
+
+// Switch language function
+function switchLanguage(lang) {
+  currentLang = lang;
+  setLanguage(lang);
+  localStorage.setItem('preferredLanguage', lang);
+}
+
+// Set language function
+function setLanguage(lang) {
+  // Update body class
+  if (lang === 'kn') {
+    document.body.classList.add('kn-active');
+  } else {
+    document.body.classList.remove('kn-active');
+  }
+  
+  // Update language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active-lang');
+  });
+  
+  if (lang === 'en') {
+    document.getElementById('langEN').classList.add('active-lang');
+  } else {
+    document.getElementById('langKN').classList.add('active-lang');
+  }
+  
+  // Show/hide language content sections
+  document.querySelectorAll('.lang-content').forEach(content => {
+    if (content.getAttribute('data-lang') === lang) {
+      content.classList.add('active');
+    } else {
+      content.classList.remove('active');
+    }
+  });
+  
+  // Update HTML lang attribute for SEO
+  document.documentElement.setAttribute('lang', lang === 'kn' ? 'kn' : 'en');
+  
+  // Smooth scroll to top on language change
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   </script>
 </body>
 </html>
