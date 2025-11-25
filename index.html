@@ -179,44 +179,95 @@
   <link rel="icon" href="/nyayanow-logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  /* Language Toggle Styles */
-.lang-btn {
-  color: #94a3b8;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-}
-
-.lang-btn:hover {
-  color: #e2e8f0;
-}
-
-.lang-btn.active-lang {
-  background: #d4af37;
-  color: #0f172a;
-}
-
-/* Hide inactive language content */
-.lang-content {
-  display: none;
-}
-
-.lang-content.active {
-  display: block;
-}
-
-/* For inline translations */
-.lang-en { display: inline; }
-.lang-kn { display: none; }
-
-body.kn-active .lang-en { display: none; }
-body.kn-active .lang-kn { display: inline; }
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  /* ========================================= */
+    /* LANGUAGE SWITCHING SYSTEM - START */
+    /* ========================================= */
     
-    * {
-      font-family: 'Inter', sans-serif;
+    /* Language Toggle Button Styles */
+    .lang-btn {
+      color: #94a3b8;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: all 0.3s ease;
     }
+    
+    .lang-btn:hover {
+      color: #e2e8f0;
+      transform: scale(1.05);
+    }
+    
+    .lang-btn.active-lang {
+      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+      color: #0f172a;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+    
+    /* Language Content Display Logic */
+    .lang-content {
+      display: none;
+    }
+    
+    .lang-content.active {
+      display: block;
+    }
+    
+    /* CRITICAL: Inline Text Translation - Hide Inactive Language */
+    .lang-en {
+      display: inline !important;
+    }
+    
+    .lang-kn {
+      display: none !important;
+    }
+    
+    /* When Kannada is active, hide English and show Kannada */
+    body.kn-active .lang-en {
+      display: none !important;
+    }
+    
+    body.kn-active .lang-kn {
+      display: inline !important;
+    }
+    
+    /* Make sure block-level elements work too */
+    .lang-content .lang-en,
+    .lang-content .lang-kn {
+      display: block !important;
+    }
+    
+    body.kn-active .lang-content .lang-en {
+      display: none !important;
+    }
+    
+    body.kn-active .lang-content .lang-kn {
+      display: block !important;
+    }
+    
+    /* Smooth Transition for Language Switch */
+    .lang-content {
+      animation: fadeInLang 0.4s ease-in;
+    }
+    
+    @keyframes fadeInLang {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Kannada Font Support */
+    body.kn-active {
+      font-family: 'Noto Sans Kannada', 'Inter', sans-serif;
+    }
+    
+    /* ========================================= */
+    /* LANGUAGE SWITCHING SYSTEM - END */
+    /* ========================================= */
     
     .gradient-gold {
       background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
