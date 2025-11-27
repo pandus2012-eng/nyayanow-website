@@ -179,9 +179,7 @@
   <link rel="icon" href="/nyayanow-logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    /* ========================================= */
+  /* ========================================= */
     /* LANGUAGE SWITCHING SYSTEM - START */
     /* ========================================= */
     
@@ -252,52 +250,185 @@
     }
     
     @keyframes fadeInLang {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     
     /* Kannada Font Support */
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap');
-    
     body.kn-active {
-      font-family: 'Noto Sans Kannada', 'Segoe UI', sans-serif;
+      font-family: 'Noto Sans Kannada', 'Inter', sans-serif;
     }
     
     /* ========================================= */
     /* LANGUAGE SWITCHING SYSTEM - END */
     /* ========================================= */
+    
+    .gradient-gold {
+      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    }
+    
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+    
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #d4af37 0%, #f4d03f 100%);
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+    
+    .feature-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .feature-card:hover::before {
+      left: 100%;
+    }
+    
+    .testimonial-slider {
+      scroll-behavior: smooth;
+    }
+    
+    .stats-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   </style>
-        <!-- CTA Buttons -->
-        <div class="flex items-center gap-3">
-          <!-- Language Toggle -->
-<div class="flex items-center gap-1 bg-slate-800 rounded-full p-1">
-  <button 
-    id="langEN" 
-    class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold transition-all active-lang"
-    onclick="switchLanguage('en')"
-  >
-    EN
-  </button>
-  <button 
-    id="langKN" 
-    class="lang-btn px-3 py-1.5 rounded-full text-xs font-semibold transition-all"
-    onclick="switchLanguage('kn')"
-  >
-    ಕನ್ನಡ
-  </button>
-</div>
-          <a
-            href="https://wa.me/919632786767"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hidden sm:inline-flex items-center gap-2 justify-center rounded-full bg-[#d4af37] px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-[#e6c45a] transition-all hover:scale-105"
-          >
-            <i class="fab fa-whatsapp"></i>
-            WhatsApp Us
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-12968072332"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QT6CY0VYS4');
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  
+  <!-- PERFECT HEADER/NAVBAR -->
+  <header class="bg-slate-950 text-slate-50 sticky top-0 z-50 shadow-xl border-b border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        
+        <!-- LEFT: Logo + Brand -->
+        <a href="#" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center flex-shrink-0 shadow-lg border-2 border-[#d4af37]/30">
+            <i class="fas fa-shield-alt text-slate-950 text-xl"></i>
+          </div>
+          <div>
+            <div class="text-xl font-extrabold tracking-tight text-white">NyayaNow</div>
+            <div class="text-[10px] text-slate-400 font-medium -mt-0.5">
+              <span class="lang-en">Simple & Trusted Legal Guidance</span>
+              <span class="lang-kn">ಸರಳ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CENTER: Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <a href="#services" class="text-slate-300 hover:text-[#d4af37] transition-colors">
+            <span class="lang-en">Services</span>
+            <span class="lang-kn">ಸೇವೆಗಳು</span>
           </a>
-          
-          <!-- Mobile Menu Button -->
-          <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-slate-800 rounded-lg transition">
+          <a href="#how" class="text-slate-300 hover:text-[#d4af37] transition-colors">
+            <span class="lang-en">How It Works</span>
+            <span class="lang-kn">ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
+          </a>
+          <a href="#templates" class="text-slate-300 hover:text-[#d4af37] transition-colors">
+            <span class="lang-en">Templates</span>
+            <span class="lang-kn">ಟೆಂಪ್ಲೇಟ್‌ಗಳು</span>
+          </a>
+          <a href="#testimonials" class="text-slate-300 hover:text-[#d4af37] transition-colors">
+            <span class="lang-en">Testimonials</span>
+            <span class="lang-kn">ಪ್ರಶಂಸಾಪತ್ರಗಳು</span>
+          </a>
+          <a href="#faq" class="text-slate-300 hover:text-[#d4af37] transition-colors">FAQ</a>
+          <a href="#contact" class="text-slate-300 hover:text-[#d4af37] transition-colors">
+            <span class="lang-en">Contact</span>
+            <span class="lang-kn">ಸಂಪರ್ಕ</span>
+          </a>
+        </nav>
+
+        <!-- RIGHT: Language Toggle + WhatsApp -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-1 bg-slate-800/60 rounded-lg p-1 border border-slate-700/50">
+            <button id="langEN" class="lang-btn px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 active-lang" onclick="switchLanguage('en')">EN</button>
+            <button id="langKN" class="lang-btn px-4 py-2 rounded-md text-xs font-bold transition-all duration-200" onclick="switchLanguage('kn')">ಕನ್ನಡ</button>
+          </div>
+          <a href="https://wa.me/919632786767?text=Hello%20NyayaNow!%20I%20need%20legal%20help." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 justify-center rounded-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-[#d4af37]/30 hover:shadow-[#d4af37]/50 hover:scale-105 transition-all duration-200">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span class="lang-en">WhatsApp Us</span>
+            <span class="lang-kn">WhatsApp ಮಾಡಿ</span>
+          </a>
+          <button id="mobileMenuBtn" class="lg:hidden p-2.5 hover:bg-slate-800/80 rounded-lg transition-colors" aria-label="Open menu">
             <i class="fas fa-bars text-xl"></i>
           </button>
         </div>
@@ -305,149 +436,198 @@
     </div>
   </header>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-slate-950 text-slate-50 z-50 p-6 shadow-2xl lg:hidden">
-    <button id="closeMobileMenu" class="absolute top-4 right-4 text-2xl hover:text-[#d4af37] transition">
-      <i class="fas fa-times"></i>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden" onclick="closeMobileMenuFunc()"></div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-950 text-slate-50 z-50 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+    <button id="closeMobileMenu" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-800 text-slate-300 hover:text-[#d4af37] transition-all" aria-label="Close menu">
+      <i class="fas fa-times text-2xl"></i>
     </button>
-    <nav class="mt-12 flex flex-col gap-6 text-base font-medium">
-      <a href="#services" class="hover:text-[#d4af37] transition-colors">Services</a>
-      <a href="#how" class="hover:text-[#d4af37] transition-colors">How It Works</a>
-      <a href="#templates" class="hover:text-[#d4af37] transition-colors">Templates</a>
-      <a href="#testimonials" class="hover:text-[#d4af37] transition-colors">Testimonials</a>
-      <a href="#faq" class="hover:text-[#d4af37] transition-colors">FAQ</a>
-      <a href="#contact" class="hover:text-[#d4af37] transition-colors">Contact</a>
+    <div class="flex items-center gap-3 mb-8 pb-6 border-b border-slate-800/80">
+      <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center shadow-lg border-2 border-[#d4af37]/30">
+        <i class="fas fa-shield-alt text-slate-950 text-xl"></i>
+      </div>
+      <div>
+        <div class="text-lg font-bold">NyayaNow</div>
+        <div class="text-[10px] text-slate-400">
+          <span class="lang-en">Legal Guidance</span>
+          <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
+        </div>
+      </div>
+    </div>
+    <nav class="flex flex-col gap-1 mb-8">
+      <a href="#services" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-gavel w-5"></i>
+        <span class="lang-en">Services</span>
+        <span class="lang-kn">ಸೇವೆಗಳು</span>
+      </a>
+      <a href="#how" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-question-circle w-5"></i>
+        <span class="lang-en">How It Works</span>
+        <span class="lang-kn">ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
+      </a>
+      <a href="#templates" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-file-alt w-5"></i>
+        <span class="lang-en">Templates</span>
+        <span class="lang-kn">ಟೆಂಪ್ಲೇಟ್‌ಗಳು</span>
+      </a>
+      <a href="#testimonials" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-star w-5"></i>
+        <span class="lang-en">Testimonials</span>
+        <span class="lang-kn">ಪ್ರಶಂಸಾಪತ್ರಗಳು</span>
+      </a>
+      <a href="#faq" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-question w-5"></i>
+        <span>FAQ</span>
+      </a>
+      <a href="#contact" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-envelope w-5"></i>
+        <span class="lang-en">Contact</span>
+        <span class="lang-kn">ಸಂಪರ್ಕ</span>
+      </a>
     </nav>
+    <div class="mb-6">
+      <div class="text-xs text-slate-400 mb-3 uppercase tracking-wider font-semibold px-4">
+        <span class="lang-en">Choose Language</span>
+        <span class="lang-kn">ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ</span>
+      </div>
+      <div class="flex items-center gap-2 bg-slate-800/80 rounded-lg p-1.5 border border-slate-700/50">
+        <button class="lang-btn flex-1 px-4 py-3 rounded-md text-sm font-bold transition-all active-lang" onclick="switchLanguage('en'); closeMobileMenuFunc();">EN</button>
+        <button class="lang-btn flex-1 px-4 py-3 rounded-md text-sm font-bold transition-all" onclick="switchLanguage('kn'); closeMobileMenuFunc();">ಕನ್ನಡ</button>
+      </div>
+    </div>
+    <a href="https://wa.me/919632786767?text=Hello%20NyayaNow!%20I%20need%20legal%20help." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 justify-center w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] px-6 py-4 text-base font-bold text-slate-950 shadow-lg hover:shadow-xl transition-all">
+      <i class="fab fa-whatsapp text-2xl"></i>
+      <span class="lang-en">WhatsApp Us Now</span>
+      <span class="lang-kn">ಈಗ WhatsApp ಮಾಡಿ</span>
+    </a>
   </div>
 
+  <script>
+  (function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileMenuLinks = document.querySelectorAll('#mobileMenu a');
+    function openMobileMenu() {
+      mobileMenu.style.transform = 'translateX(0)';
+      mobileMenuOverlay.style.opacity = '1';
+      mobileMenuOverlay.style.pointerEvents = 'auto';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenuFunc() {
+      mobileMenu.style.transform = 'translateX(100%)';
+      mobileMenuOverlay.style.opacity = '0';
+      mobileMenuOverlay.style.pointerEvents = 'none';
+      document.body.style.overflow = '';
+    }
+    window.closeMobileMenuFunc = closeMobileMenuFunc;
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+    if (closeMobileMenu) closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+    mobileMenuLinks.forEach(link => link.addEventListener('click', closeMobileMenuFunc));
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMobileMenuFunc();
+    });
+  })();
+  </script>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
   <!-- HERO SECTION -->
-<section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50 pb-20 pt-12 overflow-hidden">
-  <!-- Background Decorations -->
-  <div class="absolute top-0 right-0 w-96 h-96 bg-[#d4af37] opacity-5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#f4d03f] opacity-5 rounded-full blur-3xl"></div>
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid gap-12 lg:grid-cols-2 items-center">
-      <!-- Left: Content -->
-      <div class="fade-in">
-        <!-- Trust Badge -->
-        <div class="inline-flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full text-xs font-medium mb-6 backdrop-blur">
-          <i class="fas fa-shield-alt text-[#d4af37]"></i>
-          <span>
-            <span class="lang-en">Trusted by 10,000+ Indians</span>
-            <span class="lang-kn">10,000+ ಭಾರತೀಯರು ನಂಬಿದ್ದಾರೆ</span>
-          </span>
-        </div>
-        
-        <section id="hero" class="...">
-  <div class="container">
-    <div class="content-area">
-      
-      <!-- Main Heading -->
-      <h1 class="font-extrabold tracking-tight leading-none mb-8">
-  <!-- Line 1 -->
-  <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-2">
-    <span class="lang-en">Simple & Trusted</span>
-    <span class="lang-kn">ಸರಳ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ</span>
-  </span>
-  
-  <!-- Line 2 -->
-  <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-2">
-    <span class="lang-en">Legal Guidance</span>
-    <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
-  </span>
-  
-  <!-- Line 3 - GOLD! -->
-  <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
-    <span class="lang-en">for Every Indian.</span>
-    <span class="lang-kn">ಪ್ರತಿಯೊಬ್ಬ ಭಾರತೀಯರಿಗೆ</span>
-  </span>
-</h1>
-```
-      
-      <!-- Description -->
-      <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
-        <span class="lang-en">
-          Get clear, practical answers for everyday legal problems — FIR, cyber fraud, tenants, consumer issues and more. Online and on the streets. No confusing jargon. No fear.
-        </span>
-        <span class="lang-kn">
-          ದೈನಂದಿನ ಕಾನೂನು ಸಮಸ್ಯೆಗಳಿಗೆ ಸ್ಪಷ್ಟ, ಪ್ರಾಯೋಗಿಕ ಉತ್ತರಗಳನ್ನು ಪಡೆಯಿರಿ - FIR, ಸೈಬರ್ ವಂಚನೆ, ಬಾಡಿಗೆದಾರರು, ಗ್ರಾಹಕ ಸಮಸ್ಯೆಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವು. ಆನ್‌ಲೈನ್ ಮತ್ತು ಬೀದಿಗಳಲ್ಲಿ. ಗೊಂದಲದ ಪರಿಭಾಷೆ ಇಲ್ಲ. ಭಯವಿಲ್ಲ.
-        </span>
-      </p>
-      
-      <!-- Stats Row -->
-      <div class="grid grid-cols-3 gap-6 mb-8">
-        <div>
-          <div class="text-3xl font-bold text-[#d4af37]">10K+</div>
-          <div class="text-xs text-slate-400">
-            <span class="lang-en">Users Helped</span>
-            <span class="lang-kn">ಸಹಾಯ ಮಾಡಿದ ಬಳಕೆದಾರರು</span>
+  <section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50 pb-20 pt-12 overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-[#d4af37] opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#f4d03f] opacity-5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid gap-12 lg:grid-cols-2 items-center">
+        <div class="fade-in">
+          <!-- Trust Badge -->
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-6 h-6 rounded-full bg-[#d4af37]/20 flex items-center justify-center">
+              <i class="fas fa-shield-check text-[#d4af37] text-sm"></i>
+            </div>
+            <p class="text-sm text-slate-400">
+              <span class="lang-en">Trusted by 10,000+ Indians</span>
+              <span class="lang-kn">10,000+ ಭಾರತೀಯರು ನಂಬುತ್ತಾರೆ</span>
+            </p>
           </div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-[#d4af37]">24hrs</div>
-          <div class="text-xs text-slate-400">
-            <span class="lang-en">Response Time</span>
-            <span class="lang-kn">ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ</span>
-          </div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-[#d4af37]">
-            <span class="lang-en">Free</span>
-            <span class="lang-kn">ಉಚಿತ</span>
-          </div>
-          <div class="text-xs text-slate-400">
-            <span class="lang-en">Basic Guidance</span>
-            <span class="lang-kn">ಮೂಲಭೂತ ಮಾರ್ಗದರ್ಶನ</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- CTA Buttons -->
-      <div class="flex flex-wrap items-center gap-4 mb-6">
-        
-          href="https://wa.me/919632786767"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 justify-center rounded-full bg-[#d4af37] px-6 py-3.5 text-base font-semibold text-slate-950 hover:bg-[#e6c45a] transition-all hover:scale-105 shadow-lg hover:shadow-xl"
-        >
-          <i class="fab fa-whatsapp text-lg"></i>
-          <span class="lang-en">Get Free 3-Minute Legal Help</span>
-          <span class="lang-kn">3 ನಿಮಿಷದ ಉಚಿತ ಕಾನೂನು ಸಹಾಯ ಪಡೆಯಿರಿ</span>
-        </a>
-      </div>
-      
-    </div>
-  </div>
-</section>
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center gap-4 mb-6">
           
-            href="https://wa.me/919632786767"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 justify-center rounded-full bg-[#d4af37] px-6 py-3.5 text-base font-semibold text-slate-950 hover:bg-[#e6c45a] transition-all hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <i class="fab fa-whatsapp text-lg"></i>
-            <span class="lang-en">Get Free 3-Minute Legal Help</span>
-            <span class="lang-kn">3 ನಿಮಿಷದ ಉಚಿತ ಕಾನೂನು ಸಹಾಯ ಪಡೆಯಿರಿ</span>
-          </a>
+          <!-- PERFECT 3-LINE HERO HEADING -->
+          <h1 class="font-extrabold tracking-tight leading-none mb-8">
+            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-2">
+              <span class="lang-en">Simple & Trusted</span>
+              <span class="lang-kn">ಸರಳ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ</span>
+            </span>
+            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-2">
+              <span class="lang-en">Legal Guidance</span>
+              <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
+            </span>
+            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
+              <span class="lang-en">for Every Indian.</span>
+              <span class="lang-kn">ಪ್ರತಿಯೊಬ್ಬ ಭಾರತೀಯರಿಗೆ.</span>
+            </span>
+          </h1>
           
-            href="#templates"
-            class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-slate-500 px-6 py-3.5 text-base font-semibold text-slate-50 hover:border-[#d4af37] hover:text-[#d4af37] transition-all"
-          >
-            <i class="fas fa-file-download"></i>
-            <span class="lang-en">View Legal Templates</span>
-            <span class="lang-kn">ಕಾನೂನು ಟೆಂಪ್ಲೇಟ್‌ಗಳನ್ನು ನೋಡಿ</span>
-          </a>
+          <!-- Description -->
+          <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+            <span class="lang-en">Get clear, practical answers for everyday legal problems — FIR, cyber fraud, tenants, consumer issues and more. Online and on the streets. No confusing jargon. No fear.</span>
+            <span class="lang-kn">ದೈನಂದಿನ ಕಾನೂನು ಸಮಸ್ಯೆಗಳಿಗೆ ಸ್ಪಷ್ಟ, ಪ್ರಾಯೋಗಿಕ ಉತ್ತರಗಳನ್ನು ಪಡೆಯಿರಿ - FIR, ಸೈಬರ್ ವಂಚನೆ, ಬಾಡಿಗೆದಾರರು, ಗ್ರಾಹಕ ಸಮಸ್ಯೆಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವು. ಆನ್‌ಲೈನ್ ಮತ್ತು ಬೀದಿಗಳಲ್ಲಿ. ಗೊಂದಲದ ಪರಿಭಾಷೆ ಇಲ್ಲ. ಭಯವಿಲ್ಲ.</span>
+          </p>
+          
+          <!-- Stats Row -->
+          <div class="grid grid-cols-3 gap-6 mb-8">
+            <div>
+              <div class="text-3xl font-bold text-[#d4af37]">10K+</div>
+              <div class="text-xs text-slate-400">
+                <span class="lang-en">Users Helped</span>
+                <span class="lang-kn">ಸಹಾಯ ಮಾಡಿದ ಬಳಕೆದಾರರು</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-[#d4af37]">24hrs</div>
+              <div class="text-xs text-slate-400">
+                <span class="lang-en">Response Time</span>
+                <span class="lang-kn">ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-[#d4af37]">
+                <span class="lang-en">Free</span>
+                <span class="lang-kn">ಉಚಿತ</span>
+              </div>
+              <div class="text-xs text-slate-400">
+                <span class="lang-en">Basic Guidance</span>
+                <span class="lang-kn">ಮೂಲಭೂತ ಮಾರ್ಗದರ್ಶನ</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- CTA Button -->
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <a href="https://wa.me/919632786767" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 justify-center rounded-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] px-6 py-3.5 text-base font-semibold text-slate-950 hover:scale-105 shadow-lg hover:shadow-xl transition-all">
+              <i class="fab fa-whatsapp text-lg"></i>
+              <span class="lang-en">Get Free 3-Minute Legal Help</span>
+              <span class="lang-kn">3 ನಿಮಿಷದ ಉಚಿತ ಕಾನೂನು ಸಹಾಯ ಪಡೆಯಿರಿ</span>
+            </a>
+          </div>
+          
+          <!-- Trust Indicators -->
+          <div class="flex items-center gap-6 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-400"></i>
+              <span class="lang-en">100% Free Basic Guidance</span>
+              <span class="lang-kn">100% ಉಚಿತ ಮೂಲಭೂತ ಮಾರ್ಗದರ್ಶನ</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-lock text-blue-400"></i>
+              <span class="lang-en">Confidential</span>
+              <span class="lang-kn">ಗೌಪ್ಯ</span>
+            </div>
+          </div>
         </div>
-        
-        <!-- Confidentiality Notice -->
-        <p class="text-xs text-slate-400 flex items-center gap-2">
-          <i class="fas fa-lock text-[#d4af37]"></i>
-          <span class="lang-en">100% confidential • Powered by NyayaNow</span>
-          <span class="lang-kn">100% ಗೌಪ್ಯ • NyayaNow ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತಿದೆ</span>
-        </p>
       </div>
 
       <!-- Right: Interactive Card -->
@@ -1457,11 +1637,8 @@ function toggleServiceDetails(card) {
             <i class="fas fa-envelope"></i>
           </div>
           <h3 class="text-base font-bold mb-2">Email</h3>
-          <a
-            href="mailto:info@nyayanow.com"
-            class="text-sm text-[#d4af37] hover:text-[#b18a2b] font-semibold block mb-2"
-          >
-            info@nyayanow.com
+          <a href="/cdn-cgi/l/email-protection#7c15121a133c12051d051d12130b521f1311" class="text-sm text-[#d4af37] hover:text-[#b18a2b] font-semibold block mb-2">
+            <span class="__cf_email__" data-cfemail="98f1f6fef7d8f6e1f9e1f9f6f7efb6fbf7f5">[email&#160;protected]</span>
           </a>
           <p class="text-xs text-slate-500">For detailed queries<br />& collaborations</p>
         </div>
@@ -1615,7 +1792,7 @@ function toggleServiceDetails(card) {
     <i class="fas fa-arrow-up text-xl"></i>
   </button>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Scroll Progress Indicator
     window.addEventListener('scroll', () => {
       const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -2028,12 +2205,4 @@ function sendChatMessage() {
     input.value = '';
     // For now, redirect to WhatsApp for complex queries
     setTimeout(() => {
-      if (confirm('Connect with our team on WhatsApp for detailed help?')) {
-        window.open('https://wa.me/919632786767?text=' + encodeURIComponent(message), '_blank');
-      }
-    }, 1000);
-  }
-}
-</script>
-</body>
-</html>
+      if (confirm('Conne
