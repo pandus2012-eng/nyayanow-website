@@ -561,7 +561,7 @@
               <span class="lang-en">Legal Guidance</span>
               <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
             </span>
-            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
+            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#d4af37] font-extrabold" style="text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);">
               <span class="lang-en">for Every Indian.</span>
               <span class="lang-kn">ಪ್ರತಿಯೊಬ್ಬ ಭಾರತೀಯರಿಗೆ.</span>
             </span>
@@ -2188,17 +2188,106 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 
+
 <script>
+// AI Chat Widget Toggle
 function toggleChat() {
-  document.getElementById('chatWindow').classList.toggle('hidden');
+  const chatWindow = document.getElementById('chatWindow');
+  const chatToggleBtn = document.getElementById('chatToggleBtn');
+  
+  if (chatWindow.classList.contains('hidden')) {
+    chatWindow.classList.remove('hidden');
+    chatToggleBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+  } else {
+    chatWindow.classList.add('hidden');
+    chatToggleBtn.innerHTML = '<i class="fas fa-comments text-2xl"></i>';
+  }
 }
 
+// Send Chat Message
 function sendChatMessage() {
   const input = document.getElementById('chatInput');
   const message = input.value.trim();
+  
   if (message) {
-    // Add user message (implement full chat logic here)
+    const messagesDiv = document.getElementById('chatMessages');
+    
+    // Add user message
+    const userMsg = document.createElement('div');
+    userMsg.className = 'flex gap-3 mb-4 justify-end';
+    userMsg.innerHTML = `
+      <div class="bg-[#d4af37] text-slate-950 p-3 rounded-2xl shadow-sm max-w-[80%]">
+        <p class="text-sm">${message}</p>
+      </div>
+    `;
+    messagesDiv.appendChild(userMsg);
+    
     input.value = '';
-    // For now, redirect to WhatsApp for complex queries
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    
+    // Show typing indicator
     setTimeout(() => {
-      if (confirm('Conne
+      const typingMsg = document.createElement('div');
+      typingMsg.className = 'flex gap-3 mb-4';
+      typingMsg.id = 'typingIndicator';
+      typingMsg.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-robot text-slate-950 text-sm"></i>
+        </div>
+        <div class="bg-white p-3 rounded-2xl shadow-sm">
+          <p class="text-sm text-slate-500">
+            <span class="lang-en">Typing...</span>
+            <span class="lang-kn">ಟೈಪ್ ಮಾಡುತ್ತಿದೆ...</span>
+          </p>
+        </div>
+      `;
+      messagesDiv.appendChild(typingMsg);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      
+      // Simulate AI response after 1.5 seconds
+      setTimeout(() => {
+        const typingIndicator = document.getElementById('typingIndicator');
+        if (typingIndicator) {
+          typingIndicator.remove();
+        }
+        
+        const aiMsg = document.createElement('div');
+        aiMsg.className = 'flex gap-3 mb-4';
+        aiMsg.innerHTML = `
+          <div class="w-8 h-8 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-robot text-slate-950 text-sm"></i>
+          </div>
+          <div class="bg-white p-3 rounded-2xl shadow-sm">
+            <p class="text-sm mb-2">
+              <span class="lang-en">I understand you need legal help. For detailed assistance, please connect with our team on WhatsApp.</span>
+              <span class="lang-kn">ನಿಮಗೆ ಕಾನೂನು ಸಹಾಯ ಬೇಕು ಎಂದು ನನಗೆ ಅರ್ಥವಾಗಿದೆ. ವಿವರವಾದ ಸಹಾಯಕ್ಕಾಗಿ, ದಯವಿಟ್ಟು WhatsApp ನಲ್ಲಿ ನಮ್ಮ ತಂಡವನ್ನು ಸಂಪರ್ಕಿಸಿ.</span>
+            </p>
+            <a href="https://wa.me/919632786767?text=${encodeURIComponent(message)}" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-[#20BA5A] transition-all">
+              <i class="fab fa-whatsapp"></i>
+              <span class="lang-en">Continue on WhatsApp</span>
+              <span class="lang-kn">WhatsApp ನಲ್ಲಿ ಮುಂದುವರಿಸಿ</span>
+            </a>
+          </div>
+        `;
+        messagesDiv.appendChild(aiMsg);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      }, 1500);
+    }, 500);
+  }
+}
+
+// Allow Enter key to send message
+document.addEventListener('DOMContentLoaded', function() {
+  const chatInput = document.getElementById('chatInput');
+  if (chatInput) {
+    chatInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendChatMessage();
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
