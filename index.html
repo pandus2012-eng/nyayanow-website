@@ -179,189 +179,185 @@
   <link rel="icon" href="/nyayanow-logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
   /* ========================================= */
-    /* LANGUAGE SWITCHING SYSTEM - START */
-    /* ========================================= */
-    
-    /* Language Toggle Button Styles */
-    .lang-btn {
-      color: #94a3b8;
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      transition: all 0.3s ease;
+  /* LANGUAGE SWITCHING SYSTEM - START */
+  /* ========================================= */
+  
+  /* Language Toggle Button Styles */
+  .lang-btn {
+    color: #94a3b8;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .lang-btn:hover {
+    color: #e2e8f0;
+    transform: scale(1.05);
+  }
+  
+  .lang-btn.active-lang {
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    color: #0f172a;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+  
+  /* Language Content Display Logic */
+  .lang-content {
+    display: none;
+  }
+  
+  .lang-content.active {
+    display: block;
+  }
+  
+  /* CRITICAL: Inline Text Translation - Hide Inactive Language */
+  .lang-en {
+    display: inline !important;
+  }
+  
+  .lang-kn {
+    display: none !important;
+  }
+  
+  /* When Kannada is active, hide English and show Kannada */
+  body.kn-active .lang-en {
+    display: none !important;
+  }
+  
+  body.kn-active .lang-kn {
+    display: inline !important;
+  }
+  
+  /* Make sure block-level elements work too */
+  .lang-content .lang-en,
+  .lang-content .lang-kn {
+    display: block !important;
+  }
+  
+  body.kn-active .lang-content .lang-en {
+    display: none !important;
+  }
+  
+  body.kn-active .lang-content .lang-kn {
+    display: block !important;
+  }
+  
+  /* Smooth Transition for Language Switch */
+  .lang-content {
+    animation: fadeInLang 0.4s ease-in;
+  }
+  
+  @keyframes fadeInLang {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
-    
-    .lang-btn:hover {
-      color: #e2e8f0;
-      transform: scale(1.05);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    
-    .lang-btn.active-lang {
-      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-      color: #0f172a;
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+  
+  /* Kannada Font Support */
+  body.kn-active {
+    font-family: 'Noto Sans Kannada', 'Inter', sans-serif;
+  }
+  
+  /* ========================================= */
+  /* LANGUAGE SWITCHING SYSTEM - END */
+  /* ========================================= */
+  
+  /* Additional Styles */
+  .gradient-gold {
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    
-    /* Language Content Display Logic */
-    .lang-content {
-      display: none;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    
-    .lang-content.active {
-      display: block;
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
     }
-    
-    /* CRITICAL: Inline Text Translation - Hide Inactive Language */
-    .lang-en {
-      display: inline !important;
+    50% {
+      opacity: 0.5;
     }
-    
-    .lang-kn {
-      display: none !important;
-    }
-    
-    /* When Kannada is active, hide English and show Kannada */
-    body.kn-active .lang-en {
-      display: none !important;
-    }
-    
-    body.kn-active .lang-kn {
-      display: inline !important;
-    }
-    
-    /* Make sure block-level elements work too */
-    .lang-content .lang-en,
-    .lang-content .lang-kn {
-      display: block !important;
-    }
-    
-    body.kn-active .lang-content .lang-en {
-      display: none !important;
-    }
-    
-    body.kn-active .lang-content .lang-kn {
-      display: block !important;
-    }
-    
-    /* Smooth Transition for Language Switch */
-    .lang-content {
-      animation: fadeInLang 0.4s ease-in;
-    }
-    
-    @keyframes fadeInLang {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    /* Kannada Font Support */
-    body.kn-active {
-      font-family: 'Noto Sans Kannada', 'Inter', sans-serif;
-    }
-    
-    /* ========================================= */
-    /* LANGUAGE SWITCHING SYSTEM - END */
-    /* ========================================= */
-    
-    .gradient-gold {
-      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-    }
-    
-    .hover-lift {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .hover-lift:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-    
-    .fade-in {
-      animation: fadeIn 0.6s ease-in;
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .pulse-animation {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.5;
-      }
-    }
-    
-    .mobile-menu {
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-    }
-    
-    .mobile-menu.active {
-      transform: translateX(0);
-    }
-    
-    .scroll-indicator {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #d4af37 0%, #f4d03f 100%);
-      z-index: 9999;
-      transition: width 0.1s ease;
-    }
-    
-    .feature-card {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-      transition: left 0.5s ease;
-    }
-    
-    .feature-card:hover::before {
-      left: 100%;
-    }
-    
-    .testimonial-slider {
-      scroll-behavior: smooth;
-    }
-    
-    .stats-number {
-      font-size: 3rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+  }
+  
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+  
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.7), #d4af37 100%);
+    z-index: 9999;
+    transition: width 0.1s ease;
+  }
+  
+  .feature-card {
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature-card:hover::before {
+    left: 100%;
+  }
+  
+  .testimonial-slider {
+    scroll-behavior: smooth;
+  }
+  
+  .stats-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   </style>
+  
   <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-12968072332"></script>
 <script>
