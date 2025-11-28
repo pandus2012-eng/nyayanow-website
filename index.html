@@ -2356,4 +2356,16 @@ function sendChatMessage() {
 
 // Allow Enter key to send message
 document.addEventListener('DOMContentLoaded', function() {
-  co
+  const chatInput = document.getElementById('chatInput');
+  if (chatInput) {
+    chatInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendChatMessage();
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
