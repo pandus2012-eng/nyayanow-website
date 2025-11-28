@@ -205,6 +205,32 @@
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
   }
   
+  /* Remove unwanted outlines and focus rings */
+  *:focus {
+    outline: none !important;
+  }
+  
+  /* Only show focus outline on keyboard navigation for accessibility */
+  *:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+  }
+  
+  /* Remove default browser focus rings from specific elements */
+  button:focus,
+  a:focus,
+  input:focus,
+  select:focus {
+    outline: none !important;
+  }
+  
+  /* Specific fix for language buttons and navigation */
+  .lang-btn:focus,
+  nav a:focus,
+  header a:focus {
+    outline: none !important;
+  }
+  
   /* Language Content Display Logic */
   .lang-content {
     display: none;
@@ -381,15 +407,11 @@
           </div>
           <div>
             <div class="text-xl font-extrabold tracking-tight text-white">NyayaNow</div>
-            <div class="text-[10px] text-slate-400 font-medium -mt-0.5">
-              <span class="lang-en">Simple & Trusted Legal Guidance</span>
-              <span class="lang-kn">ಸರಳ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
-            </div>
           </div>
         </a>
 
         <!-- CENTER: Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium">
           <a href="#services" class="text-slate-300 hover:text-[#d4af37] transition-colors">
             <span class="lang-en">Services</span>
             <span class="lang-kn">ಸೇವೆಗಳು</span>
@@ -458,10 +480,6 @@
       </div>
       <div>
         <div class="text-lg font-bold">NyayaNow</div>
-        <div class="text-[10px] text-slate-400">
-          <span class="lang-en">Legal Guidance</span>
-          <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
-        </div>
       </div>
     </div>
     <nav class="flex flex-col gap-1 mb-8">
@@ -573,81 +591,132 @@
               <i class="fas fa-shield-check text-[#d4af37] text-sm"></i>
             </div>
             <p class="text-sm text-slate-400">
-              <span class="lang-en">Trusted by 10,000+ Indians</span>
-              <span class="lang-kn">10,000+ ಭಾರತೀಯರು ನಂಬುತ್ತಾರೆ</span>
+              <span class="lang-en">Built by Legal Experts | 100% Free</span>
+              <span class="lang-kn">ಕಾನೂನು ತಜ್ಞರು ನಿರ್ಮಿಸಿದ | 100% ಉಚಿತ</span>
             </p>
           </div>
           
-          <!-- PERFECT 3-LINE HERO HEADING -->
-          <h1 class="font-extrabold tracking-tight leading-none mb-8">
-            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-2">
-              <span class="lang-en">Simple & Trusted</span>
-              <span class="lang-kn">ಸರಳ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ</span>
+          <!-- REDESIGNED HERO HEADING - Shorter & Cleaner -->
+          <h1 class="font-extrabold tracking-tight leading-tight mb-6">
+            <span class="block text-4xl sm:text-5xl lg:text-6xl text-white mb-3">
+              <span class="lang-en">Clear & Trusted</span>
+              <span class="lang-kn">ಸ್ಪಷ್ಟ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ</span>
             </span>
-            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mb-2">
+            <span class="block text-4xl sm:text-5xl lg:text-6xl text-white mb-3">
               <span class="lang-en">Legal Guidance</span>
               <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
             </span>
-            <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#d4af37] font-extrabold" style="text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);">
-              <span class="lang-en">for Every Indian.</span>
-              <span class="lang-kn">ಪ್ರತಿಯೊಬ್ಬ ಭಾರತೀಯರಿಗೆ.</span>
-            </span>
           </h1>
           
-          <!-- Description -->
-          <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
-            <span class="lang-en">Get clear, practical answers for everyday legal problems — FIR, cyber fraud, tenants, consumer issues and more. Online and on the streets. No confusing jargon. No fear.</span>
-            <span class="lang-kn">ದೈನಂದಿನ ಕಾನೂನು ಸಮಸ್ಯೆಗಳಿಗೆ ಸ್ಪಷ್ಟ, ಪ್ರಾಯೋಗಿಕ ಉತ್ತರಗಳನ್ನು ಪಡೆಯಿರಿ - FIR, ಸೈಬರ್ ವಂಚನೆ, ಬಾಡಿಗೆದಾರರು, ಗ್ರಾಹಕ ಸಮಸ್ಯೆಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವು. ಆನ್‌ಲೈನ್ ಮತ್ತು ಬೀದಿಗಳಲ್ಲಿ. ಗೊಂದಲದ ಪರಿಭಾಷೆ ಇಲ್ಲ. ಭಯವಿಲ್ಲ.</span>
+          <!-- Audience Tags -->
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50">
+              <i class="fas fa-users text-[#d4af37] text-sm"></i>
+              <span class="text-sm font-medium text-slate-300">
+                <span class="lang-en">Citizens</span>
+                <span class="lang-kn">ನಾಗರಿಕರು</span>
+              </span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50">
+              <i class="fas fa-graduation-cap text-[#d4af37] text-sm"></i>
+              <span class="text-sm font-medium text-slate-300">
+                <span class="lang-en">Law Students</span>
+                <span class="lang-kn">ಕಾನೂನು ವಿದ್ಯಾರ್ಥಿಗಳು</span>
+              </span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50">
+              <i class="fas fa-balance-scale text-[#d4af37] text-sm"></i>
+              <span class="text-sm font-medium text-slate-300">
+                <span class="lang-en">Lawyers</span>
+                <span class="lang-kn">ವಕೀಲರು</span>
+              </span>
+            </div>
+          </div>
+          
+          <!-- Description - Enhanced -->
+          <p class="text-base text-slate-300 mb-6 max-w-2xl leading-relaxed">
+            <span class="lang-en">Get clear, practical answers for everyday legal problems — FIR filing, cyber fraud, tenant rights, consumer complaints, and more. Available online anytime. No confusing jargon. No fear. Empowering every Indian with legal knowledge.</span>
+            <span class="lang-kn">ದೈನಂದಿನ ಕಾನೂನು ಸಮಸ್ಯೆಗಳಿಗೆ ಸ್ಪಷ್ಟ, ಪ್ರಾಯೋಗಿಕ ಉತ್ತರಗಳನ್ನು ಪಡೆಯಿರಿ - FIR ದಾಖಲಿಸುವುದು, ಸೈಬರ್ ವಂಚನೆ, ಬಾಡಿಗೆದಾರರ ಹಕ್ಕುಗಳು, ಗ್ರಾಹಕ ದೂರುಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವು. ಯಾವಾಗ ಬೇಕಾದರೂ ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಲಭ್ಯವಿದೆ. ಗೊಂದಲದ ಪರಿಭಾಷೆ ಇಲ್ಲ. ಭಯವಿಲ್ಲ.</span>
           </p>
           
-          <!-- Stats Row -->
-          <div class="grid grid-cols-3 gap-6 mb-8">
-            <div>
-              <div class="text-3xl font-bold text-[#d4af37]">10K+</div>
+          <!-- Stats Row - Updated with New Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8 p-5 bg-slate-800/30 rounded-2xl border border-slate-700/30">
+            <!-- User Rating -->
+            <div class="text-center">
+              <div class="flex items-center justify-center gap-1 mb-1">
+                <div class="text-2xl sm:text-3xl font-bold text-[#d4af37]">4.8</div>
+                <i class="fas fa-star text-[#d4af37] text-sm"></i>
+              </div>
               <div class="text-xs text-slate-400">
-                <span class="lang-en">Users Helped</span>
-                <span class="lang-kn">ಸಹಾಯ ಮಾಡಿದ ಬಳಕೆದಾರರು</span>
+                <span class="lang-en">User Rating</span>
+                <span class="lang-kn">ಬಳಕೆದಾರರ ರೇಟಿಂಗ್</span>
               </div>
             </div>
-            <div>
-              <div class="text-3xl font-bold text-[#d4af37]">24hrs</div>
+            
+            <!-- Happy Users -->
+            <div class="text-center">
+              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">1000+</div>
               <div class="text-xs text-slate-400">
-                <span class="lang-en">Response Time</span>
-                <span class="lang-kn">ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯ</span>
+                <span class="lang-en">Happy Users</span>
+                <span class="lang-kn">ಸಂತೋಷದ ಬಳಕೆದಾರರು</span>
               </div>
             </div>
-            <div>
-              <div class="text-3xl font-bold text-[#d4af37]">
-                <span class="lang-en">Free</span>
-                <span class="lang-kn">ಉಚಿತ</span>
-              </div>
+            
+            <!-- Success Rate -->
+            <div class="text-center">
+              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">95%</div>
               <div class="text-xs text-slate-400">
-                <span class="lang-en">Basic Guidance</span>
-                <span class="lang-kn">ಮೂಲಭೂತ ಮಾರ್ಗದರ್ಶನ</span>
+                <span class="lang-en">Success Rate</span>
+                <span class="lang-kn">ಯಶಸ್ಸಿನ ದರ</span>
+              </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="text-center">
+              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">2+</div>
+              <div class="text-xs text-slate-400">
+                <span class="lang-en">Languages</span>
+                <span class="lang-kn">ಭಾಷೆಗಳು</span>
               </div>
             </div>
           </div>
           
           <!-- CTA Button -->
           <div class="flex flex-wrap items-center gap-4 mb-6">
-            <a href="https://wa.me/919632786767" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 justify-center rounded-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] px-6 py-3.5 text-base font-semibold text-slate-950 hover:scale-105 shadow-lg hover:shadow-xl transition-all">
-              <i class="fab fa-whatsapp text-lg"></i>
-              <span class="lang-en">Get Free 3-Minute Legal Help</span>
-              <span class="lang-kn">3 ನಿಮಿಷದ ಉಚಿತ ಕಾನೂನು ಸಹಾಯ ಪಡೆಯಿರಿ</span>
+            <a href="https://wa.me/919632786767" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 justify-center rounded-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] px-8 py-4 text-base font-bold text-slate-950 hover:scale-105 shadow-lg hover:shadow-xl transition-all">
+              <i class="fab fa-whatsapp text-xl"></i>
+              <span class="lang-en">Get Free Legal Help Now</span>
+              <span class="lang-kn">ಈಗ ಉಚಿತ ಸಹಾಯ ಪಡೆಯಿರಿ</span>
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-slate-700 px-8 py-4 text-base font-semibold text-slate-300 hover:bg-slate-800 hover:border-[#d4af37] transition-all">
+              <span class="lang-en">Explore Resources</span>
+              <span class="lang-kn">ಸಂಪನ್ಮೂಲಗಳನ್ನು ನೋಡಿ</span>
             </a>
           </div>
           
           <!-- Trust Indicators -->
-          <div class="flex items-center gap-6 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-slate-400">
             <div class="flex items-center gap-2">
               <i class="fas fa-check-circle text-green-400"></i>
-              <span class="lang-en">100% Free Basic Guidance</span>
-              <span class="lang-kn">100% ಉಚಿತ ಮೂಲಭೂತ ಮಾರ್ಗದರ್ಶನ</span>
+              <span class="lang-en">100% Free</span>
+              <span class="lang-kn">100% ಉಚಿತ</span>
             </div>
             <div class="flex items-center gap-2">
-              <i class="fas fa-lock text-blue-400"></i>
-              <span class="lang-en">Confidential</span>
-              <span class="lang-kn">ಗೌಪ್ಯ</span>
+              <i class="fas fa-shield-alt text-blue-400"></i>
+              <span class="font-semibold">
+                <span class="lang-en">100% Confidential</span>
+                <span class="lang-kn">100% ಗೌಪ್ಯ</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-language text-[#d4af37]"></i>
+              <span class="lang-en">Bilingual Support</span>
+              <span class="lang-kn">ದ್ವಿಭಾಷಾ ಬೆಂಬಲ</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-clock text-purple-400"></i>
+              <span class="lang-en">24/7 Available</span>
+              <span class="lang-kn">24/7 ಲಭ್ಯ</span>
             </div>
           </div>
         </div>
