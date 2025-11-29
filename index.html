@@ -12,81 +12,239 @@
 <body class="bg-slate-50">
 
   <!-- Header -->
-  <header class="bg-slate-950 text-white py-4 sticky top-0 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center">
-          <i class="fas fa-shield-alt text-slate-950 text-xl"></i>
+  <header class="bg-slate-950 text-white py-3 sticky top-0 z-50 shadow-xl border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      
+      <!-- Top Row: Logo + Language + WhatsApp -->
+      <div class="flex items-center justify-between mb-3">
+        <!-- Logo on Left -->
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+            <i class="fas fa-shield-alt text-slate-950 text-xl"></i>
+          </div>
+          <div>
+            <div class="font-bold text-xl">NyayaNow</div>
+            <div class="text-xs text-slate-400">Your Legal Companion</div>
+          </div>
+        </a>
+
+        <!-- Right Side: Language + WhatsApp + Mobile Menu -->
+        <div class="flex items-center gap-3">
+          <!-- Language Switcher (Desktop) -->
+          <div class="hidden sm:flex items-center gap-1 px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg">
+            <button onclick="switchLanguage('en')" class="px-2 py-1 text-sm font-semibold text-white hover:text-[#d4af37] transition">EN</button>
+            <span class="text-slate-600">|</span>
+            <button onclick="switchLanguage('kn')" class="px-2 py-1 text-sm hover:text-[#d4af37] transition">ಕನ್ನಡ</button>
+          </div>
+
+          <!-- WhatsApp Button (Desktop) - Green color -->
+          <a href="https://wa.me/919632786767?text=Hi%20NyayaNow,%20I%20need%20legal%20help" 
+             class="hidden sm:flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white rounded-lg text-sm font-bold hover:scale-105 transition-transform shadow-md">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>WhatsApp</span>
+          </a>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg border border-slate-700 hover:bg-slate-900 transition">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
         </div>
-        <div>
-          <div class="font-bold text-xl">NyayaNow</div>
-          <div class="text-xs text-slate-400">Laws Made Simple</div>
-        </div>
-      </a>
-      <div class="flex items-center gap-4">
-        <a href="/" class="hidden sm:block text-sm hover:text-[#d4af37] transition">Home</a>
-        <a href="/blog.html" class="hidden sm:block text-sm hover:text-[#d4af37] transition">Guides</a>
-        <button class="px-4 py-2 bg-[#d4af37] text-slate-950 rounded-lg text-sm font-bold hover:bg-[#e6c45a] transition">
-          <i class="fas fa-language mr-2"></i>ಕನ್ನಡ
-        </button>
+      </div>
+
+      <!-- Navigation Menu (Desktop) -->
+      <nav class="hidden lg:flex items-center justify-center gap-6 border-t border-slate-800 pt-3">
+        <a href="/" class="text-sm font-medium hover:text-[#d4af37] transition-colors">Home</a>
+        <a href="/about.html" class="text-sm font-medium hover:text-[#d4af37] transition-colors">About Us</a>
+        <a href="/#services" class="text-sm font-medium hover:text-[#d4af37] transition-colors">Services</a>
+        <a href="/#documents" class="text-sm font-medium hover:text-[#d4af37] transition-colors">Documents</a>
+        <a href="/#how-it-works" class="text-sm font-medium hover:text-[#d4af37] transition-colors">How It Works</a>
+        <a href="/#testimonials" class="text-sm font-medium hover:text-[#d4af37] transition-colors">Testimonials</a>
+        <a href="/#faq" class="text-sm font-medium hover:text-[#d4af37] transition-colors">FAQ</a>
+        <a href="/#contact" class="text-sm font-medium hover:text-[#d4af37] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-t border-slate-800 mt-3 rounded-lg overflow-hidden">
+        <nav class="flex flex-col">
+          <a href="/" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-home w-5 text-[#d4af37]"></i>
+            <span>Home</span>
+          </a>
+          <a href="/about.html" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-info-circle w-5 text-[#d4af37]"></i>
+            <span>About Us</span>
+          </a>
+          <a href="/#services" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-briefcase w-5 text-[#d4af37]"></i>
+            <span>Services</span>
+          </a>
+          <a href="/#documents" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-file-alt w-5 text-[#d4af37]"></i>
+            <span>Documents</span>
+          </a>
+          <a href="/#how-it-works" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-cogs w-5 text-[#d4af37]"></i>
+            <span>How It Works</span>
+          </a>
+          <a href="/#testimonials" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-star w-5 text-[#d4af37]"></i>
+            <span>Testimonials</span>
+          </a>
+          <a href="/#faq" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-question-circle w-5 text-[#d4af37]"></i>
+            <span>FAQ</span>
+          </a>
+          <a href="/#contact" class="px-4 py-3 hover:bg-slate-800 transition flex items-center gap-3 font-medium">
+            <i class="fas fa-envelope w-5 text-[#d4af37]"></i>
+            <span>Contact</span>
+          </a>
+          
+          <div class="border-t border-slate-800 my-2"></div>
+          
+          <!-- Mobile Language Switcher -->
+          <div class="px-4 py-3">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-language text-[#d4af37] text-xl w-5"></i>
+              <div class="flex items-center gap-2">
+                <button onclick="switchLanguage('en')" class="px-3 py-1 bg-slate-800 rounded text-sm font-semibold hover:bg-slate-700 transition">EN</button>
+                <button onclick="switchLanguage('kn')" class="px-3 py-1 bg-slate-800 rounded text-sm hover:bg-slate-700 transition">ಕನ್ನಡ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile WhatsApp Button - Green -->
+          <a href="https://wa.me/919632786767?text=Hi%20NyayaNow,%20I%20need%20legal%20help" 
+             class="mx-4 my-3 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white rounded-lg font-bold hover:scale-105 transition-transform">
+            <i class="fab fa-whatsapp text-xl"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </nav>
       </div>
     </div>
   </header>
 
+  <script>
+    // Mobile menu toggle with improved functionality
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuBtn && mobileMenu) {
+      // Toggle menu
+      menuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+
+      // Close menu when clicking a link
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Language switcher with bilingual alert
+    function switchLanguage(lang) {
+      if (lang === 'kn') {
+        alert('ಕನ್ನಡ ಆವೃತ್ತಿ ಶೀಘ್ರದಲ್ಲಿ ಬರಲಿದೆ!\nKannada version coming soon!');
+      }
+    }
+  </script>
+
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-slate-900 to-slate-950 text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <div class="inline-block mb-6 px-6 py-2 bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-full">
-        <span class="text-[#d4af37] text-sm font-semibold">📚 NEW FEATURE</span>
-      </div>
+  <section class="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white py-16 lg:py-24">
+    <div class="max-w-6xl mx-auto px-4 text-center">
       
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">
-        Laws Made <span class="text-[#d4af37]">Simple</span>
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+        Laws Made Simple
       </h1>
       
-      <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-        Understanding Indian laws shouldn't require a law degree. We break down complex legal acts into simple, practical guides you can actually use.
+      <!-- Tagline -->
+      <p class="text-xl sm:text-2xl md:text-3xl text-slate-300 mb-10 font-light">
+        Clear & Trusted Legal Guidance
+      </p>
+      
+      <!-- Audience Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10">
+        <div class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 border-2 border-blue-500/50 rounded-full">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-users text-blue-400 text-lg sm:text-xl"></i>
+            <span class="font-semibold text-sm sm:text-lg">Citizens</span>
+          </div>
+        </div>
+        
+        <div class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-500/20 to-purple-600/20 border-2 border-purple-500/50 rounded-full">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-graduation-cap text-purple-400 text-lg sm:text-xl"></i>
+            <span class="font-semibold text-sm sm:text-lg">Law Students</span>
+          </div>
+        </div>
+        
+        <div class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-amber-500/20 to-amber-600/20 border-2 border-amber-500/50 rounded-full">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-gavel text-amber-400 text-lg sm:text-xl"></i>
+            <span class="font-semibold text-sm sm:text-lg">Lawyers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-4xl mx-auto leading-relaxed">
+        Understanding Indian laws shouldn't require a law degree. We explain complex legal concepts in simple language, 
+        provide step-by-step guides, and offer free templates—all in English and Kannada. Whether you're protecting 
+        your consumer rights, filing an RTI, or understanding RERA, we make legal knowledge accessible to everyone.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
-        <div class="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700">
-          <i class="fas fa-language text-[#d4af37]"></i>
-          <span class="text-sm">English + Kannada</span>
-        </div>
-        <div class="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700">
-          <i class="fas fa-file-alt text-[#d4af37]"></i>
-          <span class="text-sm">Templates Included</span>
-        </div>
-        <div class="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700">
-          <i class="fas fa-video text-[#d4af37]"></i>
-          <span class="text-sm">Video Guides</span>
-        </div>
-        <div class="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700">
-          <i class="fas fa-gift text-[#d4af37]"></i>
-          <span class="text-sm">100% Free</span>
+      <!-- AI Chat Feature -->
+      <div class="max-w-2xl mx-auto mb-10">
+        <div class="bg-gradient-to-br from-[#d4af37]/10 to-[#f4d03f]/10 rounded-2xl p-6 sm:p-8 border-2 border-[#d4af37]/30 hover:border-[#d4af37]/50 transition">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-robot text-slate-950 text-xl"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-[#d4af37] text-center sm:text-left">AI-Powered Legal Assistant</h3>
+          </div>
+          <p class="text-slate-300 mb-6 text-sm sm:text-base">
+            Get instant answers to your legal questions 24/7 with our AI chat assistant. Ask in English or Kannada!
+          </p>
+          <button onclick="openAIChat()" class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-slate-950 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform shadow-lg">
+            <i class="fas fa-comments mr-2"></i>
+            Start AI Chat
+          </button>
         </div>
       </div>
 
-      <!-- Search Box -->
-      <div class="max-w-2xl mx-auto">
-        <div class="relative">
-          <input 
-            type="search" 
-            placeholder="Search laws, rights, or legal topics... (e.g., consumer rights, FIR, divorce)"
-            class="w-full px-6 py-4 pl-14 rounded-full bg-white text-slate-900 border-2 border-slate-700 focus:border-[#d4af37] focus:outline-none text-lg"
-          />
-          <i class="fas fa-search absolute left-5 top-1/2 transform -translate-y-1/2 text-slate-400 text-xl"></i>
-          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-[#d4af37] text-slate-950 rounded-full font-bold hover:bg-[#e6c45a] transition">
-            Search
-          </button>
-        </div>
-        <p class="text-xs text-slate-400 mt-3">
-          <i class="fas fa-lightbulb text-[#d4af37]"></i> 
-          Popular searches: Consumer Rights, Domestic Violence, RTI, Cyber Crime, Property Laws
-        </p>
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#categories" class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-slate-950 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform shadow-lg text-center">
+          <i class="fas fa-book-open mr-2"></i>
+          Explore Laws
+        </a>
+        <a href="https://wa.me/919632786767?text=Hi%20NyayaNow,%20I%20need%20legal%20help" class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-[#d4af37] text-white rounded-full font-bold text-base sm:text-lg hover:bg-[#d4af37]/10 transition text-center">
+          <i class="fab fa-whatsapp mr-2"></i>
+          Get Help Now
+        </a>
       </div>
+
     </div>
   </section>
+
+  <script>
+    function openAIChat() {
+      // Placeholder for AI chat functionality
+      alert('AI Chat feature coming soon! For now, please contact us via WhatsApp or email at info@nyayanow.com');
+      // Future: window.location.href = '/ai-chat.html';
+    }
+  </script>
 
   <!-- Our Approach -->
   <section class="py-16 bg-white">
@@ -827,7 +985,7 @@
           <i class="fab fa-whatsapp text-xl"></i>
           <span>Request on WhatsApp</span>
         </a>
-        <a href="/cdn-cgi/l/email-protection#244d4a424b644a5d455d454a4b530a474b49" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-950 rounded-full font-bold hover:bg-slate-100 transition">
+        <a href="/cdn-cgi/l/email-protection#dbb2b5bdb49bb5a2baa2bab5b4acf5b8b4b6" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-950 rounded-full font-bold hover:bg-slate-100 transition">
           <i class="fas fa-envelope"></i>
           <span>Email Us</span>
         </a>
@@ -893,6 +1051,4 @@
       <div class="mt-6 p-4 bg-slate-900/50 rounded-xl border border-slate-800">
         <p class="text-xs text-slate-500 text-center">
           <i class="fas fa-info-circle text-[#d4af37] mr-1"></i>
-          <strong>Disclaimer:</strong> NyayaNow provides simplified legal information for educational purposes. We are not a law firm. For legal advice specific to your case, please consult a qualified lawyer.
-        </p>
-      </div>
+          <strong>Disclaimer:</strong> NyayaNow provides simplified legal information for educational purposes. We are not a law firm. For legal advice specific to your case, please consult a qual
