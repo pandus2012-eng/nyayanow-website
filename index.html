@@ -2,25 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Citizen Services – NyayaNow</title>
-  <meta name="description" content="Simple, citizen-friendly legal services and guidance in plain language." />
-  <link rel="stylesheet" href="styles/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>NyayaNow – Simple & Trusted Legal Guidance</title>
+
+  <meta name="description" content="NyayaNow provides simple legal guidance for citizens, bilingual Supreme Court cases for law students, and practice-enhancing tools for lawyers.">
+
+  <!-- SEO -->
+  <meta property="og:title" content="NyayaNow – Simple & Trusted Legal Guidance" />
+  <meta property="og:description" content="Legal help for citizens, landmark case library for students, and professional tools for lawyers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/social/og-image.png" />
+  <meta property="og:url" content="https://nyayanow.com" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Manifest / PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#020617">
+
+  <!-- Icon -->
+  <link rel="icon" href="assets/icons/favicon.ico">
 </head>
+
 <body>
-  <header class="nn-header small">
+  <!-- HEADER -->
+  <header class="nn-header">
     <div class="nn-header-left">
       <a href="index.html" class="nn-brand-link">
         <img src="assets/logo.png" class="nn-logo" alt="NyayaNow logo" />
         <div>
           <div class="nn-brand">NyayaNow</div>
-          <p class="nn-tagline">Simple Legal Help for Citizens</p>
+          <p class="nn-tagline">Citizens · Students · Lawyers</p>
         </div>
       </a>
     </div>
+
     <nav class="nn-nav">
-      <a href="index.html">Home</a>
-      <a href="services.html" class="active">Citizens</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Citizens</a>
       <a href="students.html">Students</a>
       <a href="lawyers.html">Lawyers</a>
       <a href="legal-updates.html">Legal Updates</a>
@@ -29,99 +52,159 @@
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main class="nn-main">
-    <section class="nn-hero nn-hero--mini">
-      <h1>Citizen Legal Services</h1>
-      <p>
-        Not a lawyer? No problem. Tell us your situation in simple words. We help
-        you understand your options, documents and next steps.
-      </p>
+
+    <!-- HERO -->
+    <section class="nn-hero">
+      <div class="nn-hero-inner">
+        <h1>Clear & Trusted Legal Guidance<br>for Everyone.</h1>
+        <p>
+          Whether you’re a citizen with a legal concern, a law student preparing
+          for exams, or a lawyer building your practice – NyayaNow offers
+          bilingual cases, expert tools, and simple explanations.
+        </p>
+
+        <div class="nn-hero-actions">
+          <a href="services.html" class="nn-btn primary">For Citizens</a>
+          <a href="students.html" class="nn-btn ghost">For Students</a>
+          <a href="lawyers.html" class="nn-btn ghost">For Lawyers</a>
+        </div>
+
+        <div class="nn-hero-meta">
+          <span>📘 Landmark Cases (EN + ಕನ್ನಡ)</span>
+          <span>⚖️ Verified Lawyers</span>
+          <span>🧾 Simple Legal Guides</span>
+        </div>
+      </div>
     </section>
 
+    <!-- 3-AUDIENCE GRID -->
     <section class="nn-grid">
+
+      <!-- Citizens -->
       <article class="nn-card">
-        <h3>Common Legal Issues</h3>
-        <p class="nn-small">Choose the category that matches your problem:</p>
+        <h3>For Citizens</h3>
+        <p>Easy-to-understand explanations of your rights and options.</p>
         <ul class="nn-bullets">
-          <li>Family & Marriage (divorce, maintenance, custody)</li>
-          <li>Property & Land (sale, partition, registration)</li>
-          <li>Job / Salary / Workplace issues</li>
-          <li>Police / FIR / Criminal complaint</li>
-          <li>Neighbour, Society & Local issues</li>
+          <li>Family, property, job, police issues</li>
+          <li>Step-by-step legal guidance</li>
+          <li>Optional lawyer connection</li>
         </ul>
+        <a href="services.html" class="nn-link">Explore Citizen Services →</a>
       </article>
 
+      <!-- Students -->
       <article class="nn-card">
-        <h3>What You Get</h3>
-        <p class="nn-small">Our goal is clarity – not confusion.</p>
+        <h3>For Law Students</h3>
+        <p>Bilingual landmark case library designed like exam answers.</p>
         <ul class="nn-bullets">
-          <li>Basic legal position explained in simple language</li>
-          <li>List of possible options and remedies</li>
-          <li>Documents you may need to collect</li>
-          <li>When you really need a lawyer – and when you don’t</li>
+          <li>50 landmark Supreme Court cases</li>
+          <li>English + ಕನ್ನಡ explanations</li>
+          <li>Search by Article / issue / year</li>
         </ul>
+        <a href="students.html" class="nn-link">Open Students Library →</a>
       </article>
 
+      <!-- Lawyers -->
       <article class="nn-card">
-        <h3>Connect with Lawyer (Optional)</h3>
+        <h3>For Lawyers</h3>
+        <p>Grow your digital presence and get genuine client leads.</p>
+        <ul class="nn-bullets">
+          <li>Panel listing</li>
+          <li>Client enquiries</li>
+          <li>Case notes & legal updates</li>
+        </ul>
+        <a href="lawyers.html" class="nn-link">Lawyer Tools →</a>
+      </article>
+
+    </section>
+
+    <!-- FEATURE STRIP -->
+    <section class="nn-strip">
+      <div class="nn-strip-block">
+        <h3>Legal Updates</h3>
+        <p>Short, simple explanations of important new judgments & laws.</p>
+        <a href="legal-updates.html" class="nn-btn small">View Updates</a>
+      </div>
+      <div class="nn-strip-block">
+        <h3>Landmark Case Library</h3>
+        <p>Exam-ready case briefs with facts, issues, judgment & ratio.</p>
+        <a href="students.html" class="nn-btn small ghost">Browse Cases</a>
+      </div>
+    </section>
+
+    <!-- TRIPLE VALUE -->
+    <section class="nn-grid small">
+
+      <article class="nn-card">
+        <h3>Citizens</h3>
         <p class="nn-small">
-          Once you understand your situation, you may choose to connect with a
-          verified lawyer from our panel.
+          Get clarity, not confusion. We explain law in simple English/Kannada.
         </p>
         <ul class="nn-bullets">
-          <li>No forced paid call – you decide</li>
-          <li>We match based on location and subject</li>
-          <li>Transparent, upfront fee discussion</li>
+          <li>Guidance before taking action</li>
+          <li>Know your rights & steps</li>
+          <li>Connected to verified lawyers only when needed</li>
         </ul>
       </article>
+
+      <article class="nn-card">
+        <h3>Students</h3>
+        <p class="nn-small">Structured, bilingual case briefs for exams and viva.</p>
+        <ul class="nn-bullets">
+          <li>Landmark judgments</li>
+          <li>Smart search tools</li>
+          <li>Generate your own casebook</li>
+        </ul>
+      </article>
+
+      <article class="nn-card">
+        <h3>Lawyers</h3>
+        <p class="nn-small">
+          Build visibility, get relevant leads, and publish legal insights.
+        </p>
+        <ul class="nn-bullets">
+          <li>Client enquiry system</li>
+          <li>Panel verification</li>
+          <li>Blog & case commentary</li>
+        </ul>
+      </article>
+
     </section>
 
-    <section class="nn-case nn-section" id="citizen-form">
-      <h2>Submit Your Legal Query</h2>
-      <p class="nn-text-soft">
-        Share only what you are comfortable sharing. Avoid sharing bank OTP,
-        passwords or very sensitive details here.
-      </p>
-      <form class="nn-form">
-        <label class="nn-label">
-          Your Name
-          <input type="text" class="nn-input" placeholder="Optional" />
-        </label>
-        <label class="nn-label">
-          Mobile / Email
-          <input type="text" class="nn-input" placeholder="For follow-up reply" />
-        </label>
-        <label class="nn-label">
-          City / District
-          <input type="text" class="nn-input" placeholder="e.g., Bengaluru, Mysuru" />
-        </label>
-        <label class="nn-label">
-          Category
-          <select class="nn-select">
-            <option>Family / Marriage</option>
-            <option>Property / Land</option>
-            <option>Job / Salary</option>
-            <option>Police / FIR</option>
-            <option>Other</option>
-          </select>
-        </label>
-        <label class="nn-label">
-          Describe Your Issue
-          <textarea class="nn-textarea" rows="5" placeholder="Explain in your own words..."></textarea>
-        </label>
-        <button type="submit" class="nn-btn primary">Submit Query</button>
-      </form>
-      <p class="nn-small nn-text-soft">
-        Note: This is not a lawyer-client relationship. This platform gives
-        general guidance. For specific advice, please speak to a lawyer.
-      </p>
+    <!-- FINAL CTA -->
+    <section class="nn-hero nn-hero--mini">
+      <h2>Start Your Journey</h2>
+      <p>Choose your path. You can switch anytime.</p>
+
+      <div class="nn-hero-actions">
+        <a href="services.html" class="nn-btn primary">I'm a Citizen</a>
+        <a href="students.html" class="nn-btn ghost">I'm a Student</a>
+        <a href="lawyers.html" class="nn-btn ghost">I'm a Lawyer</a>
+      </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="nn-footer">
-    <p>© <span id="year"></span> NyayaNow. All rights reserved.</p>
+    <p>© <span id="year"></span> NyayaNow.</p>
+    <p class="nn-footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms & Conditions</a> ·
+      <a href="disclaimer.html">Disclaimer</a> ·
+      <a href="refund.html">Refund Policy</a> ·
+      <a href="contact.html">Contact</a>
+    </p>
   </footer>
 
+  <!-- JavaScript -->
   <script src="scripts/main.js"></script>
+  <script src="scripts/pwa.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
