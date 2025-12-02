@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Students Library – NyayaNow</title>
+  <title>disclaimer – NyayaNow</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
     <nav class="nn-nav">
       <a href="index.html">Home</a>
       <a href="services.html">Citizens</a>
-      <a href="students.html" class="active">Students</a>
+      <a href="students.html">Students</a>
       <a href="lawyers.html">Lawyers</a>
       <a href="legal-updates.html">Legal Updates</a>
       <a href="blog.html">Blog</a>
@@ -26,23 +26,22 @@
   </header>
 
   <main class="nn-main">
-    <section class="nn-toolbar">
-      <h1>Students Case Library</h1>
-      <div class="nn-toolbar-right">
-        <input id="searchInput" class="nn-input" placeholder="Search by case / article / topic…" />
-        <select id="categoryFilter" class="nn-select">
-          <option value="">All categories</option>
-          <option value="Constitutional">Constitutional</option>
-          <option value="Criminal">Criminal</option>
-          <option value="Civil">Civil / Family</option>
-          <option value="Social Justice">Social Justice</option>
-          <option value="Reservation">Reservation</option>
-        </select>
-      </div>
-    </section>
-
-    <section id="caseList" class="nn-list">
-      <!-- Filled by scripts/search.js -->
+    <section class="nn-case">
+      <h1>Disclaimer</h1>
+      <p class="nn-text-soft">
+        Below is the English outline. You can paste your detailed bilingual
+        (English + Kannada) policy here.
+      </p>
+      <h2>1. Information We Collect</h2>
+      <p>Explain what data is collected (name, contact, query, analytics etc.).</p>
+      <h2>2. How We Use Your Information</h2>
+      <p>Explain purpose: respond to queries, improve services, analytics.</p>
+      <h2>3. Data Sharing</h2>
+      <p>Explain if/when data is shared with panel lawyers, third parties etc.</p>
+      <h2>4. Data Security</h2>
+      <p>Short statement on how you protect user information.</p>
+      <h2>5. Contact</h2>
+      <p>Give an email ID / contact for privacy-related questions.</p>
     </section>
   </main>
 
@@ -51,6 +50,5 @@
   </footer>
 
   <script src="scripts/main.js"></script>
-  <script src="scripts/search.js"></script>
 </body>
 </html>

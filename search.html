@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Students Library – NyayaNow</title>
+  <title>Search Cases – NyayaNow</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
     <nav class="nn-nav">
       <a href="index.html">Home</a>
       <a href="services.html">Citizens</a>
-      <a href="students.html" class="active">Students</a>
+      <a href="students.html">Students</a>
       <a href="lawyers.html">Lawyers</a>
       <a href="legal-updates.html">Legal Updates</a>
       <a href="blog.html">Blog</a>
@@ -27,22 +27,13 @@
 
   <main class="nn-main">
     <section class="nn-toolbar">
-      <h1>Students Case Library</h1>
+      <h1>Search Landmark Cases</h1>
       <div class="nn-toolbar-right">
-        <input id="searchInput" class="nn-input" placeholder="Search by case / article / topic…" />
-        <select id="categoryFilter" class="nn-select">
-          <option value="">All categories</option>
-          <option value="Constitutional">Constitutional</option>
-          <option value="Criminal">Criminal</option>
-          <option value="Civil">Civil / Family</option>
-          <option value="Social Justice">Social Justice</option>
-          <option value="Reservation">Reservation</option>
-        </select>
+        <input id="searchInput" class="nn-input" placeholder="Search by case name, article, topic…" />
       </div>
     </section>
-
     <section id="caseList" class="nn-list">
-      <!-- Filled by scripts/search.js -->
+      <!-- reuse scripts/search.js -->
     </section>
   </main>
 

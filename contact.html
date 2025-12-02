@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – NyayaNow</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="nn-header small">
+    <div class="nn-header-left">
+      <a href="index.html" class="nn-brand-link">
+        <img src="assets/logo.png" class="nn-logo" alt="NyayaNow logo" />
+        <span class="nn-brand">NyayaNow</span>
+      </a>
+    </div>
+    <nav class="nn-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Citizens</a>
+      <a href="students.html">Students</a>
+      <a href="lawyers.html">Lawyers</a>
+      <a href="legal-updates.html">Legal Updates</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="nn-main">
+    <section class="nn-case">
+      <h1>Contact Us</h1>
+      <p class="nn-text-soft">
+        For general queries, feedback or collaboration requests, use the form
+        below. For legal queries, please use the Citizen Services page.
+      </p>
+      <form class="nn-form">
+        <label class="nn-label">
+          Name
+          <input type="text" class="nn-input" />
+        </label>
+        <label class="nn-label">
+          Email
+          <input type="email" class="nn-input" />
+        </label>
+        <label class="nn-label">
+          Subject
+          <input type="text" class="nn-input" />
+        </label>
+        <label class="nn-label">
+          Message
+          <textarea class="nn-textarea" rows="5"></textarea>
+        </label>
+        <button type="submit" class="nn-btn primary">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="nn-footer">
+    <p>© <span id="year"></span> NyayaNow.</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
