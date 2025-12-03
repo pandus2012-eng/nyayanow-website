@@ -135,6 +135,126 @@
   }
 }
 </script>
+<!-- BILINGUAL LANGUAGE TOGGLE SYSTEM -->
+<script>
+  // Language toggle functionality
+  function toggleLanguage(lang) {
+    // Store preference
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Hide all language variants
+    document.querySelectorAll('.lang-en, .lang-kn').forEach(el => {
+      el.style.display = 'none';
+    });
+    
+    // Show selected language
+    if (lang === 'en') {
+      document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = 'inline';
+      });
+      document.getElementById('btn-en').classList.add('active-lang');
+      document.getElementById('btn-kn').classList.remove('active-lang');
+    } else {
+      document.querySelectorAll('.lang-kn').forEach(el => {
+        el.style.display = 'inline';
+      });
+      document.getElementById('btn-kn').classList.add('active-lang');
+      document.getElementById('btn-en').classList.remove('active-lang');
+    }
+  }
+  
+  // Load saved preference on page load
+  window.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    toggleLanguage(savedLang);
+  });
+  
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+</script>
+
+<style>
+  /* Language toggle button styles */
+  .lang-toggle-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .active-lang {
+    background: #d4af37 !important;
+    color: #0f172a !important;
+  }
+  
+  /* Hide inactive language by default */
+  .lang-kn {
+    display: none;
+  }
+</style>
+<!-- BILINGUAL LANGUAGE SYSTEM -->
+<script>
+  function toggleLanguage(lang) {
+    localStorage.setItem('preferredLanguage', lang);
+    document.querySelectorAll('.lang-en, .lang-kn').forEach(el => {
+      el.style.display = 'none';
+    });
+    if (lang === 'en') {
+      document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = 'inline';
+      });
+      document.getElementById('btn-en').classList.add('active-lang');
+      document.getElementById('btn-kn').classList.remove('active-lang');
+    } else {
+      document.querySelectorAll('.lang-kn').forEach(el => {
+        el.style.display = 'inline';
+      });
+      document.getElementById('btn-kn').classList.add('active-lang');
+      document.getElementById('btn-en').classList.remove('active-lang');
+    }
+  }
+  
+  window.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    toggleLanguage(savedLang);
+  });
+  
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+</script>
+
+<style>
+  .lang-toggle-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .active-lang {
+    background: #d4af37 !important;
+    color: #0f172a !important;
+  }
+  
+  .lang-kn {
+    display: none;
+  }
+</style>
+
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -396,84 +516,99 @@
 <body class="bg-slate-50 text-slate-900 antialiased">
   
   <!-- PERFECT HEADER/NAVBAR -->
-  <header class="bg-slate-950 text-slate-50 sticky top-0 z-50 shadow-xl border-b border-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between py-4">
+  <!-- UNIVERSAL HEADER - Use on ALL pages -->
+<header class="bg-slate-950 text-slate-50 sticky top-0 z-50 shadow-xl border-b border-slate-800/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
+      
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
+        <div class="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-xl flex items-center justify-center shadow-lg">
+          <i class="fas fa-balance-scale text-slate-950 text-xl"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-extrabold">NyayaNow</h1>
+          <p class="text-xs text-slate-400">
+            <span class="lang-en">Clear & Trusted Legal Guidance</span>
+            <span class="lang-kn">ಸ್ಪಷ್ಟ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
+          </p>
+        </div>
+      </a>
+      
+      <!-- Right Side: Language Toggle + Back Home + Menu -->
+      <div class="flex items-center gap-3">
         
-        <!-- LEFT: Logo + Brand -->
-        <a href="/" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center flex-shrink-0 shadow-lg border-2 border-[#d4af37]/30">
-            <i class="fas fa-shield-alt text-slate-950 text-xl"></i>
-          </div>
-          <div>
-            <div class="text-xl font-extrabold tracking-tight text-white">NyayaNow</div>
-          </div>
-        </a>
-
-        <!-- CENTER: Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
-          <a href="/" class="text-slate-300 hover:text-[#d4af37] transition-colors font-semibold">
-            <span class="lang-en">Home</span>
-            <span class="lang-kn">ಮುಖಪುಟ</span>
-          </a>
-          <a href="/about.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">About</span>
-            <span class="lang-kn">ನಮ್ಮ ಬಗ್ಗೆ</span>
-          </a>
-          <!-- Services Dropdown -->
-<div class="relative group">
-  <button class="text-slate-300 hover:text-[#d4af37] transition-colors text-sm font-medium flex items-center gap-1">
-    <span class="lang-en">Services</span>
-    <span class="lang-kn">ಸೇವೆಗಳು</span>
-    <i class="fas fa-chevron-down text-xs"></i>
-  </button>
-  <div class="absolute hidden group-hover:block bg-slate-900 border border-slate-800 rounded-lg mt-2 py-2 min-w-[220px] shadow-xl z-50">
-    <a href="/services.html" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition">
-      <span class="lang-en">All Services</span>
-      <span class="lang-kn">ಎಲ್ಲಾ ಸೇವೆಗಳು</span>
-    </a>
-    <a href="/students.html" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition">
-      <span class="lang-en">For Students</span>
-      <span class="lang-kn">ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ</span>
-    </a>
-    <a href="/lawyers.html" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition">
-      <span class="lang-en">For Lawyers</span>
-      <span class="lang-kn">ವಕೀಲರಿಗೆ</span>
-    </a>
-  </div>
-</div>
-          <a href="/legal-updates.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Legal Updates</span>
-            <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು</span>
-          </a>
-          <a href="#templates" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Resources</span>
-            <span class="lang-kn">ಸಂಪನ್ಮೂಲಗಳು</span>
-          </a>
-          <a href="#contact" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Contact</span>
-            <span class="lang-kn">ಸಂಪರ್ಕ</span>
-          </a>
-        </nav>
-
-        <!-- RIGHT: Language Toggle + WhatsApp -->
-        <div class="flex items-center gap-3">
-          <div class="flex items-center gap-1 bg-slate-800/60 rounded-lg p-1 border border-slate-700/50">
-            <button id="langEN" class="lang-btn px-4 py-2 rounded-md text-xs font-bold transition-all duration-200 active-lang" onclick="switchLanguage('en')">EN</button>
-            <button id="langKN" class="lang-btn px-4 py-2 rounded-md text-xs font-bold transition-all duration-200" onclick="switchLanguage('kn')">ಕನ್ನಡ</button>
-          </div>
-          <a href="https://wa.me/919632786767?text=Hello%20NyayaNow!%20I%20need%20legal%20help." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 justify-center rounded-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-[#d4af37]/30 hover:shadow-[#d4af37]/50 hover:scale-105 transition-all duration-200">
-            <i class="fab fa-whatsapp text-lg"></i>
-            <span class="lang-en">WhatsApp Us</span>
-            <span class="lang-kn">WhatsApp ಮಾಡಿ</span>
-          </a>
-          <button id="mobileMenuBtn" class="lg:hidden p-2.5 hover:bg-slate-800/80 rounded-lg transition-colors" aria-label="Open menu">
-            <i class="fas fa-bars text-xl"></i>
+        <!-- Language Toggle -->
+        <div class="flex bg-slate-900 rounded-full p-1 border border-slate-800">
+          <button 
+            id="btn-en"
+            onclick="toggleLanguage('en')" 
+            class="lang-toggle-btn px-4 py-2 rounded-full text-sm bg-slate-800 text-slate-300 active-lang">
+            EN
+          </button>
+          <button 
+            id="btn-kn"
+            onclick="toggleLanguage('kn')" 
+            class="lang-toggle-btn px-4 py-2 rounded-full text-sm bg-slate-800 text-slate-300">
+            ಕನ್ನಡ
           </button>
         </div>
+        
+        <!-- Back to Home Button (Desktop) -->
+        <a href="/" class="hidden md:flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-[#d4af37] text-slate-300 hover:text-slate-950 rounded-full font-semibold transition-all group">
+          <i class="fas fa-home group-hover:scale-110 transition-transform"></i>
+          <span class="lang-en">Back to Home</span>
+          <span class="lang-kn">ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ</span>
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button 
+          onclick="toggleMobileMenu()" 
+          class="md:hidden p-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+        
       </div>
+      
     </div>
-  </header>
+  </div>
+  
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+    <div class="px-4 py-3 space-y-2">
+      
+      <!-- Back to Home - Mobile -->
+      <a href="/" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-lg transition">
+        <i class="fas fa-home w-5 text-[#d4af37]"></i>
+        <span class="lang-en font-semibold">Back to Home</span>
+        <span class="lang-kn font-semibold">ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ</span>
+      </a>
+      
+      <!-- All Services -->
+      <a href="/services.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 rounded-lg transition">
+        <i class="fas fa-briefcase w-5 text-[#d4af37]"></i>
+        <span class="lang-en">All Services</span>
+        <span class="lang-kn">ಎಲ್ಲಾ ಸೇವೆಗಳು</span>
+      </a>
+      
+      <!-- Contact -->
+      <a href="https://wa.me/919632786767" class="flex items-center gap-3 px-4 py-3 bg-[#d4af37] text-slate-950 font-bold rounded-lg hover:bg-[#f4d03f] transition">
+        <i class="fas fa-phone w-5"></i>
+        <span class="lang-en">Contact Us</span>
+        <span class="lang-kn">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</span>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+</script>
 
   <!-- Mobile Menu Overlay -->
   <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden" onclick="closeMobileMenuFunc()"></div>
