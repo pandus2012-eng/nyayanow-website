@@ -420,10 +420,28 @@
             <span class="lang-en">About</span>
             <span class="lang-kn">ನಮ್ಮ ಬಗ್ಗೆ</span>
           </a>
-          <a href="/services.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Services</span>
-            <span class="lang-kn">ಸೇವೆಗಳು</span>
-          </a>
+          <!-- Services Dropdown -->
+<div class="relative group">
+  <button class="text-slate-300 hover:text-[#d4af37] transition-colors text-sm font-medium flex items-center gap-1">
+    <span class="lang-en">Services</span>
+    <span class="lang-kn">ಸೇವೆಗಳು</span>
+    <i class="fas fa-chevron-down text-xs"></i>
+  </button>
+  <div class="absolute hidden group-hover:block bg-slate-900 border border-slate-800 rounded-lg mt-2 py-2 min-w-[220px] shadow-xl z-50">
+    <a href="/services.html" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition">
+      <span class="lang-en">All Services</span>
+      <span class="lang-kn">ಎಲ್ಲಾ ಸೇವೆಗಳು</span>
+    </a>
+    <a href="/students.html" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition">
+      <span class="lang-en">For Students</span>
+      <span class="lang-kn">ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ</span>
+    </a>
+    <a href="/lawyers.html" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition">
+      <span class="lang-en">For Lawyers</span>
+      <span class="lang-kn">ವಕೀಲರಿಗೆ</span>
+    </a>
+  </div>
+</div>
           <a href="/legal-updates.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
             <span class="lang-en">Legal Updates</span>
             <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು</span>
@@ -465,6 +483,23 @@
     <button id="closeMobileMenu" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-800 text-slate-300 hover:text-[#d4af37] transition-all" aria-label="Close menu">
       <i class="fas fa-times text-2xl"></i>
     </button>
+    <!-- For Students -->
+<a href="/students.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800/80 hover:text-[#d4af37] rounded-lg transition-all">
+  <i class="fas fa-graduation-cap w-5"></i>
+  <div class="flex flex-col">
+    <span class="lang-en">For Students</span>
+    <span class="lang-kn text-xs">ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ</span>
+  </div>
+</a>
+
+<!-- For Lawyers -->
+<a href="/lawyers.html" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800/80 hover:text-[#d4af37] rounded-lg transition-all">
+  <i class="fas fa-balance-scale w-5"></i>
+  <div class="flex flex-col">
+    <span class="lang-en">For Lawyers</span>
+    <span class="lang-kn text-xs">ವಕೀಲರಿಗೆ</span>
+  </div>
+</a>
     <div class="flex items-center gap-3 mb-8 pb-6 border-b border-slate-800/80">
       <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center shadow-lg border-2 border-[#d4af37]/30">
         <i class="fas fa-shield-alt text-slate-950 text-xl"></i>
