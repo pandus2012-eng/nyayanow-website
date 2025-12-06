@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocates Registration - NyayaNow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-white to-slate-50">
+
+    <div class="min-h-screen py-12 px-4">
+        <div class="max-w-3xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
+                    <i class="fas fa-gift"></i>
+                    <span>FREE for 6 Months - Then Optional Paid</span>
+                </div>
+                <h1 class="text-4xl font-extrabold text-slate-900 mb-2">
+                    Advocates Registration
+                </h1>
+                <p class="text-lg text-slate-600">
+                    Join 50+ advocates expanding their practice and network
+                </p>
+            </div>
+
+            <!-- Benefits Box -->
+            <div class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-8 mb-8 text-white">
+                <h3 class="text-xl font-bold mb-4">What You Get (FREE for 6 months):</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-2xl"></i>
+                        <div>
+                            <strong>Professional Profile</strong>
+                            <p class="text-sm opacity-90">Online directory listing</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-2xl"></i>
+                        <div>
+                            <strong>Client Referrals</strong>
+                            <p class="text-sm opacity-90">Pre-screened inquiries</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-2xl"></i>
+                        <div>
+                            <strong>Legal Updates</strong>
+                            <p class="text-sm opacity-90">Case law & notifications</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-2xl"></i>
+                        <div>
+                            <strong>Networking Platform</strong>
+                            <p class="text-sm opacity-90">Connect with peers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <form id="advocatesForm" class="space-y-6">
+                    
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Full Name <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="Enter your full name"
+                        >
+                    </div>
+
+                    <!-- Bar Council Registration -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Bar Council Registration Number <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="bar_council_reg" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="e.g., KAR/1234/2020"
+                        >
+                    </div>
+
+                    <!-- Bar Council State -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Bar Council State <span class="text-red-500">*</span>
+                        </label>
+                        <select 
+                            name="bar_council_state" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                        >
+                            <option value="">Select Bar Council</option>
+                            <option value="Bar Council of Karnataka">Bar Council of Karnataka</option>
+                            <option value="Bar Council of Maharashtra">Bar Council of Maharashtra</option>
+                            <option value="Bar Council of Tamil Nadu">Bar Council of Tamil Nadu</option>
+                            <option value="Bar Council of Delhi">Bar Council of Delhi</option>
+                            <option value="Bar Council of Kerala">Bar Council of Kerala</option>
+                            <option value="Bar Council of Andhra Pradesh">Bar Council of Andhra Pradesh</option>
+                            <option value="Bar Council of Telangana">Bar Council of Telangana</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Years of Practice -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Years of Practice <span class="text-red-500">*</span>
+                        </label>
+                        <select 
+                            name="years_practice" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                        >
+                            <option value="">Select years</option>
+                            <option value="0-2 years">0-2 years</option>
+                            <option value="3-5 years">3-5 years</option>
+                            <option value="6-10 years">6-10 years</option>
+                            <option value="11-15 years">11-15 years</option>
+                            <option value="16-20 years">16-20 years</option>
+                            <option value="20+ years">20+ years</option>
+                        </select>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Phone Number <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            required
+                            pattern="[0-9]{10}"
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="10-digit mobile number"
+                        >
+                        <p class="text-xs text-slate-500 mt-1">For client inquiry notifications</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Email Address <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="your.email@example.com"
+                        >
+                    </div>
+
+                    <!-- Office Address -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Office Address <span class="text-red-500">*</span>
+                        </label>
+                        <textarea 
+                            name="office_address" 
+                            required
+                            rows="2"
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="Your office/chamber address"
+                        ></textarea>
+                    </div>
+
+                    <!-- City -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            City <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="city" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="Your city"
+                        >
+                    </div>
+
+                    <!-- Courts Practice -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Courts Where You Practice <span class="text-red-500">*</span> <span class="text-xs text-slate-500">(Select all that apply)</span>
+                        </label>
+                        <div class="grid md:grid-cols-2 gap-3 bg-slate-50 p-4 rounded-lg">
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="Supreme Court" class="w-4 h-4">
+                                <span class="text-sm">Supreme Court</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="High Court" class="w-4 h-4">
+                                <span class="text-sm">High Court</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="District Court" class="w-4 h-4">
+                                <span class="text-sm">District Court</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="Sessions Court" class="w-4 h-4">
+                                <span class="text-sm">Sessions Court</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="Family Court" class="w-4 h-4">
+                                <span class="text-sm">Family Court</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="Consumer Court" class="w-4 h-4">
+                                <span class="text-sm">Consumer Court</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="Tribunal" class="w-4 h-4">
+                                <span class="text-sm">Tribunals</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="courts" value="Other" class="w-4 h-4">
+                                <span class="text-sm">Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Practice Areas -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Practice Areas <span class="text-red-500">*</span> <span class="text-xs text-slate-500">(Select all that apply)</span>
+                        </label>
+                        <div class="grid md:grid-cols-2 gap-3 bg-slate-50 p-4 rounded-lg max-h-64 overflow-y-auto">
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Criminal Law" class="w-4 h-4">
+                                <span class="text-sm">Criminal Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Civil Law" class="w-4 h-4">
+                                <span class="text-sm">Civil Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Family Law" class="w-4 h-4">
+                                <span class="text-sm">Family Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Corporate Law" class="w-4 h-4">
+                                <span class="text-sm">Corporate Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Property Law" class="w-4 h-4">
+                                <span class="text-sm">Property Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Consumer Protection" class="w-4 h-4">
+                                <span class="text-sm">Consumer Protection</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Cyber Law" class="w-4 h-4">
+                                <span class="text-sm">Cyber Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Tax Law" class="w-4 h-4">
+                                <span class="text-sm">Tax Law</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="IPR" class="w-4 h-4">
+                                <span class="text-sm">IPR</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" name="practice_areas" value="Labour Law" class="w-4 h-4">
+                                <span class="text-sm">Labour Law</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Languages You Speak <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            name="languages" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="e.g., English, Kannada, Hindi"
+                        >
+                    </div>
+
+                    <!-- Client Referral Interest -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Interested in Client Referrals? <span class="text-red-500">*</span>
+                        </label>
+                        <div class="flex gap-4">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="referral_interest" value="Yes" required class="w-4 h-4 text-purple-600">
+                                <span>Yes, send me inquiries</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="referral_interest" value="No" required class="w-4 h-4 text-purple-600">
+                                <span>No, just networking</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Professional Bio -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">
+                            Professional Bio (Optional)
+                        </label>
+                        <textarea 
+                            name="bio" 
+                            rows="3"
+                            maxlength="500"
+                            class="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-purple-500 focus:outline-none transition"
+                            placeholder="Brief description of your practice (max 500 characters)"
+                        ></textarea>
+                        <p class="text-xs text-slate-500 mt-1">This will be displayed on your profile</p>
+                    </div>
+
+                    <!-- Important Notice -->
+                    <div class="bg-purple-50 border-2 border-purple-200 rounded-lg p-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-info-circle text-purple-600 text-xl mt-1"></i>
+                            <div class="text-sm text-slate-700">
+                                <strong class="text-purple-900">Important:</strong> NyayaNow does NOT charge any commission on cases. 
+                                You deal directly with clients. We only facilitate connections. After 6 months, optional listing fees apply 
+                                (₹5,000/year basic or ₹10,000/year featured).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="bg-slate-50 rounded-lg p-4">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" name="terms" required class="mt-1 w-5 h-5 text-purple-600">
+                            <span class="text-sm text-slate-700">
+                                I confirm that I am a registered advocate with a valid Bar Council certificate. 
+                                I understand that NyayaNow will verify my credentials before activating my profile. 
+                                I agree to respond to client inquiries professionally and comply with Bar Council rules.
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit"
+                        class="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                        <i class="fas fa-balance-scale mr-2"></i>
+                        Register - Get Listed FREE for 6 Months
+                    </button>
+
+                    <!-- Privacy Note -->
+                    <p class="text-xs text-center text-slate-500">
+                        🔒 Your information will be verified and kept confidential. Profile goes live after verification (1-2 days).
+                    </p>
+
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="hidden">
+                    <div class="text-center py-8">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check-circle text-green-600 text-4xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">
+                            Application Received! ⚖️
+                        </h2>
+                        <p class="text-lg text-slate-600 mb-6">
+                            Thank you for joining NyayaNow!
+                        </p>
+                        <div class="bg-purple-50 rounded-lg p-6 mb-6 text-left">
+                            <h3 class="font-bold text-slate-900 mb-3">WHAT'S NEXT:</h3>
+                            <ul class="space-y-2 text-slate-700">
+                                <li>✅ We'll verify your Bar Council registration (1-2 days)</li>
+                                <li>✅ You'll receive confirmation email once verified</li>
+                                <li>✅ Your profile will be created and listed</li>
+                                <li>✅ Start receiving client inquiries on WhatsApp</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4 text-sm text-left">
+                            <strong>⚖️ Expected Inquiries:</strong> Based on your practice areas and location, 
+                            you can expect 2-7 client inquiries per month with ~30% conversion rate.
+                        </div>
+                        <a href="https://nyayanow.com" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3 rounded-lg transition">
+                            Back to NyayaNow →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="mt-8 text-center text-sm text-slate-600">
+                <p class="mb-2">⚖️ Verified Advocates Only | 🚫 Zero Commission | 💼 50+ Lawyers Listed | 🎁 FREE for 6 Months</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        document.getElementById('advocatesForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Handle multiple checkboxes
+            const courts = [];
+            const practiceAreas = [];
+            
+            formData.getAll('courts').forEach(val => courts.push(val));
+            formData.getAll('practice_areas').forEach(val => practiceAreas.push(val));
+            
+            // Convert form data to object
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'courts' && key !== 'practice_areas') {
+                    data[key] = value;
+                }
+            }
+            data.courts = courts.join(', ');
+            data.practice_areas = practiceAreas.join(', ');
+            
+            // Replace with your email
+            const formSubmitURL = 'https://formsubmit.co/info@nyayanow.com';
+            
+            try {
+                const button = this.querySelector('button[type="submit"]');
+                button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...';
+                button.disabled = true;
+                
+                await fetch(formSubmitURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                document.getElementById('advocatesForm').style.display = 'none';
+                document.getElementById('successMessage').classList.remove('hidden');
+                
+            } catch (error) {
+                document.getElementById('advocatesForm').style.display = 'none';
+                document.getElementById('successMessage').classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
