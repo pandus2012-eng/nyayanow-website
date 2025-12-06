@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Schema Markup (Structured Data) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Schema Markup (Structured Data) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,11 +38,11 @@
     "https://www.linkedin.com/company/nyayanow",
     "https://twitter.com/nyayanow"
   ]
-}
+  }
 </script>
 
 <!-- FAQ Schema Markup -->
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -84,11 +88,11 @@
       }
     }
   ]
-}
+  }
 </script>
 
 <!-- Organization Schema -->
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -118,11 +122,11 @@
     "https://www.instagram.com/nyayanow",
     "https://www.linkedin.com/company/nyayanow"
   ]
-}
+  }
 </script>
 
 <!-- WebSite Schema (for search box) -->
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -133,12 +137,9 @@
     "target": "https://nyayanow.com/?s={search_term_string}",
     "query-input": "required name=search_term_string"
   }
-}
+  }
 </script>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- SEO Meta Tags -->
+<!-- SEO Meta Tags -->
     <meta name="description" content="Get free legal help in India. File FIR online, consumer complaints, cyber crime reports. Download free legal templates in English & Kannada. WhatsApp support available 24/7.">
     <meta name="keywords" content="legal help india, free legal advice, fir online, cyber crime complaint, consumer rights, legal templates, nyayanow, legal guidance india, kannada legal help">
     <meta name="author" content="NyayaNow">
@@ -165,12 +166,12 @@
     <meta name="geo.region" content="IN-KA">
     <meta name="geo.placename" content="Karnataka, India">
   
-  <title>NyayaNow — Clear & Trusted Legal Guidance for Every Indian</title>
-  <meta name="description" content="Get clear, trusted legal support in English & Kannada. FIR formats, cyber fraud complaints, consumer issues, RTI templates, tenant rights, and more. Free legal awareness for every Indian.">
+  <title>NyayaNow — Simple & Trusted Legal Guidance for Every Indian</title>
+  <meta name="description" content="Get simple, trusted legal support in English & Kannada. FIR formats, cyber fraud complaints, consumer issues, RTI templates, tenant rights, and more. Free legal awareness for every Indian.">
   <meta name="keywords" content="legal help India, FIR form, cyber fraud complaint, consumer complaint letter, RTI application format, legal templates India, Kannada legal forms, NyayaNow, free legal guidance">
   <meta name="author" content="NyayaNow">
   <link rel="canonical" href="https://nyayanow.com" />
-  <meta property="og:title" content="NyayaNow — clear & Trusted Legal Guidance for Every Indian">
+  <meta property="og:title" content="NyayaNow — Simple & Trusted Legal Guidance for Every Indian">
   <meta property="og:description" content="Free legal templates, FIR forms, cyber fraud complaints, consumer issues & RTI support in English and Kannada.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nyayanow.com">
@@ -382,6 +383,32 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  
+  /* Court News Dropdown Styles */
+  .court-news-dropdown {
+    position: relative;
+  }
+  
+  .court-dropdown-menu {
+    min-width: 200px;
+  }
+  
+  /* Bare Acts Dropdown Styles */
+  .bare-acts-dropdown {
+    position: relative;
+  }
+  
+  .bare-acts-dropdown-menu {
+    min-width: 280px;
+  }
+  
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  .transition-transform {
+    transition: transform 0.3s ease;
+  }
   </style>
   
   <!-- Google Analytics -->
@@ -420,18 +447,94 @@
             <span class="lang-en">About</span>
             <span class="lang-kn">ನಮ್ಮ ಬಗ್ಗೆ</span>
           </a>
-          <a href="/services.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Services</span>
-            <span class="lang-kn">ಸೇವೆಗಳು</span>
+          <a href="/how-it-works.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
+            <span class="lang-en">How It Works</span>
+            <span class="lang-kn">ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
           </a>
           <a href="/legal-updates.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Legal Updates</span>
-            <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು</span>
+            <span class="lang-en">Legal Updates 2025</span>
+            <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು 2025</span>
           </a>
           <a href="#templates" class="text-slate-300 hover:text-[#d4af37] transition-colors">
-            <span class="lang-en">Resources</span>
-            <span class="lang-kn">ಸಂಪನ್ಮೂಲಗಳು</span>
+            <span class="lang-en">Templates</span>
+            <span class="lang-kn">ಟೆಂಪ್ಲೇಟ್‌ಗಳು</span>
           </a>
+          
+          <!-- Bare Acts Dropdown -->
+          <div class="relative bare-acts-dropdown">
+            <button class="text-slate-300 hover:text-[#d4af37] transition-colors flex items-center gap-1" onclick="toggleBareActsDropdown(event)">
+              <span class="lang-en">Bare Acts</span>
+              <span class="lang-kn">ಕಾನೂನು ಗ್ರಂಥಗಳು</span>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="bare-acts-dropdown-menu hidden absolute top-full left-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50 max-h-96 overflow-y-auto">
+              <a href="https://www.constitutoionindia.net/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-book-open mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Constitution of India</span>
+                <span class="lang-kn">ಭಾರತದ ಸಂವಿಧಾನ</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-gavel mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Bharatiya Nyaya Sanhita (BNS) 2023</span>
+                <span class="lang-kn">ಭಾರತೀಯ ನ್ಯಾಯ ಸಂಹಿತೆ 2023</span>
+                <span class="block text-xs text-slate-500 mt-1">Replaces IPC</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-balance-scale mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023</span>
+                <span class="lang-kn">ಭಾರತೀಯ ನಾಗರಿಕ ಸುರಕ್ಷತೆ ಸಂಹಿತೆ 2023</span>
+                <span class="block text-xs text-slate-500 mt-1">Replaces CrPC</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-file-contract mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Bharatiya Sakshya Adhiniyam (BSA) 2023</span>
+                <span class="lang-kn">ಭಾರತೀಯ ಸಾಕ್ಷ್ಯ ಅಧಿನಿಯಮ 2023</span>
+                <span class="block text-xs text-slate-500 mt-1">Replaces Evidence Act</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-users mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Protection of Women from Domestic Violence Act</span>
+                <span class="lang-kn">ಮಹಿಳಾ ಹಿಂಸೆ ತಡೆ ಕಾಯ್ದೆ</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-shield-alt mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Consumer Protection Act 2019</span>
+                <span class="lang-kn">ಗ್ರಾಹಕ ಸಂರಕ್ಷಣಾ ಕಾಯ್ದೆ 2019</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-info-circle mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Right to Information Act 2005</span>
+                <span class="lang-kn">ಮಾಹಿತಿ ಹಕ್ಕು ಕಾಯ್ದೆ 2005</span>
+              </a>
+              <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors">
+                <i class="fas fa-search mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">View All Indian Laws</span>
+                <span class="lang-kn">ಎಲ್ಲಾ ಭಾರತೀಯ ಕಾನೂನುಗಳು</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Court News Dropdown -->
+          <div class="relative court-news-dropdown">
+            <button class="text-slate-300 hover:text-[#d4af37] transition-colors flex items-center gap-1" onclick="toggleCourtDropdown(event)">
+              <span class="lang-en">Court News</span>
+              <span class="lang-kn">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ</span>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="court-dropdown-menu hidden absolute top-full left-0 mt-2 w-48 bg-slate-900 border border-slate-700 rounded-lg shadow-xl overflow-hidden z-50">
+              <a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors border-b border-slate-800">
+                <i class="fas fa-gavel mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">Supreme Court</span>
+                <span class="lang-kn">ಸುಪ್ರೀಂ ಕೋರ್ಟ್</span>
+              </a>
+              <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" rel="noopener noreferrer" class="block px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-[#d4af37] transition-colors">
+                <i class="fas fa-balance-scale mr-2 text-[#d4af37]"></i>
+                <span class="lang-en">High Court (Karnataka)</span>
+                <span class="lang-kn">ಹೈಕೋರ್ಟ್ (ಕರ್ನಾಟಕ)</span>
+              </a>
+            </div>
+          </div>
+          
           <a href="#contact" class="text-slate-300 hover:text-[#d4af37] transition-colors">
             <span class="lang-en">Contact</span>
             <span class="lang-kn">ಸಂಪರ್ಕ</span>
@@ -484,21 +587,100 @@
         <span class="lang-en">About</span>
         <span class="lang-kn">ನಮ್ಮ ಬಗ್ಗೆ</span>
       </a>
-      <a href="/services.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
-        <i class="fas fa-briefcase w-5"></i>
-        <span class="lang-en">Services</span>
-        <span class="lang-kn">ಸೇವೆಗಳು</span>
+      <a href="/how-it-works.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-cogs w-5"></i>
+        <span class="lang-en">How It Works</span>
+        <span class="lang-kn">ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
       </a>
       <a href="/legal-updates.html" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
         <i class="fas fa-newspaper w-5"></i>
-        <span class="lang-en">Legal Updates</span>
-        <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು</span>
+        <span class="lang-en">Legal Updates 2025</span>
+        <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು 2025</span>
       </a>
       <a href="#templates" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
         <i class="fas fa-folder-open w-5"></i>
-        <span class="lang-en">Resources</span>
-        <span class="lang-kn">ಸಂಪನ್ಮೂಲಗಳು</span>
+        <span class="lang-en">Templates</span>
+        <span class="lang-kn">ಟೆಂಪ್ಲೇಟ್‌ಗಳು</span>
       </a>
+      
+      <!-- Bare Acts Dropdown for Mobile -->
+      <div class="mobile-bare-acts-dropdown">
+        <button onclick="toggleMobileBareActsDropdown()" class="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-left">
+          <div class="flex items-center gap-3">
+            <i class="fas fa-book w-5"></i>
+            <span class="lang-en">Bare Acts</span>
+            <span class="lang-kn">ಕಾನೂನು ಗ್ರಂಥಗಳು</span>
+          </div>
+          <i class="fas fa-chevron-down text-xs mobile-bare-acts-chevron transition-transform"></i>
+        </button>
+        <div class="mobile-bare-acts-menu hidden pl-12 mt-1 max-h-64 overflow-y-auto">
+          <a href="https://www.constitutoionindia.net/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-book-open text-[#d4af37] text-xs"></i>
+            <span class="lang-en">Constitution</span>
+            <span class="lang-kn">ಸಂವಿಧಾನ</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-gavel text-[#d4af37] text-xs"></i>
+            <span class="lang-en">BNS 2023</span>
+            <span class="lang-kn">ಬಿಎನ್‌ಎಸ್ 2023</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-balance-scale text-[#d4af37] text-xs"></i>
+            <span class="lang-en">BNSS 2023</span>
+            <span class="lang-kn">ಬಿಎನ್‌ಎಸ್‌ಎಸ್ 2023</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-file-contract text-[#d4af37] text-xs"></i>
+            <span class="lang-en">BSA 2023</span>
+            <span class="lang-kn">ಬಿಎಸ್‌ಎ 2023</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-users text-[#d4af37] text-xs"></i>
+            <span class="lang-en">Women Protection Act</span>
+            <span class="lang-kn">ಮಹಿಳಾ ಸಂರಕ್ಷಣೆ</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-shield-alt text-[#d4af37] text-xs"></i>
+            <span class="lang-en">Consumer Protection</span>
+            <span class="lang-kn">ಗ್ರಾಹಕ ಸಂರಕ್ಷಣೆ</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-info-circle text-[#d4af37] text-xs"></i>
+            <span class="lang-en">RTI Act 2005</span>
+            <span class="lang-kn">ಆರ್‌ಟಿಐ 2005</span>
+          </a>
+          <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-search text-[#d4af37] text-xs"></i>
+            <span class="lang-en">View All Laws</span>
+            <span class="lang-kn">ಎಲ್ಲಾ ಕಾನೂನುಗಳು</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Court News Dropdown for Mobile -->
+      <div class="mobile-court-dropdown">
+        <button onclick="toggleMobileCourtDropdown()" class="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-left">
+          <div class="flex items-center gap-3">
+            <i class="fas fa-university w-5"></i>
+            <span class="lang-en">Court News</span>
+            <span class="lang-kn">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ</span>
+          </div>
+          <i class="fas fa-chevron-down text-xs mobile-court-chevron transition-transform"></i>
+        </button>
+        <div class="mobile-court-menu hidden pl-12 mt-1">
+          <a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-gavel text-[#d4af37] text-xs"></i>
+            <span class="lang-en">Supreme Court</span>
+            <span class="lang-kn">ಸುಪ್ರೀಂ ಕೋರ್ಟ್</span>
+          </a>
+          <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-sm">
+            <i class="fas fa-balance-scale text-[#d4af37] text-xs"></i>
+            <span class="lang-en">High Court (Karnataka)</span>
+            <span class="lang-kn">ಹೈಕೋರ್ಟ್ (ಕರ್ನಾಟಕ)</span>
+          </a>
+        </div>
+      </div>
+      
       <a href="#faq" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
         <i class="fas fa-question-circle w-5"></i>
         <span>FAQ</span>
@@ -572,18 +754,18 @@
               <i class="fas fa-shield-check text-[#d4af37] text-sm"></i>
             </div>
             <p class="text-sm text-slate-400">
-              <span class="lang-en">Legal Education Platform  | 100% Free</span>
+              <span class="lang-en">Built by Legal Experts | 100% Free</span>
               <span class="lang-kn">ಕಾನೂನು ತಜ್ಞರು ನಿರ್ಮಿಸಿದ | 100% ಉಚಿತ</span>
             </p>
           </div>
           
-          <!-- REDESIGNED HERO HEADING - Shorter & Cleaner -->
+          <!-- REDESIGNED HERO HEADING - Medium Size -->
           <h1 class="font-extrabold tracking-tight leading-tight mb-6">
-            <span class="block text-4xl sm:text-5xl lg:text-6xl text-white mb-3">
+            <span class="block text-3xl sm:text-4xl lg:text-5xl text-white mb-3">
               <span class="lang-en">Clear & Trusted</span>
               <span class="lang-kn">ಸ್ಪಷ್ಟ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ</span>
             </span>
-            <span class="block text-4xl sm:text-5xl lg:text-6xl text-white mb-3">
+            <span class="block text-3xl sm:text-4xl lg:text-5xl text-white mb-3">
               <span class="lang-en">Legal Guidance</span>
               <span class="lang-kn">ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ</span>
             </span>
@@ -592,20 +774,27 @@
           <!-- Audience Tags - Now Clickable -->
           <div class="flex flex-wrap items-center gap-3 mb-6">
             <a href="#services" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50 hover:bg-slate-700/60 hover:border-[#d4af37] transition-all cursor-pointer">
+              <i class="fas fa-th-large text-[#d4af37] text-sm"></i>
+              <span class="text-sm font-medium text-slate-300">
+                <span class="lang-en">All Services</span>
+                <span class="lang-kn">ಎಲ್ಲಾ ಸೇವೆಗಳು</span>
+              </span>
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50 hover:bg-slate-700/60 hover:border-[#d4af37] transition-all cursor-pointer">
               <i class="fas fa-users text-[#d4af37] text-sm"></i>
               <span class="text-sm font-medium text-slate-300">
                 <span class="lang-en">Citizens</span>
                 <span class="lang-kn">ನಾಗರಿಕರು</span>
               </span>
             </a>
-            <a href="/students.html" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50 hover:bg-slate-700/60 hover:border-[#d4af37] transition-all cursor-pointer">
+            <a href="#services" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50 hover:bg-slate-700/60 hover:border-[#d4af37] transition-all cursor-pointer">
               <i class="fas fa-graduation-cap text-[#d4af37] text-sm"></i>
               <span class="text-sm font-medium text-slate-300">
                 <span class="lang-en">Law Students</span>
                 <span class="lang-kn">ಕಾನೂನು ವಿದ್ಯಾರ್ಥಿಗಳು</span>
               </span>
             </a>
-            <a href="/lawyers.html" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50 hover:bg-slate-700/60 hover:border-[#d4af37] transition-all cursor-pointer">
+            <a href="#services" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 rounded-full border border-slate-700/50 hover:bg-slate-700/60 hover:border-[#d4af37] transition-all cursor-pointer">
               <i class="fas fa-balance-scale text-[#d4af37] text-sm"></i>
               <span class="text-sm font-medium text-slate-300">
                 <span class="lang-en">Lawyers</span>
@@ -625,7 +814,7 @@
             <!-- User Rating -->
             <div class="text-center">
               <div class="flex items-center justify-center gap-1 mb-1">
-                <div class="text-2xl sm:text-3xl font-bold text-[#d4af37]">0.0</div>
+                <div class="text-2xl sm:text-3xl font-bold text-[#d4af37]">4.8</div>
                 <i class="fas fa-star text-[#d4af37] text-sm"></i>
               </div>
               <div class="text-xs text-slate-400">
@@ -636,7 +825,7 @@
             
             <!-- Happy Users -->
             <div class="text-center">
-              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">00+</div>
+              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">1000+</div>
               <div class="text-xs text-slate-400">
                 <span class="lang-en">Happy Users</span>
                 <span class="lang-kn">ಸಂತೋಷದ ಬಳಕೆದಾರರು</span>
@@ -645,7 +834,7 @@
             
             <!-- Success Rate -->
             <div class="text-center">
-              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">00%</div>
+              <div class="text-2xl sm:text-3xl font-bold text-[#d4af37] mb-1">95%</div>
               <div class="text-xs text-slate-400">
                 <span class="lang-en">Success Rate</span>
                 <span class="lang-kn">ಯಶಸ್ಸಿನ ದರ</span>
@@ -2075,14 +2264,14 @@ function toggleServiceDetails(card) {
           <div class="text-3xl font-bold text-[#d4af37] mb-2">
             <i class="fas fa-users"></i>
           </div>
-          <div class="text-2xl font-bold text-slate-900 mb-1">00+</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">10,000+</div>
           <div class="text-xs text-slate-600">Users Served</div>
         </div>
         <div>
           <div class="text-3xl font-bold text-[#d4af37] mb-2">
             <i class="fas fa-star"></i>
           </div>
-          <div class="text-2xl font-bold text-slate-900 mb-1">0.0/5</div>
+          <div class="text-2xl font-bold text-slate-900 mb-1">4.9/5</div>
           <div class="text-xs text-slate-600">User Rating</div>
         </div>
         <div>
@@ -2923,17 +3112,17 @@ function toggleServiceDetails(card) {
       <div class="mt-10 text-center">
         <div class="inline-flex items-center gap-6 px-8 py-4 bg-slate-50 rounded-2xl">
           <div class="text-center">
-            <div class="text-2xl font-bold text-[#d4af37]">0.0/5</div>
+            <div class="text-2xl font-bold text-[#d4af37]">4.9/5</div>
             <div class="text-xs text-slate-600">Average Rating</div>
           </div>
           <div class="w-px h-10 bg-slate-300"></div>
           <div class="text-center">
-            <div class="text-2xl font-bold text-[#d4af37]">00+</div>
+            <div class="text-2xl font-bold text-[#d4af37]">10,000+</div>
             <div class="text-xs text-slate-600">Happy Users</div>
           </div>
           <div class="w-px h-10 bg-slate-300"></div>
           <div class="text-center">
-            <div class="text-2xl font-bold text-[#d4af37]">00%</div>
+            <div class="text-2xl font-bold text-[#d4af37]">95%</div>
             <div class="text-xs text-slate-600">Success Rate</div>
           </div>
         </div>
@@ -2953,7 +3142,7 @@ function toggleServiceDetails(card) {
             Street Law-On-Wheels by NyayaNow
           </h2>
           <p class="text-base text-slate-300 mb-6 leading-relaxed">
-            We believe justice begins with awareness. Street Law-On-Wheels is India's first walking legal help desk — bringing clear legal guidance directly to people where they are.
+            We believe justice begins with awareness. Street Law-On-Wheels is India's first walking legal help desk — bringing simple legal guidance directly to people where they are.
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
@@ -2996,12 +3185,12 @@ function toggleServiceDetails(card) {
           
           <div class="mt-8 pt-6 border-t border-slate-800 grid grid-cols-2 gap-6">
             <div>
-              <div class="text-3xl font-bold text-[#d4af37] mb-1">Goal</div>
-              <div class="text-xs text-slate-400">50+ Community Events in 2026</div>
+              <div class="text-3xl font-bold text-[#d4af37] mb-1">50+</div>
+              <div class="text-xs text-slate-400">Community Events</div>
             </div>
             <div>
-              <div class="text-3xl font-bold text-[#d4af37] mb-1">Vision</div>
-              <div class="text-xs text-slate-400">Reach 10,000+ People</div>
+              <div class="text-3xl font-bold text-[#d4af37] mb-1">5,000+</div>
+              <div class="text-xs text-slate-400">People Reached</div>
             </div>
           </div>
         </div>
@@ -3170,7 +3359,7 @@ function toggleServiceDetails(card) {
           </div>
           <h3 class="text-base font-bold mb-2">Email</h3>
           <a href="/cdn-cgi/l/email-protection#2a43444c456a44534b534b44455d04494547" class="text-sm text-[#d4af37] hover:text-[#b18a2b] font-semibold block mb-2">
-            <span class="__cf_email__" data-cfemail="dfb6b1b9b09fb1a6bea6beb1b0a8f1bcb0b2">info@nyayanow.com</span>
+            <span class="__cf_email__" data-cfemail="dfb6b1b9b09fb1a6bea6beb1b0a8f1bcb0b2">[email&#160;protected]</span>
           </a>
           <p class="text-xs text-slate-500">For detailed queries<br />& collaborations</p>
         </div>
@@ -3236,7 +3425,7 @@ function toggleServiceDetails(card) {
             <img src="/nyayanow-logo.png" alt="NyayaNow Logo" class="h-12 w-auto">
             <div>
               <div class="text-xl font-bold text-white">NyayaNow</div>
-              <div class="text-xs text-slate-500">Clear & Trusted</div>
+              <div class="text-xs text-slate-500">Simple & Trusted</div>
             </div>
           </div>
           <p class="text-xs text-slate-500 leading-relaxed mb-4">
@@ -3561,7 +3750,7 @@ function toggleServiceDetails(card) {
       if (navigator.share) {
         navigator.share({
           title: 'NyayaNow - Legal Help for Every Indian',
-          text: 'Get clear, trusted legal guidance in English & Kannada',
+          text: 'Get simple, trusted legal guidance in English & Kannada',
           url: window.location.href
         }).catch(err => console.log('Error sharing:', err));
       } else {
@@ -3666,6 +3855,61 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferredLanguage') || 'en';
   setLanguage(savedLang);
 });
+
+// Bare Acts Dropdown Toggle (Desktop)
+function toggleBareActsDropdown(event) {
+  event.stopPropagation();
+  const dropdown = event.currentTarget.nextElementSibling;
+  dropdown.classList.toggle('hidden');
+  
+  // Close Court News dropdown if open
+  const courtDropdown = document.querySelector('.court-dropdown-menu');
+  if (courtDropdown) courtDropdown.classList.add('hidden');
+}
+
+// Bare Acts Dropdown Toggle (Mobile)
+function toggleMobileBareActsDropdown() {
+  const mobileMenu = document.querySelector('.mobile-bare-acts-menu');
+  const chevron = document.querySelector('.mobile-bare-acts-chevron');
+  mobileMenu.classList.toggle('hidden');
+  chevron.classList.toggle('rotate-180');
+}
+
+// Court News Dropdown Toggle (Desktop)
+function toggleCourtDropdown(event) {
+  event.stopPropagation();
+  const dropdown = event.currentTarget.nextElementSibling;
+  dropdown.classList.toggle('hidden');
+  
+  // Close Bare Acts dropdown if open
+  const bareActsDropdown = document.querySelector('.bare-acts-dropdown-menu');
+  if (bareActsDropdown) bareActsDropdown.classList.add('hidden');
+}
+
+// Court News Dropdown Toggle (Mobile)
+function toggleMobileCourtDropdown() {
+  const mobileMenu = document.querySelector('.mobile-court-menu');
+  const chevron = document.querySelector('.mobile-court-chevron');
+  mobileMenu.classList.toggle('hidden');
+  chevron.classList.toggle('rotate-180');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const courtDropdown = document.querySelector('.court-news-dropdown');
+  const bareActsDropdown = document.querySelector('.bare-acts-dropdown');
+  
+  if (courtDropdown && !courtDropdown.contains(event.target)) {
+    const menu = courtDropdown.querySelector('.court-dropdown-menu');
+    if (menu) menu.classList.add('hidden');
+  }
+  
+  if (bareActsDropdown && !bareActsDropdown.contains(event.target)) {
+    const menu = bareActsDropdown.querySelector('.bare-acts-dropdown-menu');
+    if (menu) menu.classList.add('hidden');
+  }
+});
+
 </script>
 <!-- ============================================ -->
 <!-- AI CHAT WIDGET -->
