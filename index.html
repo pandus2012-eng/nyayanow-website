@@ -562,7 +562,7 @@
   <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden" onclick="closeMobileMenuFunc()"></div>
 
   <!-- Mobile Menu Panel -->
-  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-950 text-slate-50 z-50 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+  <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-950 text-slate-50 z-50 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
     <button id="closeMobileMenu" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-800 text-slate-300 hover:text-[#d4af37] transition-all" aria-label="Close menu">
       <i class="fas fa-times text-2xl"></i>
     </button>
@@ -1546,37 +1546,60 @@ If you named them differently, update the href links above!
       document.getElementById('scrollIndicator').style.width = scrolled + '%';
     });
 
-    // Mobile Menu Toggle
+   // Mobile Menu Toggle - FIXED VERSION
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const closeMobileMenuBtnElement = document.getElementById('closeMobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeMobileMenu.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+    // Function to close mobile menu (called from onclick in HTML)
+    function closeMobileMenuFunc() {
+      if (mobileMenu) {
+        mobileMenu.classList.remove('active');
+      }
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
+      }
       document.body.style.overflow = 'auto';
-    });
+    }
+
+    // Open mobile menu
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        if (mobileMenu) {
+          mobileMenu.classList.add('active');
+        }
+        if (mobileMenuOverlay) {
+          mobileMenuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        }
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    // Close button
+    if (closeMobileMenuBtnElement) {
+      closeMobileMenuBtnElement.addEventListener('click', () => {
+        closeMobileMenuFunc();
+      });
+    }
 
     // Close mobile menu when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
+    if (mobileMenu) {
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          setTimeout(() => {
+            closeMobileMenuFunc();
+          }, 300);
+        });
       });
-    });
+    }
 
-    // Close mobile menu when clicking outside
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
+    // ESC key to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
+        closeMobileMenuFunc();
       }
     });
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
