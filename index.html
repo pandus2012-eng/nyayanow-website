@@ -600,12 +600,97 @@
         <span class="lang-en">Templates</span>
         <span class="lang-kn">ಟೆಂಪ್ಲೇಟ್‌ಗಳು</span>
       </a>
-      <a href="#contact" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
-        <i class="fas fa-envelope w-5"></i>
-        <span class="lang-en">Contact</span>
-        <span class="lang-kn">ಸಂಪರ್ಕ</span>
+      <div>
+    <button onclick="toggleMobileBareActsDropdown()" class="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-left">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-book-open w-5"></i>
+        <span class="lang-en">Bare Acts</span>
+        <span class="lang-kn">ಕಾನೂನು ಗ್ರಂಥಗಳು</span>
+      </div>
+      <i class="fas fa-chevron-down mobile-bare-acts-chevron transition-transform text-xs"></i>
+    </button>
+    
+    <div class="mobile-bare-acts-menu hidden pl-8 mt-1">
+      <a href="https://www.constitutoionindia.net/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-book-open text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Constitution of India</span>
+        <span class="lang-kn">ಭಾರತದ ಸಂವಿಧಾನ</span>
       </a>
-    </nav>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-gavel text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Bharatiya Nyaya Sanhita 2023</span>
+        <span class="lang-kn">ಭಾರತೀಯ ನ್ಯಾಯ ಸಂಹಿತೆ 2023</span>
+      </a>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-balance-scale text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Bharatiya Nagarik Suraksha Sanhita 2023</span>
+        <span class="lang-kn">ಭಾರತೀಯ ನಾಗರಿಕ ಸುರಕ್ಷತೆ ಸಂಹಿತೆ 2023</span>
+      </a>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-file-contract text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Bharatiya Sakshya Adhiniyam 2023</span>
+        <span class="lang-kn">ಭಾರತೀಯ ಸಾಕ್ಷ್ಯ ಅಧಿನಿಯಮ 2023</span>
+      </a>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-users text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Women Protection Act</span>
+        <span class="lang-kn">ಮಹಿಳಾ ಹಿಂಸೆ ತಡೆ ಕಾಯ್ದೆ</span>
+      </a>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-shield-alt text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Consumer Protection Act 2019</span>
+        <span class="lang-kn">ಗ್ರಾಹಕ ಸಂರಕ್ಷಣಾ ಕಾಯ್ದೆ 2019</span>
+      </a>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-info-circle text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Right to Information Act 2005</span>
+        <span class="lang-kn">ಮಾಹಿತಿ ಹಕ್ಕು ಕಾಯ್ದೆ 2005</span>
+      </a>
+      
+      <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-search text-[#d4af37] text-xs"></i>
+        <span class="lang-en">View All Indian Laws</span>
+        <span class="lang-kn">ಎಲ್ಲಾ ಭಾರತೀಯ ಕಾನೂನುಗಳು</span>
+      </a>
+    </div>
+  </div>
+      <div>
+    <button onclick="toggleMobileCourtDropdown()" class="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all text-left">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-landmark w-5"></i>
+        <span class="lang-en">Court News</span>
+        <span class="lang-kn">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ</span>
+      </div>
+      <i class="fas fa-chevron-down mobile-court-chevron transition-transform text-xs"></i>
+    </button>
+    
+    <div class="mobile-court-menu hidden pl-8 mt-1">
+      <a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-gavel text-[#d4af37] text-xs"></i>
+        <span class="lang-en">Supreme Court</span>
+        <span class="lang-kn">ಸುಪ್ರೀಂ ಕೋರ್ಟ್</span>
+      </a>
+      
+      <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-400 hover:text-[#d4af37] transition-all">
+        <i class="fas fa-balance-scale text-[#d4af37] text-xs"></i>
+        <span class="lang-en">High Court (Karnataka)</span>
+        <span class="lang-kn">ಹೈಕೋರ್ಟ್ (ಕರ್ನಾಟಕ)</span>
+      </a>
+    </div>
+  </div>
+  
+  <a href="#contact" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800/80 hover:text-[#d4af37] transition-all">
+    <i class="fas fa-envelope w-5"></i>
+    <span class="lang-en">Contact</span>
+    <span class="lang-kn">ಸಂಪರ್ಕ</span>
+  </a>
+</nav>
     <div class="mb-6">
       <div class="text-xs text-slate-400 mb-3 uppercase tracking-wider font-semibold px-4">
         <span class="lang-en">Choose Language</span>
@@ -1554,6 +1639,23 @@ If you named them differently, update the href links above!
 
     // Function to close mobile menu (called from onclick in HTML)
     function closeMobileMenuFunc() {
+      function toggleMobileBareActsDropdown() {
+  const mobileMenu = document.querySelector('.mobile-bare-acts-menu');
+  const chevron = document.querySelector('.mobile-bare-acts-chevron');
+  if (mobileMenu && chevron) {
+    mobileMenu.classList.toggle('hidden');
+    chevron.classList.toggle('rotate-180');
+  }
+}
+
+function toggleMobileCourtDropdown() {
+  const mobileMenu = document.querySelector('.mobile-court-menu');
+  const chevron = document.querySelector('.mobile-court-chevron');
+  if (mobileMenu && chevron) {
+    mobileMenu.classList.toggle('hidden');
+    chevron.classList.toggle('rotate-180');
+  }
+}
       if (mobileMenu) {
         mobileMenu.classList.remove('active');
       }
