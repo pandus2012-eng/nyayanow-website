@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>NyayaNow | Legal Help Karnataka</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body { font-family: Arial, sans-serif; }
-    .kn { display: none; } /* Kannada hidden by default */
+    .kn { display: none; }
+    section { scroll-margin-top: 90px; }
+
+    @media(min-width:768px){
+      .sticky-mobile{display:none;}
+    }
   </style>
 </head>
 
@@ -21,7 +27,18 @@
 
     <h1 class="text-xl font-extrabold text-[#d4af37]">NyayaNow ⚖️</h1>
 
-    <!-- Language Toggle Button -->
+    <nav class="hidden lg:flex gap-6 text-sm text-slate-300">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#how">How</a>
+      <a href="#lawyers">Advocates</a>
+      <a href="#booking">Booking</a>
+      <a href="#apply">Apply</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Toggle -->
     <button onclick="toggleLang()"
       class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
       ಕನ್ನಡ / English
@@ -30,27 +47,26 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
+<section id="home"
+  class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
 
-  <!-- English -->
   <div class="en">
     <h2 class="text-4xl font-extrabold mb-6">
       Affordable Legal Guidance in Karnataka ⚖️
     </h2>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-      Connect with verified advocates via WhatsApp. Legal guidance starts at
+      Connect with verified advocates via WhatsApp. Guidance starts at
       <span class="text-[#d4af37] font-bold">₹99</span>.
     </p>
   </div>
 
-  <!-- Kannada -->
   <div class="kn">
     <h2 class="text-4xl font-extrabold mb-6">
       ಕರ್ನಾಟಕದಲ್ಲಿ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ ⚖️
     </h2>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-      WhatsApp ಮೂಲಕ ಪರಿಶೀಲಿತ ವಕೀಲರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ.
-      ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ <span class="text-[#d4af37] font-bold">₹99</span> ರಿಂದ ಆರಂಭ.
+      WhatsApp ಮೂಲಕ ಪರಿಶೀಲಿತ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+      ಮಾರ್ಗದರ್ಶನ <span class="text-[#d4af37] font-bold">₹99</span> ರಿಂದ ಆರಂಭ.
     </p>
   </div>
 
@@ -61,7 +77,7 @@
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section class="py-20 bg-white text-center">
+<section id="services" class="py-20 bg-white text-center">
   <h3 class="text-3xl font-extrabold mb-12">
     <span class="en">Top Legal Services</span>
     <span class="kn">ಮುಖ್ಯ ಕಾನೂನು ಸೇವೆಗಳು</span>
@@ -69,102 +85,174 @@
 
   <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
 
-    <div class="p-6 rounded-2xl border shadow-sm">
+    <div class="p-6 rounded-2xl border shadow">
       <h4 class="font-bold text-[#d4af37]">
         <span class="en">Family & Divorce</span>
         <span class="kn">ಕುಟುಂಬ ಮತ್ತು ವಿಚ್ಛೇದನ</span>
       </h4>
-      <p class="text-slate-600 mt-2">
-        <span class="en">Divorce, custody, maintenance support.</span>
-        <span class="kn">ವಿಚ್ಛೇದನ, ಪಾಲನೆ, ಮಕ್ಕಳ ಕಸ್ಟಡಿ ಸಹಾಯ.</span>
-      </p>
     </div>
 
-    <div class="p-6 rounded-2xl border shadow-sm">
+    <div class="p-6 rounded-2xl border shadow">
       <h4 class="font-bold text-[#d4af37]">
         <span class="en">Property Disputes</span>
         <span class="kn">ಆಸ್ತಿ ವಿವಾದಗಳು</span>
       </h4>
-      <p class="text-slate-600 mt-2">
-        <span class="en">Land issues, partition, deed verification.</span>
-        <span class="kn">ಭೂಮಿ ಸಮಸ್ಯೆಗಳು, ಹಂಚಿಕೆ, ದಾಖಲೆ ಪರಿಶೀಲನೆ.</span>
-      </p>
     </div>
 
-    <div class="p-6 rounded-2xl border shadow-sm">
+    <div class="p-6 rounded-2xl border shadow">
       <h4 class="font-bold text-[#d4af37]">
         <span class="en">Criminal & Bail</span>
         <span class="kn">ಕ್ರಿಮಿನಲ್ ಮತ್ತು ಜಾಮೀನು</span>
       </h4>
-      <p class="text-slate-600 mt-2">
-        <span class="en">FIR guidance, bail matters support.</span>
-        <span class="kn">FIR ಮಾರ್ಗದರ್ಶನ, ಜಾಮೀನು ಸಹಾಯ.</span>
-      </p>
     </div>
 
   </div>
 </section>
 
+<!-- ================= HOW IT WORKS ================= -->
+<section id="how" class="py-20 bg-slate-100 text-center">
+  <h3 class="text-3xl font-extrabold mb-10">
+    <span class="en">How NyayaNow Works</span>
+    <span class="kn">NyayaNow ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
+  </h3>
+
+  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
+
+    <div class="p-6 bg-white rounded-2xl shadow">
+      <span class="en">1️⃣ Share Issue</span>
+      <span class="kn">1️⃣ ಸಮಸ್ಯೆ ತಿಳಿಸಿ</span>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl shadow">
+      <span class="en">2️⃣ Pay Securely</span>
+      <span class="kn">2️⃣ ಸುರಕ್ಷಿತ ಪಾವತಿ</span>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl shadow">
+      <span class="en">3️⃣ Advocate Calls</span>
+      <span class="kn">3️⃣ ವಕೀಲರು ಕರೆಮಾಡುತ್ತಾರೆ</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= LAWYERS ================= -->
+<section id="lawyers" class="py-20 bg-white text-center">
+  <h3 class="text-3xl font-extrabold mb-12">
+    <span class="en">Verified Advocates</span>
+    <span class="kn">ಪರಿಶೀಲಿತ ವಕೀಲರು</span>
+  </h3>
+
+  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
+    <div class="p-6 border rounded-2xl shadow">Adv. Ravi Kumar</div>
+    <div class="p-6 border rounded-2xl shadow">Adv. Sneha Joshi</div>
+    <div class="p-6 border rounded-2xl shadow">Adv. Imran Shariff</div>
+  </div>
+</section>
+
 <!-- ================= BOOKING ================= -->
-<section class="py-20 bg-slate-100 text-center">
+<section id="booking" class="py-20 bg-slate-100 text-center">
   <h3 class="text-3xl font-extrabold mb-10">
     <span class="en">Book Consultation</span>
     <span class="kn">ಸಲಹೆ ಬುಕ್ ಮಾಡಿ</span>
   </h3>
 
-  <p class="text-slate-600 mb-6">
-    <span class="en">Packages start at ₹99</span>
-    <span class="kn">ಪ್ಯಾಕೇಜ್‌ಗಳು ₹99 ರಿಂದ ಆರಂಭ</span>
-  </p>
+  <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-3 px-6">
+    <div class="p-6 bg-white rounded-2xl shadow">₹99 Basic</div>
+    <div class="p-6 bg-white rounded-2xl shadow">₹499 Call</div>
+    <div class="p-6 bg-white rounded-2xl shadow">₹999 Drafting</div>
+  </div>
+</section>
 
-  <a href="https://wa.me/919632786767"
+<!-- ================= APPLY ================= -->
+<section id="apply" class="py-20 bg-white text-center">
+  <h3 class="text-3xl font-extrabold mb-6">
+    <span class="en">Join as Advocate Partner</span>
+    <span class="kn">ವಕೀಲ ಪಾಲುದಾರರಾಗಿ ಸೇರಿ</span>
+  </h3>
+
+  <a href="#"
     class="bg-[#d4af37] px-8 py-4 rounded-full font-bold text-black">
-    <span class="en">Book Now</span>
-    <span class="kn">ಇದೀಗ ಬುಕ್ ಮಾಡಿ</span>
+    <span class="en">Apply Now</span>
+    <span class="kn">ಅರ್ಜಿಸಿ</span>
   </a>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section id="faq" class="py-20 bg-slate-100 text-center">
+  <h3 class="text-3xl font-extrabold mb-10">
+    <span class="en">FAQs</span>
+    <span class="kn">ಪ್ರಶ್ನೆಗಳು</span>
+  </h3>
+
+  <p>
+    <span class="en">Q: Is NyayaNow a law firm?</span>
+    <span class="kn">ಪ್ರ: NyayaNow ಕಾನೂನು ಸಂಸ್ಥೆಯೇ?</span>
+  </p>
+  <p class="text-slate-600">
+    <span class="en">No, we connect clients with independent advocates.</span>
+    <span class="kn">ಇಲ್ಲ, ನಾವು ಸ್ವತಂತ್ರ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.</span>
+  </p>
+</section>
+
 <!-- ================= CONTACT ================= -->
-<section class="py-20 bg-white text-center">
+<section id="contact" class="py-20 bg-white text-center">
   <h3 class="text-3xl font-extrabold mb-6">
     <span class="en">Contact NyayaNow</span>
     <span class="kn">NyayaNow ಸಂಪರ್ಕಿಸಿ</span>
   </h3>
 
-  <p class="text-slate-600 mb-4">
-    WhatsApp: <b>+91 9632786767</b><br>
-    Email: <b>info@nyayanow.com</b>
+  <p>WhatsApp: +91 9632786767</p>
+  <p>Email: info@nyayanow.com</p>
+</section>
+
+<!-- ================= LEGAL POLICIES ================= -->
+<section class="py-20 bg-slate-100 text-center">
+  <h3 class="text-2xl font-bold mb-6">
+    <span class="en">Legal Policies</span>
+    <span class="kn">ಕಾನೂನು ನೀತಿಗಳು</span>
+  </h3>
+
+  <p class="text-slate-600 max-w-3xl mx-auto">
+    <span class="en">
+      NyayaNow is a facilitation platform. Refunds depend on service status.
+      Privacy is protected and consultations are handled by licensed advocates.
+    </span>
+
+    <span class="kn">
+      NyayaNow ಕೇವಲ ಸಂಪರ್ಕ ವೇದಿಕೆ. ಸೇವೆಯ ಸ್ಥಿತಿಗೆ ಅನುಗುಣವಾಗಿ ಮರುಪಾವತಿ.
+      ನಿಮ್ಮ ಗೌಪ್ಯತೆ ಸುರಕ್ಷಿತವಾಗಿದೆ.
+    </span>
   </p>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-black text-slate-400 py-10 text-center text-sm">
   <p class="text-white font-bold text-lg">NyayaNow.com ⚖️</p>
-
-  <p class="mt-3">
-    <span class="en">Affordable legal guidance starting at ₹99</span>
-    <span class="kn">₹99 ರಿಂದ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ</span>
-  </p>
-
-  <p class="mt-4 text-xs text-slate-500 max-w-xl mx-auto">
-    <span class="en">
-      Disclaimer: NyayaNow is a facilitation platform, not a law firm.
-    </span>
-    <span class="kn">
-      ಸೂಚನೆ: NyayaNow ಕೇವಲ ಸಂಪರ್ಕ ವೇದಿಕೆ, ಇದು ಕಾನೂನು ಸಂಸ್ಥೆಯಲ್ಲ.
-    </span>
-  </p>
-
-  <p class="mt-4 text-xs text-slate-600">© 2026 NyayaNow</p>
+  <p>© 2026 NyayaNow | All Rights Reserved</p>
 </footer>
 
-<!-- ================= LANGUAGE TOGGLE SCRIPT ================= -->
+<!-- ================= STICKY MOBILE ================= -->
+<div class="sticky-mobile fixed bottom-5 left-1/2 -translate-x-1/2 w-[90%] max-w-md flex gap-3 z-50">
+
+  <a href="https://wa.me/919632786767"
+    class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-2xl font-bold shadow-lg">
+    WhatsApp
+  </a>
+
+  <a href="#booking"
+    class="flex-1 bg-[#d4af37] text-black text-center py-4 rounded-2xl font-bold shadow-lg">
+    Book ₹99
+  </a>
+
+</div>
+
+<!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
   function toggleLang() {
     document.querySelectorAll(".en").forEach(el => {
       el.style.display = (el.style.display === "none") ? "block" : "none";
     });
-
     document.querySelectorAll(".kn").forEach(el => {
       el.style.display = (el.style.display === "none") ? "block" : "none";
     });
