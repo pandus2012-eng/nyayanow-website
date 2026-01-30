@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NyayaNow | Legal Help Karnataka</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body { font-family: Arial, sans-serif; }
-    .kn { display: none; }
-    section { scroll-margin-top: 90px; }
+    .kn { display:none; }
+    section { scroll-margin-top:90px; }
 
     /* Sidebar */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -260px;
-      width: 250px;
-      height: 100%;
-      background: #0f172a;
-      color: white;
-      padding: 25px;
-      transition: 0.3s;
-      z-index: 9999;
+    .sidebar{
+      position:fixed; top:0; left:-260px;
+      width:250px; height:100%;
+      background:#0f172a; color:white;
+      padding:25px; transition:.3s;
+      z-index:9999;
     }
-    .sidebar.active { left: 0; }
+    .sidebar.active{ left:0; }
 
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 9998;
+    .overlay{
+      display:none; position:fixed;
+      top:0; left:0; width:100%;
+      height:100%; background:rgba(0,0,0,.6);
+      z-index:9998;
     }
-    .overlay.active { display: block; }
+    .overlay.active{ display:block; }
 
     @media(min-width:768px){
       .sticky-mobile{display:none;}
@@ -48,43 +39,30 @@
 
 <body class="bg-slate-50 text-slate-900 antialiased">
 
-<!-- ================= MOBILE SIDEBAR ================= -->
+<!-- ============ MOBILE SIDEBAR ============ -->
 <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
 <div id="sidebar" class="sidebar">
   <h2 class="text-xl font-bold text-[#d4af37] mb-6">NyayaNow ⚖️</h2>
-
   <a href="#home" onclick="closeMenu()" class="block py-2">Home</a>
   <a href="#services" onclick="closeMenu()" class="block py-2">Services</a>
   <a href="#how" onclick="closeMenu()" class="block py-2">How It Works</a>
   <a href="#lawyers" onclick="closeMenu()" class="block py-2">Advocates</a>
   <a href="#booking" onclick="closeMenu()" class="block py-2">Booking</a>
-  <a href="#apply" onclick="closeMenu()" class="block py-2">Apply</a>
+  <a href="#apply" onclick="closeMenu()" class="block py-2">Advocate Apply</a>
   <a href="#faq" onclick="closeMenu()" class="block py-2">FAQ</a>
+  <a href="#policies" onclick="closeMenu()" class="block py-2">Policies</a>
   <a href="#contact" onclick="closeMenu()" class="block py-2">Contact</a>
 </div>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ============ NAVBAR ============ -->
 <header class="bg-slate-950 text-white sticky top-0 z-50 shadow-lg">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <!-- Mobile Menu Button -->
     <button class="menu-btn text-2xl" onclick="openMenu()">☰</button>
 
     <h1 class="text-xl font-extrabold text-[#d4af37]">NyayaNow ⚖️</h1>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex gap-6 text-sm text-slate-300">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#how">How</a>
-      <a href="#lawyers">Advocates</a>
-      <a href="#booking">Booking</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Language Toggle -->
     <button onclick="toggleLang()"
       class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
       ಕನ್ನಡ / English
@@ -92,16 +70,16 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ============ HERO ============ -->
 <section id="home"
-  class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
+class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
 
   <div class="en">
     <h2 class="text-4xl font-extrabold mb-6">
       Affordable Legal Guidance in Karnataka ⚖️
     </h2>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-      Connect with verified advocates via WhatsApp. Starting at
+      Verified advocate consultation via WhatsApp. Starting at
       <span class="text-[#d4af37] font-bold">₹99</span>.
     </p>
   </div>
@@ -111,74 +89,124 @@
       ಕರ್ನಾಟಕದಲ್ಲಿ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ ⚖️
     </h2>
     <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-      WhatsApp ಮೂಲಕ ಪರಿಶೀಲಿತ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+      WhatsApp ಮೂಲಕ ಪರಿಶೀಲಿತ ವಕೀಲರ ಸಲಹೆ.
       ಸಹಾಯ <span class="text-[#d4af37] font-bold">₹99</span> ರಿಂದ ಆರಂಭ.
     </p>
   </div>
 
   <a href="https://wa.me/919632786767"
-    class="bg-[#25D366] px-8 py-4 rounded-full font-bold text-white">
+  class="bg-[#25D366] px-8 py-4 rounded-full font-bold text-white">
     WhatsApp Now
   </a>
 </section>
 
-<!-- ================= SERVICES ================= -->
+<!-- ============ SERVICES FULL ============ -->
 <section id="services" class="py-20 bg-white text-center">
   <h3 class="text-3xl font-extrabold mb-12">
-    <span class="en">Top Legal Services</span>
-    <span class="kn">ಮುಖ್ಯ ಕಾನೂನು ಸೇವೆಗಳು</span>
+    <span class="en">Legal Services We Offer</span>
+    <span class="kn">ನಾವು ನೀಡುವ ಕಾನೂನು ಸೇವೆಗಳು</span>
   </h3>
 
   <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-    <div class="p-6 border rounded-2xl shadow">Family & Divorce</div>
-    <div class="p-6 border rounded-2xl shadow">Property Disputes</div>
-    <div class="p-6 border rounded-2xl shadow">Criminal & Bail</div>
+
+    <div class="p-6 border rounded-2xl shadow">
+      <b>👨‍👩‍👧 Family & Divorce</b><br>
+      <span class="en">Divorce, custody, maintenance.</span>
+      <span class="kn">ವಿಚ್ಛೇದನ, ಪಾಲನೆ, ಮಕ್ಕಳ ಕಸ್ಟಡಿ.</span>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow">
+      <b>🏠 Property Disputes</b><br>
+      <span class="en">Land disputes, partition, sale deed check.</span>
+      <span class="kn">ಆಸ್ತಿ ವಿವಾದ, ಹಂಚಿಕೆ, ದಾಖಲೆ ಪರಿಶೀಲನೆ.</span>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow">
+      <b>🚔 Criminal & Bail</b><br>
+      <span class="en">FIR, bail, police rights.</span>
+      <span class="kn">FIR, ಜಾಮೀನು, ಪೊಲೀಸ್ ಹಕ್ಕುಗಳು.</span>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow">
+      <b>🛒 Consumer Complaints</b><br>
+      <span class="en">Fraud, defective product cases.</span>
+      <span class="kn">ಮೋಸ, ಗ್ರಾಹಕ ನ್ಯಾಯಾಲಯ ಪ್ರಕರಣಗಳು.</span>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow">
+      <b>💼 Labour & Employment</b><br>
+      <span class="en">Salary disputes, termination support.</span>
+      <span class="kn">ಸಂಬಳ ವಿವಾದ, ಉದ್ಯೋಗ ಸಮಸ್ಯೆಗಳು.</span>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow">
+      <b>📄 Drafting & Notices</b><br>
+      <span class="en">Legal notices, agreements, complaints.</span>
+      <span class="kn">ನೋಟಿಸ್, ಒಪ್ಪಂದ, ದೂರು ಬರವಣಿಗೆ.</span>
+    </div>
+
   </div>
 </section>
 
-<!-- ================= LAWYERS ================= -->
-<section id="lawyers" class="py-20 bg-slate-100 text-center">
-  <h3 class="text-3xl font-extrabold mb-10">
-    <span class="en">Verified Advocates</span>
-    <span class="kn">ಪರಿಶೀಲಿತ ವಕೀಲರು</span>
-  </h3>
-
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-    <div class="p-6 bg-white rounded-2xl shadow">Adv. Ravi Kumar</div>
-    <div class="p-6 bg-white rounded-2xl shadow">Adv. Sneha Joshi</div>
-    <div class="p-6 bg-white rounded-2xl shadow">Adv. Imran Shariff</div>
-  </div>
-</section>
-
-<!-- ================= BOOKING ================= -->
-<section id="booking" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-10">
-    <span class="en">Book Legal Help</span>
-    <span class="kn">ಕಾನೂನು ಸಹಾಯ ಬುಕ್ ಮಾಡಿ</span>
-  </h3>
-
-  <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-    <div class="p-6 border rounded-2xl shadow">₹99 Basic Guidance</div>
-    <div class="p-6 border rounded-2xl shadow">₹499 Advocate Call</div>
-    <div class="p-6 border rounded-2xl shadow">₹999 Drafting Support</div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
+<!-- ============ FAQ FULL ============ -->
 <section id="faq" class="py-20 bg-slate-100 text-center">
   <h3 class="text-3xl font-extrabold mb-10">
     <span class="en">Frequently Asked Questions</span>
     <span class="kn">ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು</span>
   </h3>
 
-  <p class="max-w-3xl mx-auto text-slate-600">
-    <span class="en">NyayaNow is not a law firm. We connect clients with verified advocates.</span>
-    <span class="kn">NyayaNow ಕಾನೂನು ಸಂಸ್ಥೆಯಲ್ಲ. ನಾವು ಪರಿಶೀಲಿತ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.</span>
+  <div class="max-w-4xl mx-auto text-left space-y-6 px-6">
+
+    <div>
+      <b>Q1. Is NyayaNow a law firm?</b><br>
+      <span class="en">No. We connect clients with independent licensed advocates.</span>
+      <span class="kn">ಇಲ್ಲ. ನಾವು ಸ್ವತಂತ್ರ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.</span>
+    </div>
+
+    <div>
+      <b>Q2. Consultation starts at ₹99?</b><br>
+      <span class="en">Yes, basic WhatsApp guidance starts at ₹99.</span>
+      <span class="kn">ಹೌದು, ₹99 ರಿಂದ ಸಹಾಯ ಆರಂಭ.</span>
+    </div>
+
+    <div>
+      <b>Q3. Do you support Kannada?</b><br>
+      <span class="en">Yes, consultations are available in Kannada & English.</span>
+      <span class="kn">ಹೌದು, ಕನ್ನಡ ಮತ್ತು ಇಂಗ್ಲಿಷ್ ಲಭ್ಯ.</span>
+    </div>
+
+    <div>
+      <b>Q4. Are advocates verified?</b><br>
+      <span class="en">Yes, only Bar Council enrolled advocates are onboarded.</span>
+      <span class="kn">ಹೌದು, ಪರಿಶೀಲಿತ ವಕೀಲರು ಮಾತ್ರ.</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ POLICIES FULL ============ -->
+<section id="policies" class="py-20 bg-white text-center">
+  <h3 class="text-3xl font-extrabold mb-8">
+    <span class="en">Terms • Privacy • Refund • Disclaimer</span>
+    <span class="kn">ನಿಯಮಗಳು • ಗೌಪ್ಯತೆ • ಮರುಪಾವತಿ</span>
+  </h3>
+
+  <p class="max-w-4xl mx-auto text-slate-600 px-6">
+    <span class="en">
+      NyayaNow is a legal facilitation platform. Payments are for consultation booking.
+      Refunds apply only if service is not delivered. User data is protected and shared
+      only with assigned advocates.
+    </span>
+
+    <span class="kn">
+      NyayaNow ಕೇವಲ ಸಂಪರ್ಕ ವೇದಿಕೆ. ಪಾವತಿ ಸಲಹೆ ಬುಕ್ಕಿಂಗ್ ಗಾಗಿ.
+      ಸೇವೆ ನೀಡದಿದ್ದರೆ ಮಾತ್ರ ಮರುಪಾವತಿ. ನಿಮ್ಮ ಮಾಹಿತಿ ಸುರಕ್ಷಿತವಾಗಿದೆ.
+    </span>
   </p>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="py-20 bg-white text-center">
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-20 bg-slate-100 text-center">
   <h3 class="text-3xl font-extrabold mb-6">
     <span class="en">Contact NyayaNow</span>
     <span class="kn">NyayaNow ಸಂಪರ್ಕಿಸಿ</span>
@@ -188,13 +216,13 @@
   <p>Email: info@nyayanow.com</p>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ============ FOOTER ============ -->
 <footer class="bg-black text-slate-400 py-10 text-center text-sm">
   <p class="text-white font-bold text-lg">NyayaNow.com ⚖️</p>
   <p>© 2026 NyayaNow | All Rights Reserved</p>
 </footer>
 
-<!-- ================= STICKY MOBILE BUTTON ================= -->
+<!-- ============ STICKY MOBILE BUTTON ============ -->
 <div class="sticky-mobile fixed bottom-5 left-1/2 -translate-x-1/2 w-[90%] max-w-md flex gap-3 z-50">
   <a href="https://wa.me/919632786767"
     class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-2xl font-bold shadow-lg">
@@ -206,23 +234,23 @@
   </a>
 </div>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- ============ SCRIPTS ============ -->
 <script>
-  function toggleLang() {
-    document.querySelectorAll(".en").forEach(el => {
-      el.style.display = (el.style.display === "none") ? "block" : "none";
+  function toggleLang(){
+    document.querySelectorAll(".en").forEach(el=>{
+      el.style.display=(el.style.display==="none")?"block":"none";
     });
-    document.querySelectorAll(".kn").forEach(el => {
-      el.style.display = (el.style.display === "none") ? "block" : "none";
+    document.querySelectorAll(".kn").forEach(el=>{
+      el.style.display=(el.style.display==="none")?"block":"none";
     });
   }
 
-  function openMenu() {
+  function openMenu(){
     document.getElementById("sidebar").classList.add("active");
     document.getElementById("overlay").classList.add("active");
   }
 
-  function closeMenu() {
+  function closeMenu(){
     document.getElementById("sidebar").classList.remove("active");
     document.getElementById("overlay").classList.remove("active");
   }
