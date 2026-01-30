@@ -1,39 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>NyayaNow — Affordable Legal Help in Karnataka</title>
-
-  <meta name="description"
-    content="NyayaNow provides affordable legal guidance and advocate consultations starting at ₹99 via WhatsApp. Verified advocates across Karnataka. Kannada & English support." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NyayaNow | Legal Help Karnataka</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body { font-family: Arial, sans-serif; }
-    section { scroll-margin-top: 90px; }
-    @media(min-width:768px){
-      .sticky-mobile{display:none;}
-    }
+    .kn { display: none; } /* Kannada hidden by default */
   </style>
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "NyayaNow",
-    "url": "https://nyayanow.com",
-    "description": "Affordable legal guidance and advocate consultations starting at ₹99 via WhatsApp.",
-    "telephone": "+91-9632786767",
-    "email": "info@nyayanow.com",
-    "priceRange": "₹99 - ₹999",
-    "availableLanguage": ["Kannada","English"],
-    "areaServed": "Karnataka"
-  }
-  </script>
 </head>
 
 <body class="bg-slate-50 text-slate-900 antialiased">
@@ -44,201 +21,155 @@
 
     <h1 class="text-xl font-extrabold text-[#d4af37]">NyayaNow ⚖️</h1>
 
-    <nav class="hidden lg:flex gap-6 text-sm text-slate-300">
-      <a href="#home" class="hover:text-[#d4af37]">Home</a>
-      <a href="#services" class="hover:text-[#d4af37]">Services</a>
-      <a href="#how" class="hover:text-[#d4af37]">How It Works</a>
-      <a href="#lawyers" class="hover:text-[#d4af37]">Advocates</a>
-      <a href="#booking" class="hover:text-[#d4af37]">Booking</a>
-      <a href="#contact" class="hover:text-[#d4af37]">Contact</a>
-    </nav>
-
-    <a href="https://wa.me/919632786767"
-      class="bg-[#25D366] px-5 py-3 rounded-full font-bold">
-      WhatsApp Help
-    </a>
+    <!-- Language Toggle Button -->
+    <button onclick="toggleLang()"
+      class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
+      ಕನ್ನಡ / English
+    </button>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section id="home"
-  class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
+<section class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
 
-  <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">
-    Affordable Legal Guidance in Karnataka
-  </h2>
-
-  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-    Connect with Bar Council verified advocates via WhatsApp.  
-    Legal guidance starts at <span class="text-[#d4af37] font-bold">₹99</span>.
-  </p>
-
-  <div class="flex justify-center gap-4 flex-wrap">
-    <a href="https://wa.me/919632786767"
-      class="bg-[#25D366] px-8 py-4 rounded-full font-bold">
-      Chat on WhatsApp
-    </a>
-
-    <a href="#booking"
-      class="border-2 border-[#d4af37] px-8 py-4 rounded-full font-bold text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition">
-      Book Consultation
-    </a>
+  <!-- English -->
+  <div class="en">
+    <h2 class="text-4xl font-extrabold mb-6">
+      Affordable Legal Guidance in Karnataka ⚖️
+    </h2>
+    <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+      Connect with verified advocates via WhatsApp. Legal guidance starts at
+      <span class="text-[#d4af37] font-bold">₹99</span>.
+    </p>
   </div>
 
-  <p class="mt-8 text-sm text-slate-400">
-    🔒 Confidential • ⚖ Verified Advocates • 🌐 Kannada + English
-  </p>
+  <!-- Kannada -->
+  <div class="kn">
+    <h2 class="text-4xl font-extrabold mb-6">
+      ಕರ್ನಾಟಕದಲ್ಲಿ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ ⚖️
+    </h2>
+    <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+      WhatsApp ಮೂಲಕ ಪರಿಶೀಲಿತ ವಕೀಲರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ.
+      ಕಾನೂನು ಮಾರ್ಗದರ್ಶನ <span class="text-[#d4af37] font-bold">₹99</span> ರಿಂದ ಆರಂಭ.
+    </p>
+  </div>
+
+  <a href="https://wa.me/919632786767"
+    class="bg-[#25D366] px-8 py-4 rounded-full font-bold text-white">
+    WhatsApp Now
+  </a>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section id="services" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-12">Top Legal Services</h3>
+<section class="py-20 bg-white text-center">
+  <h3 class="text-3xl font-extrabold mb-12">
+    <span class="en">Top Legal Services</span>
+    <span class="kn">ಮುಖ್ಯ ಕಾನೂನು ಸೇವೆಗಳು</span>
+  </h3>
 
   <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
 
     <div class="p-6 rounded-2xl border shadow-sm">
-      <h4 class="font-bold text-[#d4af37]">Family & Divorce</h4>
-      <p class="text-slate-600 mt-2">Divorce, custody, domestic violence support.</p>
+      <h4 class="font-bold text-[#d4af37]">
+        <span class="en">Family & Divorce</span>
+        <span class="kn">ಕುಟುಂಬ ಮತ್ತು ವಿಚ್ಛೇದನ</span>
+      </h4>
+      <p class="text-slate-600 mt-2">
+        <span class="en">Divorce, custody, maintenance support.</span>
+        <span class="kn">ವಿಚ್ಛೇದನ, ಪಾಲನೆ, ಮಕ್ಕಳ ಕಸ್ಟಡಿ ಸಹಾಯ.</span>
+      </p>
     </div>
 
     <div class="p-6 rounded-2xl border shadow-sm">
-      <h4 class="font-bold text-[#d4af37]">Property Disputes</h4>
-      <p class="text-slate-600 mt-2">Land issues, partition, sale deed verification.</p>
+      <h4 class="font-bold text-[#d4af37]">
+        <span class="en">Property Disputes</span>
+        <span class="kn">ಆಸ್ತಿ ವಿವಾದಗಳು</span>
+      </h4>
+      <p class="text-slate-600 mt-2">
+        <span class="en">Land issues, partition, deed verification.</span>
+        <span class="kn">ಭೂಮಿ ಸಮಸ್ಯೆಗಳು, ಹಂಚಿಕೆ, ದಾಖಲೆ ಪರಿಶೀಲನೆ.</span>
+      </p>
     </div>
 
     <div class="p-6 rounded-2xl border shadow-sm">
-      <h4 class="font-bold text-[#d4af37]">Criminal & Bail</h4>
-      <p class="text-slate-600 mt-2">FIR guidance, bail matters, police rights.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= HOW IT WORKS ================= -->
-<section id="how" class="py-20 bg-slate-100 text-center">
-  <h3 class="text-3xl font-extrabold mb-10">How NyayaNow Works</h3>
-
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-
-    <div class="p-6 rounded-2xl bg-white shadow">
-      <h4 class="font-bold text-[#d4af37]">1️⃣ Share Issue</h4>
-      <p class="text-slate-600 mt-2">Send your problem on WhatsApp.</p>
-    </div>
-
-    <div class="p-6 rounded-2xl bg-white shadow">
-      <h4 class="font-bold text-[#d4af37]">2️⃣ Pay Securely</h4>
-      <p class="text-slate-600 mt-2">Packages start at ₹99 via Razorpay.</p>
-    </div>
-
-    <div class="p-6 rounded-2xl bg-white shadow">
-      <h4 class="font-bold text-[#d4af37]">3️⃣ Advocate Calls</h4>
-      <p class="text-slate-600 mt-2">Verified lawyer contacts you in 60 minutes.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= LAWYERS ================= -->
-<section id="lawyers" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-12">Verified Advocates</h3>
-
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-
-    <div class="p-6 rounded-2xl border shadow">
-      <h4 class="font-bold text-[#d4af37]">Adv. Ravi Kumar</h4>
-      <p>Bangalore • Property Law</p>
-      <p>⭐ 4.8/5</p>
-    </div>
-
-    <div class="p-6 rounded-2xl border shadow">
-      <h4 class="font-bold text-[#d4af37]">Adv. Sneha Joshi</h4>
-      <p>Mysore • Family Law</p>
-      <p>⭐ 4.7/5</p>
-    </div>
-
-    <div class="p-6 rounded-2xl border shadow">
-      <h4 class="font-bold text-[#d4af37]">Adv. Imran Shariff</h4>
-      <p>Hubli • Criminal Law</p>
-      <p>⭐ 4.9/5</p>
+      <h4 class="font-bold text-[#d4af37]">
+        <span class="en">Criminal & Bail</span>
+        <span class="kn">ಕ್ರಿಮಿನಲ್ ಮತ್ತು ಜಾಮೀನು</span>
+      </h4>
+      <p class="text-slate-600 mt-2">
+        <span class="en">FIR guidance, bail matters support.</span>
+        <span class="kn">FIR ಮಾರ್ಗದರ್ಶನ, ಜಾಮೀನು ಸಹಾಯ.</span>
+      </p>
     </div>
 
   </div>
 </section>
 
 <!-- ================= BOOKING ================= -->
-<section id="booking" class="py-20 bg-slate-100 text-center">
-  <h3 class="text-3xl font-extrabold mb-10">Book Consultation</h3>
+<section class="py-20 bg-slate-100 text-center">
+  <h3 class="text-3xl font-extrabold mb-10">
+    <span class="en">Book Consultation</span>
+    <span class="kn">ಸಲಹೆ ಬುಕ್ ಮಾಡಿ</span>
+  </h3>
 
-  <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-3 px-6">
+  <p class="text-slate-600 mb-6">
+    <span class="en">Packages start at ₹99</span>
+    <span class="kn">ಪ್ಯಾಕೇಜ್‌ಗಳು ₹99 ರಿಂದ ಆರಂಭ</span>
+  </p>
 
-    <div class="p-6 bg-white rounded-2xl shadow">
-      <h4 class="font-bold text-[#d4af37]">₹99 Basic Guidance</h4>
-      <p class="text-slate-600 mt-2">Quick WhatsApp legal guidance.</p>
-      <a href="#" class="mt-4 inline-block bg-[#d4af37] px-6 py-3 rounded-full font-bold">
-        Pay ₹99
-      </a>
-    </div>
-
-    <div class="p-6 bg-white rounded-2xl shadow">
-      <h4 class="font-bold text-[#d4af37]">₹499 Advocate Call</h4>
-      <p class="text-slate-600 mt-2">30 min consultation with lawyer.</p>
-      <a href="#" class="mt-4 inline-block bg-[#d4af37] px-6 py-3 rounded-full font-bold">
-        Pay ₹499
-      </a>
-    </div>
-
-    <div class="p-6 bg-white rounded-2xl shadow">
-      <h4 class="font-bold text-[#d4af37]">₹999 Drafting Support</h4>
-      <p class="text-slate-600 mt-2">Legal notice / agreement drafting.</p>
-      <a href="#" class="mt-4 inline-block bg-[#d4af37] px-6 py-3 rounded-full font-bold">
-        Pay ₹999
-      </a>
-    </div>
-
-  </div>
+  <a href="https://wa.me/919632786767"
+    class="bg-[#d4af37] px-8 py-4 rounded-full font-bold text-black">
+    <span class="en">Book Now</span>
+    <span class="kn">ಇದೀಗ ಬುಕ್ ಮಾಡಿ</span>
+  </a>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-6">Contact NyayaNow</h3>
+<section class="py-20 bg-white text-center">
+  <h3 class="text-3xl font-extrabold mb-6">
+    <span class="en">Contact NyayaNow</span>
+    <span class="kn">NyayaNow ಸಂಪರ್ಕಿಸಿ</span>
+  </h3>
 
   <p class="text-slate-600 mb-4">
     WhatsApp: <b>+91 9632786767</b><br>
     Email: <b>info@nyayanow.com</b>
   </p>
-
-  <a href="https://wa.me/919632786767"
-    class="bg-[#25D366] px-8 py-4 rounded-full font-bold text-white">
-    Chat Now →
-  </a>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-black text-slate-400 py-10 text-center text-sm">
   <p class="text-white font-bold text-lg">NyayaNow.com ⚖️</p>
-  <p>Affordable legal guidance starting at ₹99</p>
-  <p class="mt-3">© 2026 NyayaNow. All rights reserved.</p>
+
+  <p class="mt-3">
+    <span class="en">Affordable legal guidance starting at ₹99</span>
+    <span class="kn">₹99 ರಿಂದ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ</span>
+  </p>
 
   <p class="mt-4 text-xs text-slate-500 max-w-xl mx-auto">
-    Disclaimer: NyayaNow is a legal facilitation platform, not a law firm.
-    Consultations are provided by independent licensed advocates.
+    <span class="en">
+      Disclaimer: NyayaNow is a facilitation platform, not a law firm.
+    </span>
+    <span class="kn">
+      ಸೂಚನೆ: NyayaNow ಕೇವಲ ಸಂಪರ್ಕ ವೇದಿಕೆ, ಇದು ಕಾನೂನು ಸಂಸ್ಥೆಯಲ್ಲ.
+    </span>
   </p>
+
+  <p class="mt-4 text-xs text-slate-600">© 2026 NyayaNow</p>
 </footer>
 
-<!-- ================= STICKY MOBILE BUTTON ================= -->
-<div class="sticky-mobile fixed bottom-5 left-1/2 -translate-x-1/2 w-[90%] max-w-md flex gap-3 z-50">
+<!-- ================= LANGUAGE TOGGLE SCRIPT ================= -->
+<script>
+  function toggleLang() {
+    document.querySelectorAll(".en").forEach(el => {
+      el.style.display = (el.style.display === "none") ? "block" : "none";
+    });
 
-  <a href="https://wa.me/919632786767"
-    class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-2xl font-bold shadow-lg">
-    WhatsApp
-  </a>
-
-  <a href="#booking"
-    class="flex-1 bg-[#d4af37] text-black text-center py-4 rounded-2xl font-bold shadow-lg">
-    Book ₹99
-  </a>
-
-</div>
+    document.querySelectorAll(".kn").forEach(el => {
+      el.style.display = (el.style.display === "none") ? "block" : "none";
+    });
+  }
+</script>
 
 </body>
 </html>
