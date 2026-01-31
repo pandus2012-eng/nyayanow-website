@@ -452,6 +452,11 @@
             <span class="lang-en">How It Works</span>
             <span class="lang-kn">ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
           </a>
+          <a href="#professionals" class="text-slate-300 hover:text-[#d4af37] transition-colors font-bold">
+            <span class="lang-en">Book Lawyers & CAs</span>
+            <span class="lang-kn">ವಕೀಲರು ಮತ್ತು CA</span>
+          </a>
+          
           <a href="/legal-updates.html" class="text-slate-300 hover:text-[#d4af37] transition-colors">
             <span class="lang-en">Legal Updates 2025</span>
             <span class="lang-kn">ಕಾನೂನು ನವೀಕರಣಗಳು 2025</span>
@@ -812,9 +817,9 @@
               <span class="lang-en">Get Free Legal Help Now</span>
               <span class="lang-kn">ಈಗ ಉಚಿತ ಸಹಾಯ ಪಡೆಯಿರಿ</span>
             </a>
-            <a href="#professionals" class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-[#d4af37] px-8 py-4 text-base font-semibold text-white hover:bg-[#d4af37] hover:text-slate-950 transition-all">
-              <i class="fas fa-user-tie"></i>
-              <span class="lang-en">Book a Lawyer/CA</span>
+            <a href="#professionals" class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-[#d4af37] px-8 py-4 text-base font-bold text-white hover:bg-[#d4af37] hover:text-slate-950 shadow-lg hover:shadow-xl transition-all">
+              <i class="fas fa-calendar-check text-xl"></i>
+              <span class="lang-en">Book Lawyer/CA</span>
               <span class="lang-kn">ವಕೀಲ/CA ಬುಕ್ ಮಾಡಿ</span>
             </a>
             <a href="#registration" class="inline-flex items-center gap-2 justify-center rounded-full border-2 border-slate-700 px-8 py-4 text-base font-semibold text-slate-300 hover:bg-slate-800 hover:border-[#d4af37] transition-all">
@@ -2060,512 +2065,122 @@ document.addEventListener('click', function(event) {
 });
 
 </script>
-<!-- ============================================ -->
-<!-- LAWYERS & CAs BOOKING SECTION - NEW -->
-<!-- ============================================ -->
-<section id="professionals" class="py-20 bg-slate-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37]/10 text-[#d4af37] rounded-full text-sm font-semibold mb-4">
-        <i class="fas fa-certificate"></i>
-        <span class="lang-en">Verified Professionals</span>
-        <span class="lang-kn">ಪರಿಶೀಲಿಸಿದ ವೃತ್ತಿಪರರು</span>
-      </div>
-      
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
-        <span class="lang-en">Book Expert <span class="text-[#d4af37]">Lawyers & CAs</span></span>
-        <span class="lang-kn">ತಜ್ಞ <span class="text-[#d4af37]">ವಕೀಲರು ಮತ್ತು CA ಗಳನ್ನು</span> ಬುಕ್ ಮಾಡಿ</span>
-      </h2>
-      <p class="text-slate-400 text-lg max-w-3xl mx-auto">
-        <span class="lang-en">Connect with verified legal professionals and chartered accountants for personalized consultation</span>
-        <span class="lang-kn">ವೈಯಕ್ತಿಕ ಸಮಾಲೋಚನೆಗಾಗಿ ಪರಿಶೀಲಿಸಿದ ಕಾನೂನು ವೃತ್ತಿಪರರು ಮತ್ತು ಚಾರ್ಟರ್ಡ್ ಅಕೌಂಟೆಂಟ್‌ಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ</span>
-      </p>
-    </div>
 
-    <!-- Filter Tabs -->
-    <div class="flex justify-center mb-12">
-      <div class="inline-flex bg-slate-950 rounded-full p-2 border border-slate-800">
-        <button onclick="filterProf('all')" class="prof-filter-btn active px-8 py-3 rounded-full transition-all bg-[#d4af37] text-slate-950 font-semibold">
-          <span class="lang-en">All</span>
-          <span class="lang-kn">ಎಲ್ಲಾ</span>
-        </button>
-        <button onclick="filterProf('lawyer')" class="prof-filter-btn px-8 py-3 rounded-full transition-all hover:bg-slate-900">
-          <span class="lang-en">Lawyers</span>
-          <span class="lang-kn">ವಕೀಲರು</span>
-        </button>
-        <button onclick="filterProf('ca')" class="prof-filter-btn px-8 py-3 rounded-full transition-all hover:bg-slate-900">
-          <span class="lang-en">CAs</span>
-          <span class="lang-kn">CA ಗಳು</span>
-        </button>
-      </div>
-    </div>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="profGrid">
-      <!-- Professional Card Template - Repeated for each professional -->
-      
-      <!-- Lawyer 1 -->
-      <div class="prof-card prof-item bg-slate-950 border-2 border-slate-800 rounded-2xl p-6 hover:border-[#d4af37] transition-all" data-type="lawyer">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold flex-shrink-0">
-            AS
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center gap-2 mb-1">
-              <h3 class="text-xl font-bold text-white">
-                <span class="lang-en">Adv. Arjun Sharma</span>
-                <span class="lang-kn">ವಕೀಲ. ಅರ್ಜುನ್ ಶರ್ಮಾ</span>
-              </h3>
-              <i class="fas fa-certificate text-blue-500 text-sm prof-verified" title="Verified"></i>
+
+<section id="professionals" class="py-20 bg-slate-900" style="min-height: 800px; background-color: #0f172a !important; border: 5px solid #d4af37 !important;">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-white mb-4">
+                    Book Expert <span class="text-[#d4af37]">Lawyers & CAs</span>
+                </h2>
+                <p class="text-white text-2xl bg-green-600 p-4 rounded">
+                    ✅ IF YOU SEE THIS GREEN BOX, THE SECTION IS WORKING!
+                </p>
             </div>
-            <p class="text-[#d4af37] text-sm font-semibold mb-2">
-              <span class="lang-en">Criminal & Civil Law</span>
-              <span class="lang-kn">ಕ್ರಿಮಿನಲ್ ಮತ್ತು ಸಿವಿಲ್ ಕಾನೂನು</span>
-            </p>
-            <div class="flex items-center gap-1 text-[#d4af37] mb-2">
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star-half-alt text-xs"></i>
-              <span class="text-slate-400 text-xs ml-1">(4.8)</span>
+            
+            <!-- Professionals Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Professional Card 1 -->
+                <div class="bg-slate-950 border-4 border-[#d4af37] rounded-2xl p-6">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold">
+                            AS
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Adv. Arjun Sharma</h3>
+                            <p class="text-[#d4af37] text-sm font-semibold">Criminal & Civil Law</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-slate-300">
+                        <p><i class="fas fa-briefcase text-[#d4af37] mr-2"></i>15+ years experience</p>
+                        <p><i class="fas fa-map-marker-alt text-[#d4af37] mr-2"></i>Bangalore, Karnataka</p>
+                    </div>
+                    
+                    <button class="w-full bg-[#d4af37] text-slate-950 px-4 py-3 rounded-lg font-bold hover:bg-[#e6c45a]">
+                        ₹99 - Book Basic
+                    </button>
+                </div>
+                
+                <!-- Professional Card 2 -->
+                <div class="bg-slate-950 border-4 border-[#d4af37] rounded-2xl p-6">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold">
+                            PM
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Adv. Priya Menon</h3>
+                            <p class="text-[#d4af37] text-sm font-semibold">Family & Divorce Law</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-slate-300">
+                        <p><i class="fas fa-briefcase text-[#d4af37] mr-2"></i>10+ years experience</p>
+                        <p><i class="fas fa-map-marker-alt text-[#d4af37] mr-2"></i>Bangalore, Karnataka</p>
+                    </div>
+                    
+                    <button class="w-full bg-[#d4af37] text-slate-950 px-4 py-3 rounded-lg font-bold hover:bg-[#e6c45a]">
+                        ₹499 - Book Standard
+                    </button>
+                </div>
+                
+                <!-- Professional Card 3 -->
+                <div class="bg-slate-950 border-4 border-[#d4af37] rounded-2xl p-6">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold">
+                            RK
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">CA Rajesh Kumar</h3>
+                            <p class="text-[#d4af37] text-sm font-semibold">Tax & GST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-slate-300">
+                        <p><i class="fas fa-briefcase text-[#d4af37] mr-2"></i>12+ years experience</p>
+                        <p><i class="fas fa-map-marker-alt text-[#d4af37] mr-2"></i>Bangalore, Karnataka</p>
+                    </div>
+                    
+                    <button class="w-full bg-[#d4af37] text-slate-950 px-4 py-3 rounded-lg font-bold hover:bg-[#e6c45a]">
+                        ₹999 - Book Premium
+                    </button>
+                </div>
+                
+                <!-- Professional Card 4 -->
+                <div class="bg-slate-950 border-4 border-[#d4af37] rounded-2xl p-6">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold">
+                            SG
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">CA Sneha Gupta</h3>
+                            <p class="text-[#d4af37] text-sm font-semibold">Audit & Compliance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-slate-300">
+                        <p><i class="fas fa-briefcase text-[#d4af37] mr-2"></i>9+ years experience</p>
+                        <p><i class="fas fa-map-marker-alt text-[#d4af37] mr-2"></i>Bangalore, Karnataka</p>
+                    </div>
+                    
+                    <button class="w-full bg-[#d4af37] text-slate-950 px-4 py-3 rounded-lg font-bold hover:bg-[#e6c45a]">
+                        ₹1,200 - Book Now
+                    </button>
+                </div>
+                
             </div>
-          </div>
-        </div>
-        
-        <div class="space-y-3 mb-6">
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-briefcase w-4"></i>
-            <span class="lang-en">15+ years experience</span>
-            <span class="lang-kn">15+ ವರ್ಷಗಳ ಅನುಭವ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-map-marker-alt w-4"></i>
-            <span class="lang-en">Bangalore, Karnataka</span>
-            <span class="lang-kn">ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-language w-4"></i>
-            <span class="lang-en">English, Kannada, Hindi</span>
-            <span class="lang-kn">ಇಂಗ್ಲಿಷ್, ಕನ್ನಡ, ಹಿಂದಿ</span>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-800">
-          <div>
-            <div class="text-2xl font-bold text-[#d4af37]">₹1,500</div>
-            <div class="text-xs text-slate-500 lang-en">per consultation</div>
-            <div class="text-xs text-slate-500 lang-kn">ಪ್ರತಿ ಸಮಾಲೋಚನೆ</div>
-          </div>
-          <div class="text-sm text-slate-400">
-            <i class="fas fa-clock"></i> 30 min
-          </div>
-        </div>
-        
-        <button onclick="openBooking('Adv. Arjun Sharma','lawyer','1500','AS')" class="w-full bg-[#d4af37] text-slate-950 px-6 py-3 rounded-full font-semibold hover:bg-[#e6c45a] transition-all">
-          <span class="lang-en">Book Consultation</span>
-          <span class="lang-kn">ಸಮಾಲೋಚನೆಯನ್ನು ಬುಕ್ ಮಾಡಿ</span>
-        </button>
-      </div>
-
-      <!-- Lawyer 2 -->
-      <div class="prof-card prof-item bg-slate-950 border-2 border-slate-800 rounded-2xl p-6 hover:border-[#d4af37] transition-all" data-type="lawyer">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold flex-shrink-0">
-            PM
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center gap-2 mb-1">
-              <h3 class="text-xl font-bold text-white">
-                <span class="lang-en">Adv. Priya Menon</span>
-                <span class="lang-kn">ವಕೀಲ. ಪ್ರಿಯಾ ಮೆನನ್</span>
-              </h3>
-              <i class="fas fa-certificate text-blue-500 text-sm prof-verified" title="Verified"></i>
+            
+            <div class="text-center mt-12">
+                <p class="text-white text-2xl bg-red-600 p-4 rounded">
+                    👆 IF YOU SEE 4 PROFESSIONALS ABOVE, IT'S WORKING!
+                </p>
             </div>
-            <p class="text-[#d4af37] text-sm font-semibold mb-2">
-              <span class="lang-en">Family & Divorce Law</span>
-              <span class="lang-kn">ಕುಟುಂಬ ಮತ್ತು ವಿಚ್ಛೇದನ ಕಾನೂನು</span>
-            </p>
-            <div class="flex items-center gap-1 text-[#d4af37] mb-2">
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <span class="text-slate-400 text-xs ml-1">(5.0)</span>
-            </div>
-          </div>
+            
         </div>
-        
-        <div class="space-y-3 mb-6">
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-briefcase w-4"></i>
-            <span class="lang-en">10+ years experience</span>
-            <span class="lang-kn">10+ ವರ್ಷಗಳ ಅನುಭವ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-map-marker-alt w-4"></i>
-            <span class="lang-en">Bangalore, Karnataka</span>
-            <span class="lang-kn">ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-language w-4"></i>
-            <span class="lang-en">English, Kannada, Tamil</span>
-            <span class="lang-kn">ಇಂಗ್ಲಿಷ್, ಕನ್ನಡ, ತಮಿಳು</span>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-800">
-          <div>
-            <div class="text-2xl font-bold text-[#d4af37]">₹2,000</div>
-            <div class="text-xs text-slate-500 lang-en">per consultation</div>
-            <div class="text-xs text-slate-500 lang-kn">ಪ್ರತಿ ಸಮಾಲೋಚನೆ</div>
-          </div>
-          <div class="text-sm text-slate-400">
-            <i class="fas fa-clock"></i> 45 min
-          </div>
-        </div>
-        
-        <button onclick="openBooking('Adv. Priya Menon','lawyer','2000','PM')" class="w-full bg-[#d4af37] text-slate-950 px-6 py-3 rounded-full font-semibold hover:bg-[#e6c45a] transition-all">
-          <span class="lang-en">Book Consultation</span>
-          <span class="lang-kn">ಸಮಾಲೋಚನೆಯನ್ನು ಬುಕ್ ಮಾಡಿ</span>
-        </button>
-      </div>
-
-      <!-- CA 1 -->
-      <div class="prof-card prof-item bg-slate-950 border-2 border-slate-800 rounded-2xl p-6 hover:border-[#d4af37] transition-all" data-type="ca">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold flex-shrink-0">
-            RK
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center gap-2 mb-1">
-              <h3 class="text-xl font-bold text-white">
-                <span class="lang-en">CA Rajesh Kumar</span>
-                <span class="lang-kn">CA ರಾಜೇಶ್ ಕುಮಾರ್</span>
-              </h3>
-              <i class="fas fa-certificate text-blue-500 text-sm prof-verified" title="Verified"></i>
-            </div>
-            <p class="text-[#d4af37] text-sm font-semibold mb-2">
-              <span class="lang-en">Tax & GST Consultant</span>
-              <span class="lang-kn">ತೆರಿಗೆ ಮತ್ತು GST ಸಲಹೆಗಾರ</span>
-            </p>
-            <div class="flex items-center gap-1 text-[#d4af37] mb-2">
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star-half-alt text-xs"></i>
-              <span class="text-slate-400 text-xs ml-1">(4.7)</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="space-y-3 mb-6">
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-briefcase w-4"></i>
-            <span class="lang-en">12+ years experience</span>
-            <span class="lang-kn">12+ ವರ್ಷಗಳ ಅನುಭವ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-map-marker-alt w-4"></i>
-            <span class="lang-en">Bangalore, Karnataka</span>
-            <span class="lang-kn">ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-language w-4"></i>
-            <span class="lang-en">English, Kannada, Hindi</span>
-            <span class="lang-kn">ಇಂಗ್ಲಿಷ್, ಕನ್ನಡ, ಹಿಂದಿ</span>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-800">
-          <div>
-            <div class="text-2xl font-bold text-[#d4af37]">₹1,200</div>
-            <div class="text-xs text-slate-500 lang-en">per consultation</div>
-            <div class="text-xs text-slate-500 lang-kn">ಪ್ರತಿ ಸಮಾಲೋಚನೆ</div>
-          </div>
-          <div class="text-sm text-slate-400">
-            <i class="fas fa-clock"></i> 30 min
-          </div>
-        </div>
-        
-        <button onclick="openBooking('CA Rajesh Kumar','ca','1200','RK')" class="w-full bg-[#d4af37] text-slate-950 px-6 py-3 rounded-full font-semibold hover:bg-[#e6c45a] transition-all">
-          <span class="lang-en">Book Consultation</span>
-          <span class="lang-kn">ಸಮಾಲೋಚನೆಯನ್ನು ಬುಕ್ ಮಾಡಿ</span>
-        </button>
-      </div>
-
-      <!-- CA 2 -->
-      <div class="prof-card prof-item bg-slate-950 border-2 border-slate-800 rounded-2xl p-6 hover:border-[#d4af37] transition-all" data-type="ca">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-3xl font-bold flex-shrink-0">
-            SG
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center gap-2 mb-1">
-              <h3 class="text-xl font-bold text-white">
-                <span class="lang-en">CA Sneha Gupta</span>
-                <span class="lang-kn">CA ಸ್ನೇಹಾ ಗುಪ್ತಾ</span>
-              </h3>
-              <i class="fas fa-certificate text-blue-500 text-sm prof-verified" title="Verified"></i>
-            </div>
-            <p class="text-[#d4af37] text-sm font-semibold mb-2">
-              <span class="lang-en">Audit & Compliance</span>
-              <span class="lang-kn">ಆಡಿಟ್ ಮತ್ತು ಅನುಸರಣೆ</span>
-            </p>
-            <div class="flex items-center gap-1 text-[#d4af37] mb-2">
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <i class="fas fa-star text-xs"></i>
-              <span class="text-slate-400 text-xs ml-1">(4.9)</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="space-y-3 mb-6">
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-briefcase w-4"></i>
-            <span class="lang-en">9+ years experience</span>
-            <span class="lang-kn">9+ ವರ್ಷಗಳ ಅನುಭವ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-map-marker-alt w-4"></i>
-            <span class="lang-en">Bangalore, Karnataka</span>
-            <span class="lang-kn">ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-slate-400">
-            <i class="fas fa-language w-4"></i>
-            <span class="lang-en">English, Kannada, Hindi</span>
-            <span class="lang-kn">ಇಂಗ್ಲಿಷ್, ಕನ್ನಡ, ಹಿಂದಿ</span>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-800">
-          <div>
-            <div class="text-2xl font-bold text-[#d4af37]">₹1,500</div>
-            <div class="text-xs text-slate-500 lang-en">per consultation</div>
-            <div class="text-xs text-slate-500 lang-kn">ಪ್ರತಿ ಸಮಾಲೋಚನೆ</span>
-          </div>
-          <div class="text-sm text-slate-400">
-            <i class="fas fa-clock"></i> 45 min
-          </div>
-        </div>
-        
-        <button onclick="openBooking('CA Sneha Gupta','ca','1500','SG')" class="w-full bg-[#d4af37] text-slate-950 px-6 py-3 rounded-full font-semibold hover:bg-[#e6c45a] transition-all">
-          <span class="lang-en">Book Consultation</span>
-          <span class="lang-kn">ಸಮಾಲೋಚನೆಯನ್ನು ಬುಕ್ ಮಾಡಿ</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Booking Modal -->
-<div id="bookModal" class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center p-4" style="backdrop-filter: blur(8px);">
-  <div class="bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slideUp">
-    <div class="sticky top-0 bg-slate-900 border-b border-slate-800 p-6 flex items-center justify-between z-10">
-      <h3 class="text-2xl font-bold text-white">
-        <span class="lang-en">Book Consultation</span>
-        <span class="lang-kn">ಸಮಾಲೋಚನೆಯನ್ನು ಬುಕ್ ಮಾಡಿ</span>
-      </h3>
-      <button onclick="closeBooking()" class="text-slate-400 hover:text-white">
-        <i class="fas fa-times text-2xl"></i>
-      </button>
-    </div>
-    
-    <div class="p-6">
-      <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 mb-6">
-        <div class="flex items-center gap-4 mb-4">
-          <div id="modalInit" class="w-16 h-16 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center text-slate-950 text-2xl font-bold"></div>
-          <div>
-            <h4 id="modalName" class="text-xl font-bold text-white"></h4>
-            <p id="modalType" class="text-[#d4af37]"></p>
-          </div>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-          <div>
-            <div class="text-xs text-slate-500 lang-en">Consultation Fee</div>
-            <div class="text-xs text-slate-500 lang-kn">ಸಮಾಲೋಚನಾ ಶುಲ್ಕ</div>
-            <div class="text-2xl font-bold text-[#d4af37]">₹<span id="modalFee"></span></div>
-          </div>
-          <div class="text-sm text-slate-400">
-            <i class="fas fa-clock"></i> 30-45 min
-          </div>
-        </div>
-      </div>
-      
-      <form id="bookForm" class="space-y-4">
-        <div>
-          <label class="block text-sm font-semibold mb-2 text-white">
-            <span class="lang-en">Full Name *</span>
-            <span class="lang-kn">ಪೂರ್ಣ ಹೆಸರು *</span>
-          </label>
-          <input type="text" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#d4af37] text-white">
-        </div>
-        
-        <div>
-          <label class="block text-sm font-semibold mb-2 text-white">
-            <span class="lang-en">Email *</span>
-            <span class="lang-kn">ಇಮೇಲ್ *</span>
-          </label>
-          <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#d4af37] text-white">
-        </div>
-        
-        <div>
-          <label class="block text-sm font-semibold mb-2 text-white">
-            <span class="lang-en">Phone Number *</span>
-            <span class="lang-kn">ದೂರವಾಣಿ ಸಂಖ್ಯೆ *</span>
-          </label>
-          <input type="tel" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#d4af37] text-white" placeholder="+91">
-        </div>
-        
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-semibold mb-2 text-white">
-              <span class="lang-en">Preferred Date *</span>
-              <span class="lang-kn">ಬಯಸಿದ ದಿನಾಂಕ *</span>
-            </label>
-            <input type="date" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#d4af37] text-white">
-          </div>
-          
-          <div>
-            <label class="block text-sm font-semibold mb-2 text-white">
-              <span class="lang-en">Time *</span>
-              <span class="lang-kn">ಸಮಯ *</span>
-            </label>
-            <select required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#d4af37] text-white">
-              <option value="">Select</option>
-              <option>10:00 AM</option>
-              <option>11:00 AM</option>
-              <option>2:00 PM</option>
-              <option>3:00 PM</option>
-              <option>4:00 PM</option>
-            </select>
-          </div>
-        </div>
-        
-        <div>
-          <label class="block text-sm font-semibold mb-2 text-white">
-            <span class="lang-en">Brief Description *</span>
-            <span class="lang-kn">ಸಂಕ್ಷಿಪ್ತ ವಿವರಣೆ *</span>
-          </label>
-          <textarea required rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#d4af37] text-white"></textarea>
-        </div>
-        
-        <div class="flex gap-3 pt-4">
-          <button type="submit" class="flex-1 bg-[#d4af37] text-slate-950 px-6 py-4 rounded-full font-bold hover:bg-[#e6c45a] transition-all">
-            <span class="lang-en">Confirm Booking</span>
-            <span class="lang-kn">ಬುಕಿಂಗ್ ದೃಢೀಕರಿಸಿ</span>
-          </button>
-          <button type="button" onclick="closeBooking()" class="px-6 py-4 rounded-full border-2 border-slate-700 hover:border-slate-600 transition-all text-white">
-            <span class="lang-en">Cancel</span>
-            <span class="lang-kn">ರದ್ದುಮಾಡಿ</span>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<style>
-.prof-card {
-  transition: all 0.3s ease;
-}
-.prof-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(212,175,55,0.2);
-}
-.prof-verified {
-  animation: glow 2s ease-in-out infinite;
-}
-@keyframes glow {
-  0%, 100% { filter: drop-shadow(0 0 3px rgba(59,130,246,0.5)); }
-  50% { filter: drop-shadow(0 0 8px rgba(59,130,246,0.8)); }
-}
-@keyframes slideUp {
-  from { transform: translateY(100px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-.animate-slideUp {
-  animation: slideUp 0.4s ease-out;
-}
-.prof-filter-btn.active {
-  background: linear-gradient(to right, #d4af37, #f4d03f);
-  color: #0f172a;
-  font-weight: 700;
-}
-</style>
-
-<script>
-// Professional filter
-function filterProf(type) {
-  const items = document.querySelectorAll('.prof-item');
-  const buttons = document.querySelectorAll('.prof-filter-btn');
-  
-  buttons.forEach(btn => {
-    btn.classList.remove('active','bg-[#d4af37]','text-slate-950');
-    if(btn.onclick.toString().includes(type)) {
-      btn.classList.add('active','bg-[#d4af37]','text-slate-950');
-    }
-  });
-  
-  items.forEach(item => {
-    if(type === 'all' || item.dataset.type === type) {
-      item.style.display = 'block';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-}
-
-// Booking modal
-function openBooking(name, type, fee, initials) {
-  document.getElementById('modalInit').textContent = initials;
-  document.getElementById('modalName').textContent = name;
-  document.getElementById('modalType').textContent = type === 'lawyer' ? 'Lawyer / ವಕೀಲ' : 'CA';
-  document.getElementById('modalFee').textContent = fee;
-  document.getElementById('bookModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeBooking() {
-  document.getElementById('bookModal').classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-
-// Form submission
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('bookForm');
-  if(form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('modalName').textContent;
-      const inputs = form.querySelectorAll('input, select, textarea');
-      const msg = `Hi, I want to book a consultation with ${name}.
-
-Name: ${inputs[0].value}
-Email: ${inputs[1].value}
-Phone: ${inputs[2].value}
-Date: ${inputs[3].value}
-Time: ${inputs[4].value}
-Details: ${inputs[5].value}`;
-      
-      window.open(`https://wa.me/919632786767?text=${encodeURIComponent(msg)}`, '_blank');
-      closeBooking();
-      form.reset();
-    });
-  }
-  
-  // Set min date to today
-  const dateInput = document.querySelector('input[type="date"]');
-  if(dateInput) {
-    dateInput.min = new Date().toISOString().split('T')[0];
-  }
-});
-</script>
-
+    </section>
 
 <!-- ============================================ -->
 <!-- AI CHAT WIDGET -->
@@ -2723,5 +2338,197 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<!-- Booking Modal -->
+<div id="bookModal" class="fixed inset-0 bg-black/80 hidden z-50" style="backdrop-filter: blur(8px); display: none;">
+  <div style="position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+    <div style="background-color: #0f172a; border-radius: 1rem; max-width: 42rem; width: 100%; max-height: 90vh; overflow-y: auto;">
+      <div style="position: sticky; top: 0; background-color: #0f172a; border-bottom: 1px solid #1e293b; padding: 1.5rem; display: flex; align-items: center; justify-content: space-between; z-index: 10;">
+        <h3 style="font-size: 1.5rem; font-weight: bold; color: white;">Book Your Consultation</h3>
+        <button onclick="closeBookModal()" style="color: #94a3b8; font-size: 1.5rem; background: none; border: none; cursor: pointer;">✕</button>
+      </div>
+      
+      <div style="padding: 1.5rem;">
+        <div style="background-color: #020617; border: 1px solid #1e293b; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div id="mdlInit" style="width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(to bottom right, #d4af37, #f4d03f); display: flex; align-items: center; justify-content: center; color: #0f172a; font-size: 1.5rem; font-weight: bold;"></div>
+            <div>
+              <h4 id="mdlName" style="font-size: 1.25rem; font-weight: bold; color: white;"></h4>
+              <p id="mdlSpec" style="color: #d4af37; font-size: 0.875rem;"></p>
+              <p id="mdlPkg" style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.25rem;"></p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid #1e293b;">
+            <div>
+              <div style="font-size: 0.75rem; color: #64748b;">Total Amount</div>
+              <div style="font-size: 1.875rem; font-weight: bold; color: #d4af37;">₹<span id="mdlFee"></span></div>
+            </div>
+            <div style="text-align: right;">
+              <i class="fas fa-shield-alt" style="color: #22c55e;"></i>
+              <div style="font-size: 0.875rem; color: #94a3b8;">Secure Payment</div>
+            </div>
+          </div>
+        </div>
+        
+        <form id="bookForm" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            <div>
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">Full Name *</label>
+              <input type="text" id="custName" required style="width: 100%; background-color: #020617; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem 1rem; color: white;">
+            </div>
+            
+            <div>
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">Phone *</label>
+              <input type="tel" id="custPhone" required pattern="[0-9]{10}" style="width: 100%; background-color: #020617; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem 1rem; color: white;" placeholder="10 digits">
+            </div>
+          </div>
+          
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">Email *</label>
+            <input type="email" id="custEmail" required style="width: 100%; background-color: #020617; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem 1rem; color: white;">
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            <div>
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">Preferred Date *</label>
+              <input type="date" id="consDate" required style="width: 100%; background-color: #020617; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem 1rem; color: white;">
+            </div>
+            
+            <div>
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">Time *</label>
+              <select id="consTime" required style="width: 100%; background-color: #020617; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem 1rem; color: white;">
+                <option value="">Select</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">Brief Description *</label>
+            <textarea id="issueDesc" required rows="3" style="width: 100%; background-color: #020617; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem 1rem; color: white;"></textarea>
+          </div>
+          
+          <div style="display: flex; align-items: start; gap: 0.5rem;">
+            <input type="checkbox" id="agreeTerms" required style="margin-top: 0.25rem;">
+            <label for="agreeTerms" style="font-size: 0.875rem; color: #94a3b8;">I agree to terms and understand this is a paid service.</label>
+          </div>
+          
+          <div style="display: flex; gap: 0.75rem; padding-top: 1rem;">
+            <button type="submit" style="flex: 1; background: linear-gradient(to right, #d4af37, #f4d03f); color: #0f172a; padding: 1rem 2rem; border-radius: 9999px; font-weight: bold; border: none; cursor: pointer;">
+              🔒 Proceed to Payment
+            </button>
+            <button type="button" onclick="closeBookModal()" style="padding: 1rem 1.5rem; border-radius: 9999px; border: 2px solid #334155; color: white; background: none; cursor: pointer;">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+let currProf = {};
+
+function filterProf(type) {
+  const items = document.querySelectorAll('.prof-item');
+  const buttons = document.querySelectorAll('.prof-filter-btn');
+  
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+    btn.style.background = 'transparent';
+    btn.style.color = 'white';
+  });
+  
+  event.target.classList.add('active');
+  event.target.style.background = 'linear-gradient(to right, #d4af37, #f4d03f)';
+  event.target.style.color = '#0f172a';
+  event.target.style.fontWeight = '700';
+  
+  items.forEach(item => {
+    if(type === 'all' || item.dataset.type === type) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+function openBookModal(name, type, fee, init, spec, pkg) {
+  currProf = {name, type, fee, init, spec, pkg};
+  
+  document.getElementById('mdlInit').textContent = init;
+  document.getElementById('mdlName').textContent = name;
+  document.getElementById('mdlSpec').textContent = spec;
+  document.getElementById('mdlPkg').textContent = pkg + ' Package';
+  document.getElementById('mdlFee').textContent = fee;
+  
+  const modal = document.getElementById('bookModal');
+  modal.classList.remove('hidden');
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('consDate').setAttribute('min', today);
+}
+
+function closeBookModal() {
+  const modal = document.getElementById('bookModal');
+  modal.classList.add('hidden');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+  document.getElementById('bookForm').reset();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('bookForm');
+  if(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const data = {
+        profName: currProf.name,
+        profType: currProf.type,
+        amount: currProf.fee,
+        package: currProf.pkg,
+        name: document.getElementById('custName').value,
+        email: document.getElementById('custEmail').value,
+        phone: document.getElementById('custPhone').value,
+        date: document.getElementById('consDate').value,
+        time: document.getElementById('consTime').value,
+        desc: document.getElementById('issueDesc').value
+      };
+      
+      const msg = `🎉 BOOKING CONFIRMED
+
+Professional: ${data.profName}
+Package: ${data.package} (₹${data.amount})
+
+Customer: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
+
+Date: ${data.date}
+Time: ${data.time}
+
+Issue: ${data.desc}
+
+Payment: ₹${data.amount}`;
+      
+      const waUrl = 'https://wa.me/919632786767?text=' + encodeURIComponent(msg);
+      window.open(waUrl, '_blank');
+      
+      alert('✅ Booking request sent! Please complete payment via WhatsApp.');
+      closeBookModal();
+    });
+  }
+});
+</script>
+
 </body>
-</html>
