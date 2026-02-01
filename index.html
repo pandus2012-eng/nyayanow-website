@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>NyayaNow | Legal Help Karnataka</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NyayaNow | Karnataka Legal Help</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: Arial, sans-serif; }
-    .kn { display: none; }
-    section { scroll-margin-top: 90px; }
+    body { font-family: Arial; }
+    .kn { display:none; }
 
-    @media(min-width:768px){
-      .sticky-mobile{display:none;}
+    /* Modal */
+    .modal {
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.85);
+      z-index:9999;
+      padding:30px;
+    }
+    .modal-content {
+      background:#0f172a;
+      max-width:500px;
+      margin:auto;
+      padding:25px;
+      border-radius:18px;
+      color:white;
     }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-900">
 
 <!-- ================= NAVBAR ================= -->
 <header class="bg-slate-950 text-white sticky top-0 z-50 shadow-lg">
@@ -27,18 +39,6 @@
 
     <h1 class="text-xl font-extrabold text-[#d4af37]">NyayaNow ⚖️</h1>
 
-    <nav class="hidden lg:flex gap-6 text-sm text-slate-300">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#how">How</a>
-      <a href="#lawyers">Advocates</a>
-      <a href="#booking">Booking</a>
-      <a href="#apply">Apply</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Toggle -->
     <button onclick="toggleLang()"
       class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
       ಕನ್ನಡ / English
@@ -50,270 +50,210 @@
 <section id="home"
   class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
 
-  <div class="en">
-    <h2 class="text-4xl font-extrabold mb-6">
-      Affordable Legal Guidance in Karnataka ⚖️
-    </h2>
-    <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-      Connect with verified advocates via WhatsApp. Guidance starts at
-      <span class="text-[#d4af37] font-bold">₹99</span>.
-    </p>
-  </div>
+  <h2 class="text-4xl font-extrabold mb-6 en">
+    Affordable Legal Guidance in Karnataka ⚖️
+  </h2>
+  <h2 class="text-4xl font-extrabold mb-6 kn">
+    ಕರ್ನಾಟಕದಲ್ಲಿ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ ⚖️
+  </h2>
 
-  <div class="kn">
-    <h2 class="text-4xl font-extrabold mb-6">
-      ಕರ್ನಾಟಕದಲ್ಲಿ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ ⚖️
-    </h2>
-    <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-      WhatsApp ಮೂಲಕ ಪರಿಶೀಲಿತ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.
-      ಮಾರ್ಗದರ್ಶನ <span class="text-[#d4af37] font-bold">₹99</span> ರಿಂದ ಆರಂಭ.
-    </p>
-  </div>
-
-  <!-- ================= CATEGORY PILLS (LIKE SCREENSHOT) ================= -->
-<div class="flex flex-wrap justify-center gap-4 mt-10">
-
-  <!-- Citizens -->
-<a href="services.html"
-  class="flex items-center gap-2 px-8 py-3 rounded-full 
-         bg-slate-900/60 border border-slate-700 
-         text-white font-semibold shadow-md
-         hover:bg-slate-800 transition">
-
-  <span class="text-yellow-400 text-xl">👥</span>
-  <span class="en">Citizens</span>
-  <span class="kn">ನಾಗರಿಕರು</span>
-</a>
-
-    class="flex items-center gap-2 px-8 py-3 rounded-full 
-           bg-slate-900/60 border border-slate-700 
-           text-white font-semibold shadow-md
-           hover:bg-slate-800 transition">
-
-    <span class="text-yellow-400 text-xl">👥</span>
-    <span class="en">Citizens</span>
-    <span class="kn">ನಾಗರಿಕರು</span>
-  </a>
-
-  <!-- Law Students -->
-  <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20am%20a%20Law%20student%20and%20want%20support."
-    class="flex items-center gap-2 px-8 py-3 rounded-full 
-           bg-slate-900/60 border border-slate-700 
-           text-white font-semibold shadow-md
-           hover:bg-slate-800 transition">
-
-    <span class="text-yellow-400 text-xl">🎓</span>
-    <span class="en">Law Students</span>
-    <span class="kn">ಕಾನೂನು ವಿದ್ಯಾರ್ಥಿಗಳು</span>
-  </a>
-
-  <!-- Lawyers -->
-  <a href="#apply"
-    class="flex items-center gap-2 px-8 py-3 rounded-full 
-           bg-slate-900/60 border border-slate-700 
-           text-white font-semibold shadow-md
-           hover:bg-slate-800 transition">
-
-    <span class="text-yellow-400 text-xl">⚖️</span>
-    <span class="en">Lawyers</span>
-    <span class="kn">ವಕೀಲರು</span>
-  </a>
-
-  <!-- CAs -->
-  <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20am%20a%20CA%20and%20want%20to%20join."
-    class="flex items-center gap-2 px-8 py-3 rounded-full 
-           bg-slate-900/60 border border-slate-700 
-           text-white font-semibold shadow-md
-           hover:bg-slate-800 transition">
-
-    <span class="text-yellow-400 text-xl">📊</span>
-    <span class="en">CAs</span>
-    <span class="kn">ಚಾರ್ಟರ್ಡ್ ಅಕೌಂಟೆಂಟ್ಸ್</span>
-  </a>
-
-</div>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-12">
-    <span class="en">Top Legal Services</span>
-    <span class="kn">ಮುಖ್ಯ ಕಾನೂನು ಸೇವೆಗಳು</span>
-  </h3>
-
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-
-    <div class="p-6 rounded-2xl border shadow">
-      <h4 class="font-bold text-[#d4af37]">
-        <span class="en">Family & Divorce</span>
-        <span class="kn">ಕುಟುಂಬ ಮತ್ತು ವಿಚ್ಛೇದನ</span>
-      </h4>
-    </div>
-
-    <div class="p-6 rounded-2xl border shadow">
-      <h4 class="font-bold text-[#d4af37]">
-        <span class="en">Property Disputes</span>
-        <span class="kn">ಆಸ್ತಿ ವಿವಾದಗಳು</span>
-      </h4>
-    </div>
-
-    <div class="p-6 rounded-2xl border shadow">
-      <h4 class="font-bold text-[#d4af37]">
-        <span class="en">Criminal & Bail</span>
-        <span class="kn">ಕ್ರಿಮಿನಲ್ ಮತ್ತು ಜಾಮೀನು</span>
-      </h4>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= HOW IT WORKS ================= -->
-<section id="how" class="py-20 bg-slate-100 text-center">
-  <h3 class="text-3xl font-extrabold mb-10">
-    <span class="en">How NyayaNow Works</span>
-    <span class="kn">NyayaNow ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
-  </h3>
-
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-
-    <div class="p-6 bg-white rounded-2xl shadow">
-      <span class="en">1️⃣ Share Issue</span>
-      <span class="kn">1️⃣ ಸಮಸ್ಯೆ ತಿಳಿಸಿ</span>
-    </div>
-
-    <div class="p-6 bg-white rounded-2xl shadow">
-      <span class="en">2️⃣ Pay Securely</span>
-      <span class="kn">2️⃣ ಸುರಕ್ಷಿತ ಪಾವತಿ</span>
-    </div>
-
-    <div class="p-6 bg-white rounded-2xl shadow">
-      <span class="en">3️⃣ Advocate Calls</span>
-      <span class="kn">3️⃣ ವಕೀಲರು ಕರೆಮಾಡುತ್ತಾರೆ</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= LAWYERS ================= -->
-<section id="lawyers" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-12">
-    <span class="en">Verified Advocates</span>
-    <span class="kn">ಪರಿಶೀಲಿತ ವಕೀಲರು</span>
-  </h3>
-
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-    <div class="p-6 border rounded-2xl shadow">Adv. Ravi Kumar</div>
-    <div class="p-6 border rounded-2xl shadow">Adv. Sneha Joshi</div>
-    <div class="p-6 border rounded-2xl shadow">Adv. Imran Shariff</div>
-  </div>
-</section>
-
-<!-- ================= BOOKING ================= -->
-<section id="booking" class="py-20 bg-slate-100 text-center">
-  <h3 class="text-3xl font-extrabold mb-10">
-    <span class="en">Book Consultation</span>
-    <span class="kn">ಸಲಹೆ ಬುಕ್ ಮಾಡಿ</span>
-  </h3>
-
-  <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-3 px-6">
-    <div class="p-6 bg-white rounded-2xl shadow">₹99 Basic</div>
-    <div class="p-6 bg-white rounded-2xl shadow">₹499 Call</div>
-    <div class="p-6 bg-white rounded-2xl shadow">₹999 Drafting</div>
-  </div>
-</section>
-
-<!-- ================= APPLY ================= -->
-<section id="apply" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-6">
-    <span class="en">Join as Advocate Partner</span>
-    <span class="kn">ವಕೀಲ ಪಾಲುದಾರರಾಗಿ ಸೇರಿ</span>
-  </h3>
-
-  <a href="#"
-    class="bg-[#d4af37] px-8 py-4 rounded-full font-bold text-black">
-    <span class="en">Apply Now</span>
-    <span class="kn">ಅರ್ಜಿಸಿ</span>
-  </a>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section id="faq" class="py-20 bg-slate-100 text-center">
-  <h3 class="text-3xl font-extrabold mb-10">
-    <span class="en">FAQs</span>
-    <span class="kn">ಪ್ರಶ್ನೆಗಳು</span>
-  </h3>
-
-  <p>
-    <span class="en">Q: Is NyayaNow a law firm?</span>
-    <span class="kn">ಪ್ರ: NyayaNow ಕಾನೂನು ಸಂಸ್ಥೆಯೇ?</span>
+  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10 en">
+    Verified advocate consultations starting at ₹99.
   </p>
-  <p class="text-slate-600">
-    <span class="en">No, we connect clients with independent advocates.</span>
-    <span class="kn">ಇಲ್ಲ, ನಾವು ಸ್ವತಂತ್ರ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.</span>
+  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10 kn">
+    ಪರಿಶೀಲಿತ ವಕೀಲರ ಸಲಹೆ ₹99 ರಿಂದ ಆರಂಭ.
   </p>
+
+  <!-- CATEGORY BUTTONS -->
+  <div class="flex flex-wrap justify-center gap-4">
+
+    <!-- Citizens -->
+    <a href="#citizens"
+      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
+             text-white font-semibold hover:bg-slate-800 transition">
+      👥 Citizens
+    </a>
+
+    <!-- Lawyers -->
+    <a href="#apply"
+      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
+             text-white font-semibold hover:bg-slate-800 transition">
+      ⚖️ Lawyers
+    </a>
+
+    <!-- Students -->
+    <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20am%20a%20Law%20student."
+      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
+             text-white font-semibold hover:bg-slate-800 transition">
+      🎓 Students
+    </a>
+
+    <!-- CA -->
+    <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20need%20CA%20consultation."
+      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
+             text-white font-semibold hover:bg-slate-800 transition">
+      📊 CA
+    </a>
+
+  </div>
+</section>
+
+<!-- ================= CITIZENS SECTION ================= -->
+<section id="citizens" class="py-20 bg-white text-center">
+
+  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-6">
+    Consultation Packages
+  </h2>
+
+  <!-- Packages -->
+  <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6 px-6">
+
+    <div class="p-6 border rounded-xl shadow">
+      <h3 class="font-bold">₹99 Basic Guidance</h3>
+      <p class="text-sm text-slate-500 mt-2">WhatsApp Legal Support</p>
+    </div>
+
+    <div class="p-6 border rounded-xl shadow">
+      <h3 class="font-bold">₹499 Lawyer Consultation</h3>
+      <p class="text-sm text-slate-500 mt-2">Verified Advocate Call</p>
+    </div>
+
+    <div class="p-6 border rounded-xl shadow">
+      <h3 class="font-bold">₹999 Drafting Support</h3>
+      <p class="text-sm text-slate-500 mt-2">Notice / Agreement Draft</p>
+    </div>
+
+    <div class="p-6 border rounded-xl shadow">
+      <h3 class="font-bold">₹499 CA Consultation</h3>
+      <p class="text-sm text-slate-500 mt-2">Tax & GST Guidance</p>
+    </div>
+
+  </div>
+
+  <!-- Services Buttons -->
+  <div class="flex justify-center gap-4 mt-10 flex-wrap">
+
+    <button onclick="openModal('legalModal')"
+      class="bg-[#d4af37] px-6 py-3 rounded-full font-bold">
+      ⚖️ View Legal Services
+    </button>
+
+    <button onclick="openModal('caModal')"
+      class="bg-[#d4af37] px-6 py-3 rounded-full font-bold">
+      📊 View CA Services
+    </button>
+  </div>
+
+  <!-- Important Note -->
+  <p class="mt-8 text-slate-600 max-w-2xl mx-auto">
+    After payment, please send the payment screenshot on WhatsApp.
+    Our team will connect you with the right advocate within <b>30–60 minutes</b>.
+  </p>
+
+  <a href="https://wa.me/919632786767"
+    class="mt-5 inline-block bg-green-500 text-white px-8 py-3 rounded-xl font-bold">
+    Send Screenshot on WhatsApp
+  </a>
+
+</section>
+
+<!-- ================= ADVOCATE APPLY ================= -->
+<section id="apply" class="py-20 bg-slate-100 text-center">
+  <h2 class="text-3xl font-extrabold mb-8 text-[#d4af37]">
+    Advocate Partner Registration
+  </h2>
+
+  <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow text-left">
+    <label class="block mb-2 font-bold">Full Name</label>
+    <input class="w-full border p-3 rounded mb-5"/>
+
+    <label class="block mb-2 font-bold">Bar Council Number</label>
+    <input class="w-full border p-3 rounded mb-5"/>
+
+    <label class="block mb-2 font-bold">City</label>
+    <input class="w-full border p-3 rounded mb-5"/>
+
+    <button class="w-full bg-green-500 text-white py-3 rounded-xl font-bold">
+      Submit Application
+    </button>
+  </form>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="py-20 bg-white text-center">
-  <h3 class="text-3xl font-extrabold mb-6">
-    <span class="en">Contact NyayaNow</span>
-    <span class="kn">NyayaNow ಸಂಪರ್ಕಿಸಿ</span>
-  </h3>
-
+<section id="contact" class="py-16 bg-white text-center">
+  <h2 class="text-3xl font-extrabold mb-4">Contact NyayaNow</h2>
   <p>WhatsApp: +91 9632786767</p>
   <p>Email: info@nyayanow.com</p>
 </section>
 
-<!-- ================= LEGAL POLICIES ================= -->
-<section class="py-20 bg-slate-100 text-center">
-  <h3 class="text-2xl font-bold mb-6">
-    <span class="en">Legal Policies</span>
-    <span class="kn">ಕಾನೂನು ನೀತಿಗಳು</span>
-  </h3>
-
-  <p class="text-slate-600 max-w-3xl mx-auto">
-    <span class="en">
-      NyayaNow is a facilitation platform. Refunds depend on service status.
-      Privacy is protected and consultations are handled by licensed advocates.
-    </span>
-
-    <span class="kn">
-      NyayaNow ಕೇವಲ ಸಂಪರ್ಕ ವೇದಿಕೆ. ಸೇವೆಯ ಸ್ಥಿತಿಗೆ ಅನುಗುಣವಾಗಿ ಮರುಪಾವತಿ.
-      ನಿಮ್ಮ ಗೌಪ್ಯತೆ ಸುರಕ್ಷಿತವಾಗಿದೆ.
-    </span>
-  </p>
-</section>
-
 <!-- ================= FOOTER ================= -->
-<footer class="bg-black text-slate-400 py-10 text-center text-sm">
-  <p class="text-white font-bold text-lg">NyayaNow.com ⚖️</p>
-  <p>© 2026 NyayaNow | All Rights Reserved</p>
+<footer class="bg-black text-slate-400 py-8 text-center text-sm">
+  © 2026 NyayaNow.com | Not a law firm, only a facilitation platform.
 </footer>
 
-<!-- ================= STICKY MOBILE ================= -->
-<div class="sticky-mobile fixed bottom-5 left-1/2 -translate-x-1/2 w-[90%] max-w-md flex gap-3 z-50">
+<!-- ================= MODALS ================= -->
 
-  <a href="https://wa.me/919632786767"
-    class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-2xl font-bold shadow-lg">
-    WhatsApp
-  </a>
+<div id="legalModal" class="modal">
+  <div class="modal-content">
+    <h3 class="text-xl font-bold text-[#d4af37] mb-4">⚖️ Legal Services</h3>
+    <ul class="space-y-2 text-slate-300 text-sm">
+      <li>Property Disputes</li>
+      <li>Family & Divorce</li>
+      <li>Criminal & Bail</li>
+      <li>Consumer Complaints</li>
+      <li>Labour Issues</li>
+      <li>Cyber Fraud</li>
+      <li>Tenant Issues</li>
+      <li>FIR Support</li>
+      <li>Agreements & Drafting</li>
+      <li>Accident Claims</li>
+      <li>Business Support</li>
+      <li>Court Guidance</li>
+    </ul>
 
-  <a href="#booking"
-    class="flex-1 bg-[#d4af37] text-black text-center py-4 rounded-2xl font-bold shadow-lg">
-    Book ₹99
-  </a>
-
+    <button onclick="closeModal('legalModal')"
+      class="mt-6 w-full bg-red-500 py-2 rounded-lg font-bold">
+      Close
+    </button>
+  </div>
 </div>
 
-<!-- ================= LANGUAGE SCRIPT ================= -->
+<div id="caModal" class="modal">
+  <div class="modal-content">
+    <h3 class="text-xl font-bold text-[#d4af37] mb-4">📊 CA Services</h3>
+    <ul class="space-y-2 text-slate-300 text-sm">
+      <li>Income Tax Filing</li>
+      <li>GST Registration</li>
+      <li>Business Compliance</li>
+      <li>Tax Notice Reply</li>
+      <li>Accounting Support</li>
+      <li>Startup CA Consultation</li>
+    </ul>
+
+    <button onclick="closeModal('caModal')"
+      class="mt-6 w-full bg-red-500 py-2 rounded-lg font-bold">
+      Close
+    </button>
+  </div>
+</div>
+
+<!-- ================= SCRIPT ================= -->
 <script>
-  function toggleLang() {
-    document.querySelectorAll(".en").forEach(el => {
-      el.style.display = (el.style.display === "none") ? "block" : "none";
-    });
-    document.querySelectorAll(".kn").forEach(el => {
-      el.style.display = (el.style.display === "none") ? "block" : "none";
-    });
-  }
+function toggleLang(){
+  document.querySelectorAll(".en").forEach(el=>{
+    el.style.display = (el.style.display==="none") ? "block" : "none";
+  });
+  document.querySelectorAll(".kn").forEach(el=>{
+    el.style.display = (el.style.display==="none") ? "block" : "none";
+  });
+}
+
+function openModal(id){
+  document.getElementById(id).style.display="block";
+}
+function closeModal(id){
+  document.getElementById(id).style.display="none";
+}
 </script>
 
 </body>
