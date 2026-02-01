@@ -3,258 +3,109 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NyayaNow | Karnataka Legal Help</title>
+  <title>NyayaNow | Legal Help Karnataka</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: Arial; }
-    .kn { display:none; }
+    body { font-family: Arial, sans-serif; }
 
-    /* Modal */
-    .modal {
-      display:none;
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.85);
-      z-index:9999;
-      padding:30px;
-    }
-    .modal-content {
-      background:#0f172a;
-      max-width:500px;
-      margin:auto;
-      padding:25px;
-      border-radius:18px;
+    .category-btn{
+      padding:14px 28px;
+      border-radius:999px;
+      background:rgba(15,23,42,0.7);
+      border:1px solid rgba(148,163,184,0.3);
       color:white;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .category-btn:hover{
+      background:rgba(30,41,59,0.9);
+      transform:scale(1.03);
+    }
+
+    /* Sticky WhatsApp */
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:14px 18px;
+      border-radius:50px;
+      font-weight:bold;
+      box-shadow:0 6px 15px rgba(0,0,0,0.3);
+      z-index:9997;
     }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-900">
 
-<!-- ================= NAVBAR ================= -->
-<header class="bg-slate-950 text-white sticky top-0 z-50 shadow-lg">
+<!-- NAVBAR -->
+<header class="bg-slate-950 text-white shadow-lg">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-extrabold text-[#d4af37]">
+      NyayaNow ⚖️
+    </h1>
 
-    <h1 class="text-xl font-extrabold text-[#d4af37]">NyayaNow ⚖️</h1>
-
-    <button onclick="toggleLang()"
-      class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
-      ಕನ್ನಡ / English
-    </button>
+    <a href="https://wa.me/919632786767"
+       class="bg-[#d4af37] text-black px-5 py-2 rounded-full font-bold">
+       WhatsApp Us
+    </a>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section id="home"
-  class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
+<!-- HERO SECTION -->
+<section class="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
 
-  <h2 class="text-4xl font-extrabold mb-6 en">
+  <h2 class="text-5xl font-extrabold mb-6">
     Affordable Legal Guidance in Karnataka ⚖️
   </h2>
-  <h2 class="text-4xl font-extrabold mb-6 kn">
-    ಕರ್ನಾಟಕದಲ್ಲಿ ಕಡಿಮೆ ವೆಚ್ಚದ ಕಾನೂನು ಸಹಾಯ ⚖️
-  </h2>
 
-  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10 en">
-    Verified advocate consultations starting at ₹99.
-  </p>
-  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10 kn">
-    ಪರಿಶೀಲಿತ ವಕೀಲರ ಸಲಹೆ ₹99 ರಿಂದ ಆರಂಭ.
+  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-12">
+    Connect with verified advocates & professionals. Guidance starts at ₹99.
   </p>
 
-  <!-- CATEGORY BUTTONS -->
-  <div class="flex flex-wrap justify-center gap-4">
+  <!-- CATEGORY OPTIONS -->
+  <div class="flex flex-wrap justify-center gap-5">
 
     <!-- Citizens -->
-    <a href="#citizens"
-      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
-             text-white font-semibold hover:bg-slate-800 transition">
+    <a href="services.html" class="category-btn">
       👥 Citizens
     </a>
 
     <!-- Lawyers -->
-    <a href="#apply"
-      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
-             text-white font-semibold hover:bg-slate-800 transition">
+    <a href="Lawyer.html" class="category-btn">
       ⚖️ Lawyers
     </a>
 
+    <!-- CA -->
+    <a href="ca.html" class="category-btn">
+      📊 CAs
+    </a>
+
     <!-- Students -->
-    <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20am%20a%20Law%20student."
-      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
-             text-white font-semibold hover:bg-slate-800 transition">
+    <a href="students.html" class="category-btn">
       🎓 Students
     </a>
 
-    <!-- CA -->
-    <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20need%20CA%20consultation."
-      class="px-8 py-3 rounded-full bg-slate-900/70 border border-slate-700
-             text-white font-semibold hover:bg-slate-800 transition">
-      📊 CA
-    </a>
-
-  </div>
-</section>
-
-<!-- ================= CITIZENS SECTION ================= -->
-<section id="citizens" class="py-20 bg-white text-center">
-
-  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-6">
-    Consultation Packages
-  </h2>
-
-  <!-- Packages -->
-  <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6 px-6">
-
-    <div class="p-6 border rounded-xl shadow">
-      <h3 class="font-bold">₹99 Basic Guidance</h3>
-      <p class="text-sm text-slate-500 mt-2">WhatsApp Legal Support</p>
-    </div>
-
-    <div class="p-6 border rounded-xl shadow">
-      <h3 class="font-bold">₹499 Lawyer Consultation</h3>
-      <p class="text-sm text-slate-500 mt-2">Verified Advocate Call</p>
-    </div>
-
-    <div class="p-6 border rounded-xl shadow">
-      <h3 class="font-bold">₹999 Drafting Support</h3>
-      <p class="text-sm text-slate-500 mt-2">Notice / Agreement Draft</p>
-    </div>
-
-    <div class="p-6 border rounded-xl shadow">
-      <h3 class="font-bold">₹499 CA Consultation</h3>
-      <p class="text-sm text-slate-500 mt-2">Tax & GST Guidance</p>
-    </div>
-
   </div>
 
-  <!-- Services Buttons -->
-  <div class="flex justify-center gap-4 mt-10 flex-wrap">
-
-    <button onclick="openModal('legalModal')"
-      class="bg-[#d4af37] px-6 py-3 rounded-full font-bold">
-      ⚖️ View Legal Services
-    </button>
-
-    <button onclick="openModal('caModal')"
-      class="bg-[#d4af37] px-6 py-3 rounded-full font-bold">
-      📊 View CA Services
-    </button>
-  </div>
-
-  <!-- Important Note -->
-  <p class="mt-8 text-slate-600 max-w-2xl mx-auto">
-    After payment, please send the payment screenshot on WhatsApp.
-    Our team will connect you with the right advocate within <b>30–60 minutes</b>.
-  </p>
-
-  <a href="https://wa.me/919632786767"
-    class="mt-5 inline-block bg-green-500 text-white px-8 py-3 rounded-xl font-bold">
-    Send Screenshot on WhatsApp
-  </a>
-
 </section>
 
-<!-- ================= ADVOCATE APPLY ================= -->
-<section id="apply" class="py-20 bg-slate-100 text-center">
-  <h2 class="text-3xl font-extrabold mb-8 text-[#d4af37]">
-    Advocate Partner Registration
-  </h2>
-
-  <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow text-left">
-    <label class="block mb-2 font-bold">Full Name</label>
-    <input class="w-full border p-3 rounded mb-5"/>
-
-    <label class="block mb-2 font-bold">Bar Council Number</label>
-    <input class="w-full border p-3 rounded mb-5"/>
-
-    <label class="block mb-2 font-bold">City</label>
-    <input class="w-full border p-3 rounded mb-5"/>
-
-    <button class="w-full bg-green-500 text-white py-3 rounded-xl font-bold">
-      Submit Application
-    </button>
-  </form>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="py-16 bg-white text-center">
-  <h2 class="text-3xl font-extrabold mb-4">Contact NyayaNow</h2>
-  <p>WhatsApp: +91 9632786767</p>
-  <p>Email: info@nyayanow.com</p>
-</section>
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="bg-black text-slate-400 py-8 text-center text-sm">
-  © 2026 NyayaNow.com | Not a law firm, only a facilitation platform.
+  <p class="text-white font-bold text-lg">NyayaNow.com ⚖️</p>
+  <p>WhatsApp: +91 9632786767 | Email: info@nyayanow.com</p>
+  <p class="mt-2">© 2026 NyayaNow | All Rights Reserved</p>
 </footer>
 
-<!-- ================= MODALS ================= -->
-
-<div id="legalModal" class="modal">
-  <div class="modal-content">
-    <h3 class="text-xl font-bold text-[#d4af37] mb-4">⚖️ Legal Services</h3>
-    <ul class="space-y-2 text-slate-300 text-sm">
-      <li>Property Disputes</li>
-      <li>Family & Divorce</li>
-      <li>Criminal & Bail</li>
-      <li>Consumer Complaints</li>
-      <li>Labour Issues</li>
-      <li>Cyber Fraud</li>
-      <li>Tenant Issues</li>
-      <li>FIR Support</li>
-      <li>Agreements & Drafting</li>
-      <li>Accident Claims</li>
-      <li>Business Support</li>
-      <li>Court Guidance</li>
-    </ul>
-
-    <button onclick="closeModal('legalModal')"
-      class="mt-6 w-full bg-red-500 py-2 rounded-lg font-bold">
-      Close
-    </button>
-  </div>
-</div>
-
-<div id="caModal" class="modal">
-  <div class="modal-content">
-    <h3 class="text-xl font-bold text-[#d4af37] mb-4">📊 CA Services</h3>
-    <ul class="space-y-2 text-slate-300 text-sm">
-      <li>Income Tax Filing</li>
-      <li>GST Registration</li>
-      <li>Business Compliance</li>
-      <li>Tax Notice Reply</li>
-      <li>Accounting Support</li>
-      <li>Startup CA Consultation</li>
-    </ul>
-
-    <button onclick="closeModal('caModal')"
-      class="mt-6 w-full bg-red-500 py-2 rounded-lg font-bold">
-      Close
-    </button>
-  </div>
-</div>
-
-<!-- ================= SCRIPT ================= -->
-<script>
-function toggleLang(){
-  document.querySelectorAll(".en").forEach(el=>{
-    el.style.display = (el.style.display==="none") ? "block" : "none";
-  });
-  document.querySelectorAll(".kn").forEach(el=>{
-    el.style.display = (el.style.display==="none") ? "block" : "none";
-  });
-}
-
-function openModal(id){
-  document.getElementById(id).style.display="block";
-}
-function closeModal(id){
-  document.getElementById(id).style.display="none";
-}
-</script>
+<!-- Sticky WhatsApp Button -->
+<a href="https://wa.me/919632786767" class="whatsapp-float">
+  WhatsApp 💬
+</a>
 
 </body>
 </html>
