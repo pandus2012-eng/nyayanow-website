@@ -4,138 +4,142 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NyayaNow | Student Portal</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: Arial; }
-    .kn { display:none; }
+    body {
+      font-family: Arial;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+    }
+    .kn { display: none; }
   </style>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="text-white">
 
-<!-- NAVBAR -->
-<header class="bg-slate-900 shadow-lg sticky top-0 z-50">
+<!-- HEADER -->
+<header class="w-full bg-slate-900/80 shadow-md sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
+    <!-- Logo -->
     <a href="index.html" class="text-xl font-bold text-[#d4af37]">
       NyayaNow ⚖️
     </a>
 
-    <button onclick="toggleLang()"
-      class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
-      ಕನ್ನಡ / English
-    </button>
+    <!-- Controls -->
+    <div class="flex gap-3 items-center">
+
+      <!-- Home Button -->
+      <a href="index.html"
+        class="bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-200">
+        ⬅ Home
+      </a>
+
+      <!-- Language Toggle -->
+      <button onclick="toggleLang()"
+        class="bg-[#d4af37] text-black px-5 py-2 rounded-full font-bold hover:opacity-90">
+        ಕನ್ನಡ / English
+      </button>
+    </div>
 
   </div>
 </header>
 
-<!-- HERO -->
-<section class="py-16 text-center">
-  <h1 class="text-4xl font-extrabold text-[#d4af37] mb-4 en">
-    Law Student Support Portal 🎓
+<!-- HERO SECTION -->
+<section class="text-center py-14 px-6">
+
+  <h1 class="text-5xl font-extrabold text-[#d4af37] mb-4 en">
+    Student Learning Portal 🎓
   </h1>
-  <h1 class="text-4xl font-extrabold text-[#d4af37] mb-4 kn">
-    ಕಾನೂನು ವಿದ್ಯಾರ್ಥಿ ಸಹಾಯ ಪೋರ್ಟಲ್ 🎓
+
+  <h1 class="text-5xl font-extrabold text-[#d4af37] mb-4 kn">
+    ವಿದ್ಯಾರ್ಥಿ ಕಲಿಕೆ ಪೋರ್ಟಲ್ 🎓
   </h1>
 
   <p class="text-slate-300 max-w-2xl mx-auto en">
-    Join NyayaNow student community for mentorship, internships, notes, and career guidance.
+    Join NyayaNow as a law student intern and gain real legal exposure, mentorship, and learning opportunities.
   </p>
+
   <p class="text-slate-300 max-w-2xl mx-auto kn">
-    NyayaNow ವಿದ್ಯಾರ್ಥಿ ಸಮುದಾಯದಲ್ಲಿ ಸೇರಿ – ಮಾರ್ಗದರ್ಶನ, ಇಂಟರ್ನ್‌ಶಿಪ್, ನೋಟ್ಸ್ ಮತ್ತು ವೃತ್ತಿ ಸಹಾಯ ಪಡೆಯಿರಿ.
+    NyayaNow ನಲ್ಲಿ ಕಾನೂನು ವಿದ್ಯಾರ್ಥಿಯಾಗಿ ಸೇರಿ, ಇಂಟರ್ನ್‌ಶಿಪ್, ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ಕಲಿಕೆ ಅವಕಾಶಗಳನ್ನು ಪಡೆಯಿರಿ.
   </p>
+
 </section>
 
-<!-- BENEFITS -->
-<section class="pb-14">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+<!-- FEATURE CARDS -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6 mb-16">
 
-    <div class="bg-slate-900 p-6 rounded-xl shadow">
-      <h3 class="font-bold text-[#d4af37] mb-2">📚 Study & Exam Notes</h3>
-      <p class="text-slate-300 text-sm">
-        Access important notes, question papers and exam preparation support.
-      </p>
-    </div>
-
-    <div class="bg-slate-900 p-6 rounded-xl shadow">
-      <h3 class="font-bold text-[#d4af37] mb-2">🧑‍⚖️ Internship Mentorship</h3>
-      <p class="text-slate-300 text-sm">
-        Get guidance for internships under advocates and legal professionals.
-      </p>
-    </div>
-
-    <div class="bg-slate-900 p-6 rounded-xl shadow">
-      <h3 class="font-bold text-[#d4af37] mb-2">🚀 Career Opportunities</h3>
-      <p class="text-slate-300 text-sm">
-        Build your legal career with NyayaNow networking and placement support.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- STUDENT REGISTRATION FORM -->
-<section class="pb-20 text-center">
-  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-8 en">
-    Student Registration Form
-  </h2>
-  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-8 kn">
-    ವಿದ್ಯಾರ್ಥಿ ನೋಂದಣಿ ಫಾರ್ಮ್
-  </h2>
-
-  <form class="max-w-xl mx-auto bg-slate-900 p-8 rounded-2xl shadow text-left">
-
-    <label class="block mb-2 font-bold">Full Name</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="Student Name"/>
-
-    <label class="block mb-2 font-bold">College / University</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="KSLU / University Name"/>
-
-    <label class="block mb-2 font-bold">Year / Semester</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="1st Year / 3rd Year"/>
-
-    <label class="block mb-2 font-bold">Interested Area</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="Criminal / Corporate / Judiciary"/>
-
-    <button type="button"
-      class="w-full bg-green-500 py-3 rounded-xl font-bold">
-      Submit Registration
-    </button>
-
-    <p class="text-xs text-slate-400 mt-4">
-      After submission, our team will connect you for mentorship and student support.
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">
+      📚 Legal Internship
+    </h3>
+    <p class="text-slate-300 text-sm">
+      Apply for internships with verified advocates and firms.
     </p>
-  </form>
+  </div>
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">
+      👨‍⚖️ Advocate Mentorship
+    </h3>
+    <p class="text-slate-300 text-sm">
+      Learn directly from experienced lawyers and professionals.
+    </p>
+  </div>
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">
+      🚀 Career Growth
+    </h3>
+    <p class="text-slate-300 text-sm">
+      Build your career with practical legal knowledge and exposure.
+    </p>
+  </div>
+
 </section>
 
-<!-- WHATSAPP CONNECT -->
-<section class="text-center pb-16">
-  <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20am%20a%20Law%20student%20and%20want%20to%20join%20the%20student%20community."
-    class="bg-[#d4af37] text-black px-8 py-4 rounded-xl font-bold shadow-lg">
-    Connect on WhatsApp 🎓
+<!-- REGISTRATION BUTTON -->
+<section class="text-center px-6 mb-14">
+
+  <h2 class="text-4xl font-extrabold text-[#d4af37] mb-6">
+    Student Registration
+  </h2>
+
+  <p class="text-slate-300 mb-8">
+    Click below to register as a NyayaNow Student Member securely through our official form.
+  </p>
+
+  <!-- ✅ Student Google Form Button -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO57lCULx5Azk_cin6-s2ZWR9WP0Svsw5hEuJlCYft24XCUQ/viewform?usp=header"
+     target="_blank"
+     class="inline-block bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-600 shadow-lg">
+     Register as Student Member 🚀
   </a>
+
 </section>
+
+<!-- WHATSAPP SUPPORT -->
+<div class="text-center mt-6">
+  <a href="https://wa.me/919632786767"
+    class="inline-block bg-[#d4af37] text-black px-10 py-4 rounded-xl font-bold shadow-lg hover:opacity-90">
+    WhatsApp Support 🎓
+  </a>
+</div>
 
 <!-- FOOTER -->
-<footer class="bg-black text-slate-500 text-center py-6 text-sm">
-  © 2026 NyayaNow.com | Student Support Portal <br/>
-  NyayaNow helps students connect with mentors and legal opportunities.
+<footer class="text-center text-slate-500 text-xs mt-16 pb-6">
+  © 2026 NyayaNow.com | Student Portal <br>
+  NyayaNow provides learning and internship connections for students.
 </footer>
 
-<!-- SCRIPT -->
+<!-- LANGUAGE SCRIPT -->
 <script>
 function toggleLang(){
   document.querySelectorAll(".en").forEach(el=>{
-    el.style.display=(el.style.display==="none")?"block":"none";
+    el.style.display = (el.style.display==="none") ? "block" : "none";
   });
   document.querySelectorAll(".kn").forEach(el=>{
-    el.style.display=(el.style.display==="none")?"block":"none";
+    el.style.display = (el.style.display==="none") ? "block" : "none";
   });
 }
 </script>
