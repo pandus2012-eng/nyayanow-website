@@ -3,164 +3,180 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NyayaNow | Packages</title>
-
+  <title>NyayaNow | Citizen Portal</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: Arial, sans-serif; }
-    .kn { display:none; }
+    body {
+      font-family: Arial;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+    }
+    .kn { display: none; }
   </style>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="text-white">
 
-<!-- NAVBAR -->
-<header class="bg-slate-900 shadow-md">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<!-- HEADER -->
+<header class="w-full bg-slate-900/80 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
     <a href="index.html" class="text-xl font-bold text-[#d4af37]">
       NyayaNow ⚖️
     </a>
 
-    <button onclick="toggleLang()"
-      class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
-      ಕನ್ನಡ / English
-    </button>
+    <!-- Controls -->
+    <div class="flex gap-3 items-center">
+
+      <!-- Home Button -->
+      <a href="index.html"
+        class="bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-200">
+        ⬅ Home
+      </a>
+
+      <!-- Language Toggle -->
+      <button onclick="toggleLang()"
+        class="bg-[#d4af37] text-black px-5 py-2 rounded-full font-bold hover:opacity-90">
+        ಕನ್ನಡ / English
+      </button>
+    </div>
+
   </div>
 </header>
 
-<!-- HERO -->
-<section class="py-10 text-center">
-  <h1 class="text-3xl font-extrabold text-[#d4af37] mb-2 en">
+<!-- HERO SECTION -->
+<section class="text-center py-14 px-6">
+
+  <h1 class="text-5xl font-extrabold text-[#d4af37] mb-4 en">
+    Citizen Consultation Portal 🧑‍⚖️
+  </h1>
+
+  <h1 class="text-5xl font-extrabold text-[#d4af37] mb-4 kn">
+    ನಾಗರಿಕ ಸಲಹೆ ಪೋರ್ಟಲ್ 🧑‍⚖️
+  </h1>
+
+  <p class="text-slate-300 max-w-2xl mx-auto en">
+    Book affordable legal consultation packages and connect with verified lawyers across Karnataka.
+  </p>
+
+  <p class="text-slate-300 max-w-2xl mx-auto kn">
+    ಕಡಿಮೆ ದರದ ಕಾನೂನು ಸಲಹೆ ಪ್ಯಾಕೇಜ್‌ಗಳನ್ನು ಬುಕ್ ಮಾಡಿ ಮತ್ತು ಕರ್ನಾಟಕದ ಪರಿಶೀಲಿತ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+  </p>
+
+</section>
+
+<!-- BOOKING FEATURE CARDS -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6 mb-16">
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">
+      ⚡ Quick Booking
+    </h3>
+    <p class="text-slate-300 text-sm">
+      Choose a consultation package and book instantly online.
+    </p>
+  </div>
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">
+      ✔ Verified Experts
+    </h3>
+    <p class="text-slate-300 text-sm">
+      Get connected only with trusted lawyers and professionals.
+    </p>
+  </div>
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">
+      💬 WhatsApp Support
+    </h3>
+    <p class="text-slate-300 text-sm">
+      After booking, our team will assist you via WhatsApp.
+    </p>
+  </div>
+
+</section>
+
+<!-- CONSULTATION PACKAGES -->
+<section class="text-center px-6 mb-14">
+
+  <h2 class="text-4xl font-extrabold text-[#d4af37] mb-6">
     Consultation Packages
-  </h1>
-  <h1 class="text-3xl font-extrabold text-[#d4af37] mb-2 kn">
-    ಸಲಹೆ ಪ್ಯಾಕೇಜುಗಳು
-  </h1>
+  </h2>
 
-  <p class="text-slate-300 text-sm max-w-xl mx-auto en">
-    Choose a package, make payment, and send screenshot on WhatsApp.
+  <p class="text-slate-300 mb-10">
+    Select the best package for your legal needs.
   </p>
-  <p class="text-slate-300 text-sm max-w-xl mx-auto kn">
-    ಪ್ಯಾಕೇಜ್ ಆಯ್ಕೆ ಮಾಡಿ, ಪಾವತಿ ಮಾಡಿ ಮತ್ತು WhatsApp ನಲ್ಲಿ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಕಳುಹಿಸಿ.
-  </p>
-</section>
 
-<!-- PACKAGES -->
-<section class="pb-10">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-4 px-6">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
 
-    <div class="bg-slate-900 p-5 rounded-xl text-center">
-      <h2 class="font-bold text-[#d4af37]">Basic Guidance</h2>
-      <p class="text-xl font-extrabold mt-2">₹99</p>
-      <a href="#" class="mt-3 block bg-[#d4af37] text-black py-2 rounded-lg font-bold">
-        Pay ₹99
-      </a>
+    <div class="bg-slate-900 p-6 rounded-xl">
+      <h3 class="font-bold text-[#d4af37]">₹99 Basic Guidance</h3>
+      <p class="text-sm text-slate-300 mt-2">WhatsApp Support</p>
     </div>
 
-    <div class="bg-slate-900 p-5 rounded-xl text-center">
-      <h2 class="font-bold text-[#d4af37]">Lawyer Consultation</h2>
-      <p class="text-xl font-extrabold mt-2">₹499</p>
-      <a href="#" class="mt-3 block bg-[#d4af37] text-black py-2 rounded-lg font-bold">
-        Pay ₹499
-      </a>
+    <div class="bg-slate-900 p-6 rounded-xl">
+      <h3 class="font-bold text-[#d4af37]">₹499 Lawyer Consultation</h3>
+      <p class="text-sm text-slate-300 mt-2">30 min call</p>
     </div>
 
-    <div class="bg-slate-900 p-5 rounded-xl text-center">
-      <h2 class="font-bold text-[#d4af37]">Document Drafting</h2>
-      <p class="text-xl font-extrabold mt-2">₹999</p>
-      <a href="#" class="mt-3 block bg-[#d4af37] text-black py-2 rounded-lg font-bold">
-        Pay ₹999
-      </a>
+    <div class="bg-slate-900 p-6 rounded-xl">
+      <h3 class="font-bold text-[#d4af37]">₹999 Drafting Support</h3>
+      <p class="text-sm text-slate-300 mt-2">Notice/Agreement</p>
     </div>
 
-    <div class="bg-slate-900 p-5 rounded-xl text-center">
-      <h2 class="font-bold text-[#d4af37]">CA Consultation</h2>
-      <p class="text-xl font-extrabold mt-2">₹499</p>
-      <a href="#" class="mt-3 block bg-[#d4af37] text-black py-2 rounded-lg font-bold">
-        Pay ₹499
-      </a>
+    <div class="bg-slate-900 p-6 rounded-xl">
+      <h3 class="font-bold text-[#d4af37]">₹499 CA Consultation</h3>
+      <p class="text-sm text-slate-300 mt-2">GST/Tax Help</p>
     </div>
 
   </div>
+
 </section>
 
-<!-- SERVICES IN 2 BOXES (NO DROPDOWN) -->
-<section class="pb-10">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 px-6">
+<!-- BOOKING BUTTON -->
+<section class="text-center px-6 mb-16">
 
-    <!-- Legal -->
-    <div class="bg-slate-900 p-6 rounded-xl">
-      <h3 class="text-xl font-bold text-[#d4af37] mb-4">
-        ⚖️ Legal Services
-      </h3>
+  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-4">
+    Book Your Consultation Now
+  </h2>
 
-      <ul class="text-slate-300 space-y-2 text-sm">
-        <li>🏠 Property Disputes</li>
-        <li>👨‍👩‍👧 Family & Divorce</li>
-        <li>🚔 Criminal & Bail</li>
-        <li>🛒 Consumer Complaints</li>
-        <li>💼 Labour Issues</li>
-        <li>💻 Cyber Fraud</li>
-        <li>🏘 Tenant & Rent Issues</li>
-        <li>📝 FIR & Police Complaints</li>
-        <li>📑 Agreements & Drafting</li>
-        <li>🚗 Accident Claims</li>
-        <li>🏢 Business Legal Support</li>
-        <li>📌 Court Guidance</li>
-      </ul>
-    </div>
-
-    <!-- CA -->
-    <div class="bg-slate-900 p-6 rounded-xl">
-      <h3 class="text-xl font-bold text-[#d4af37] mb-4">
-        📊 Chartered Accountant Services
-      </h3>
-
-      <ul class="text-slate-300 space-y-2 text-sm">
-        <li>💰 Income Tax Filing</li>
-        <li>📄 GST Registration & Returns</li>
-        <li>🏢 Business Compliance</li>
-        <li>🧾 Tax Notice Reply</li>
-        <li>📊 Accounting & Audit Support</li>
-        <li>🚀 Startup CA Consultation</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- IMPORTANT NOTE -->
-<section class="bg-slate-900 py-6 text-center px-6">
-  <h3 class="font-bold text-[#d4af37] mb-2">
-    Important Note
-  </h3>
-
-  <p class="text-slate-300 text-sm max-w-2xl mx-auto">
-    After payment, please send the payment screenshot on WhatsApp.
-    Our team will connect you with the right advocate within
-    <b>30–60 minutes</b>.
+  <p class="text-slate-300 mb-8">
+    Click below to fill the consultation request form securely.
   </p>
 
-  <a href="https://wa.me/919632786767"
-    class="mt-4 inline-block bg-green-500 px-6 py-2 rounded-lg font-bold">
-    Send Screenshot on WhatsApp
+  <!-- ✅ Citizen Google Form Button -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-J1gpA_COVZ8v3nkQYA73hdKfdfmFFpuDqVfy5m3nysEdXA/viewform?usp=header"
+     target="_blank"
+     class="inline-block bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-600 shadow-lg">
+     Proceed to Consultation Form 🚀
   </a>
+
 </section>
+
+<!-- WHATSAPP SUPPORT -->
+<div class="text-center mt-6">
+  <a href="https://wa.me/919632786767"
+    class="inline-block bg-[#d4af37] text-black px-10 py-4 rounded-xl font-bold shadow-lg hover:opacity-90">
+    WhatsApp Support 💬
+  </a>
+</div>
 
 <!-- FOOTER -->
-<footer class="bg-black text-slate-500 text-center py-4 text-xs">
-  © 2026 NyayaNow.com | Not a law firm, only a facilitation platform.
+<footer class="text-center text-slate-500 text-xs mt-16 pb-6">
+  © 2026 NyayaNow.com | Citizen Portal <br>
+  NyayaNow connects citizens with independent advocates for consultation.
 </footer>
 
-<!-- SCRIPT -->
+<!-- LANGUAGE SCRIPT -->
 <script>
 function toggleLang(){
   document.querySelectorAll(".en").forEach(el=>{
-    el.style.display=(el.style.display==="none")?"block":"none";
+    el.style.display = (el.style.display==="none") ? "block" : "none";
   });
   document.querySelectorAll(".kn").forEach(el=>{
-    el.style.display=(el.style.display==="none")?"block":"none";
+    el.style.display = (el.style.display==="none") ? "block" : "none";
   });
 }
 </script>
