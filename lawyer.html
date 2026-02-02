@@ -4,138 +4,130 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NyayaNow | Lawyer Partner Portal</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: Arial; }
-    .kn { display:none; }
+    body {
+      font-family: Arial;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+    }
+    .kn { display: none; }
   </style>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="text-white">
 
-<!-- NAVBAR -->
-<header class="bg-slate-900 shadow-lg sticky top-0 z-50">
+<!-- HEADER -->
+<header class="w-full bg-slate-900/80 shadow-md sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <a href="index.html" class="text-xl font-bold text-[#d4af37]">
       NyayaNow ⚖️
     </a>
 
-    <button onclick="toggleLang()"
-      class="bg-[#d4af37] text-black px-4 py-2 rounded-full font-bold">
-      ಕನ್ನಡ / English
-    </button>
+    <div class="flex gap-3 items-center">
 
+      <!-- HOME BUTTON -->
+      <a href="index.html"
+        class="bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-200">
+        ⬅ Home
+      </a>
+
+      <!-- Language Toggle -->
+      <button onclick="toggleLang()"
+        class="bg-[#d4af37] text-black px-5 py-2 rounded-full font-bold hover:opacity-90">
+        ಕನ್ನಡ / English
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="py-16 text-center">
-  <h1 class="text-4xl font-extrabold text-[#d4af37] mb-4 en">
+<!-- HERO SECTION -->
+<section class="text-center py-14 px-6">
+  <h1 class="text-5xl font-extrabold text-[#d4af37] mb-4 en">
     Lawyer Partner Portal ⚖️
   </h1>
-  <h1 class="text-4xl font-extrabold text-[#d4af37] mb-4 kn">
+  <h1 class="text-5xl font-extrabold text-[#d4af37] mb-4 kn">
     ವಕೀಲ ಪಾಲುದಾರ ಪೋರ್ಟಲ್ ⚖️
   </h1>
 
   <p class="text-slate-300 max-w-2xl mx-auto en">
     Join NyayaNow as a verified advocate partner and get client consultation leads across Karnataka.
   </p>
+
   <p class="text-slate-300 max-w-2xl mx-auto kn">
-    NyayaNow ನಲ್ಲಿ ಪರಿಶೀಲಿತ ವಕೀಲ ಪಾಲುದಾರರಾಗಿರಿ ಮತ್ತು ಕರ್ನಾಟಕದಾದ್ಯಂತ ಗ್ರಾಹಕರ ಸಲಹೆ ಅವಕಾಶ ಪಡೆಯಿರಿ.
+    NyayaNow ನಲ್ಲಿ ಪರಿಶೀಲಿತ ವಕೀಲ ಪಾಲುದಾರರಾಗಿ ಸೇರಿ ಮತ್ತು ಕರ್ನಾಟಕದಾದ್ಯಂತ ಗ್ರಾಹಕರ ಸಂಪರ್ಕ ಪಡೆಯಿರಿ.
   </p>
 </section>
 
-<!-- BENEFITS -->
-<section class="pb-14">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+<!-- FEATURE CARDS -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6 mb-16">
 
-    <div class="bg-slate-900 p-6 rounded-xl shadow">
-      <h3 class="font-bold text-[#d4af37] mb-2">📌 Verified Clients</h3>
-      <p class="text-slate-300 text-sm">
-        Get genuine consultation requests from citizens.
-      </p>
-    </div>
-
-    <div class="bg-slate-900 p-6 rounded-xl shadow">
-      <h3 class="font-bold text-[#d4af37] mb-2">💼 Flexible Practice</h3>
-      <p class="text-slate-300 text-sm">
-        Provide WhatsApp or call consultations anytime.
-      </p>
-    </div>
-
-    <div class="bg-slate-900 p-6 rounded-xl shadow">
-      <h3 class="font-bold text-[#d4af37] mb-2">🚀 Grow Your Reach</h3>
-      <p class="text-slate-300 text-sm">
-        Expand your legal services digitally across Karnataka.
-      </p>
-    </div>
-
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">✔ Verified Clients</h3>
+    <p class="text-slate-300 text-sm">
+      Get genuine consultation requests from citizens.
+    </p>
   </div>
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">📞 Flexible Practice</h3>
+    <p class="text-slate-300 text-sm">
+      Provide WhatsApp or call consultations anytime.
+    </p>
+  </div>
+
+  <div class="bg-slate-800/40 p-6 rounded-xl shadow-lg">
+    <h3 class="text-[#d4af37] font-bold text-lg mb-2">🚀 Grow Your Reach</h3>
+    <p class="text-slate-300 text-sm">
+      Expand your legal services digitally across Karnataka.
+    </p>
+  </div>
+
 </section>
 
-<!-- ADVOCATE REGISTRATION FORM -->
-<section class="pb-20 text-center">
-  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-8 en">
+<!-- REGISTRATION BUTTON -->
+<section class="text-center px-6 mb-14">
+
+  <h2 class="text-4xl font-extrabold text-[#d4af37] mb-6">
     Advocate Partner Registration
   </h2>
-  <h2 class="text-3xl font-extrabold text-[#d4af37] mb-8 kn">
-    ವಕೀಲ ನೋಂದಣಿ ಫಾರ್ಮ್
-  </h2>
 
-  <form class="max-w-xl mx-auto bg-slate-900 p-8 rounded-2xl shadow text-left">
+  <p class="text-slate-300 mb-8">
+    Click below to complete your registration securely through our official form.
+  </p>
 
-    <label class="block mb-2 font-bold">Full Name</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="Advocate Name"/>
+  <!-- ✅ Registration Button -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSejRPX5eGLqPsnAmSCmw1WB6gYH71_WJvjgPMXhJYFy7HgWFg/viewform"
+     target="_blank"
+     class="inline-block bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-600 shadow-lg">
+     Register as Lawyer Partner 🚀
+  </a>
 
-    <label class="block mb-2 font-bold">Bar Council Enrollment No</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="Enrollment Number"/>
-
-    <label class="block mb-2 font-bold">City / District</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="Bangalore / Mysore"/>
-
-    <label class="block mb-2 font-bold">Specialization</label>
-    <input class="w-full p-3 rounded bg-slate-800 border border-slate-700 mb-5"
-      placeholder="Family / Criminal / Property"/>
-
-    <button type="button"
-      class="w-full bg-green-500 py-3 rounded-xl font-bold">
-      Submit Application
-    </button>
-
-    <p class="text-xs text-slate-400 mt-4">
-      After submission, our team will verify your Bar Council details and contact you.
-    </p>
-  </form>
 </section>
 
-<!-- WHATSAPP CONNECT -->
-<section class="text-center pb-16">
-  <a href="https://wa.me/919632786767?text=Hello%20NyayaNow,%20I%20am%20an%20Advocate%20and%20want%20to%20join%20as%20a%20partner."
-    class="bg-[#d4af37] text-black px-8 py-4 rounded-xl font-bold shadow-lg">
+<!-- WHATSAPP BUTTON -->
+<div class="text-center mt-6">
+  <a href="https://wa.me/919632786767"
+    class="inline-block bg-[#d4af37] text-black px-10 py-4 rounded-xl font-bold shadow-lg hover:opacity-90">
     Connect on WhatsApp ⚖️
   </a>
-</section>
+</div>
 
 <!-- FOOTER -->
-<footer class="bg-black text-slate-500 text-center py-6 text-sm">
-  © 2026 NyayaNow.com | Lawyer Partner Portal <br/>
+<footer class="text-center text-slate-500 text-xs mt-16 pb-6">
+  © 2026 NyayaNow.com | Lawyer Partner Portal <br>
   NyayaNow is not a law firm. We only facilitate advocate-client connections.
 </footer>
 
-<!-- SCRIPT -->
+<!-- LANGUAGE SCRIPT -->
 <script>
 function toggleLang(){
   document.querySelectorAll(".en").forEach(el=>{
-    el.style.display=(el.style.display==="none")?"block":"none";
+    el.style.display = (el.style.display==="none") ? "block" : "none";
   });
   document.querySelectorAll(".kn").forEach(el=>{
-    el.style.display=(el.style.display==="none")?"block":"none";
+    el.style.display = (el.style.display==="none") ? "block" : "none";
   });
 }
 </script>
