@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NyayaNow | Legal Help Karnataka</title>
+  <title>NyayaNow | Legal & CA Services Karnataka</title>
 
+  <!-- SEO -->
+  <meta name="description" content="NyayaNow connects citizens with verified Advocates and Chartered Accountants in Karnataka. Platform fee ₹99 only."/>
+  <meta name="keywords" content="Legal services Karnataka, Lawyer booking, CA services, NyayaNow"/>
+  <meta name="theme-color" content="#020617"/>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json"/>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: Arial, sans-serif; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .kn { display:none; }
 
-    .category-btn{
-      padding:14px 28px;
-      border-radius:999px;
-      background:rgba(15,23,42,0.7);
-      border:1px solid rgba(148,163,184,0.3);
-      color:white;
-      font-weight:600;
-      transition:0.3s;
-    }
-
-    .category-btn:hover{
-      background:rgba(30,41,59,0.9);
-      transform:scale(1.03);
-    }
-
-    /* Sticky WhatsApp */
+    /* WhatsApp */
     .whatsapp-float{
       position:fixed;
       bottom:20px;
@@ -33,90 +28,178 @@
       background:#25D366;
       color:white;
       padding:14px 18px;
-      border-radius:50px;
+      border-radius:999px;
       font-weight:bold;
-      box-shadow:0 6px 15px rgba(0,0,0,0.3);
-      z-index:9997;
+      box-shadow:0 8px 20px rgba(0,0,0,0.35);
+      z-index:9999;
     }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-800">
 
-<!-- NAVBAR -->
-<header class="bg-slate-950 text-white shadow-lg">
+<!-- ================= HEADER ================= -->
+<header class="bg-slate-950 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-extrabold text-[#d4af37]">
-      NyayaNow ⚖️
-    </h1>
+    <div class="text-2xl font-extrabold text-amber-400">NyayaNow</div>
 
-    <a href="https://wa.me/919632786767"
-       class="bg-[#d4af37] text-black px-5 py-2 rounded-full font-bold">
-       WhatsApp Us
-    </a>
+    <nav class="hidden md:flex gap-8 text-sm font-semibold">
+      <a href="#book" class="hover:text-amber-400 en">Book Service</a>
+      <a href="#book" class="hover:text-amber-400 kn">ಸೇವೆ ಬುಕ್</a>
+
+      <a href="#how" class="hover:text-amber-400 en">How It Works</a>
+      <a href="#how" class="hover:text-amber-400 kn">ಹೆಗಿದೆ</a>
+
+      <a href="#professionals" class="hover:text-amber-400 en">For Professionals</a>
+      <a href="#professionals" class="hover:text-amber-400 kn">ವೃತ್ತಿಪರರಿಗೆ</a>
+    </nav>
+
+    <div class="flex gap-3 items-center">
+      <button onclick="toggleLang()"
+        class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
+        ಕನ್ನಡ / English
+      </button>
+
+      <a href="citizens.html"
+         class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm en">
+        Book Now
+      </a>
+      <a href="citizens.html"
+         class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm kn">
+        ಈಗ ಬುಕ್ ಮಾಡಿ
+      </a>
+    </div>
   </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white text-center">
+<!-- ================= HERO ================= -->
+<section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-28 text-center">
 
-  <h2 class="text-5xl font-extrabold mb-6">
-    Affordable Legal Guidance in Karnataka ⚖️
-  </h2>
+    <!-- EN -->
+    <div class="en">
+      <h1 class="text-5xl font-extrabold mb-6">
+        Legal & Financial Assistance. Simplified.
+      </h1>
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-10">
+        Connect with verified Advocates and Chartered Accountants across Karnataka.
+        Platform fee ₹99 only.
+      </p>
+    </div>
 
-  <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-12">
-    Connect with verified advocates & professionals. Guidance starts at ₹99.
-  </p>
+    <!-- KN -->
+    <div class="kn">
+      <h1 class="text-5xl font-extrabold mb-6">
+        ಕಾನೂನು ಮತ್ತು ಹಣಕಾಸು ಸಹಾಯ – ಸುಲಭವಾಗಿ
+      </h1>
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-10">
+        ಕರ್ನಾಟಕದ ಪರಿಶೀಲಿತ ವಕೀಲರು ಮತ್ತು ಸಿಎಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ.
+        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ ₹99 ಮಾತ್ರ.
+      </p>
+    </div>
 
-  <!-- CATEGORY OPTIONS -->
-  <div class="flex flex-wrap justify-center gap-5">
+    <div class="flex justify-center gap-6 flex-wrap">
+      <a href="citizens.html"
+         class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold en">
+        Book a Service
+      </a>
+      <a href="citizens.html"
+         class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold kn">
+        ಸೇವೆ ಬುಕ್ ಮಾಡಿ
+      </a>
 
-    <!-- Citizens -->
-    <a href="services.html" class="category-btn">
-      👥 Citizens
-    </a>
-
-    <!-- Lawyers -->
-    <a href="lawyer.html" class="category-btn">
-      ⚖️ Lawyers
-    </a>
-
-    <!-- CA -->
-    <a href="ca.html" class="category-btn">
-      📊 CAs
-    </a>
-
-    <!-- Students -->
-    <a href="students.html" class="category-btn">
-      🎓 Students
-    </a>
-
-
+      <a href="professional-onboarding.html"
+         class="border border-slate-400 px-8 py-4 rounded-full font-bold en">
+        Register as Professional
+      </a>
+      <a href="professional-onboarding.html"
+         class="border border-slate-400 px-8 py-4 rounded-full font-bold kn">
+        ವೃತ್ತಿಪರರಾಗಿ ನೋಂದಣಿ
+      </a>
+    </div>
   </div>
-
 </section>
 
-<footer class="text-center text-slate-500 text-xs mt-16 pb-6">
-  © 2026 NyayaNow.com | All Rights Reserved <br>
+<!-- ================= TRUST ================= -->
+<section class="bg-white py-8 border-b">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-6 text-center text-sm font-semibold">
+    <div class="en">✔ Verified Advocates & CAs</div>
+    <div class="kn">✔ ಪರಿಶೀಲಿತ ವಕೀಲರು & ಸಿಎಗಳು</div>
 
-  <a href="citizen-terms.html" class="underline text-[#d4af37]">
-    Citizen Terms
-  </a> |
-  <a href="terms.html" class="underline text-[#d4af37]">
-    Lawyer Terms
-  </a> |
-  <a href="ca-terms.html" class="underline text-[#d4af37]">
-    CA Terms
-  </a> |
-  <a href="student-terms.html" class="underline text-[#d4af37]">
-    Student Terms
-  </a> |
-  
-  <a href="privacy.html" class="underline text-[#d4af37]">Privacy Policy</a> |
-<a href="disclaimer.html" class="underline text-[#d4af37]">Disclaimer</a>
+    <div class="en">✔ Platform Fee ₹99</div>
+    <div class="kn">✔ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ ₹99</div>
 
+    <div class="en">✔ Direct Payment to Professionals</div>
+    <div class="kn">✔ ವೃತ್ತಿಪರರಿಗೆ ನೇರ ಪಾವತಿ</div>
+
+    <div class="en">✔ Data Privacy & Security</div>
+    <div class="kn">✔ ಡೇಟಾ ಸುರಕ್ಷತೆ</div>
+  </div>
+</section>
+
+<!-- ================= BOOK ================= -->
+<section id="book" class="py-20 bg-white text-center">
+  <h2 class="text-3xl font-extrabold mb-6 en">Book a Professional Service</h2>
+  <h2 class="text-3xl font-extrabold mb-6 kn">ಸೇವೆ ಬುಕ್ ಮಾಡಿ</h2>
+
+  <p class="text-slate-600 mb-10 en">
+    Choose the service you need and get connected with a verified professional.
+  </p>
+  <p class="text-slate-600 mb-10 kn">
+    ನಿಮ್ಮ ಸಮಸ್ಯೆಗೆ ಸರಿಯಾದ ವೃತ್ತಿಪರರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
+  </p>
+
+  <a href="citizens.html"
+     class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold en">
+    Proceed to Booking
+  </a>
+  <a href="citizens.html"
+     class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold kn">
+    ಬುಕ್ಕಿಂಗ್ ಮುಂದುವರಿಸಿ
+  </a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-950 text-slate-400 text-center py-10 text-sm">
+  <p class="en mb-2">NyayaNow is a technology platform. It does not provide legal advice.</p>
+  <p class="kn mb-2">NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.</p>
+
+  <div class="space-x-6">
+    <a href="terms.html" class="hover:text-amber-400">Terms</a>
+    <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
+    <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
+  </div>
+
+  <div class="mt-4">© 2026 NyayaNow</div>
 </footer>
 
-  
+<!-- ================= WHATSAPP ================= -->
+<a href="https://wa.me/919632786767" target="_blank" class="whatsapp-float">
+  WhatsApp Support
+</a>
+
+<!-- ================= LANGUAGE SCRIPT ================= -->
+<script>
+  let lang = "en";
+  function toggleLang(){
+    if(lang === "en"){
+      document.querySelectorAll(".en").forEach(e=>e.style.display="none");
+      document.querySelectorAll(".kn").forEach(e=>e.style.display="block");
+      lang = "kn";
+    } else {
+      document.querySelectorAll(".kn").forEach(e=>e.style.display="none");
+      document.querySelectorAll(".en").forEach(e=>e.style.display="block");
+      lang = "en";
+    }
+  }
+</script>
+
+<!-- ================= SERVICE WORKER ================= -->
+<script>
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
+
 </body>
 </html>
