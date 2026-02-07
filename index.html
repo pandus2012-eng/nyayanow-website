@@ -130,7 +130,8 @@
 </header>
   <!-- ================= MOBILE MENU ================= -->
 <div id="mobileMenu"
-     class="hidden md:hidden bg-slate-900 text-white px-6 py-6 space-y-4">
+  class="hidden md:hidden bg-slate-900 text-white px-6 py-8 space-y-5
+         text-base font-medium shadow-xl">
 
   <a href="about.html" class="block en">About</a>
   <a href="about.html" class="block kn">ನಮ್ಮ ಬಗ್ಗೆ</a>
@@ -258,17 +259,20 @@
 <script>
   let lang = "en";
 
-  function toggleLang() {
-    if (lang === "en") {
-      document.querySelectorAll(".en").forEach(e => e.style.display = "none");
-      document.querySelectorAll(".kn").forEach(e => e.style.display = "block");
-      lang = "kn";
-    } else {
-      document.querySelectorAll(".kn").forEach(e => e.style.display = "none");
-      document.querySelectorAll(".en").forEach(e => e.style.display = "block");
-      lang = "en";
-    }
+   function toggleLang() {
+  const en = document.querySelectorAll(".en");
+  const kn = document.querySelectorAll(".kn");
+
+  const isEnglishVisible = en[0].offsetParent !== null;
+
+  if (isEnglishVisible) {
+    en.forEach(e => e.style.display = "none");
+    kn.forEach(e => e.style.display = "block");
+  } else {
+    kn.forEach(e => e.style.display = "none");
+    en.forEach(e => e.style.display = "block");
   }
+}
 
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
