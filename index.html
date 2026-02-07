@@ -20,7 +20,6 @@
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     .kn { display:none; }
 
-    /* WhatsApp */
     .whatsapp-float{
       position:fixed;
       bottom:20px;
@@ -60,11 +59,11 @@
         ಕನ್ನಡ / English
       </button>
 
-      <a href="citizens.html"
+      <a href="book-service.html"
          class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm en">
         Book Now
       </a>
-      <a href="citizens.html"
+      <a href="book-service.html"
          class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm kn">
         ಈಗ ಬುಕ್ ಮಾಡಿ
       </a>
@@ -76,7 +75,6 @@
 <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
   <div class="max-w-7xl mx-auto px-6 py-28 text-center">
 
-    <!-- EN -->
     <div class="en">
       <h1 class="text-5xl font-extrabold mb-6">
         Legal & Financial Assistance. Simplified.
@@ -87,7 +85,6 @@
       </p>
     </div>
 
-    <!-- KN -->
     <div class="kn">
       <h1 class="text-5xl font-extrabold mb-6">
         ಕಾನೂನು ಮತ್ತು ಹಣಕಾಸು ಸಹಾಯ – ಸುಲಭವಾಗಿ
@@ -99,41 +96,24 @@
     </div>
 
     <div class="flex justify-center gap-6 flex-wrap">
-      <a href="citizens.html"
+      <a href="book-service.html"
          class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold en">
         Book a Service
       </a>
-      <a href="citizens.html"
+      <a href="book-service.html"
          class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold kn">
         ಸೇವೆ ಬುಕ್ ಮಾಡಿ
       </a>
 
-      <a href="professional-onboarding.html"
+      <a href="advocate-register.html"
          class="border border-slate-400 px-8 py-4 rounded-full font-bold en">
-        Register as Professional
+        Register as Advocate
       </a>
-      <a href="professional-onboarding.html"
+      <a href="ca-register.html"
          class="border border-slate-400 px-8 py-4 rounded-full font-bold kn">
-        ವೃತ್ತಿಪರರಾಗಿ ನೋಂದಣಿ
+        ಸಿಎ ಆಗಿ ನೋಂದಣಿ
       </a>
     </div>
-  </div>
-</section>
-
-<!-- ================= TRUST ================= -->
-<section class="bg-white py-8 border-b">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-6 text-center text-sm font-semibold">
-    <div class="en">✔ Verified Advocates & CAs</div>
-    <div class="kn">✔ ಪರಿಶೀಲಿತ ವಕೀಲರು & ಸಿಎಗಳು</div>
-
-    <div class="en">✔ Platform Fee ₹99</div>
-    <div class="kn">✔ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ ₹99</div>
-
-    <div class="en">✔ Direct Payment to Professionals</div>
-    <div class="kn">✔ ವೃತ್ತಿಪರರಿಗೆ ನೇರ ಪಾವತಿ</div>
-
-    <div class="en">✔ Data Privacy & Security</div>
-    <div class="kn">✔ ಡೇಟಾ ಸುರಕ್ಷತೆ</div>
   </div>
 </section>
 
@@ -149,11 +129,11 @@
     ನಿಮ್ಮ ಸಮಸ್ಯೆಗೆ ಸರಿಯಾದ ವೃತ್ತಿಪರರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
   </p>
 
-  <a href="citizens.html"
+  <a href="book-service.html"
      class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold en">
     Proceed to Booking
   </a>
-  <a href="citizens.html"
+  <a href="book-service.html"
      class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold kn">
     ಬುಕ್ಕಿಂಗ್ ಮುಂದುವರಿಸಿ
   </a>
@@ -173,12 +153,10 @@
   <div class="mt-4">© 2026 NyayaNow</div>
 </footer>
 
-<!-- ================= WHATSAPP ================= -->
 <a href="https://wa.me/919632786767" target="_blank" class="whatsapp-float">
   WhatsApp Support
 </a>
 
-<!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
   let lang = "en";
   function toggleLang(){
@@ -191,13 +169,6 @@
       document.querySelectorAll(".en").forEach(e=>e.style.display="block");
       lang = "en";
     }
-  }
-</script>
-
-<!-- ================= SERVICE WORKER ================= -->
-<script>
-  if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('service-worker.js');
   }
 </script>
 
