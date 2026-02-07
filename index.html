@@ -38,30 +38,110 @@
 <body class="bg-slate-50 text-slate-800">
 
 <!-- ================= HEADER ================= -->
-<header class="bg-slate-950 text-white sticky top-0 z-50">
+<header class="bg-slate-950 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <!-- LOGO -->
-    <span class="text-2xl font-extrabold text-amber-400">NyayaNow</span>
+    <span class="text-2xl font-extrabold text-amber-400">
+      NyayaNow
+    </span>
 
-    <!-- DESKTOP NAV -->
-    <nav class="hidden md:flex gap-6 text-sm font-semibold">
-      <a href="about.html" class="en">About</a>
-      <a href="about.html" class="kn">ನಮ್ಮ ಬಗ್ಗೆ</a>
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex gap-8 text-sm font-semibold items-center">
 
-      <a href="how-it-works.html" class="en">How It Works</a>
-      <a href="how-it-works.html" class="kn">ಹೆಗಿದೆ</a>
+      <a href="about.html" class="en hover:text-amber-400">About</a>
+      <a href="about.html" class="kn hover:text-amber-400">ನಮ್ಮ ಬಗ್ಗೆ</a>
 
-      <a href="professional-onboarding.html" class="en">For Professionals</a>
-      <a href="professional-onboarding.html" class="kn">ವೃತ್ತಿಪರರಿಗೆ</a>
+      <a href="how-it-works.html" class="en hover:text-amber-400">How It Works</a>
+      <a href="how-it-works.html" class="kn hover:text-amber-400">ಹೆಗಿದೆ</a>
 
-      <a href="contact.html" class="en">Contact</a>
-      <a href="contact.html" class="kn">ಸಂಪರ್ಕ</a>
+      <a href="professional-onboarding.html" class="en hover:text-amber-400">
+        For Professionals
+      </a>
+      <a href="professional-onboarding.html" class="kn hover:text-amber-400">
+        ವೃತ್ತಿಪರರಿಗೆ
+      </a>
+
+      <!-- COURT NEWS (DESKTOP) -->
+      <div class="relative group">
+
+        <span class="en cursor-pointer hover:text-amber-400">
+          Court News ▾
+        </span>
+        <span class="kn cursor-pointer hover:text-amber-400">
+          ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾
+        </span>
+
+        <div
+          class="absolute left-0 mt-2 w-72 bg-white text-slate-800 rounded-lg shadow-lg
+                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                 transition-all duration-200 z-50">
+
+          <a href="https://www.sci.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 en">
+            Supreme Court of India
+          </a>
+          <a href="https://www.sci.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 kn">
+            ಸುಪ್ರೀಂ ಕೋರ್ಟ್
+          </a>
+
+          <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 en">
+            Karnataka High Court
+          </a>
+          <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 kn">
+            ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್
+          </a>
+
+          <a href="https://hcservices.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 en">
+            All High Courts
+          </a>
+          <a href="https://hcservices.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 kn">
+            ಎಲ್ಲಾ ಹೈಕೋರ್ಟ್‌ಗಳು
+          </a>
+
+          <a href="https://districts.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 en">
+            District Courts
+          </a>
+          <a href="https://districts.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 kn">
+            ಜಿಲ್ಲಾ ನ್ಯಾಯಾಲಯಗಳು
+          </a>
+
+          <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 en">
+            Case Status
+          </a>
+          <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 kn">
+            ಪ್ರಕರಣ ಸ್ಥಿತಿ
+          </a>
+
+          <a href="https://judgments.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 en">
+            Judgments & Orders
+          </a>
+          <a href="https://judgments.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100 kn">
+            ತೀರ್ಪುಗಳು ಮತ್ತು ಆದೇಶಗಳು
+          </a>
+
+        </div>
+      </div>
+
+      <a href="contact.html" class="en hover:text-amber-400">Contact</a>
+      <a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
+
     </nav>
 
-    <!-- MOBILE BUTTON -->
+    <!-- MOBILE MENU BUTTON -->
     <button id="menuBtn"
-      class="md:hidden text-3xl font-bold"
+      class="md:hidden text-3xl font-bold focus:outline-none"
       aria-label="Menu">
       ☰
     </button>
@@ -82,14 +162,54 @@
   <a href="professional-onboarding.html" class="block en">For Professionals</a>
   <a href="professional-onboarding.html" class="block kn">ವೃತ್ತಿಪರರಿಗೆ</a>
 
-  <div class="border-t border-slate-700 pt-3"></div>
+  <!-- COURT NEWS (MOBILE) -->
+  <div class="border-t border-slate-700 pt-3 text-sm uppercase text-slate-400 en">
+    Court News
+  </div>
+  <div class="border-t border-slate-700 pt-3 text-sm uppercase text-slate-400 kn">
+    ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ
+  </div>
 
-  <a href="https://www.sci.gov.in" target="_blank" class="block">
-    Supreme Court
+  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2 en">
+    Supreme Court of India
+  </a>
+  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2 kn">
+    ಸುಪ್ರೀಂ ಕೋರ್ಟ್
   </a>
 
-  <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" class="block">
+  <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" class="block pl-2 en">
     Karnataka High Court
+  </a>
+  <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" class="block pl-2 kn">
+    ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್
+  </a>
+
+  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2 en">
+    All High Courts
+  </a>
+  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2 kn">
+    ಎಲ್ಲಾ ಹೈಕೋರ್ಟ್‌ಗಳು
+  </a>
+
+  <a href="https://districts.ecourts.gov.in" target="_blank" class="block pl-2 en">
+    District Courts
+  </a>
+  <a href="https://districts.ecourts.gov.in" target="_blank" class="block pl-2 kn">
+    ಜಿಲ್ಲಾ ನ್ಯಾಯಾಲಯಗಳು
+  </a>
+
+  <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank" class="block pl-2 en">
+    Case Status
+  </a>
+  <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank" class="block pl-2 kn">
+    ಪ್ರಕರಣ ಸ್ಥಿತಿ
+  </a>
+
+  <a href="https://judgments.ecourts.gov.in" target="_blank" class="block pl-2 en">
+    Judgments & Orders
+  </a>
+  <a href="https://judgments.ecourts.gov.in" target="_blank" class="block pl-2 kn">
+    ತೀರ್ಪುಗಳು ಮತ್ತು ಆದೇಶಗಳು
   </a>
 
   <div class="border-t border-slate-700 pt-3"></div>
