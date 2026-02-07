@@ -36,6 +36,9 @@
 .en { display: block; }
 .kn { display: none; }
 
+body.lang-kn .en { display: none; }
+body.lang-kn .kn { display: block; }
+
   </style>
 </head>
 
@@ -257,22 +260,9 @@
 </a>
 
 <script>
-  let lang = "en";
-
-   function toggleLang() {
-  const en = document.querySelectorAll(".en");
-  const kn = document.querySelectorAll(".kn");
-
-  const isEnglishVisible = en[0].offsetParent !== null;
-
-  if (isEnglishVisible) {
-    en.forEach(e => e.style.display = "none");
-    kn.forEach(e => e.style.display = "block");
-  } else {
-    kn.forEach(e => e.style.display = "none");
-    en.forEach(e => e.style.display = "block");
+  function toggleLang() {
+    document.body.classList.toggle("lang-kn");
   }
-}
 
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
