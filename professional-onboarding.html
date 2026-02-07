@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register as Professional | NyayaNow</title>
 
-  <meta name="description" content="Register as an Advocate or Chartered Accountant on NyayaNow.">
+  <meta name="description" content="Register as an Advocate, Chartered Accountant, or Law / CA Student on NyayaNow.">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -18,52 +18,78 @@
 
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="bg-slate-950 text-white shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-extrabold text-amber-400">NyayaNow</a>
-    <a href="index.html" class="text-sm font-semibold hover:text-amber-400">Home</a>
+    <a href="homepage.html" class="text-xl font-extrabold text-amber-400">NyayaNow</a>
+    <a href="homepage.html" class="text-sm font-semibold hover:text-amber-400">Home</a>
   </div>
 </header>
 
-<!-- ================= MAIN ================= -->
+<!-- MAIN -->
 <main class="flex-grow flex items-center justify-center px-6">
 
-  <div class="max-w-4xl w-full text-center">
+  <div class="max-w-5xl w-full text-center">
 
     <h1 class="text-3xl font-extrabold mb-4">
-      Register as a Professional
+      Register as Professional
     </h1>
 
     <p class="text-slate-600 mb-10">
-      Choose your professional category to continue registration.
+      Choose your category to continue registration with NyayaNow.
     </p>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- Advocate Card -->
-      <div class="bg-white shadow-xl rounded-2xl p-8">
+      <!-- Advocate -->
+      <div class="bg-white shadow-xl rounded-2xl p-8 border">
         <h2 class="text-2xl font-bold mb-3">Advocate</h2>
-        <p class="text-slate-600 mb-6">
-          Register as an independent Advocate and receive client requests
-          through NyayaNow.
+        <p class="text-slate-600 mb-4">
+          For licensed advocates enrolled with a State Bar Council.
         </p>
+        <ul class="text-sm text-slate-600 mb-6 space-y-1">
+          <li>• Client consultation requests</li>
+          <li>• Court & legal matter support</li>
+          <li>• Independent professional practice</li>
+        </ul>
         <a href="advocate-register.html"
-           class="inline-block bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-bold">
+           class="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-full font-bold">
           Register as Advocate
         </a>
       </div>
 
-      <!-- CA Card -->
-      <div class="bg-white shadow-xl rounded-2xl p-8">
+      <!-- CA -->
+      <div class="bg-white shadow-xl rounded-2xl p-8 border">
         <h2 class="text-2xl font-bold mb-3">Chartered Accountant</h2>
-        <p class="text-slate-600 mb-6">
-          Register as an independent Chartered Accountant and provide
-          tax and compliance services.
+        <p class="text-slate-600 mb-4">
+          For ICAI registered Chartered Accountants.
         </p>
+        <ul class="text-sm text-slate-600 mb-6 space-y-1">
+          <li>• Tax & GST consultations</li>
+          <li>• Compliance & filings</li>
+          <li>• Business advisory services</li>
+        </ul>
         <a href="ca-register.html"
-           class="inline-block bg-amber-400 hover:bg-amber-500 text-black px-8 py-3 rounded-full font-bold">
+           class="inline-block bg-amber-400 hover:bg-amber-500 text-black px-6 py-3 rounded-full font-bold">
           Register as CA
+        </a>
+      </div>
+
+      <!-- Law / CA Student -->
+      <div class="bg-white shadow-xl rounded-2xl p-8 border">
+        <h2 class="text-2xl font-bold mb-3">Law / CA Student</h2>
+        <p class="text-slate-600 mb-4">
+          For students pursuing Law or CA courses.
+        </p>
+        <ul class="text-sm text-slate-600 mb-6 space-y-1">
+          <li>• Internship & learning exposure</li>
+          <li>• Legal / tax research assistance</li>
+          <li>• Documentation & drafting support</li>
+          <li>• Platform experience & mentorship</li>
+        </ul>
+        <a href="student-register.html"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold">
+          Student Registration
         </a>
       </div>
 
@@ -73,7 +99,7 @@
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="bg-slate-950 text-slate-400 text-center py-6 text-sm">
   © 2026 NyayaNow · Technology Facilitation Platform
 </footer>
