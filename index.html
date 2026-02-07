@@ -17,19 +17,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("mobileMenu");
-
-    if (btn && menu) {
-      btn.addEventListener("click", function () {
-        menu.classList.toggle("hidden");
-      });
-    }
-  });
-</script>
-
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     .kn { display:none; }
 
@@ -63,13 +50,8 @@
 <header class="bg-slate-950 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <!-- LOGO -->
-    <div class="text-2xl font-extrabold text-amber-400">
-      NyayaNow
-    </div>
-
     <!-- DESKTOP NAVIGATION -->
-    <nav class="flex gap-8 text-sm font-semibold items-center">
+    <nav class="hidden md:flex gap-8 text-sm font-semibold items-center">
 
       <!-- About -->
       <a href="about.html" class="en hover:text-amber-400">About</a>
@@ -163,10 +145,12 @@
       <a href="contact.html" class="en hover:text-amber-400">Contact</a>
       <a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
 
+      <!-- Language Toggle -->
+      <button onclick="toggleLang()"
+        class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
+        ಕನ್ನಡ / English
+      </button>
     </nav>
-
-  </div>
-</header>
 
     <!-- MOBILE MENU BUTTON -->
     <button id="menuBtn"
