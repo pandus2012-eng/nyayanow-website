@@ -40,197 +40,39 @@
 <!-- ================= HEADER ================= -->
 <header class="bg-slate-950 text-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-extrabold text-amber-400">NyayaNow</div>
 
-    <!-- LOGO -->
-    <span class="text-2xl font-extrabold text-amber-400">
-      NyayaNow
-    </span>
-
-    <!-- ================= DESKTOP HEADER ================= -->
-<header class="bg-slate-950 text-white sticky top-0 z-50 shadow">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="hidden md:flex gap-8 text-sm font-semibold items-center">
-
-      <!-- About -->
+    <nav class="hidden md:flex gap-8 text-sm font-semibold">
       <a href="about.html" class="en hover:text-amber-400">About</a>
       <a href="about.html" class="kn hover:text-amber-400">ನಮ್ಮ ಬಗ್ಗೆ</a>
 
-      <!-- How It Works -->
-      <a href="how-it-works.html" class="en hover:text-amber-400">How It Works</a>
-      <a href="how-it-works.html" class="kn hover:text-amber-400">ಹೆಗಿದೆ</a>
+      <a href="#book" class="hover:text-amber-400 en">Book Service</a>
+      <a href="#book" class="hover:text-amber-400 kn">ಸೇವೆ ಬುಕ್</a>
 
-      <!-- For Professionals -->
-      <a href="professional-onboarding.html" class="en hover:text-amber-400">
-        For Professionals
-      </a>
-      <a href="professional-onboarding.html" class="kn hover:text-amber-400">
-        ವೃತ್ತಿಪರರಿಗೆ
-      </a>
+      <a href="#how" class="hover:text-amber-400 en">How It Works</a>
+      <a href="#how" class="hover:text-amber-400 kn">ಹೆಗಿದೆ</a>
 
-      <!-- Court News (DESKTOP DROPDOWN) -->
-      <div class="relative group">
-
-        <span class="en cursor-pointer hover:text-amber-400">
-          Court News ▾
-        </span>
-        <span class="kn cursor-pointer hover:text-amber-400">
-          ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾
-        </span>
-
-        <div
-          class="absolute left-0 mt-2 w-72 bg-white text-slate-800 rounded-lg shadow-lg
-                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                 transition-all duration-200 z-50">
-
-          <a href="https://www.sci.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 en">
-            Supreme Court of India
-          </a>
-          <a href="https://www.sci.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 kn">
-            ಸುಪ್ರೀಂ ಕೋರ್ಟ್
-          </a>
-
-          <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 en">
-            Karnataka High Court
-          </a>
-          <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 kn">
-            ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್
-          </a>
-
-          <a href="https://hcservices.ecourts.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 en">
-            All High Courts (India)
-          </a>
-          <a href="https://hcservices.ecourts.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 kn">
-            ಎಲ್ಲಾ ಹೈಕೋರ್ಟ್‌ಗಳು
-          </a>
-
-          <a href="https://districts.ecourts.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 en">
-            District Courts
-          </a>
-          <a href="https://districts.ecourts.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 kn">
-            ಜಿಲ್ಲಾ ನ್ಯಾಯಾಲಯಗಳು
-          </a>
-
-          <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 en">
-            Case Status
-          </a>
-          <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 kn">
-            ಪ್ರಕರಣ ಸ್ಥಿತಿ
-          </a>
-
-          <a href="https://judgments.ecourts.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 en">
-            Judgments & Orders
-          </a>
-          <a href="https://judgments.ecourts.gov.in" target="_blank"
-             class="block px-4 py-2 hover:bg-slate-100 kn">
-            ತೀರ್ಪುಗಳು ಮತ್ತು ಆದೇಶಗಳು
-          </a>
-
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <a href="contact.html" class="en hover:text-amber-400">Contact</a>
-      <a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
-
-      <!-- Language Toggle -->
-      <button onclick="toggleLang()"
-        class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
-        ಕನ್ನಡ / English
-      </button>
+      <a href="#professionals" class="hover:text-amber-400 en">For Professionals</a>
+      <a href="#professionals" class="hover:text-amber-400 kn">ವೃತ್ತಿಪರರಿಗೆ</a>
     </nav>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button id="menuBtn"
-      class="md:hidden text-3xl font-bold focus:outline-none"
-      aria-label="Menu">
-      ☰
-    </button>
+    <div class="flex gap-3 items-center">
+      <button onclick="toggleLang()"
+        class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
+        ಕನ್ನಡ / English
+      </button>
 
+      <a href="book-service.html"
+         class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm en">
+        Book Now
+      </a>
+      <a href="book-service.html"
+         class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm kn">
+        ಈಗ ಬುಕ್ ಮಾಡಿ
+      </a>
+    </div>
   </div>
 </header>
-
-  <!-- ================= MOBILE MENU ================= -->
-<div id="mobileMenu"
-     class="hidden md:hidden bg-slate-900 text-white px-6 py-6 space-y-4">
-
-  <a href="about.html" class="block en">About</a>
-  <a href="about.html" class="block kn">ನಮ್ಮ ಬಗ್ಗೆ</a>
-
-  <a href="how-it-works.html" class="block en">How It Works</a>
-  <a href="how-it-works.html" class="block kn">ಹೆಗಿದೆ</a>
-
-  <a href="professional-onboarding.html" class="block en">For Professionals</a>
-  <a href="professional-onboarding.html" class="block kn">ವೃತ್ತಿಪರರಿಗೆ</a>
-
-  <!-- COURT NEWS (MOBILE) -->
-  <div class="border-t border-slate-700 pt-3 text-sm uppercase text-slate-400 en">
-    Court News
-  </div>
-  <div class="border-t border-slate-700 pt-3 text-sm uppercase text-slate-400 kn">
-    ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ
-  </div>
-
-  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2 en">
-    Supreme Court of India
-  </a>
-  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2 kn">
-    ಸುಪ್ರೀಂ ಕೋರ್ಟ್
-  </a>
-
-  <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" class="block pl-2 en">
-    Karnataka High Court
-  </a>
-  <a href="https://karnatakajudiciary.kar.nic.in/" target="_blank" class="block pl-2 kn">
-    ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್
-  </a>
-
-  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2 en">
-    All High Courts
-  </a>
-  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2 kn">
-    ಎಲ್ಲಾ ಹೈಕೋರ್ಟ್‌ಗಳು
-  </a>
-
-  <a href="https://districts.ecourts.gov.in" target="_blank" class="block pl-2 en">
-    District Courts
-  </a>
-  <a href="https://districts.ecourts.gov.in" target="_blank" class="block pl-2 kn">
-    ಜಿಲ್ಲಾ ನ್ಯಾಯಾಲಯಗಳು
-  </a>
-
-  <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank" class="block pl-2 en">
-    Case Status
-  </a>
-  <a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank" class="block pl-2 kn">
-    ಪ್ರಕರಣ ಸ್ಥಿತಿ
-  </a>
-
-  <a href="https://judgments.ecourts.gov.in" target="_blank" class="block pl-2 en">
-    Judgments & Orders
-  </a>
-  <a href="https://judgments.ecourts.gov.in" target="_blank" class="block pl-2 kn">
-    ತೀರ್ಪುಗಳು ಮತ್ತು ಆದೇಶಗಳು
-  </a>
-
-  <div class="border-t border-slate-700 pt-3"></div>
-
-  <a href="contact.html" class="block en">Contact</a>
-  <a href="contact.html" class="block kn">ಸಂಪರ್ಕ</a>
-
-</div>
 
 <!-- ================= HERO ================= -->
 <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -257,25 +99,22 @@
     </div>
 
     <div class="flex justify-center gap-6 flex-wrap">
-     <a href="book-service.html"
-   class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold en">
-  Book a Service
-</a>
+      <a href="book-service.html"
+         class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold en">
+        Book a Service
+      </a>
+      <a href="book-service.html"
+         class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold kn">
+        ಸೇವೆ ಬುಕ್ ಮಾಡಿ
+      </a>
 
-<a href="book-service.html"
-   class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold kn">
-  ಸೇವೆ ಬುಕ್ ಮಾಡಿ
-</a>
-
-<a href="professional-onboarding.html"
-   class="border border-slate-400 px-8 py-4 rounded-full font-bold en">
-  Register as Professional
-</a>
-
-<a href="professional-onboarding.html"
-   class="border border-slate-400 px-8 py-4 rounded-full font-bold kn">
-  ವೃತ್ತಿಪರರಾಗಿ ನೋಂದಣಿ
-</a>
+      <a href="advocate-register.html"
+         class="border border-slate-400 px-8 py-4 rounded-full font-bold en">
+        Register as Advocate
+      </a>
+      <a href="ca-register.html"
+         class="border border-slate-400 px-8 py-4 rounded-full font-bold kn">
+        ಸಿಎ ಆಗಿ ನೋಂದಣಿ
       </a>
     </div>
   </div>
