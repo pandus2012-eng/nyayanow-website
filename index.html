@@ -253,20 +253,29 @@
 
 <script>
   let lang = "en";
-  function toggleLang(document.getElementById("menuBtn")?.addEventListener("click", function () {
-  document.getElementById("mobileMenu")?.classList.toggle("hidden");
-});
-){
-    if(lang === "en"){
-      document.querySelectorAll(".en").forEach(e=>e.style.display="none");
-      document.querySelectorAll(".kn").forEach(e=>e.style.display="block");
+
+  function toggleLang() {
+    if (lang === "en") {
+      document.querySelectorAll(".en").forEach(e => e.style.display = "none");
+      document.querySelectorAll(".kn").forEach(e => e.style.display = "block");
       lang = "kn";
     } else {
-      document.querySelectorAll(".kn").forEach(e=>e.style.display="none");
-      document.querySelectorAll(".en").forEach(e=>e.style.display="block");
+      document.querySelectorAll(".kn").forEach(e => e.style.display = "none");
+      document.querySelectorAll(".en").forEach(e => e.style.display = "block");
       lang = "en";
     }
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  });
 </script>
 
 </body>
