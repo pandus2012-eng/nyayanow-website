@@ -8,59 +8,126 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .kn { display:none; }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
 
+<!-- HEADER -->
 <header class="bg-slate-950 text-white px-6 py-4 flex justify-between items-center">
   <span class="font-bold text-amber-400">NyayaNow</span>
 
-  <a href="index.html"
-     class="text-sm font-semibold hover:text-amber-400">
-    Home
-  </a>
+  <div class="flex gap-4 items-center">
+    <button onclick="toggleLang()"
+      class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
+      ಕನ್ನಡ / English
+    </button>
+
+    <a href="index.html" class="text-sm font-semibold hover:text-amber-400">
+      Home
+    </a>
+  </div>
 </header>
 
-<main class="max-w-5xl mx-auto px-6 py-16">
-  <h1 class="text-3xl font-extrabold mb-6">Privacy Policy</h1>
+<!-- CONTENT -->
+<main class="max-w-5xl mx-auto px-6 py-14">
 
-  <p class="mb-4">
-    NyayaNow collects limited personal information such as name, mobile number,
-    email address, and service-related details solely for the purpose of
-    facilitating services on the platform.
-  </p>
+  <!-- ENGLISH -->
+  <div class="en">
+    <h1 class="text-3xl font-extrabold mb-6">Privacy Policy</h1>
 
-  <p class="mb-4">
-    The information collected is used for communication, service coordination,
-    platform improvement, and legal or regulatory compliance.
-  </p>
+    <p class="mb-4">
+      NyayaNow respects your privacy and is committed to protecting the personal
+      information of its users. This Privacy Policy explains how we collect,
+      use, and safeguard your information.
+    </p>
 
-  <p class="mb-4">
-    NyayaNow does not sell, rent, or misuse user data. Information is shared
-    only with the relevant Advocate or Chartered Accountant assigned to a
-    service request, or when required by law.
-  </p>
+    <p class="mb-4">
+      NyayaNow may collect personal details such as name, mobile number, email
+      address, WhatsApp number, and service-related information when you use
+      our platform.
+    </p>
 
-  <p class="mb-4">
-    Reasonable technical and organizational security measures are implemented
-    to protect personal data from unauthorized access or misuse.
-  </p>
+    <p class="mb-4">
+      The information collected is used only for service facilitation,
+      communication, customer support, and legal or regulatory compliance.
+    </p>
 
-  <p class="mb-4">
-    Users may request access, correction, or deletion of their personal data
-    by contacting NyayaNow through official support channels.
-  </p>
+    <p class="mb-4">
+      NyayaNow does not sell, rent, or misuse personal data. Information is
+      shared only with the relevant Advocate or Chartered Accountant assigned
+      to your request, or when required by law.
+    </p>
+
+    <p class="mb-4">
+      We implement reasonable technical and organizational measures to protect
+      your personal data against unauthorized access, misuse, or loss.
+    </p>
+
+    <p class="mb-4">
+      Users may request access, correction, or deletion of their personal data
+      by contacting NyayaNow through official communication channels.
+    </p>
+  </div>
+
+  <!-- KANNADA -->
+  <div class="kn">
+    <h1 class="text-3xl font-extrabold mb-6">ಗೌಪ್ಯತಾ ನೀತಿ</h1>
+
+    <p class="mb-4">
+      NyayaNow ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ಗೌರವಿಸುತ್ತದೆ ಮತ್ತು ಬಳಕೆದಾರರ ವೈಯಕ್ತಿಕ
+      ಮಾಹಿತಿಯನ್ನು ರಕ್ಷಿಸಲು ಬದ್ಧವಾಗಿದೆ. ಈ ಗೌಪ್ಯತಾ ನೀತಿ ನಾವು ಮಾಹಿತಿ ಹೇಗೆ ಸಂಗ್ರಹಿಸಿ,
+      ಬಳಸುತ್ತೇವೆ ಮತ್ತು ರಕ್ಷಿಸುತ್ತೇವೆ ಎಂಬುದನ್ನು ವಿವರಿಸುತ್ತದೆ.
+    </p>
+
+    <p class="mb-4">
+      NyayaNow ಬಳಕೆದಾರರಿಂದ ಹೆಸರು, ಮೊಬೈಲ್ ಸಂಖ್ಯೆ, ಇಮೇಲ್ ವಿಳಾಸ, ವಾಟ್ಸಾಪ್ ಸಂಖ್ಯೆ
+      ಮತ್ತು ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಬಹುದು.
+    </p>
+
+    <p class="mb-4">
+      ಸಂಗ್ರಹಿಸಲಾದ ಮಾಹಿತಿಯನ್ನು ಕೇವಲ ಸೇವೆ ಒದಗಿಸುವುದು, ಸಂಪರ್ಕ, ಗ್ರಾಹಕ ಬೆಂಬಲ
+      ಮತ್ತು ಕಾನೂನು ಅಥವಾ ನಿಯಂತ್ರಣ ಅನುಸರಣೆಗೆ ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ.
+    </p>
+
+    <p class="mb-4">
+      NyayaNow ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಮಾರಾಟ, ಬಾಡಿಗೆ ಅಥವಾ ದುರುಪಯೋಗ ಮಾಡುವುದಿಲ್ಲ.
+      ಮಾಹಿತಿ ಸಂಬಂಧಿತ ವಕೀಲ ಅಥವಾ ಸಿಎಗೆ ಅಥವಾ ಕಾನೂನುಬದ್ಧ ಅಗತ್ಯವಿದ್ದಾಗ ಮಾತ್ರ ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.
+    </p>
+
+    <p class="mb-4">
+      ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಅನಧಿಕೃತ ಪ್ರವೇಶ, ದುರುಪಯೋಗ ಅಥವಾ ನಷ್ಟದಿಂದ
+      ರಕ್ಷಿಸಲು ಯುಕ್ತವಾದ ತಾಂತ್ರಿಕ ಮತ್ತು ಆಡಳಿತಾತ್ಮಕ ಕ್ರಮಗಳನ್ನು ಅನುಸರಿಸಲಾಗುತ್ತದೆ.
+    </p>
+
+    <p class="mb-4">
+      ಬಳಕೆದಾರರು ತಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಗೆ ಪ್ರವೇಶ, ತಿದ್ದುಪಡಿ ಅಥವಾ ಅಳಿಸುವಿಕೆಗೆ
+      NyayaNow ಅನ್ನು ಅಧಿಕೃತ ಮಾರ್ಗಗಳ ಮೂಲಕ ಸಂಪರ್ಕಿಸಬಹುದು.
+    </p>
+  </div>
+
 </main>
 
 <footer class="bg-slate-950 text-slate-400 text-center py-6 text-sm">
   © 2026 NyayaNow
 </footer>
 
+<script>
+  let lang = "en";
+  function toggleLang(){
+    if(lang === "en"){
+      document.querySelectorAll(".en").forEach(e=>e.style.display="none");
+      document.querySelectorAll(".kn").forEach(e=>e.style.display="block");
+      lang = "kn";
+    } else {
+      document.querySelectorAll(".kn").forEach(e=>e.style.display="none");
+      document.querySelectorAll(".en").forEach(e=>e.style.display="block");
+      lang = "en";
+    }
+  }
+</script>
+
 </body>
 </html>
-
-
