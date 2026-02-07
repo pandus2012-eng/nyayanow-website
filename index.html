@@ -117,9 +117,53 @@
          class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm kn">
         ಈಗ ಬುಕ್ ಮಾಡಿ
       </a>
+      <!-- Mobile Menu Button -->
+<button id="menuBtn"
+  class="md:hidden text-3xl font-bold text-white ml-2"
+  aria-label="Menu">
+  ☰
+</button>
+
     </div>
   </div>
 </header>
+  <!-- ================= MOBILE MENU ================= -->
+<div id="mobileMenu"
+     class="hidden md:hidden bg-slate-900 text-white px-6 py-6 space-y-4">
+
+  <a href="about.html" class="block en">About</a>
+  <a href="about.html" class="block kn">ನಮ್ಮ ಬಗ್ಗೆ</a>
+
+  <a href="#book" class="block en">Book Service</a>
+  <a href="#book" class="block kn">ಸೇವೆ ಬುಕ್</a>
+
+  <a href="how-it-works.html" class="block en">How It Works</a>
+  <a href="how-it-works.html" class="block kn">ಹೆಗಿದೆ</a>
+
+  <a href="professional-onboarding.html" class="block en">For Professionals</a>
+  <a href="professional-onboarding.html" class="block kn">ವೃತ್ತಿಪರರಿಗೆ</a>
+
+  <div class="border-t border-slate-700 pt-3 text-slate-400 en">
+    Court News
+  </div>
+  <div class="border-t border-slate-700 pt-3 text-slate-400 kn">
+    ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ
+  </div>
+
+  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2">
+    Supreme Court of India
+  </a>
+
+  <a href="https://judiciary.karnataka.gov.in" target="_blank" class="block pl-2">
+    Karnataka High Court
+  </a>
+
+  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2">
+    Other High Courts
+  </a>
+
+</div>
+
 
 <!-- ================= HERO ================= -->
 <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -212,7 +256,10 @@
 
 <script>
   let lang = "en";
-  function toggleLang(){
+  function toggleLang(document.getElementById("menuBtn")?.addEventListener("click", function () {
+  document.getElementById("mobileMenu")?.classList.toggle("hidden");
+});
+){
     if(lang === "en"){
       document.querySelectorAll(".en").forEach(e=>e.style.display="none");
       document.querySelectorAll(".kn").forEach(e=>e.style.display="block");
