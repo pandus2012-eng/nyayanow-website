@@ -1,126 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | NyayaNow</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Contact NyayaNow for legal and CA service support.">
+<title>Contact Us | NyayaNow</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta name="description"
+  content="Contact NyayaNow for support, enquiries, or professional onboarding. WhatsApp, email, or submit the contact form." />
 
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    .kn { display:none; }
-  </style>
+<meta name="theme-color" content="#020617" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.en { display:block; }
+.kn { display:none; }
+body.lang-kn .en { display:none; }
+body.lang-kn .kn { display:block; }
+
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 18px;
+  border-radius:999px;
+  font-weight:bold;
+  box-shadow:0 8px 20px rgba(0,0,0,0.35);
+  z-index:9999;
+}
+</style>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
 
 <!-- ================= HEADER ================= -->
-<header class="bg-slate-950 text-white px-6 py-4 flex justify-between items-center">
-  <span class="text-xl font-extrabold text-amber-400">NyayaNow</span>
+<header class="bg-slate-950 text-white shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-extrabold text-amber-400">NyayaNow</a>
 
-  <div class="flex gap-4 items-center">
-    <button onclick="toggleLang()"
-      class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
-      ಕನ್ನಡ / English
-    </button>
+    <div class="flex gap-3 items-center">
+      <button id="langBtn"
+        onclick="toggleLang()"
+        class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
+        ಕನ್ನಡ
+      </button>
 
-    <a href="index.html" class="text-sm font-semibold hover:text-amber-400">
-      Home
-    </a>
+      <a href="index.html"
+         class="border border-slate-400 px-4 py-1 rounded-full text-sm font-bold">
+        Home
+      </a>
+    </div>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-  <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+<!-- ================= CONTACT SECTION ================= -->
+<section class="max-w-6xl mx-auto px-6 py-20">
 
-    <div class="en">
-      <h1 class="text-4xl font-extrabold mb-4">Contact Us</h1>
-      <p class="text-slate-300 text-lg">
-        We’re here to help you with NyayaNow services.
-      </p>
+  <!-- Title -->
+  <div class="text-center mb-14">
+    <h1 class="text-4xl font-extrabold mb-4 en">Contact NyayaNow</h1>
+    <h1 class="text-4xl font-extrabold mb-4 kn">NyayaNow ಅನ್ನು ಸಂಪರ್ಕಿಸಿ</h1>
+
+    <p class="text-slate-600 en">
+      Reach out to us for support, enquiries, or professional onboarding.
+    </p>
+    <p class="text-slate-600 kn">
+      ಸಹಾಯ, ಮಾಹಿತಿ ಅಥವಾ ವೃತ್ತಿಪರ ನೋಂದಣಿಗಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-12">
+
+    <!-- ================= CONTACT FORM ================= -->
+    <div class="bg-white rounded-xl shadow p-8">
+      <h2 class="text-2xl font-bold mb-6 en">Send us a message</h2>
+      <h2 class="text-2xl font-bold mb-6 kn">ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</h2>
+
+      <form>
+        <div class="mb-4">
+          <label class="block text-sm font-semibold mb-1 en">Full Name</label>
+          <label class="block text-sm font-semibold mb-1 kn">ಪೂರ್ಣ ಹೆಸರು</label>
+          <input type="text" required
+            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-400"/>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-sm font-semibold mb-1 en">Mobile Number</label>
+          <label class="block text-sm font-semibold mb-1 kn">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ</label>
+          <input type="tel" required
+            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-400"/>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-sm font-semibold mb-1 en">Email (optional)</label>
+          <label class="block text-sm font-semibold mb-1 kn">ಇಮೇಲ್ (ಐಚ್ಛಿಕ)</label>
+          <input type="email"
+            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-400"/>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-sm font-semibold mb-1 en">Message</label>
+          <label class="block text-sm font-semibold mb-1 kn">ಸಂದೇಶ</label>
+          <textarea rows="4" required
+            class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-400"></textarea>
+        </div>
+
+        <button type="submit"
+          class="bg-amber-400 text-black px-6 py-3 rounded-full font-bold w-full">
+          <span class="en">Submit</span>
+          <span class="kn">ಸಲ್ಲಿಸಿ</span>
+        </button>
+
+        <p class="text-xs text-slate-500 mt-4 en">
+          This form is for enquiries only. NyayaNow does not provide legal advice.
+        </p>
+        <p class="text-xs text-slate-500 mt-4 kn">
+          ಈ ಫಾರ್ಮ್ ಮಾಹಿತಿ ಪಡೆಯಲು ಮಾತ್ರ. NyayaNow ಕಾನೂನು ಸಲಹೆ ನೀಡುವುದಿಲ್ಲ.
+        </p>
+      </form>
     </div>
 
-    <div class="kn">
-      <h1 class="text-4xl font-extrabold mb-4">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h1>
-      <p class="text-slate-300 text-lg">
-        NyayaNow ಸೇವೆಗಳ ಕುರಿತು ಸಹಾಯಕ್ಕಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.
-      </p>
-    </div>
+    <!-- ================= CONTACT INFO ================= -->
+    <div class="space-y-8">
 
+      <!-- WhatsApp -->
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-xl font-bold mb-2 en">WhatsApp Support</h3>
+        <h3 class="text-xl font-bold mb-2 kn">ವಾಟ್ಸಪ್ ಸಹಾಯ</h3>
+
+        <p class="text-slate-600 mb-4 en">
+          Fastest way to reach us.
+        </p>
+        <p class="text-slate-600 mb-4 kn">
+          ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುವ ವೇಗವಾದ ಮಾರ್ಗ.
+        </p>
+
+        <a href="https://wa.me/919632786767"
+           target="_blank"
+           class="inline-block bg-green-500 text-white px-6 py-3 rounded-full font-bold">
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Email -->
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-xl font-bold mb-2 en">Email</h3>
+        <h3 class="text-xl font-bold mb-2 kn">ಇಮೇಲ್</h3>
+
+        <p class="text-slate-600 mb-2">
+          support@nyayanow.com
+        </p>
+
+        <p class="text-xs text-slate-500 en">
+          We usually respond within 24 working hours.
+        </p>
+        <p class="text-xs text-slate-500 kn">
+          ಸಾಮಾನ್ಯವಾಗಿ 24 ಕಾರ್ಯಗಂಟೆಗಳಲ್ಲಿ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತೇವೆ.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- ================= CONTENT ================= -->
-<main class="max-w-4xl mx-auto px-6 py-14">
-
-  <!-- ENGLISH -->
-  <div class="en space-y-6">
-
-    <div class="bg-white shadow rounded-xl p-6">
-      <h2 class="text-xl font-bold mb-2">Customer Support</h2>
-      <p>Email: <strong>support@nyayanow.com</strong></p>
-      <p>WhatsApp: <strong>+91 96327 86767</strong></p>
-    </div>
-
-    <div class="bg-white shadow rounded-xl p-6">
-      <h2 class="text-xl font-bold mb-2">Office Address</h2>
-      <p>Karnataka, India</p>
-    </div>
-
-    <div class="bg-white shadow rounded-xl p-6 text-sm text-slate-600">
-      NyayaNow is a technology facilitation platform.  
-      We do not provide legal advice directly.
-    </div>
-
-  </div>
-
-  <!-- KANNADA -->
-  <div class="kn space-y-6">
-
-    <div class="bg-white shadow rounded-xl p-6">
-      <h2 class="text-xl font-bold mb-2">ಗ್ರಾಹಕ ಬೆಂಬಲ</h2>
-      <p>ಇಮೇಲ್: <strong>support@nyayanow.com</strong></p>
-      <p>ವಾಟ್ಸಾಪ್: <strong>+91 96327 86767</strong></p>
-    </div>
-
-    <div class="bg-white shadow rounded-xl p-6">
-      <h2 class="text-xl font-bold mb-2">ಕಚೇರಿ ವಿಳಾಸ</h2>
-      <p>ಕರ್ನಾಟಕ, ಭಾರತ</p>
-    </div>
-
-    <div class="bg-white shadow rounded-xl p-6 text-sm text-slate-600">
-      NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.  
-      ನೇರವಾಗಿ ಕಾನೂನು ಸಲಹೆ ನೀಡುವುದಿಲ್ಲ.
-    </div>
-
-  </div>
-
-</main>
-
 <!-- ================= FOOTER ================= -->
-<footer class="bg-slate-950 text-slate-400 text-center py-6 text-sm">
-  © 2026 NyayaNow · Technology Facilitation Platform
+<footer class="bg-slate-950 text-slate-400 text-center py-8 text-sm">
+  <p class="en">NyayaNow is a technology platform. It does not provide legal advice.</p>
+  <p class="kn">NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.</p>
+
+  <div class="mt-3 space-x-6">
+    <a href="terms.html" class="hover:text-amber-400">Terms</a>
+    <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
+    <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
+  </div>
+
+  <div class="mt-3">© 2026 NyayaNow</div>
 </footer>
 
+<a href="https://wa.me/919632786767"
+   target="_blank"
+   class="whatsapp-float"
+   aria-label="WhatsApp Support">
+  WhatsApp Support
+</a>
+
 <script>
-  let lang = "en";
-  function toggleLang(){
-    if(lang === "en"){
-      document.querySelectorAll(".en").forEach(e=>e.style.display="none");
-      document.querySelectorAll(".kn").forEach(e=>e.style.display="block");
-      lang = "kn";
-    } else {
-      document.querySelectorAll(".kn").forEach(e=>e.style.display="none");
-      document.querySelectorAll(".en").forEach(e=>e.style.display="block");
-      lang = "en";
-    }
+function toggleLang() {
+  document.body.classList.toggle("lang-kn");
+  const isKn = document.body.classList.contains("lang-kn");
+  localStorage.setItem("lang", isKn ? "kn" : "en");
+  document.getElementById("langBtn").innerText = isKn ? "English" : "ಕನ್ನಡ";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const savedLang = localStorage.getItem("lang");
+  if (savedLang === "kn") {
+    document.body.classList.add("lang-kn");
+    document.getElementById("langBtn").innerText = "English";
   }
+});
 </script>
 
 </body>

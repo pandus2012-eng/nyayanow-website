@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Platform Fee Policy | NyayaNow</title>
+
+<meta name="description"
+  content="Understand NyayaNow’s ₹99 platform facilitation fee and how it works." />
+
+<meta name="theme-color" content="#020617" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.en { display:block; }
+.kn { display:none; }
+body.lang-kn .en { display:none; }
+body.lang-kn .kn { display:block; }
+</style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<header class="bg-slate-950 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-extrabold text-amber-400">NyayaNow</a>
+    <button id="langBtn" onclick="toggleLang()"
+      class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
+      ಕನ್ನಡ
+    </button>
+  </div>
+</header>
+
+<section class="max-w-5xl mx-auto px-6 py-16 bg-white mt-10 rounded-xl shadow">
+
+  <h1 class="text-3xl font-extrabold mb-6 en">Platform Fee Policy</h1>
+  <h1 class="text-3xl font-extrabold mb-6 kn">ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ ನೀತಿ</h1>
+
+  <p class="mb-6 en">
+    NyayaNow charges a fixed platform facilitation fee of ₹99 to connect users with verified Advocates and Chartered Accountants.
+  </p>
+  <p class="mb-6 kn">
+    NyayaNow ಪರಿಶೀಲಿತ ವಕೀಲರು ಮತ್ತು ಚಾರ್ಟರ್ಡ್ ಅಕೌಂಟೆಂಟ್‌ಗಳೊಂದಿಗೆ ಬಳಕೆದಾರರನ್ನು ಸಂಪರ್ಕಿಸಲು ₹99 ನಿಶ್ಚಿತ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕವನ್ನು ವಸೂಲಿ ಮಾಡುತ್ತದೆ.
+  </p>
+
+  <h2 class="text-xl font-bold mb-3 en">What the ₹99 Covers</h2>
+  <h2 class="text-xl font-bold mb-3 kn">₹99 ಯಾವ ಸೇವೆಗಳಿಗೆ</h2>
+
+  <ul class="list-disc pl-6 mb-6 text-slate-700 en">
+    <li>Technology platform usage</li>
+    <li>Professional verification and onboarding</li>
+    <li>Service coordination and communication support</li>
+  </ul>
+
+  <ul class="list-disc pl-6 mb-6 text-slate-700 kn">
+    <li>ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಬಳಕೆ</li>
+    <li>ವೃತ್ತಿಪರ ಪರಿಶೀಲನೆ ಮತ್ತು ನೋಂದಣಿ</li>
+    <li>ಸೇವೆ ಸಂಯೋಜನೆ ಮತ್ತು ಸಂವಹನ ಬೆಂಬಲ</li>
+  </ul>
+
+  <h2 class="text-xl font-bold mb-3 en">What the ₹99 Does NOT Include</h2>
+  <h2 class="text-xl font-bold mb-3 kn">₹99 ಒಳಗೊಂಡಿಲ್ಲ</h2>
+
+  <p class="mb-6 en">
+    The platform fee does not include legal advice or professional service fees. Professional charges must be paid directly to the Advocate or Chartered Accountant.
+  </p>
+  <p class="mb-6 kn">
+    ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕದಲ್ಲಿ ಕಾನೂನು ಸಲಹೆ ಅಥವಾ ವೃತ್ತಿಪರ ಸೇವಾ ಶುಲ್ಕ ಒಳಗೊಂಡಿಲ್ಲ. ವೃತ್ತಿಪರರ ಶುಲ್ಕವನ್ನು ನೇರವಾಗಿ ಪಾವತಿಸಬೇಕು.
+  </p>
+
+  <p class="text-sm text-slate-500 en">
+    NyayaNow does not influence or control professional fees.
+  </p>
+  <p class="text-sm text-slate-500 kn">
+    NyayaNow ವೃತ್ತಿಪರರ ಶುಲ್ಕವನ್ನು ನಿಯಂತ್ರಿಸುವುದಿಲ್ಲ.
+  </p>
+
+</section>
+
+<footer class="bg-slate-950 text-slate-400 text-center py-8 text-sm mt-10">
+  <p>© 2026 NyayaNow</p>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle("lang-kn");
+  const isKn = document.body.classList.contains("lang-kn");
+  localStorage.setItem("lang", isKn ? "kn" : "en");
+  document.getElementById("langBtn").innerText = isKn ? "English" : "ಕನ್ನಡ";
+}
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("lang") === "kn") {
+    document.body.classList.add("lang-kn");
+    document.getElementById("langBtn").innerText = "English";
+  }
+});
+</script>
+
+</body>
+</html>
