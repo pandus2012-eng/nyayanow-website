@@ -16,6 +16,10 @@
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
+  .en { display:block; }
+  .kn { display:none; }
+  body.lang-kn .en { display:none; }
+  body.lang-kn .kn { display:block; }
 </style>
 </head>
 
@@ -25,17 +29,35 @@
 <header class="bg-slate-950 text-white">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <a href="index.html" class="text-xl font-extrabold text-amber-400">NyayaNow</a>
-    <a href="index.html" class="text-sm font-semibold hover:text-amber-400">Home</a>
+
+    <div class="flex gap-4 items-center">
+      <button onclick="toggleLang()"
+        class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
+        ಕನ್ನಡ / English
+      </button>
+
+      <a href="index.html" class="text-sm font-semibold hover:text-amber-400">
+        Home
+      </a>
+    </div>
   </div>
 </header>
 
 <!-- ================= PAGE TITLE ================= -->
 <section class="bg-white border-b">
   <div class="max-w-4xl mx-auto px-6 py-10">
-    <h1 class="text-3xl font-extrabold mb-2">Book a Professional Service</h1>
-    <p class="text-slate-600">
-      Fill the details below and pay a one-time
-      <strong>₹99 platform facilitation fee</strong>.
+    <h1 class="text-3xl font-extrabold mb-2 en">
+      Book a Professional Service
+    </h1>
+    <h1 class="text-3xl font-extrabold mb-2 kn">
+      ವೃತ್ತಿಪರ ಸೇವೆ ಬುಕ್ ಮಾಡಿ
+    </h1>
+
+    <p class="text-slate-600 en">
+      Fill the details below and pay a one-time <strong>₹99 platform facilitation fee</strong>.
+    </p>
+    <p class="text-slate-600 kn">
+      ಕೆಳಗಿನ ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ ಮತ್ತು <strong>₹99 ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ</strong> ಪಾವತಿಸಿ.
     </p>
   </div>
 </section>
@@ -52,28 +74,37 @@
         onsubmit="submitAndPay(event)"
         class="grid md:grid-cols-2 gap-6">
 
+        <!-- Name -->
         <div>
-          <label class="text-sm font-semibold">Full Name</label>
-          <input name="entry.1394880848" class="w-full mt-1 p-3 border rounded-lg" required>
+          <label class="text-sm font-semibold en">Full Name</label>
+          <label class="text-sm font-semibold kn">ಪೂರ್ಣ ಹೆಸರು</label>
+          <input name="entry.1394880848"
+                 class="w-full mt-1 p-3 border rounded-lg" required>
         </div>
 
+        <!-- Mobile -->
         <div>
-          <label class="text-sm font-semibold">Mobile Number</label>
+          <label class="text-sm font-semibold en">Mobile Number</label>
+          <label class="text-sm font-semibold kn">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ</label>
           <input name="entry.2143171419" type="tel"
                  class="w-full mt-1 p-3 border rounded-lg" required>
         </div>
 
+        <!-- WhatsApp -->
         <div>
-          <label class="text-sm font-semibold">WhatsApp Number</label>
+          <label class="text-sm font-semibold en">WhatsApp Number</label>
+          <label class="text-sm font-semibold kn">ವಾಟ್ಸಪ್ ಸಂಖ್ಯೆ</label>
           <input name="entry.599798992" type="tel"
                  class="w-full mt-1 p-3 border rounded-lg">
         </div>
 
+        <!-- Service -->
         <div>
-          <label class="text-sm font-semibold">Service Required</label>
+          <label class="text-sm font-semibold en">Service Required</label>
+          <label class="text-sm font-semibold kn">ಅಗತ್ಯವಿರುವ ಸೇವೆ</label>
           <select name="entry.1883923852"
                   class="w-full mt-1 p-3 border rounded-lg" required>
-            <option value="">Select service</option>
+            <option value="">Select / ಆಯ್ಕೆಮಾಡಿ</option>
             <option>Family Dispute</option>
             <option>Property Issue</option>
             <option>Criminal Matter</option>
@@ -83,8 +114,10 @@
           </select>
         </div>
 
+        <!-- Mode -->
         <div>
-          <label class="text-sm font-semibold">Consultation Mode</label>
+          <label class="text-sm font-semibold en">Consultation Mode</label>
+          <label class="text-sm font-semibold kn">ಸಲಹೆ ವಿಧಾನ</label>
           <select name="entry.1269874112"
                   class="w-full mt-1 p-3 border rounded-lg" required>
             <option>Phone Call</option>
@@ -93,8 +126,10 @@
           </select>
         </div>
 
+        <!-- Urgency -->
         <div>
-          <label class="text-sm font-semibold">Urgency</label>
+          <label class="text-sm font-semibold en">Urgency</label>
+          <label class="text-sm font-semibold kn">ತುರ್ತುತೆ</label>
           <select name="entry.200288478"
                   class="w-full mt-1 p-3 border rounded-lg" required>
             <option>Immediate (Today)</option>
@@ -103,48 +138,62 @@
           </select>
         </div>
 
-        <!-- ================= CONSENT ================= -->
-        <div class="md:col-span-2 text-sm space-y-2">
+        <!-- CONSENT -->
+        <div class="md:col-span-2 text-sm">
           <label class="flex items-start gap-2">
             <input type="checkbox" required>
-            <span>
+            <span class="en">
               I agree to the
-              <a href="terms.html" target="_blank"
-                 class="text-blue-600 underline">Terms & Conditions</a>
+              <a href="terms.html" target="_blank" class="text-blue-600 underline">Terms</a>
               and
-              <a href="privacy.html" target="_blank"
-                 class="text-blue-600 underline">Privacy Policy</a>
+              <a href="privacy.html" target="_blank" class="text-blue-600 underline">Privacy Policy</a>
+            </span>
+            <span class="kn">
+              ನಾನು
+              <a href="terms.html" target="_blank" class="text-blue-600 underline">ನಿಯಮಗಳು</a>
+              ಮತ್ತು
+              <a href="privacy.html" target="_blank" class="text-blue-600 underline">ಗೌಪ್ಯತಾ ನೀತಿ</a>
+              ಗೆ ಒಪ್ಪುತ್ತೇನೆ
             </span>
           </label>
         </div>
 
-        <!-- ================= FEE EXPLANATION ================= -->
+        <!-- FEE BOX -->
         <div class="md:col-span-2 bg-slate-50 border rounded-xl p-5 text-sm">
           <p><strong>Platform Fee:</strong> ₹99 (paid to NyayaNow)</p>
           <p><strong>Professional Fee:</strong> Paid directly to Advocate / CA</p>
-          <p class="mt-2 text-slate-600">
-            ₹99 is a non-refundable platform facilitation fee charged for
-            coordination and professional onboarding.
+
+          <p class="mt-2 text-slate-600 en">
+            ₹99 is a non-refundable platform facilitation fee.
           </p>
+          <p class="mt-2 text-slate-600 kn">
+            ₹99 ಮರುಪಾವತಿಸದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕವಾಗಿದೆ.
+          </p>
+
           <p class="mt-2">
-            <a href="platform-fee.html" target="_blank"
-               class="text-blue-600 underline">Platform Fee Policy</a> ·
-            <a href="refund.html" target="_blank"
-               class="text-blue-600 underline">Refund Policy</a>
+            <a href="platform-fee.html" target="_blank" class="text-blue-600 underline">
+              Platform Fee Policy
+            </a>
+            ·
+            <a href="refund.html" target="_blank" class="text-blue-600 underline">
+              Refund Policy
+            </a>
           </p>
         </div>
 
-        <!-- ================= SUBMIT ================= -->
+        <!-- SUBMIT -->
         <div class="md:col-span-2 text-center mt-4">
-          <button
-            type="submit"
+          <button type="submit"
             class="bg-amber-400 hover:bg-amber-500 text-black px-12 py-4 rounded-full font-bold">
-            Proceed to Pay ₹99
+            <span class="en">Proceed to Pay ₹99</span>
+            <span class="kn">₹99 ಪಾವತಿಸಲು ಮುಂದುವರಿಸಿ</span>
           </button>
 
-          <p class="text-xs text-slate-500 mt-3">
-            Submission of this form does not guarantee professional assignment.
-            Payment is required to process your request.
+          <p class="text-xs text-slate-500 mt-3 en">
+            Submission does not guarantee professional assignment.
+          </p>
+          <p class="text-xs text-slate-500 mt-3 kn">
+            ಸೇವೆ ಖಚಿತವಾಗುವುದಿಲ್ಲ.
           </p>
         </div>
 
@@ -161,6 +210,10 @@
 
 <!-- ================= SCRIPT ================= -->
 <script>
+function toggleLang(){
+  document.body.classList.toggle("lang-kn");
+}
+
 function submitAndPay(e) {
   e.preventDefault();
 
@@ -170,7 +223,6 @@ function submitAndPay(e) {
     mode: "no-cors"
   });
 
-  // 🔴 Update redirect after GitHub deploy
   window.location.href =
     "https://razorpay.me/@nyayanow?redirect=https://YOUR_USERNAME.github.io/YOUR_REPO/payment-success.html";
 }
