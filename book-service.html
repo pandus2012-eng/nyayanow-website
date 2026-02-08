@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book a Service | NyayaNow</title>
 
-<meta name="description" content="Book legal or CA services through NyayaNow. Platform booking fee ₹99 only.">
+<meta name="description"
+      content="Book legal or CA services through NyayaNow. Platform facilitation fee ₹99 only.">
+
+<meta name="theme-color" content="#020617">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -31,7 +34,8 @@
   <div class="max-w-4xl mx-auto px-6 py-10">
     <h1 class="text-3xl font-extrabold mb-2">Book a Professional Service</h1>
     <p class="text-slate-600">
-      Fill the details below and pay a one-time platform booking fee of <strong>₹99</strong>.
+      Fill the details below and pay a one-time
+      <strong>₹99 platform facilitation fee</strong>.
     </p>
   </div>
 </section>
@@ -55,22 +59,20 @@
 
         <div>
           <label class="text-sm font-semibold">Mobile Number</label>
-          <input name="entry.2143171419" type="tel" class="w-full mt-1 p-3 border rounded-lg" required>
-        </div>
-
-        <div>
-          <label class="text-sm font-semibold">Alternate Mobile</label>
-          <input name="entry.1805477722" type="tel" class="w-full mt-1 p-3 border rounded-lg">
+          <input name="entry.2143171419" type="tel"
+                 class="w-full mt-1 p-3 border rounded-lg" required>
         </div>
 
         <div>
           <label class="text-sm font-semibold">WhatsApp Number</label>
-          <input name="entry.599798992" type="tel" class="w-full mt-1 p-3 border rounded-lg">
+          <input name="entry.599798992" type="tel"
+                 class="w-full mt-1 p-3 border rounded-lg">
         </div>
 
         <div>
           <label class="text-sm font-semibold">Service Required</label>
-          <select name="entry.1883923852" class="w-full mt-1 p-3 border rounded-lg" required>
+          <select name="entry.1883923852"
+                  class="w-full mt-1 p-3 border rounded-lg" required>
             <option value="">Select service</option>
             <option>Family Dispute</option>
             <option>Property Issue</option>
@@ -83,43 +85,67 @@
 
         <div>
           <label class="text-sm font-semibold">Consultation Mode</label>
-          <select name="entry.1269874112" class="w-full mt-1 p-3 border rounded-lg" required>
+          <select name="entry.1269874112"
+                  class="w-full mt-1 p-3 border rounded-lg" required>
             <option>Phone Call</option>
-            <option>In-Person Meeting</option>
             <option>Online</option>
+            <option>In-Person Meeting</option>
           </select>
         </div>
 
         <div>
           <label class="text-sm font-semibold">Urgency</label>
-          <select name="entry.200288478" class="w-full mt-1 p-3 border rounded-lg" required>
+          <select name="entry.200288478"
+                  class="w-full mt-1 p-3 border rounded-lg" required>
             <option>Immediate (Today)</option>
             <option>Within 2–3 Days</option>
             <option>Within a Week</option>
           </select>
         </div>
 
-        <div class="md:col-span-2 text-sm">
-          <label class="flex items-center gap-2">
-            <input type="checkbox" name="entry.1334602209" value="I Agree" required>
-            I agree to the
-            <a href="terms.html" target="_blank" class="text-blue-600 underline">
-              Terms & Conditions
-            </a>
+        <!-- ================= CONSENT ================= -->
+        <div class="md:col-span-2 text-sm space-y-2">
+          <label class="flex items-start gap-2">
+            <input type="checkbox" required>
+            <span>
+              I agree to the
+              <a href="terms.html" target="_blank"
+                 class="text-blue-600 underline">Terms & Conditions</a>
+              and
+              <a href="privacy.html" target="_blank"
+                 class="text-blue-600 underline">Privacy Policy</a>
+            </span>
           </label>
         </div>
 
+        <!-- ================= FEE EXPLANATION ================= -->
         <div class="md:col-span-2 bg-slate-50 border rounded-xl p-5 text-sm">
           <p><strong>Platform Fee:</strong> ₹99 (paid to NyayaNow)</p>
           <p><strong>Professional Fee:</strong> Paid directly to Advocate / CA</p>
+          <p class="mt-2 text-slate-600">
+            ₹99 is a non-refundable platform facilitation fee charged for
+            coordination and professional onboarding.
+          </p>
+          <p class="mt-2">
+            <a href="platform-fee.html" target="_blank"
+               class="text-blue-600 underline">Platform Fee Policy</a> ·
+            <a href="refund.html" target="_blank"
+               class="text-blue-600 underline">Refund Policy</a>
+          </p>
         </div>
 
+        <!-- ================= SUBMIT ================= -->
         <div class="md:col-span-2 text-center mt-4">
           <button
             type="submit"
             class="bg-amber-400 hover:bg-amber-500 text-black px-12 py-4 rounded-full font-bold">
-            Pay ₹99 & Submit
+            Proceed to Pay ₹99
           </button>
+
+          <p class="text-xs text-slate-500 mt-3">
+            Submission of this form does not guarantee professional assignment.
+            Payment is required to process your request.
+          </p>
         </div>
 
       </form>
@@ -144,12 +170,11 @@ function submitAndPay(e) {
     mode: "no-cors"
   });
 
-  // 🔴 CHANGE THIS AFTER GITHUB DEPLOY
+  // 🔴 Update redirect after GitHub deploy
   window.location.href =
-  "https://razorpay.me/@nyayanow?redirect=https://YOUR_USERNAME.github.io/YOUR_REPO/payment-success.html";
+    "https://razorpay.me/@nyayanow?redirect=https://YOUR_USERNAME.github.io/YOUR_REPO/payment-success.html";
 }
 </script>
 
 </body>
 </html>
-
