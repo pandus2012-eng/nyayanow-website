@@ -7,42 +7,43 @@
 <title>NyayaNow | Find Advocates & Chartered Accountants in Karnataka</title>
 
 <meta name="description"
-  content="NyayaNow is a technology platform connecting citizens with verified Advocates and Chartered Accountants across Karnataka. Transparent platform fee ₹99 only." />
+  content="NyayaNow connects citizens with verified Advocates and Chartered Accountants across Karnataka. Transparent platform fee ₹99 only." />
 
 <meta name="keywords"
   content="advocate consultation Karnataka, CA services Karnataka, lawyer near me Karnataka, GST CA Karnataka, family lawyer Mysore" />
-  <meta name="theme-color" content="#020617"/>
 
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json"/>
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://nyayanow.com/" />
+<meta name="theme-color" content="#020617"/>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<!-- PWA -->
+<link rel="manifest" href="manifest.json"/>
 
-  <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    .kn { display:none; }
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-    .whatsapp-float{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:14px 18px;
-      border-radius:999px;
-      font-weight:bold;
-      box-shadow:0 8px 20px rgba(0,0,0,0.35);
-      z-index:9999;
-    }
-    /* Language enforcement */
-.en { display: block; }
-.kn { display: none; }
+<style>
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.en { display:block; }
+.kn { display:none; }
+body.lang-kn .en { display:none; }
+body.lang-kn .kn { display:block; }
 
-body.lang-kn .en { display: none; }
-body.lang-kn .kn { display: block; }
-
-  </style>
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 18px;
+  border-radius:999px;
+  font-weight:bold;
+  box-shadow:0 8px 20px rgba(0,0,0,0.35);
+  z-index:9999;
+}
+</style>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
@@ -56,67 +57,47 @@ body.lang-kn .kn { display: block; }
       <a href="about.html" class="en hover:text-amber-400">About</a>
       <a href="about.html" class="kn hover:text-amber-400">ನಮ್ಮ ಬಗ್ಗೆ</a>
 
-      <a href="#book" class="hover:text-amber-400 en">Book Service</a>
-      <a href="#book" class="hover:text-amber-400 kn">ಸೇವೆ ಬುಕ್</a>
+      <a href="#book" class="en hover:text-amber-400">Book Service</a>
+      <a href="#book" class="kn hover:text-amber-400">ಸೇವೆ ಬುಕ್</a>
 
-      <a href="how-it-works.html" class="en hover:text-amber-400">
-  How It Works
-</a>
-<a href="how-it-works.html" class="kn hover:text-amber-400">
-  ಹೆಗಿದೆ
-</a>
+      <a href="how-it-works.html" class="en hover:text-amber-400">How It Works</a>
+      <a href="how-it-works.html" class="kn hover:text-amber-400">ಹೆಗಿದೆ</a>
 
-      <a href="professional-onboarding.html" class="en">For Professionals</a>
-<a href="professional-onboarding.html" class="kn">ವೃತ್ತಿಪರರಿಗೆ</a>
-      <!-- Court News Dropdown -->
-<div class="relative group">
+      <a href="professional-onboarding.html" class="en hover:text-amber-400">For Professionals</a>
+      <a href="professional-onboarding.html" class="kn hover:text-amber-400">ವೃತ್ತಿಪರರಿಗೆ</a>
 
-  <!-- English -->
-  <span class="en cursor-pointer hover:text-amber-400">
-    Court News ▾
-  </span>
+      <a href="contact.html" class="en hover:text-amber-400">Contact</a>
+      <a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
 
-  <!-- Kannada -->
-  <span class="kn cursor-pointer hover:text-amber-400">
-    ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾
-  </span>
+      <!-- Court News -->
+      <div class="relative group">
+        <span class="en cursor-pointer hover:text-amber-400">Court News ▾</span>
+        <span class="kn cursor-pointer hover:text-amber-400">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾</span>
 
-  <!-- Dropdown -->
-  <div
-    class="absolute left-0 mt-2 w-56 bg-white text-slate-800 rounded-lg shadow-lg
-           opacity-0 invisible group-hover:opacity-100 group-hover:visible
-           transition-all duration-200 z-50">
+        <div class="absolute left-0 mt-2 w-56 bg-white text-slate-800 rounded-lg shadow-lg
+             opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
 
-    <a href="https://www.sci.gov.in"
-       target="_blank"
-       class="block px-4 py-2 hover:bg-slate-100">
-      Supreme Court of India
-    </a>
-
-    <a href="https://judiciary.karnataka.gov.in"
-       target="_blank"
-       class="block px-4 py-2 hover:bg-slate-100">
-      Karnataka High Court
-    </a>
-
-    <a href="https://hcservices.ecourts.gov.in"
-       target="_blank"
-       class="block px-4 py-2 hover:bg-slate-100">
-      Other High Courts (India)
-    </a>
-    
-    <a href="contact.html" class="en hover:text-amber-400">Contact</a>
-<a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
-    
-  </div>
-</div>
-
+          <a href="https://www.sci.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100">
+            Supreme Court of India
+          </a>
+          <a href="https://judiciary.karnataka.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100">
+            Karnataka High Court
+          </a>
+          <a href="https://hcservices.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100">
+            Other High Courts
+          </a>
+        </div>
+      </div>
     </nav>
 
     <div class="flex gap-3 items-center">
-      <button onclick="toggleLang()"
+      <button id="langBtn"
+        onclick="toggleLang()"
         class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
-        ಕನ್ನಡ / English
+        ಕನ್ನಡ
       </button>
 
       <a href="book-service.html"
@@ -127,20 +108,18 @@ body.lang-kn .kn { display: block; }
          class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm kn">
         ಈಗ ಬುಕ್ ಮಾಡಿ
       </a>
-      <!-- Mobile Menu Button -->
-<button id="menuBtn"
-  class="md:hidden text-3xl font-bold text-white ml-2"
-  aria-label="Menu">
-  ☰
-</button>
 
+      <button id="menuBtn"
+        class="md:hidden text-3xl font-bold ml-2">
+        ☰
+      </button>
     </div>
   </div>
 </header>
-  <!-- ================= MOBILE MENU ================= -->
+
+<!-- ================= MOBILE MENU ================= -->
 <div id="mobileMenu"
-  class="hidden md:hidden bg-slate-900 text-white px-6 py-8 space-y-5
-         text-base font-medium shadow-xl">
+  class="hidden md:hidden bg-slate-900 text-white px-6 py-8 space-y-5 text-base font-medium">
 
   <a href="about.html" class="block en">About</a>
   <a href="about.html" class="block kn">ನಮ್ಮ ಬಗ್ಗೆ</a>
@@ -154,30 +133,16 @@ body.lang-kn .kn { display: block; }
   <a href="professional-onboarding.html" class="block en">For Professionals</a>
   <a href="professional-onboarding.html" class="block kn">ವೃತ್ತಿಪರರಿಗೆ</a>
 
-  <div class="border-t border-slate-700 pt-3 text-slate-400 en">
-    Court News
-  </div>
-  <div class="border-t border-slate-700 pt-3 text-slate-400 kn">
-    ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ
-  </div>
+  <a href="contact.html" class="block en">Contact</a>
+  <a href="contact.html" class="block kn">ಸಂಪರ್ಕ</a>
 
-  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2">
-    Supreme Court of India
-  </a>
+  <div class="border-t border-slate-700 pt-3 text-slate-400 en">Court News</div>
+  <div class="border-t border-slate-700 pt-3 text-slate-400 kn">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ</div>
 
-  <a href="https://judiciary.karnataka.gov.in" target="_blank" class="block pl-2">
-    Karnataka High Court
-  </a>
-
-  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2">
-    Other High Courts
-  </a>
-  
-<a href="contact.html" class="block en">Contact</a>
-<a href="contact.html" class="block kn">ಸಂಪರ್ಕ</a>
-
+  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2">Supreme Court of India</a>
+  <a href="https://judiciary.karnataka.gov.in" target="_blank" class="block pl-2">Karnataka High Court</a>
+  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2">Other High Courts</a>
 </div>
-
 
 <!-- ================= HERO ================= -->
 <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -187,67 +152,58 @@ body.lang-kn .kn { display: block; }
       <h1 class="text-5xl font-extrabold mb-6">
         Find Verified Advocates & Chartered Accountants
       </h1>
-      <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-10">
-        Connect with verified Advocates and Chartered Accountants across Karnataka.
-        Platform fee ₹99 only.
+      <p class="text-lg text-slate-300 mb-4">
+        Verified professionals • Transparent pricing • Karnataka-focused
+      </p>
+      <p class="text-slate-400 mb-8">
+        ₹99 is a platform facilitation fee. Professional fees are paid directly to the Advocate / CA.
       </p>
     </div>
 
     <div class="kn">
       <h1 class="text-5xl font-extrabold mb-6">
-        ಪರಿಶೀಲಿಸಿದ ವಕೀಲರು ಮತ್ತು ಚಾರ್ಟರ್ಡ್ ಅಕೌಂಟೆಂಟ್‌ಗಳನ್ನು ಹುಡುಕಿ
+        ಪರಿಶೀಲಿತ ವಕೀಲರು ಮತ್ತು ಚಾರ್ಟರ್ಡ್ ಅಕೌಂಟೆಂಟ್‌ಗಳನ್ನು ಹುಡುಕಿ
       </h1>
-      <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-10">
-        ಕರ್ನಾಟಕದ ಪರಿಶೀಲಿತ ವಕೀಲರು ಮತ್ತು ಸಿಎಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ.
-        ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ ₹99 ಮಾತ್ರ.
+      <p class="text-lg text-slate-300 mb-4">
+        ಪರಿಶೀಲಿತ ವೃತ್ತಿಪರರು • ಸ್ಪಷ್ಟ ಶುಲ್ಕ • ಕರ್ನಾಟಕಕ್ಕೆ ವಿಶೇಷ
+      </p>
+      <p class="text-slate-400 mb-8">
+        ₹99 ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕ ಮಾತ್ರ. ವಕೀಲ / ಸಿಎ ಶುಲ್ಕವನ್ನು ನೇರವಾಗಿ ಪಾವತಿಸಬೇಕು.
       </p>
     </div>
 
     <div class="flex justify-center gap-6 flex-wrap">
-     <a href="book-service.html"
-   class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold en">
-  Book a Service
-</a>
-
-<a href="book-service.html"
-   class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold kn">
-  ಸೇವೆ ಬುಕ್ ಮಾಡಿ
-</a>
-
-<a href="professional-onboarding.html"
-   class="border border-slate-400 px-8 py-4 rounded-full font-bold en">
-  Register as Professional
-</a>
-
-<a href="professional-onboarding.html"
-   class="border border-slate-400 px-8 py-4 rounded-full font-bold kn">
-  ವೃತ್ತಿಪರರಾಗಿ ನೋಂದಣಿ
-</a>
-      
+      <a href="book-service.html"
+         class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold en">
+        Book a Service
+      </a>
+      <a href="book-service.html"
+         class="bg-amber-400 text-black px-8 py-4 rounded-full font-bold kn">
+        ಸೇವೆ ಬುಕ್ ಮಾಡಿ
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ================= BOOK ================= -->
-<section id="book" class="py-20 bg-white text-center">
-  <h2 class="text-3xl font-extrabold mb-6 en">Book a Professional Service</h2>
-  <h2 class="text-3xl font-extrabold mb-6 kn">ಸೇವೆ ಬುಕ್ ಮಾಡಿ</h2>
+<!-- ================= HOW IT WORKS ================= -->
+<section class="py-20 bg-white text-center">
+  <h2 class="text-3xl font-extrabold mb-12 en">How NyayaNow Works</h2>
+  <h2 class="text-3xl font-extrabold mb-12 kn">NyayaNow ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</h2>
 
-  <p class="text-slate-600 mb-10 en">
-    Choose the service you need and get connected with a verified professional.
-  </p>
-  <p class="text-slate-600 mb-10 kn">
-    ನಿಮ್ಮ ಸಮಸ್ಯೆಗೆ ಸರಿಯಾದ ವೃತ್ತಿಪರರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
-  </p>
-
-  <a href="book-service.html"
-     class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold en">
-    Proceed to Booking
-  </a>
-  <a href="book-service.html"
-     class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold kn">
-    ಬುಕ್ಕಿಂಗ್ ಮುಂದುವರಿಸಿ
-  </a>
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 text-left px-6">
+    <div>
+      <h3 class="font-bold mb-2">1. Choose Service</h3>
+      <p class="text-slate-600">Select the legal or CA service you need.</p>
+    </div>
+    <div>
+      <h3 class="font-bold mb-2">2. Pay ₹99</h3>
+      <p class="text-slate-600">Pay only the platform facilitation fee.</p>
+    </div>
+    <div>
+      <h3 class="font-bold mb-2">3. Get Connected</h3>
+      <p class="text-slate-600">We connect you with a verified professional.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -256,33 +212,41 @@ body.lang-kn .kn { display: block; }
   <p class="kn mb-2">NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.</p>
 
   <div class="space-x-6">
-    <a href="terms.html" class="hover:text-amber-400">Terms</a>
-    <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
-    <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
-  </div>
+  <a href="terms.html" class="hover:text-amber-400">Terms</a>
+  <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
+  <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
+  <a href="platform-fee.html" class="hover:text-amber-400">Platform Fee Policy</a>
+  <a href="refund.html" class="hover:text-amber-400">Refund Policy</a>
+  <a href="contact.html" class="hover:text-amber-400">Contact</a>
+</div>
 
   <div class="mt-4">© 2026 NyayaNow</div>
 </footer>
 
-<a href="https://wa.me/919632786767" target="_blank" class="whatsapp-float">
+<a href="https://wa.me/919632786767" target="_blank"
+   class="whatsapp-float" aria-label="WhatsApp Support">
   WhatsApp Support
 </a>
 
 <script>
-  function toggleLang() {
-    document.body.classList.toggle("lang-kn");
+function toggleLang() {
+  document.body.classList.toggle("lang-kn");
+  const isKn = document.body.classList.contains("lang-kn");
+  localStorage.setItem("lang", isKn ? "kn" : "en");
+  document.getElementById("langBtn").innerText = isKn ? "English" : "ಕನ್ನಡ";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const savedLang = localStorage.getItem("lang");
+  if (savedLang === "kn") {
+    document.body.classList.add("lang-kn");
+    document.getElementById("langBtn").innerText = "English";
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-      });
-    }
-  });
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+});
 </script>
 
 </body>
