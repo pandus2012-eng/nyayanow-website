@@ -1,117 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Successful | NyayaNow</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<title>Payment Successful | NyayaNow</title>
 
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    }
-    .kn { display: none; }
-  </style>
+<meta name="description"
+      content="Payment successful. Your service request has been received by NyayaNow." />
+
+<meta name="theme-color" content="#020617">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+</style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
 
 <!-- ================= HEADER ================= -->
-<header class="bg-slate-950 text-white shadow">
+<header class="bg-slate-950 text-white">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="text-xl font-extrabold text-amber-400">NyayaNow</div>
-
-    <div class="flex gap-4 items-center">
-      <button onclick="toggleLang()"
-        class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
-        ಕನ್ನಡ / English
-      </button>
-      <a href="index.html" class="text-sm font-semibold hover:text-amber-400 en">Home</a>
-      <a href="index.html" class="text-sm font-semibold hover:text-amber-400 kn">ಮುಖಪುಟ</a>
-    </div>
+    <a href="index.html" class="text-xl font-extrabold text-amber-400">NyayaNow</a>
+    <a href="index.html" class="text-sm font-semibold hover:text-amber-400">Home</a>
   </div>
 </header>
 
-<!-- ================= MAIN ================= -->
+<!-- ================= SUCCESS CONTENT ================= -->
 <main class="flex-grow flex items-center justify-center px-6">
 
-  <div class="bg-white shadow-xl rounded-2xl p-10 max-w-md w-full text-center">
+  <div class="max-w-xl w-full bg-white shadow-xl rounded-2xl p-10 text-center">
 
-    <div class="text-green-500 text-5xl mb-4">✔</div>
+    <div class="text-green-600 text-5xl mb-4">✓</div>
 
-    <div class="en">
-      <h1 class="text-2xl font-extrabold mb-3">Payment Successful</h1>
-      <p class="text-slate-600 mb-6">
-        Your NyayaNow booking is confirmed.<br>
-        A verified professional will contact you shortly.
+    <h1 class="text-3xl font-extrabold mb-3">
+      Payment Successful
+    </h1>
+
+    <p class="text-slate-600 mb-6">
+      Your ₹99 platform facilitation fee has been received successfully.
+    </p>
+
+    <div class="bg-slate-50 border rounded-xl p-4 text-sm text-left mb-6">
+      <p><strong>What happens next?</strong></p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>Your service request has been recorded.</li>
+        <li>Our team will review and assign a suitable professional.</li>
+        <li>You will be contacted via phone or WhatsApp.</li>
+      </ul>
+    </div>
+
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-left mb-6">
+      <p><strong>Important Note:</strong></p>
+      <p class="mt-1">
+        NyayaNow is a technology facilitation platform. Payment of the platform
+        fee does not guarantee professional assignment or legal advice.
+        Professional fees, if any, are payable directly to the Advocate or
+        Chartered Accountant.
       </p>
     </div>
 
-    <div class="kn">
-      <h1 class="text-2xl font-extrabold mb-3">ಪಾವತಿ ಯಶಸ್ವಿಯಾಗಿದೆ</h1>
-      <p class="text-slate-600 mb-6">
-        ನಿಮ್ಮ NyayaNow ಬುಕ್ಕಿಂಗ್ ದೃಢಪಟ್ಟಿದೆ.<br>
-        ಪರಿಶೀಲಿತ ವೃತ್ತಿಪರರು ಶೀಘ್ರದಲ್ಲೇ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತಾರೆ.
-      </p>
+    <div class="text-sm mb-6">
+      <a href="platform-fee.html" class="text-blue-600 underline">
+        Platform Fee Policy
+      </a>
+      ·
+      <a href="refund.html" class="text-blue-600 underline">
+        Refund Policy
+      </a>
     </div>
 
-    <div class="space-y-3">
-      <a href="https://wa.me/919632786767"
-         target="_blank"
-         class="block bg-green-500 hover:bg-green-600 text-white py-3 rounded-full font-bold en">
-        Contact on WhatsApp (English)
+    <div class="flex justify-center gap-4">
+      <a href="index.html"
+         class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-full font-bold">
+        Go to Home
       </a>
 
-      <a href="https://wa.me/919632786767"
-         target="_blank"
-         class="block bg-green-600 hover:bg-green-700 text-white py-3 rounded-full font-bold kn">
-        WhatsApp ಸಂಪರ್ಕ (ಕನ್ನಡ)
+      <a href="contact.html"
+         class="border border-slate-400 px-6 py-3 rounded-full font-bold">
+        Contact Support
       </a>
     </div>
 
-    <div class="bg-slate-100 border rounded-xl p-4 mt-6 text-xs text-slate-600">
-      <p class="en">
-        Platform booking fee ₹99 only.<br>
-        Professional fee to be paid directly to the Advocate / CA.
-      </p>
-      <p class="kn">
-        ಇದು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಬುಕ್ಕಿಂಗ್ ಶುಲ್ಕ ₹99 ಮಾತ್ರ.<br>
-        ವೃತ್ತಿಪರ ಶುಲ್ಕವನ್ನು ವಕೀಲ / ಸಿಎಗೆ ನೇರವಾಗಿ ಪಾವತಿಸಬೇಕು.
-      </p>
-    </div>
+    <p class="text-xs text-slate-500 mt-6">
+      If you do not hear from us within a reasonable time,
+      please contact NyayaNow support.
+    </p>
 
   </div>
+
 </main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-slate-950 text-slate-400 text-center py-6 text-sm">
-  <p class="en">NyayaNow is a technology facilitation platform.</p>
-  <p class="kn">NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.</p>
-
-  <div class="space-x-6 mt-2">
-    <a href="terms.html" class="hover:text-amber-400">Terms</a>
-    <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
-    <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
-  </div>
-
-  <div class="mt-3">© 2026 NyayaNow</div>
+  © 2026 NyayaNow · Technology Facilitation Platform
 </footer>
-
-<script>
-  let lang = "en";
-  function toggleLang(){
-    if(lang === "en"){
-      document.querySelectorAll(".en").forEach(e => e.style.display = "none");
-      document.querySelectorAll(".kn").forEach(e => e.style.display = "block");
-      lang = "kn";
-    } else {
-      document.querySelectorAll(".kn").forEach(e => e.style.display = "none");
-      document.querySelectorAll(".en").forEach(e => e.style.display = "block");
-      lang = "en";
-    }
-  }
-</script>
 
 </body>
 </html>
