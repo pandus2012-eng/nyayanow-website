@@ -69,6 +69,62 @@
     <div class="bg-white shadow-xl rounded-2xl p-8">
 
       <form
+            <!-- ================= AUTO-FILLED PROFESSIONAL DETAILS ================= -->
+
+<div class="bg-slate-100 p-4 rounded-lg mb-6">
+
+  <h3 class="font-bold mb-3 text-sm">
+    Selected Professional
+  </h3>
+
+  <div class="grid md:grid-cols-2 gap-4 text-sm">
+
+    <div>
+      <label class="block text-slate-600 mb-1">Professional Name</label>
+      <input id="professionalName"
+        type="text"
+        readonly
+        class="w-full border rounded px-3 py-2 bg-white" />
+    </div>
+
+    <div>
+      <label class="block text-slate-600 mb-1">Profession</label>
+      <input id="professionType"
+        type="text"
+        readonly
+        class="w-full border rounded px-3 py-2 bg-white" />
+    </div>
+
+    <div>
+      <label class="block text-slate-600 mb-1">District</label>
+      <input id="district"
+        type="text"
+        readonly
+        class="w-full border rounded px-3 py-2 bg-white" />
+    </div>
+
+    <div>
+      <label class="block text-slate-600 mb-1">Taluk / City</label>
+      <input id="taluk"
+        type="text"
+        readonly
+        class="w-full border rounded px-3 py-2 bg-white" />
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="block text-slate-600 mb-1">Service / Practice Area</label>
+      <input id="practiceArea"
+        type="text"
+        readonly
+        class="w-full border rounded px-3 py-2 bg-white" />
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= HIDDEN FIELD (VERY IMPORTANT) ================= -->
+<input id="professionalId" type="hidden" name="professionalId">
+
         action="https://docs.google.com/forms/d/e/1FAIpQLSf-J1gpA_COVZ8v3nkQYA73hdKfdfmFFpuDqVfy5m3nysEdXA/formResponse"
         method="POST"
         onsubmit="submitAndPay(event)"
@@ -231,7 +287,27 @@ function submitAndPay(e) {
 }
 </script>
 
+   <script>
+const params = new URLSearchParams(window.location.search);
+
+function setValue(id, value) {
+  const el = document.getElementById(id);
+  if (el && value) el.value = value;
+}
+
+// Auto-fill visible fields
+setValue("professionalName", params.get("name"));
+setValue("professionType", params.get("profession"));
+setValue("district", params.get("district"));
+setValue("taluk", params.get("taluk"));
+setValue("practiceArea", params.get("area"));
+
+// Hidden fields (important for admin/dashboard)
+setValue("professionalId", params.get("professional"));
+</script>
+   
 </body>
 </html>
+
 
 
