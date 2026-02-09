@@ -194,6 +194,19 @@ body.lang-kn .kn {
   Other High Courts
 </a>
 </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  }
+});
+</script>
 
 <!-- ================= HERO ================= -->
 <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
