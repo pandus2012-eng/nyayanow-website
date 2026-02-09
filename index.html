@@ -23,145 +23,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-  <!-- ================= AI CHAT BUBBLE ================= -->
-<button id="aiBubble"
-  class="fixed bottom-20 left-4
-         bg-slate-900 text-white
-         px-4 py-3 rounded-full
-         shadow-xl z-40
-         text-sm font-bold">
-  🤖 Ask NyayaNow
-</button>
-<div id="aiChat"
-  class="hidden fixed bottom-36 left-4
-         w-72 bg-white rounded-xl
-         shadow-2xl z-50
-         border overflow-hidden">
-
-  <!-- Header -->
-  <div class="bg-slate-900 text-white px-4 py-3 text-sm font-bold">
-    NyayaNow Assistant
-  </div>
-
-  <!-- Body -->
-  <div class="p-4 space-y-3 text-sm">
-
-    <p class="en">
-      Hi 👋 What kind of issue are you facing?
-    </p>
-    <p class="kn">
-      ನಮಸ್ಕಾರ 👋 ನೀವು ಯಾವ ರೀತಿಯ ಸಮಸ್ಯೆಯನ್ನು ಎದುರಿಸುತ್ತಿದ್ದೀರಿ?
-    </p>
-
-    <div class="grid grid-cols-2 gap-2">
-
-      <button onclick="aiChatSelect('family')"
-        class="border rounded-lg px-2 py-1">
-        <span class="en">Family</span>
-        <span class="kn">ಕುಟುಂಬ</span>
-      </button>
-
-      <button onclick="aiChatSelect('property')"
-        class="border rounded-lg px-2 py-1">
-        <span class="en">Property</span>
-        <span class="kn">ಆಸ್ತಿ</span>
-      </button>
-
-      <button onclick="aiChatSelect('criminal')"
-        class="border rounded-lg px-2 py-1">
-        <span class="en">Criminal</span>
-        <span class="kn">ಕ್ರಿಮಿನಲ್</span>
-      </button>
-
-      <button onclick="aiChatSelect('labour')"
-        class="border rounded-lg px-2 py-1">
-        <span class="en">Job / Labour</span>
-        <span class="kn">ಉದ್ಯೋಗ</span>
-      </button>
-
-      <button onclick="aiChatSelect('gst')"
-        class="border rounded-lg px-2 py-1">
-        <span class="en">GST / Tax</span>
-        <span class="kn">ತೆರಿಗೆ</span>
-      </button>
-
-      <button onclick="aiChatSelect('general')"
-        class="border rounded-lg px-2 py-1">
-        <span class="en">Not sure</span>
-        <span class="kn">ಖಚಿತವಿಲ್ಲ</span>
-      </button>
-
-    </div>
-
-    <div id="aiChatResult" class="hidden pt-2 border-t">
-      <p id="aiChatText" class="font-semibold mb-2"></p>
-
-      <a href="book-service.html"
-         class="block text-center
-                bg-amber-400 text-black
-                px-4 py-2 rounded-full
-                font-bold">
-        <span class="en">Book Service</span>
-        <span class="kn">ಸೇವೆ ಬುಕ್ ಮಾಡಿ</span>
-      </a>
-
-      <p class="text-xs text-slate-500 mt-2 en">
-        AI provides general guidance only.
-      </p>
-      <p class="text-xs text-slate-500 mt-2 kn">
-        ಎಐ ಸಾಮಾನ್ಯ ಮಾರ್ಗದರ್ಶನ ಮಾತ್ರ ನೀಡುತ್ತದೆ.
-      </p>
-    </div>
-
-  </div>
-</div>
-  <script>
-const aiBubble = document.getElementById("aiBubble");
-const aiChat = document.getElementById("aiChat");
-
-aiBubble.addEventListener("click", () => {
-  aiChat.classList.toggle("hidden");
-});
-
-function aiChatSelect(type) {
-  const resultBox = document.getElementById("aiChatResult");
-  const text = document.getElementById("aiChatText");
-
-  const isKn = document.body.classList.contains("lang-kn");
-
-  const responses = {
-    family: {
-      en: "This usually needs Family Legal Consultation.",
-      kn: "ಇದು ಕುಟುಂಬ ಕಾನೂನು ಸಲಹೆಗೆ ಸೇರಿದೆ."
-    },
-    property: {
-      en: "This looks like a Property Legal Issue.",
-      kn: "ಇದು ಆಸ್ತಿ ಕಾನೂನು ಸಮಸ್ಯೆಯಂತೆ ಕಾಣುತ್ತದೆ."
-    },
-    criminal: {
-      en: "This may require Criminal Law consultation.",
-      kn: "ಇದಕ್ಕೆ ಕ್ರಿಮಿನಲ್ ಕಾನೂನು ಸಲಹೆ ಅಗತ್ಯವಿರಬಹುದು."
-    },
-    labour: {
-      en: "This relates to Labour / Employment law.",
-      kn: "ಇದು ಉದ್ಯೋಗ / ಕಾರ್ಮಿಕ ಕಾನೂನಿಗೆ ಸಂಬಂಧಿಸಿದೆ."
-    },
-    gst: {
-      en: "This fits under GST or Tax consultation.",
-      kn: "ಇದು ಜಿಎಸ್‌ಟಿ ಅಥವಾ ತೆರಿಗೆ ಸಲಹೆಗೆ ಸೇರಿದೆ."
-    },
-    general: {
-      en: "You can start with a General Legal Consultation.",
-      kn: "ಸಾಮಾನ್ಯ ಕಾನೂನು ಸಲಹೆಯಿಂದ ಪ್ರಾರಂಭಿಸಬಹುದು."
-    }
-  };
-
-  resultBox.classList.remove("hidden");
-  text.innerText = isKn ? responses[type].kn : responses[type].en;
-}
-</script>
-
-
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -461,6 +322,110 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobileMenu");
   menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
 });
+</script>
+  
+<!-- ================= AI CHAT BUBBLE ================= -->
+<button id="aiBubble"
+  class="fixed bottom-20 left-4
+         bg-slate-900 text-white
+         px-4 py-3 rounded-full
+         shadow-xl z-40
+         text-sm font-bold">
+  🤖 Ask NyayaNow
+</button>
+
+<div id="aiChat"
+  class="hidden fixed bottom-36 left-4
+         w-72 bg-white rounded-xl
+         shadow-2xl z-50
+         border overflow-hidden">
+
+  <div class="bg-slate-900 text-white px-4 py-3 text-sm font-bold">
+    NyayaNow Assistant
+  </div>
+
+  <div class="p-4 space-y-3 text-sm">
+
+    <p class="en">Hi 👋 What kind of issue are you facing?</p>
+    <p class="kn">ನಮಸ್ಕಾರ 👋 ನೀವು ಯಾವ ರೀತಿಯ ಸಮಸ್ಯೆಯನ್ನು ಎದುರಿಸುತ್ತಿದ್ದೀರಿ?</p>
+
+    <div class="grid grid-cols-2 gap-2">
+
+      <button onclick="aiChatSelect('family')" class="border rounded-lg px-2 py-1">
+        <span class="en">Family</span><span class="kn">ಕುಟುಂಬ</span>
+      </button>
+
+      <button onclick="aiChatSelect('property')" class="border rounded-lg px-2 py-1">
+        <span class="en">Property</span><span class="kn">ಆಸ್ತಿ</span>
+      </button>
+
+      <button onclick="aiChatSelect('criminal')" class="border rounded-lg px-2 py-1">
+        <span class="en">Criminal</span><span class="kn">ಕ್ರಿಮಿನಲ್</span>
+      </button>
+
+      <button onclick="aiChatSelect('labour')" class="border rounded-lg px-2 py-1">
+        <span class="en">Job / Labour</span><span class="kn">ಉದ್ಯೋಗ</span>
+      </button>
+
+      <button onclick="aiChatSelect('gst')" class="border rounded-lg px-2 py-1">
+        <span class="en">GST / Tax</span><span class="kn">ತೆರಿಗೆ</span>
+      </button>
+
+      <button onclick="aiChatSelect('general')" class="border rounded-lg px-2 py-1">
+        <span class="en">Not sure</span><span class="kn">ಖಚಿತವಿಲ್ಲ</span>
+      </button>
+
+    </div>
+
+    <div id="aiChatResult" class="hidden pt-2 border-t">
+      <p id="aiChatText" class="font-semibold mb-2"></p>
+
+      <a id="aiBookLink"
+         href="book-service.html"
+         class="block text-center bg-amber-400 text-black px-4 py-2 rounded-full font-bold">
+        <span class="en">Book Service</span>
+        <span class="kn">ಸೇವೆ ಬುಕ್ ಮಾಡಿ</span>
+      </a>
+
+      <p class="text-xs text-slate-500 mt-2 en">
+        AI provides general guidance only.
+      </p>
+      <p class="text-xs text-slate-500 mt-2 kn">
+        ಎಐ ಸಾಮಾನ್ಯ ಮಾರ್ಗದರ್ಶನ ಮಾತ್ರ ನೀಡುತ್ತದೆ.
+      </p>
+    </div>
+
+  </div>
+</div>
+  <script>
+const aiBubble = document.getElementById("aiBubble");
+const aiChat = document.getElementById("aiChat");
+
+aiBubble.addEventListener("click", () => {
+  aiChat.classList.toggle("hidden");
+});
+
+function aiChatSelect(type) {
+  const resultBox = document.getElementById("aiChatResult");
+  const text = document.getElementById("aiChatText");
+  const bookLink = document.getElementById("aiBookLink");
+
+  const isKn = document.body.classList.contains("lang-kn");
+
+  const responses = {
+    family: { en: "Family Legal Consultation.", kn: "ಕುಟುಂಬ ಕಾನೂನು ಸಲಹೆ." },
+    property: { en: "Property Legal Issue.", kn: "ಆಸ್ತಿ ಕಾನೂನು ಸಮಸ್ಯೆ." },
+    criminal: { en: "Criminal Law Consultation.", kn: "ಕ್ರಿಮಿನಲ್ ಕಾನೂನು ಸಲಹೆ." },
+    labour: { en: "Labour / Employment Law.", kn: "ಕಾರ್ಮಿಕ / ಉದ್ಯೋಗ ಕಾನೂನು." },
+    gst: { en: "GST / Tax Consultation.", kn: "ಜಿಎಸ್‌ಟಿ / ತೆರಿಗೆ ಸಲಹೆ." },
+    general: { en: "General Legal Consultation.", kn: "ಸಾಮಾನ್ಯ ಕಾನೂನು ಸಲಹೆ." }
+  };
+
+  resultBox.classList.remove("hidden");
+  text.innerText = isKn ? responses[type].kn : responses[type].en;
+
+  bookLink.href = "book-service.html?service=" + type;
+}
 </script>
 
 </body>
