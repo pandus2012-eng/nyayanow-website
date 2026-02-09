@@ -1,16 +1,7 @@
-/* ===== Language visibility (Tailwind-safe) ===== */
-.en {
-  display: block !important;
-}
+/* ===== Language visibility ===== */
+.en { display: block; }
+.kn { display: none; }
 
-.kn {
-  display: none !important;
-}
-
-body.lang-kn .en {
-  display: none !important;
-}
-
-body.lang-kn .kn {
-  display: block !important;
-}
+/* Kannada mode */
+body.lang-kn .en { display: none; }
+body.lang-kn .kn { display: block; }
