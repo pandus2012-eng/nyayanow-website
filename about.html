@@ -139,16 +139,15 @@ body {
 <!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
 function toggleLang() {
-  document.body.classList.toggle("lang-kn");
-
-  const isKn = document.body.classList.contains("lang-kn");
+  const body = document.body;
+  const isKn = body.classList.toggle("lang-kn");
   localStorage.setItem("lang", isKn ? "kn" : "en");
 
   const btn = document.getElementById("langBtn");
   if (btn) btn.innerText = isKn ? "English" : "ಕನ್ನಡ";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("lang");
   if (savedLang === "kn") {
     document.body.classList.add("lang-kn");
@@ -160,3 +159,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
+
