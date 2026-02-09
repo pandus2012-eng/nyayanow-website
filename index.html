@@ -50,47 +50,55 @@ body.lang-kn .kn { display:block; }
 
 <!-- ================= HEADER ================= -->
 <header class="bg-slate-950 text-white sticky top-0 z-50 shadow">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="text-2xl font-extrabold text-amber-400">NyayaNow</div>
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
 
-    <nav class="hidden md:flex gap-8 text-sm font-semibold">
+    <!-- Logo -->
+    <a href="index.html" class="text-2xl font-extrabold text-amber-400">
+      NyayaNow
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-6 text-sm font-semibold items-center">
+
       <a href="about.html" class="en hover:text-amber-400">About</a>
       <a href="about.html" class="kn hover:text-amber-400">ನಮ್ಮ ಬಗ್ಗೆ</a>
 
-      <a href="book-service.html"
-   class="block en relative z-50 cursor-pointer">
-  Book Service
-</a>
-
-<a href="book-service.html"
-   class="block kn relative z-50 cursor-pointer">
-  ಸೇವೆ ಬುಕ್
-</a>
       <a href="how-it-works.html" class="en hover:text-amber-400">How It Works</a>
       <a href="how-it-works.html" class="kn hover:text-amber-400">ಹೆಗಿದೆ</a>
 
-      <a href="professional-onboarding.html" class="en hover:text-amber-400">For Professionals</a>
-      <a href="professional-onboarding.html" class="kn hover:text-amber-400">ವೃತ್ತಿಪರರಿಗೆ</a>
+      <a href="professional-onboarding.html" class="en hover:text-amber-400">
+        For Professionals
+      </a>
+      <a href="professional-onboarding.html" class="kn hover:text-amber-400">
+        ವೃತ್ತಿಪರರಿಗೆ
+      </a>
 
       <a href="contact.html" class="en hover:text-amber-400">Contact</a>
       <a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
 
       <!-- Court News -->
       <div class="relative group">
-        <span class="en cursor-pointer hover:text-amber-400">Court News ▾</span>
-        <span class="kn cursor-pointer hover:text-amber-400">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾</span>
+        <span class="en cursor-pointer hover:text-amber-400">
+          Court News ▾
+        </span>
+        <span class="kn cursor-pointer hover:text-amber-400">
+          ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾
+        </span>
 
         <div class="absolute left-0 mt-2 w-56 bg-white text-slate-800 rounded-lg shadow-lg
-             opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all z-50">
 
           <a href="https://www.sci.gov.in" target="_blank"
              class="block px-4 py-2 hover:bg-slate-100">
             Supreme Court of India
           </a>
+
           <a href="https://judiciary.karnataka.gov.in" target="_blank"
              class="block px-4 py-2 hover:bg-slate-100">
             Karnataka High Court
           </a>
+
           <a href="https://hcservices.ecourts.gov.in" target="_blank"
              class="block px-4 py-2 hover:bg-slate-100">
             Other High Courts
@@ -99,63 +107,85 @@ body.lang-kn .kn { display:block; }
       </div>
     </nav>
 
-    <div class="flex gap-3 items-center">
+    <!-- Right Controls -->
+    <div class="flex items-center gap-3">
+
+      <!-- Language Toggle -->
       <button id="langBtn"
         onclick="toggleLang()"
-        class="border border-amber-400 text-amber-400 px-4 py-1 rounded-full text-sm font-bold">
-        ಕನ್ನಡ
+        class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
+        ಕನ್ನಡ / EN
       </button>
 
+      <!-- Primary CTA -->
       <a href="book-service.html"
-         class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm en">
+         class="hidden md:inline-block bg-amber-400 text-black
+                px-5 py-2 rounded-full font-bold text-sm en">
         Book Now
       </a>
+
       <a href="book-service.html"
-         class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-sm kn">
+         class="hidden md:inline-block bg-amber-400 text-black
+                px-5 py-2 rounded-full font-bold text-sm kn">
         ಈಗ ಬುಕ್ ಮಾಡಿ
       </a>
 
+      <!-- Mobile Menu Button -->
       <button id="menuBtn"
-        class="md:hidden text-3xl font-bold ml-2">
+        class="md:hidden text-3xl font-bold ml-1"
+        aria-label="Menu">
         ☰
       </button>
     </div>
+
   </div>
 </header>
 
 <!-- ================= MOBILE MENU ================= -->
 <div id="mobileMenu"
-  class="hidden md:hidden bg-slate-900 text-white px-6 py-8 space-y-5
-         text-base font-medium shadow-xl fixed top-16 left-0 right-0 z-40">
+  class="hidden fixed top-16 left-0 right-0
+         bg-slate-900 text-white px-6 py-8 space-y-5
+         text-base font-medium shadow-xl z-40">
 
   <a href="about.html" class="block en">About</a>
   <a href="about.html" class="block kn">ನಮ್ಮ ಬಗ್ಗೆ</a>
 
-  <a href="book-service.html"
-   class="block en relative z-50 cursor-pointer">
-  Book Service
-</a>
-
-<a href="book-service.html"
-   class="block kn relative z-50 cursor-pointer">
-  ಸೇವೆ ಬುಕ್
-</a>
+  <a href="book-service.html" class="block en">
+    Book Service
+  </a>
+  <a href="book-service.html" class="block kn">
+    ಸೇವೆ ಬುಕ್
+  </a>
 
   <a href="how-it-works.html" class="block en">How It Works</a>
   <a href="how-it-works.html" class="block kn">ಹೆಗಿದೆ</a>
 
-  <a href="professional-onboarding.html" class="block en">For Professionals</a>
-  <a href="professional-onboarding.html" class="block kn">ವೃತ್ತಿಪರರಿಗೆ</a>
+  <a href="professional-onboarding.html" class="block en">
+    For Professionals
+  </a>
+  <a href="professional-onboarding.html" class="block kn">
+    ವೃತ್ತಿಪರರಿಗೆ
+  </a>
 
   <a href="contact.html" class="block en">Contact</a>
   <a href="contact.html" class="block kn">ಸಂಪರ್ಕ</a>
 
-  <div class="border-t border-slate-700 pt-3 text-slate-400 en">Court News</div>
-  <div class="border-t border-slate-700 pt-3 text-slate-400 kn">ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ</div>
+  <div class="border-t border-slate-700 pt-3 text-slate-400 en">
+    Court News
+  </div>
+  <div class="border-t border-slate-700 pt-3 text-slate-400 kn">
+    ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ
+  </div>
 
-  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2">Supreme Court of India</a>
-  <a href="https://judiciary.karnataka.gov.in" target="_blank" class="block pl-2">Karnataka High Court</a>
-  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2">Other High Courts</a>
+  <a href="https://www.sci.gov.in" target="_blank" class="block pl-2">
+    Supreme Court of India
+  </a>
+  <a href="https://judiciary.karnataka.gov.in" target="_blank" class="block pl-2">
+    Karnataka High Court
+  </a>
+  <a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2">
+    Other High Courts
+  </a>
 </div>
 
 <!-- ================= HERO ================= -->
