@@ -168,7 +168,7 @@ body {
       <!-- NEW: Secondary CTA -->
       <a href="professionals.html"
          class="border border-slate-400 px-8 py-4 rounded-full font-bold en">
-        Browse Advocates & CAs
+        Find Advocates & CAs
       </a>
       <a href="professionals.html"
          class="border border-slate-400 px-8 py-4 rounded-full font-bold kn">
@@ -179,27 +179,175 @@ body {
   </div>
 </section>
 
-<!-- FOOTER + AI + SCRIPTS -->
-<!-- (UNCHANGED FROM YOUR VERSION – KEEP AS IS) -->
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-950 text-slate-400 text-center px-4 py-10 text-sm">
+
+  <!-- Disclaimer -->
+  <p class="en mb-2">
+    NyayaNow is a technology platform. It does not provide legal advice.
+  </p>
+  <p class="kn mb-2">
+    NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.
+  </p>
+
+  <!-- Footer Links -->
+  <div class="mt-6
+              grid grid-cols-2 gap-4
+              md:flex md:justify-center md:gap-6">
+
+    <a href="terms.html" class="hover:text-amber-400">Terms</a>
+    <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
+    <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
+    <a href="platform-fee.html" class="hover:text-amber-400">Platform Fee</a>
+    <a href="refund.html" class="hover:text-amber-400">Refund Policy</a>
+    <a href="contact.html" class="hover:text-amber-400">Contact</a>
+
+  </div>
+
+  <div class="mt-6">
+    © 2026 NyayaNow
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP BUTTON ================= -->
+<a href="https://wa.me/919632786767"
+   target="_blank"
+   aria-label="WhatsApp Support"
+   class="fixed bottom-5 right-5
+          bg-green-500 hover:bg-green-600
+          text-white
+          px-6 py-4
+          rounded-full
+          font-bold text-base
+          shadow-2xl
+          z-50
+          flex items-center gap-2">
+  WhatsApp
+</a>
 
 <script>
 function toggleLang() {
-  const body = document.body;
-  const isKn = body.classList.toggle("lang-kn");
+  document.body.classList.toggle("lang-kn");
+  const isKn = document.body.classList.contains("lang-kn");
   localStorage.setItem("lang", isKn ? "kn" : "en");
-
-  const btn = document.getElementById("langBtn");
-  if (btn) btn.innerText = isKn ? "English" : "ಕನ್ನಡ";
+  document.getElementById("langBtn").innerText = isKn ? "English" : "ಕನ್ನಡ";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const savedLang = localStorage.getItem("lang");
   if (savedLang === "kn") {
     document.body.classList.add("lang-kn");
-    const btn = document.getElementById("langBtn");
-    if (btn) btn.innerText = "English";
+    document.getElementById("langBtn").innerText = "English";
   }
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
 });
+</script>
+  
+<!-- ================= AI CHAT BUBBLE ================= -->
+<button id="aiBubble"
+  class="fixed bottom-20 left-4
+         bg-slate-900 text-white
+         px-4 py-3 rounded-full
+         shadow-xl z-40
+         text-sm font-bold">
+  🤖 Ask NyayaNow
+</button>
+
+<div id="aiChat"
+  class="hidden fixed bottom-36 left-4
+         w-72 bg-white rounded-xl
+         shadow-2xl z-50
+         border overflow-hidden">
+
+  <div class="bg-slate-900 text-white px-4 py-3 text-sm font-bold">
+    NyayaNow Assistant
+  </div>
+
+  <div class="p-4 space-y-3 text-sm">
+
+    <p class="en">Hi 👋 What kind of issue are you facing?</p>
+    <p class="kn">ನಮಸ್ಕಾರ 👋 ನೀವು ಯಾವ ರೀತಿಯ ಸಮಸ್ಯೆಯನ್ನು ಎದುರಿಸುತ್ತಿದ್ದೀರಿ?</p>
+
+    <div class="grid grid-cols-2 gap-2">
+
+      <button onclick="aiChatSelect('family')" class="border rounded-lg px-2 py-1">
+        <span class="en">Family</span><span class="kn">ಕುಟುಂಬ</span>
+      </button>
+
+      <button onclick="aiChatSelect('property')" class="border rounded-lg px-2 py-1">
+        <span class="en">Property</span><span class="kn">ಆಸ್ತಿ</span>
+      </button>
+
+      <button onclick="aiChatSelect('criminal')" class="border rounded-lg px-2 py-1">
+        <span class="en">Criminal</span><span class="kn">ಕ್ರಿಮಿನಲ್</span>
+      </button>
+
+      <button onclick="aiChatSelect('labour')" class="border rounded-lg px-2 py-1">
+        <span class="en">Job / Labour</span><span class="kn">ಉದ್ಯೋಗ</span>
+      </button>
+
+      <button onclick="aiChatSelect('gst')" class="border rounded-lg px-2 py-1">
+        <span class="en">GST / Tax</span><span class="kn">ತೆರಿಗೆ</span>
+      </button>
+
+      <button onclick="aiChatSelect('general')" class="border rounded-lg px-2 py-1">
+        <span class="en">Not sure</span><span class="kn">ಖಚಿತವಿಲ್ಲ</span>
+      </button>
+
+    </div>
+
+    <div id="aiChatResult" class="hidden pt-2 border-t">
+      <p id="aiChatText" class="font-semibold mb-2"></p>
+
+      <a id="aiBookLink"
+         href="book-service.html"
+         class="block text-center bg-amber-400 text-black px-4 py-2 rounded-full font-bold">
+        <span class="en">Book Service</span>
+        <span class="kn">ಸೇವೆ ಬುಕ್ ಮಾಡಿ</span>
+      </a>
+
+      <p class="text-xs text-slate-500 mt-2 en">
+        AI provides general guidance only.
+      </p>
+      <p class="text-xs text-slate-500 mt-2 kn">
+        ಎಐ ಸಾಮಾನ್ಯ ಮಾರ್ಗದರ್ಶನ ಮಾತ್ರ ನೀಡುತ್ತದೆ.
+      </p>
+    </div>
+
+  </div>
+</div>
+  <script>
+const aiBubble = document.getElementById("aiBubble");
+const aiChat = document.getElementById("aiChat");
+
+aiBubble.addEventListener("click", () => {
+  aiChat.classList.toggle("hidden");
+});
+
+function aiChatSelect(type) {
+  const resultBox = document.getElementById("aiChatResult");
+  const text = document.getElementById("aiChatText");
+  const bookLink = document.getElementById("aiBookLink");
+
+  const isKn = document.body.classList.contains("lang-kn");
+
+  const responses = {
+    family: { en: "Family Legal Consultation.", kn: "ಕುಟುಂಬ ಕಾನೂನು ಸಲಹೆ." },
+    property: { en: "Property Legal Issue.", kn: "ಆಸ್ತಿ ಕಾನೂನು ಸಮಸ್ಯೆ." },
+    criminal: { en: "Criminal Law Consultation.", kn: "ಕ್ರಿಮಿನಲ್ ಕಾನೂನು ಸಲಹೆ." },
+    labour: { en: "Labour / Employment Law.", kn: "ಕಾರ್ಮಿಕ / ಉದ್ಯೋಗ ಕಾನೂನು." },
+    gst: { en: "GST / Tax Consultation.", kn: "ಜಿಎಸ್‌ಟಿ / ತೆರಿಗೆ ಸಲಹೆ." },
+    general: { en: "General Legal Consultation.", kn: "ಸಾಮಾನ್ಯ ಕಾನೂನು ಸಲಹೆ." }
+  };
+
+  resultBox.classList.remove("hidden");
+  text.innerText = isKn ? responses[type].kn : responses[type].en;
+
+  bookLink.href = "book-service.html?service=" + type;
+}
 </script>
 
 </body>
