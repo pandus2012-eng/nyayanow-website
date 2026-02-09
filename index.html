@@ -75,23 +75,55 @@ body.lang-kn .kn { display:block; }
 
       <a href="contact.html" class="en hover:text-amber-400">Contact</a>
       <a href="contact.html" class="kn hover:text-amber-400">ಸಂಪರ್ಕ</a>
+
+      <!-- Court News -->
+      <div class="relative group">
+        <span class="en cursor-pointer hover:text-amber-400">
+          Court News ▾
+        </span>
+        <span class="kn cursor-pointer hover:text-amber-400">
+          ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ ▾
+        </span>
+
+        <div class="absolute left-0 mt-2 w-56 bg-white text-slate-800 rounded-lg shadow-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all z-50">
+
+          <a href="https://www.sci.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100">
+            Supreme Court of India
+          </a>
+
+          <a href="https://judiciary.karnataka.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100">
+            Karnataka High Court
+          </a>
+
+          <a href="https://hcservices.ecourts.gov.in" target="_blank"
+             class="block px-4 py-2 hover:bg-slate-100">
+            Other High Courts
+          </a>
+        </div>
+      </div>
     </nav>
 
     <!-- Right Controls -->
     <div class="flex items-center gap-3">
 
       <!-- Language Toggle -->
-      <button onclick="toggleLang()"
+      <button id="langBtn"
+        onclick="toggleLang()"
         class="border border-amber-400 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
         ಕನ್ನಡ / EN
       </button>
 
-      <!-- Primary CTA (Desktop only) -->
+      <!-- Primary CTA -->
       <a href="book-service.html"
          class="hidden md:inline-block bg-amber-400 text-black
                 px-5 py-2 rounded-full font-bold text-sm en">
         Book Now
       </a>
+
       <a href="book-service.html"
          class="hidden md:inline-block bg-amber-400 text-black
                 px-5 py-2 rounded-full font-bold text-sm kn">
@@ -198,25 +230,45 @@ body.lang-kn .kn { display:block; }
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer class="bg-slate-950 text-slate-400 text-center py-10 text-sm">
-  <p class="en mb-2">NyayaNow is a technology platform. It does not provide legal advice.</p>
-  <p class="kn mb-2">NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.</p>
+<footer class="bg-slate-950 text-slate-400 text-center px-4 py-10 text-sm">
 
-  <div class="space-x-6">
-  <a href="terms.html" class="hover:text-amber-400">Terms</a>
-  <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
-  <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
-  <a href="platform-fee.html" class="hover:text-amber-400">Platform Fee Policy</a>
-  <a href="refund.html" class="hover:text-amber-400">Refund Policy</a>
-  <a href="contact.html" class="hover:text-amber-400">Contact</a>
-</div>
+  <!-- Disclaimer -->
+  <p class="en mb-2">
+    NyayaNow is a technology platform. It does not provide legal advice.
+  </p>
+  <p class="kn mb-2">
+    NyayaNow ಒಂದು ತಂತ್ರಜ್ಞಾನ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾತ್ರ.
+  </p>
 
-  <div class="mt-4">© 2026 NyayaNow</div>
+  <!-- Footer Links -->
+  <div class="mt-6
+              grid grid-cols-2 gap-4
+              md:flex md:justify-center md:gap-6">
+
+    <a href="terms.html" class="hover:text-amber-400">Terms</a>
+    <a href="privacy.html" class="hover:text-amber-400">Privacy</a>
+    <a href="disclaimer.html" class="hover:text-amber-400">Disclaimer</a>
+    <a href="platform-fee.html" class="hover:text-amber-400">Platform Fee</a>
+    <a href="refund.html" class="hover:text-amber-400">Refund Policy</a>
+    <a href="contact.html" class="hover:text-amber-400">Contact</a>
+
+  </div>
+
+  <div class="mt-6">
+    © 2026 NyayaNow
+  </div>
 </footer>
 
-<a href="https://wa.me/919632786767" target="_blank"
-   class="whatsapp-float" aria-label="WhatsApp Support">
-  WhatsApp Support
+<!-- ================= WHATSAPP BUTTON ================= -->
+<a href="https://wa.me/919632786767"
+   target="_blank"
+   aria-label="WhatsApp Support"
+   class="fixed bottom-4 right-4
+          bg-green-500 text-white
+          px-4 py-3 rounded-full
+          font-bold text-sm
+          shadow-lg z-50">
+  WhatsApp
 </a>
 
 <script>
