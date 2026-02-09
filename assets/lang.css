@@ -1,0 +1,16 @@
+/* ===== Language visibility (Tailwind-safe) ===== */
+.en {
+  display: block !important;
+}
+
+.kn {
+  display: none !important;
+}
+
+body.lang-kn .en {
+  display: none !important;
+}
+
+body.lang-kn .kn {
+  display: block !important;
+}
