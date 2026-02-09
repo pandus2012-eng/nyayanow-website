@@ -175,6 +175,24 @@ body.lang-kn .kn {
 
   <a href="contact.html" class="block en">Contact</a>
   <a href="contact.html" class="block kn">ಸಂಪರ್ಕ</a>
+
+  <!-- Court News (Mobile) -->
+<div class="border-t border-slate-700 pt-3 text-slate-400 en">
+  Court News
+</div>
+<div class="border-t border-slate-700 pt-3 text-slate-400 kn">
+  ನ್ಯಾಯಾಲಯ ಸುದ್ದಿ
+</div>
+
+<a href="https://www.sci.gov.in" target="_blank" class="block pl-2">
+  Supreme Court of India
+</a>
+<a href="https://judiciary.karnataka.gov.in" target="_blank" class="block pl-2">
+  Karnataka High Court
+</a>
+<a href="https://hcservices.ecourts.gov.in" target="_blank" class="block pl-2">
+  Other High Courts
+</a>
 </div>
 
 <!-- ================= HERO ================= -->
@@ -215,6 +233,87 @@ body.lang-kn .kn {
         ಸೇವೆ ಬುಕ್ ಮಾಡಿ
       </a>
     </div>
+  </div>
+</section>
+
+  <!-- ================= AI SERVICE HELPER ================= -->
+<section class="py-16 bg-slate-50">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <h2 class="text-3xl font-extrabold mb-3 en">
+      Not sure which service you need?
+    </h2>
+    <h2 class="text-3xl font-extrabold mb-3 kn">
+      ಯಾವ ಸೇವೆ ಬೇಕು ಎಂದು ಖಚಿತವಿಲ್ಲವೇ?
+    </h2>
+
+    <p class="text-slate-600 mb-8 en">
+      Answer one question and we’ll guide you.
+    </p>
+    <p class="text-slate-600 mb-8 kn">
+      ಒಂದು ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಿ, ನಾವು ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತೇವೆ.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+      <button onclick="aiSelect('family')"
+        class="border rounded-xl p-4 hover:bg-white shadow-sm">
+        <span class="en">Family Issue</span>
+        <span class="kn">ಕುಟುಂಬ ಸಮಸ್ಯೆ</span>
+      </button>
+
+      <button onclick="aiSelect('property')"
+        class="border rounded-xl p-4 hover:bg-white shadow-sm">
+        <span class="en">Property Problem</span>
+        <span class="kn">ಆಸ್ತಿ ಸಮಸ್ಯೆ</span>
+      </button>
+
+      <button onclick="aiSelect('criminal')"
+        class="border rounded-xl p-4 hover:bg-white shadow-sm">
+        <span class="en">Police / Criminal</span>
+        <span class="kn">ಪೊಲೀಸ್ / ಕ್ರಿಮಿನಲ್</span>
+      </button>
+
+      <button onclick="aiSelect('labour')"
+        class="border rounded-xl p-4 hover:bg-white shadow-sm">
+        <span class="en">Job / Labour</span>
+        <span class="kn">ಉದ್ಯೋಗ / ಕಾರ್ಮಿಕ</span>
+      </button>
+
+      <button onclick="aiSelect('gst')"
+        class="border rounded-xl p-4 hover:bg-white shadow-sm">
+        <span class="en">GST / Tax</span>
+        <span class="kn">ಜಿಎಸ್‌ಟಿ / ತೆರಿಗೆ</span>
+      </button>
+
+      <button onclick="aiSelect('general')"
+        class="border rounded-xl p-4 hover:bg-white shadow-sm">
+        <span class="en">Not Sure</span>
+        <span class="kn">ಖಚಿತವಿಲ್ಲ</span>
+      </button>
+
+    </div>
+
+    <div id="aiResult"
+      class="hidden mt-8 bg-white border rounded-xl p-6 text-center shadow">
+
+      <p id="aiText" class="font-semibold mb-4"></p>
+
+      <a href="book-service.html"
+         class="inline-block bg-amber-400 text-black
+                px-6 py-3 rounded-full font-bold">
+        <span class="en">Book Service</span>
+        <span class="kn">ಸೇವೆ ಬುಕ್ ಮಾಡಿ</span>
+      </a>
+
+      <p class="text-xs text-slate-500 mt-4 en">
+        AI provides general guidance only. No legal advice.
+      </p>
+      <p class="text-xs text-slate-500 mt-4 kn">
+        ಎಐ ಸಾಮಾನ್ಯ ಮಾರ್ಗದರ್ಶನ ಮಾತ್ರ ನೀಡುತ್ತದೆ. ಕಾನೂನು ಸಲಹೆ ಅಲ್ಲ.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -273,11 +372,15 @@ body.lang-kn .kn {
 <a href="https://wa.me/919632786767"
    target="_blank"
    aria-label="WhatsApp Support"
-   class="fixed bottom-4 right-4
-          bg-green-500 text-white
-          px-4 py-3 rounded-full
-          font-bold text-sm
-          shadow-lg z-50">
+   class="fixed bottom-5 right-5
+          bg-green-500 hover:bg-green-600
+          text-white
+          px-6 py-4
+          rounded-full
+          font-bold text-base
+          shadow-2xl
+          z-50
+          flex items-center gap-2">
   WhatsApp
 </a>
 
