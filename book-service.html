@@ -65,70 +65,57 @@
 <!-- ================= FORM ================= -->
 <section class="py-12">
   <div class="max-w-4xl mx-auto px-6">
-
     <div class="bg-white shadow-xl rounded-2xl p-8">
 
       <form
-            <!-- ================= AUTO-FILLED PROFESSIONAL DETAILS ================= -->
-
-<div class="bg-slate-100 p-4 rounded-lg mb-6">
-
-  <h3 class="font-bold mb-3 text-sm">
-    Selected Professional
-  </h3>
-
-  <div class="grid md:grid-cols-2 gap-4 text-sm">
-
-    <div>
-      <label class="block text-slate-600 mb-1">Professional Name</label>
-      <input id="professionalName"
-        type="text"
-        readonly
-        class="w-full border rounded px-3 py-2 bg-white" />
-    </div>
-
-    <div>
-      <label class="block text-slate-600 mb-1">Profession</label>
-      <input id="professionType"
-        type="text"
-        readonly
-        class="w-full border rounded px-3 py-2 bg-white" />
-    </div>
-
-    <div>
-      <label class="block text-slate-600 mb-1">District</label>
-      <input id="district"
-        type="text"
-        readonly
-        class="w-full border rounded px-3 py-2 bg-white" />
-    </div>
-
-    <div>
-      <label class="block text-slate-600 mb-1">Taluk / City</label>
-      <input id="taluk"
-        type="text"
-        readonly
-        class="w-full border rounded px-3 py-2 bg-white" />
-    </div>
-
-    <div class="md:col-span-2">
-      <label class="block text-slate-600 mb-1">Service / Practice Area</label>
-      <input id="practiceArea"
-        type="text"
-        readonly
-        class="w-full border rounded px-3 py-2 bg-white" />
-    </div>
-
-  </div>
-</div>
-
-<!-- ================= HIDDEN FIELD (VERY IMPORTANT) ================= -->
-<input id="professionalId" type="hidden" name="professionalId">
-
         action="https://docs.google.com/forms/d/e/1FAIpQLSf-J1gpA_COVZ8v3nkQYA73hdKfdfmFFpuDqVfy5m3nysEdXA/formResponse"
         method="POST"
         onsubmit="submitAndPay(event)"
-        class="grid md:grid-cols-2 gap-6">
+        class="grid md:grid-cols-2 gap-6"
+      >
+
+        <!-- ================= AUTO-FILLED PROFESSIONAL DETAILS ================= -->
+        <div class="md:col-span-2 bg-slate-100 p-4 rounded-lg mb-4">
+
+          <h3 class="font-bold mb-3 text-sm">Selected Professional</h3>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm">
+
+            <div>
+              <label class="block text-slate-600 mb-1">Professional Name</label>
+              <input id="professionalName" type="text" readonly
+                class="w-full border rounded px-3 py-2 bg-white">
+            </div>
+
+            <div>
+              <label class="block text-slate-600 mb-1">Profession</label>
+              <input id="professionType" type="text" readonly
+                class="w-full border rounded px-3 py-2 bg-white">
+            </div>
+
+            <div>
+              <label class="block text-slate-600 mb-1">District</label>
+              <input id="district" type="text" readonly
+                class="w-full border rounded px-3 py-2 bg-white">
+            </div>
+
+            <div>
+              <label class="block text-slate-600 mb-1">Taluk / City</label>
+              <input id="taluk" type="text" readonly
+                class="w-full border rounded px-3 py-2 bg-white">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-slate-600 mb-1">Service / Practice Area</label>
+              <input id="practiceArea" type="text" readonly
+                class="w-full border rounded px-3 py-2 bg-white">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= HIDDEN FIELD ================= -->
+        <input type="hidden" id="professionalId" name="entry.9999999999">
 
         <!-- Name -->
         <div>
@@ -194,66 +181,22 @@
           </select>
         </div>
 
-        <!-- CONSENT -->
+        <!-- Consent -->
         <div class="md:col-span-2 text-sm">
           <label class="flex items-start gap-2">
             <input type="checkbox" required>
-            <span class="en">
-              I agree to the
-              <a href="terms.html" target="_blank" class="text-blue-600 underline">Terms</a>
-              and
-              <a href="privacy.html" target="_blank" class="text-blue-600 underline">Privacy Policy</a>
-            </span>
-            <span class="kn">
-              ನಾನು
-              <a href="terms.html" target="_blank" class="text-blue-600 underline">ನಿಯಮಗಳು</a>
-              ಮತ್ತು
-              <a href="privacy.html" target="_blank" class="text-blue-600 underline">ಗೌಪ್ಯತಾ ನೀತಿ</a>
-              ಗೆ ಒಪ್ಪುತ್ತೇನೆ
-            </span>
+            <span class="en">I agree to the <a href="terms.html" target="_blank" class="underline">Terms</a> and <a href="privacy.html" target="_blank" class="underline">Privacy Policy</a></span>
+            <span class="kn">ನಾನು <a href="terms.html" target="_blank" class="underline">ನಿಯಮಗಳು</a> ಮತ್ತು <a href="privacy.html" target="_blank" class="underline">ಗೌಪ್ಯತಾ ನೀತಿ</a> ಗೆ ಒಪ್ಪುತ್ತೇನೆ</span>
           </label>
         </div>
 
-        <!-- FEE BOX -->
-        <div class="md:col-span-2 bg-slate-50 border rounded-xl p-5 text-sm">
-          <p><strong>Platform Fee:</strong> ₹99 (paid to NyayaNow)</p>
-          <p><strong>Professional Fee:</strong> Paid directly to Advocate / CA</p>
-
-          <p class="mt-2 text-slate-600 en">
-            ₹99 is a non-refundable platform facilitation fee.
-          </p>
-          <p class="mt-2 text-slate-600 kn">
-            ₹99 ಮರುಪಾವತಿಸದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಶುಲ್ಕವಾಗಿದೆ.
-          </p>
-
-          <p class="mt-2">
-            <a href="platform-fee.html" target="_blank" class="text-blue-600 underline">
-              Platform Fee Policy
-            </a>
-            ·
-            <a href="refund.html" target="_blank" class="text-blue-600 underline">
-              Refund Policy
-            </a>
-          </p>
-        </div>
-
-        <!-- SUBMIT -->
+        <!-- Submit -->
         <div class="md:col-span-2 text-center mt-4">
           <button type="submit"
-            class="bg-amber-400 hover:bg-amber-500 text-black px-12 py-4 rounded-full font-bold">
+            class="bg-amber-400 px-12 py-4 rounded-full font-bold">
             <span class="en">Proceed to Pay ₹99</span>
             <span class="kn">₹99 ಪಾವತಿಸಲು ಮುಂದುವರಿಸಿ</span>
           </button>
-
-          <p class="text-xs text-slate-500 mt-2 en">
-  Submission does not guarantee professional assignment.
-  After payment, please return to NyayaNow to see confirmation.
-</p>
-
-<p class="text-xs text-slate-500 mt-2 kn">
-  ಸೇವೆ ಖಚಿತವಾಗುವುದಿಲ್ಲ.
-  ಪಾವತಿಯ ನಂತರ ದೃಢೀಕರಣವನ್ನು ನೋಡಲು ದಯವಿಟ್ಟು NyayaNow ಗೆ ಮರಳಿ ಬನ್ನಿ.
-</p>
         </div>
 
       </form>
@@ -269,21 +212,16 @@
 
 <!-- ================= SCRIPT ================= -->
 <script>
-function toggleLang(){
-  document.body.classList.toggle("lang-kn");
-}
+function submitAndPay(event) {
+  event.preventDefault();
 
-function submitAndPay(e) {
-  e.preventDefault();
+  // submit Google Form
+  event.target.submit();
 
-  fetch(e.target.action, {
-    method: "POST",
-    body: new FormData(e.target),
-    mode: "no-cors"
-  });
-
-  window.location.href =
-"https://razorpay.me/@nyayanow?redirect=https://nyayanow.com/payment-success.html";
+  // redirect to Razorpay after short delay
+  setTimeout(() => {
+    window.location.href = "https://rzp.io/rzp/Z8yrAmSU";
+  }, 800);
 }
 </script>
 
@@ -308,6 +246,7 @@ setValue("professionalId", params.get("professional"));
    
 </body>
 </html>
+
 
 
 
