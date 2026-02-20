@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book legal and compliance services with NyayaNow. Get instant quote and expert assistance. Company registration, GST, trademark, legal notice, FSSAI license and more.">
+    <title>Book Service - NyayaNow | Legal & Compliance Services</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; line-height: 1.6; color: #1f2937; background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%); min-height: 100vh; }
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 700; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        
+        header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #14b8a6, #f97316); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .logo-text h1 { font-size: 1.5rem; color: #1f2937; margin: 0; }
+        .logo-text p { font-size: 0.75rem; color: #6b7280; margin: 0; }
+        nav { display: flex; align-items: center; gap: 2rem; }
+        nav a { text-decoration: none; color: #374151; font-weight: 600; transition: color 0.3s; }
+        
+        .booking-section { padding: 120px 2rem 3rem; }
+        .booking-container { max-width: 900px; margin: 0 auto; }
+        .page-title { text-align: center; margin-bottom: 1rem; }
+        .page-title h1 { font-size: 2.5rem; color: #1f2937; margin-bottom: 0.5rem; }
+        .page-title p { font-size: 1.125rem; color: #6b7280; }
+        
+        .booking-card { background: white; border-radius: 1.5rem; padding: 3rem; box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.15); margin-top: 2rem; }
+        
+        .form-section { margin-bottom: 2rem; }
+        .section-title { font-size: 1.25rem; color: #1f2937; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e5e7eb; }
+        
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; color: #374151; margin-bottom: 0.5rem; }
+        .form-group label .required { color: #ef4444; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 2px solid #e5e7eb; border-radius: 0.5rem; font-size: 1rem; font-family: 'Source Sans Pro', sans-serif; transition: all 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #14b8a6; box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .form-group small { display: block; color: #6b7280; margin-top: 0.25rem; font-size: 0.875rem; }
+        
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        
+        .service-card { border: 2px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1rem; cursor: pointer; transition: all 0.3s; }
+        .service-card:hover { border-color: #14b8a6; background: #f0fdfa; }
+        .service-card.selected { border-color: #14b8a6; background: #f0fdfa; box-shadow: 0 4px 12px rgba(20, 184, 166, 0.2); }
+        .service-card h3 { font-size: 1.125rem; margin-bottom: 0.25rem; color: #1f2937; }
+        .service-card .price { font-size: 1.5rem; font-weight: 700; color: #14b8a6; margin-bottom: 0.25rem; }
+        .service-card .timeline { color: #6b7280; font-size: 0.875rem; }
+        
+        .price-summary { background: linear-gradient(135deg, #f0fdfa, #fef3c7); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
+        .price-summary h3 { margin-bottom: 1rem; color: #1f2937; }
+        .price-row { display: flex; justify-content: space-between; margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #d1d5db; }
+        .price-row.total { border-bottom: none; font-size: 1.5rem; font-weight: 700; color: #14b8a6; margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #14b8a6; }
+        
+        .submit-button { width: 100%; padding: 1.25rem; background: linear-gradient(to right, #14b8a6, #f97316); color: white; border: none; border-radius: 0.75rem; font-size: 1.125rem; font-weight: 700; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .submit-button:hover { box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3); transform: translateY(-2px); }
+        .submit-button:disabled { opacity: 0.6; cursor: not-allowed; }
+        
+        .success-message { background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 2rem; border-radius: 1rem; text-align: center; display: none; }
+        .success-message.show { display: block; }
+        .success-message h2 { color: white; margin-bottom: 1rem; }
+        .success-message p { font-size: 1.125rem; margin-bottom: 1.5rem; }
+        .success-message .ref-number { font-size: 1.5rem; font-weight: 700; background: rgba(255, 255, 255, 0.2); padding: 1rem; border-radius: 0.5rem; display: inline-block; margin: 1rem 0; }
+        
+        .trust-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+        .trust-badge { text-align: center; padding: 1rem; background: #f9fafb; border-radius: 0.5rem; }
+        .trust-badge i { color: #14b8a6; margin-bottom: 0.5rem; }
+        .trust-badge h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .trust-badge p { font-size: 0.875rem; color: #6b7280; margin: 0; }
+        
+        footer { background: #111827; color: white; padding: 2rem; margin-top: 3rem; text-align: center; }
+        
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .booking-card { padding: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .trust-badges { grid-template-columns: 1fr; }
+            .page-title h1 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="scale" style="color: white; width: 28px; height: 28px;"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>NyayaNow</h1>
+                    <p>Legal & Compliance Solutions</p>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="booking-section">
+        <div class="booking-container">
+            <div class="page-title">
+                <h1>Book Your Service</h1>
+                <p>Fill in the details below and our expert will contact you within 2 hours</p>
+            </div>
+
+            <div class="booking-card">
+                <form id="bookingForm" action="https://formspree.io/f/PASTE_YOUR_FORM_ID_HERE" method="POST">
+    <!-- Formspree Configuration - REPLACE WITH YOUR ENDPOINT -->
+    <input type="hidden" name="_subject" value="🔔 New NyayaNow Booking">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_gotcha" style="display:none">
+    
+                    <!-- Service Selection -->
+                    <div class="form-section">
+                        <h2 class="section-title">Select Service</h2>
+                        
+                        <div class="form-group">
+                            <select id="serviceSelect" name="service" required onchange="updateServiceDetails()">
+                                <option value="">-- Choose a service --</option>
+                                <optgroup label="Company Registration">
+                                    <option value="pvt-ltd" data-price="6999" data-timeline="15 days">Private Limited Company - ₹6,999</option>
+                                    <option value="llp" data-price="6499" data-timeline="10 days">LLP Registration - ₹6,499</option>
+                                    <option value="opc" data-price="5999" data-timeline="10-12 days">One Person Company - ₹5,999</option>
+                                    <option value="partnership" data-price="3999" data-timeline="5-7 days">Partnership Firm - ₹3,999</option>
+                                </optgroup>
+                                <optgroup label="GST & Tax">
+                                    <option value="gst" data-price="999" data-timeline="3-5 days">GST Registration - ₹999</option>
+                                    <option value="itr-individual" data-price="799" data-timeline="24-48 hours">Income Tax Filing (Individual) - ₹799</option>
+                                    <option value="itr-business" data-price="2499" data-timeline="3-5 days">Income Tax Filing (Business) - ₹2,499</option>
+                                    <option value="tds" data-price="999" data-timeline="3-5 days">TDS Return Filing - ₹999</option>
+                                </optgroup>
+                                <optgroup label="Trademark & IP">
+                                    <option value="trademark" data-price="4999" data-timeline="8-18 months">Trademark Registration - ₹4,999</option>
+                                    <option value="copyright" data-price="3999" data-timeline="6-12 months">Copyright Registration - ₹3,999</option>
+                                </optgroup>
+                                <optgroup label="Legal Services">
+                                    <option value="legal-notice" data-price="1999" data-timeline="5-7 days">Legal Notice - ₹1,999</option>
+                                    <option value="contract-drafting" data-price="2999" data-timeline="3-7 days">Contract Drafting - ₹2,999</option>
+                                    <option value="legal-consultation" data-price="999" data-timeline="Same day">Legal Consultation - ₹999</option>
+                                </optgroup>
+                                <optgroup label="Licenses">
+                                    <option value="fssai-basic" data-price="2999" data-timeline="7-10 days">FSSAI Basic Registration - ₹2,999</option>
+                                    <option value="fssai-state" data-price="4999" data-timeline="30-60 days">FSSAI State License - ₹4,999</option>
+                                    <option value="shop-license" data-price="1999" data-timeline="7-15 days">Shop & Establishment License - ₹1,999</option>
+                                    <option value="msme" data-price="999" data-timeline="3-5 days">MSME Registration - ₹999</option>
+                                </optgroup>
+                                <optgroup label="Property">
+                                    <option value="property-verification" data-price="2999" data-timeline="5-7 days">Property Document Verification - ₹2,999</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div id="serviceDetails" style="display: none;">
+                            <div class="service-card selected">
+                                <h3 id="serviceName">Selected Service</h3>
+                                <div class="price" id="servicePrice">₹0</div>
+                                <div class="timeline" id="serviceTimeline">Timeline</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h2 class="section-title">Your Information</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name <span class="required">*</span></label>
+                                <input type="text" name="name" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Email Address <span class="required">*</span></label>
+                                <input type="email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number <span class="required">*</span></label>
+                                <input type="tel" name="phone" required placeholder="+91 98765 43210" pattern="[0-9+\s-]{10,15}">
+                                <small>We'll call you within 2 hours</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>City <span class="required">*</span></label>
+                                <input type="text" name="city" required placeholder="Bangalore">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Information (optional) -->
+                    <div class="form-section">
+                        <h2 class="section-title">Business Details (Optional)</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Business Name</label>
+                                <input type="text" name="businessName" placeholder="Your Company Name (if applicable)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Business Type</label>
+                                <select name="businessType">
+                                    <option value="">-- Select --</option>
+                                    <option value="new">New Business (Not registered)</option>
+                                    <option value="proprietorship">Proprietorship</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="llp">LLP</option>
+                                    <option value="pvt-ltd">Private Limited</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Requirements -->
+                    <div class="form-section">
+                        <h2 class="section-title">Additional Information</h2>
+                        
+                        <div class="form-group">
+                            <label>Tell us about your requirements</label>
+                            <textarea name="requirements" placeholder="Any specific requirements, questions, or documents you have ready..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How did you hear about us?</label>
+                            <select name="source">
+                                <option value="">-- Select --</option>
+                                <option value="google">Google Search</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="referral">Friend/Colleague Referral</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Price Summary -->
+                    <div class="price-summary" id="priceSummary" style="display: none;">
+                        <h3>Order Summary</h3>
+                        <div class="price-row">
+                            <span id="summaryService">Service</span>
+                            <span id="summaryPrice">₹0</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total Amount</span>
+                            <span id="totalPrice">₹0</span>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #6b7280; margin-top: 1rem; margin-bottom: 0;">
+                            <i data-lucide="info" style="width: 16px; height: 16px;"></i>
+                            No payment required now. Pay after service completion.
+                        </p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-button">
+                        <i data-lucide="send" style="width: 20px; height: 20px;"></i>
+                        Book Service - Get Expert Callback
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <i data-lucide="check-circle" style="width: 64px; height: 64px;"></i>
+                    <h2>Booking Confirmed!</h2>
+                    <p>Your service request has been received successfully.</p>
+                    <div class="ref-number">Booking ID: <span id="bookingId">NYN-2026-XXXX</span></div>
+                    <p>Our expert will call you within 2 hours on <strong id="confirmedPhone"></strong></p>
+                    <p style="font-size: 0.875rem; margin-top: 1rem;">Check your email for booking confirmation details.</p>
+                    <button onclick="location.href='index.html'" style="margin-top: 1.5rem; padding: 0.875rem 2rem; background: white; color: #10b981; border: none; border-radius: 0.5rem; font-weight: 700; cursor: pointer;">
+                        Back to Home
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i data-lucide="shield-check" style="width: 32px; height: 32px;"></i>
+                    <h4>100% Secure</h4>
+                    <p>Your data is safe</p>
+                </div>
+                <div class="trust-badge">
+                    <i data-lucide="clock" style="width: 32px; height: 32px;"></i>
+                    <h4>2 Hour Response</h4>
+                    <p>Expert callback guaranteed</p>
+                </div>
+                <div class="trust-badge">
+                    <i data-lucide="users" style="width: 32px; height: 32px;"></i>
+                    <h4>50,000+ Clients</h4>
+                    <p>Trusted by businesses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 NyayaNow. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Service details mapping
+        const services = {
+            'pvt-ltd': { name: 'Private Limited Company', price: 6999, timeline: '15 days' },
+            'llp': { name: 'LLP Registration', price: 6499, timeline: '10 days' },
+            'opc': { name: 'One Person Company', price: 5999, timeline: '10-12 days' },
+            'partnership': { name: 'Partnership Firm', price: 3999, timeline: '5-7 days' },
+            'gst': { name: 'GST Registration', price: 999, timeline: '3-5 days' },
+            'itr-individual': { name: 'Income Tax Filing (Individual)', price: 799, timeline: '24-48 hours' },
+            'itr-business': { name: 'Income Tax Filing (Business)', price: 2499, timeline: '3-5 days' },
+            'tds': { name: 'TDS Return Filing', price: 999, timeline: '3-5 days' },
+            'trademark': { name: 'Trademark Registration', price: 4999, timeline: '8-18 months' },
+            'copyright': { name: 'Copyright Registration', price: 3999, timeline: '6-12 months' },
+            'legal-notice': { name: 'Legal Notice', price: 1999, timeline: '5-7 days' },
+            'contract-drafting': { name: 'Contract Drafting', price: 2999, timeline: '3-7 days' },
+            'legal-consultation': { name: 'Legal Consultation', price: 999, timeline: 'Same day' },
+            'fssai-basic': { name: 'FSSAI Basic Registration', price: 2999, timeline: '7-10 days' },
+            'fssai-state': { name: 'FSSAI State License', price: 4999, timeline: '30-60 days' },
+            'shop-license': { name: 'Shop & Establishment License', price: 1999, timeline: '7-15 days' },
+            'msme': { name: 'MSME Registration', price: 999, timeline: '3-5 days' },
+            'property-verification': { name: 'Property Document Verification', price: 2999, timeline: '5-7 days' }
+        };
+
+        function updateServiceDetails() {
+            const select = document.getElementById('serviceSelect');
+            const selectedValue = select.value;
+            
+            if (selectedValue && services[selectedValue]) {
+                const service = services[selectedValue];
+                
+                // Update service details card
+                document.getElementById('serviceName').textContent = service.name;
+                document.getElementById('servicePrice').textContent = '₹' + service.price.toLocaleString();
+                document.getElementById('serviceTimeline').textContent = 'Timeline: ' + service.timeline;
+                document.getElementById('serviceDetails').style.display = 'block';
+                
+                // Update price summary
+                document.getElementById('summaryService').textContent = service.name;
+                document.getElementById('summaryPrice').textContent = '₹' + service.price.toLocaleString();
+                document.getElementById('totalPrice').textContent = '₹' + service.price.toLocaleString();
+                document.getElementById('priceSummary').style.display = 'block';
+            } else {
+                document.getElementById('serviceDetails').style.display = 'none';
+                document.getElementById('priceSummary').style.display = 'none';
+            }
+            
+            lucide.createIcons();
+        }
+
+        // Form submission - FOR FORMSPREE: Let form submit normally
+        // Comment out preventDefault to allow Formspree to handle submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            // e.preventDefault();  // COMMENTED OUT - Let Formspree handle submission
+            
+            // Optional: You can add validation here before submission
+            console.log('Form submitting to Formspree...');
+            // Formspree will handle the submission and redirect
+        });
+
+        // Optional: Function to send data to backend
+        function sendToBackend(data, bookingId) {
+            fetch('/api/bookings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    bookingId: bookingId,
+                    ...data,
+                    timestamp: new Date().toISOString()
+                })
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Success:', result);
+                // Send confirmation email
+                sendConfirmationEmail(data.email, bookingId);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        // Optional: Send confirmation email
+        function sendConfirmationEmail(email, bookingId) {
+            // Implementation for email service (e.g., SendGrid, AWS SES, etc.)
+            console.log('Sending confirmation email to:', email);
+        }
+    </script>
+</body>
+</html>
