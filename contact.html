@@ -274,7 +274,8 @@
                     <h2>Send Us a Message</h2>
                     <p>Fill in the form below and we'll get back to you within 2 hours.</p>
 
-                    <form id="contactForm" action="https://formspree.io/f/PASTE_YOUR_FORM_ID_HERE" method="POST">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="hidden" name="_next" value="https://your-site.com/thank-you.html">
                         <input type="hidden" name="_subject" value="📩 New Contact Message - NyayaNow">
                         <input type="hidden" name="_template" value="box">
                         <input type="hidden" name="_gotcha" style="display:none">
