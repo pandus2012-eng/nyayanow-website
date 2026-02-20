@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact NyayaNow - Get in touch with our legal experts. Call, WhatsApp, or email us. Expert callback within 2 hours.">
+    <title>Contact Us - NyayaNow | Legal & Compliance Solutions</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; line-height: 1.6; color: #1f2937; background: linear-gradient(to bottom right, #f8fafc 0%, #fff7ed 30%, #f0fdfa 100%); }
+        h1, h2, h3, h4 { font-family: 'Crimson Pro', serif; font-weight: 700; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+
+        /* Header */
+        header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #14b8a6, #f97316); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .logo-text h1 { font-size: 1.5rem; color: #1f2937; margin: 0; }
+        .logo-text p { font-size: 0.75rem; color: #6b7280; margin: 0; }
+        nav { display: flex; align-items: center; gap: 2rem; }
+        nav a { text-decoration: none; color: #374151; font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: #14b8a6; }
+        .cta-button { padding: 0.625rem 1.5rem; background: linear-gradient(to right, #0d9488, #f97316); color: white; border-radius: 0.5rem; font-weight: 700; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .cta-button:hover { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2); transform: translateY(-2px); }
+
+        /* Hero */
+        .hero { padding: 140px 2rem 60px; text-align: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #f0fdfa, #fff7ed); border: 1px solid #99f6e4; color: #0f766e; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 3rem; color: #1f2937; margin-bottom: 1rem; line-height: 1.2; }
+        .hero h1 span { background: linear-gradient(to right, #14b8a6, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.25rem; color: #6b7280; max-width: 600px; margin: 0 auto; }
+
+        /* Contact Cards */
+        .contact-cards { padding: 1rem 2rem 4rem; }
+        .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+        .contact-card { background: white; border-radius: 1.25rem; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 2px solid #e5e7eb; transition: all 0.3s; }
+        .contact-card:hover { border-color: #14b8a6; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(20,184,166,0.15); }
+        .card-icon { width: 64px; height: 64px; border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+        .contact-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .contact-card p { color: #6b7280; margin-bottom: 1.25rem; font-size: 0.9375rem; }
+        .contact-card a.card-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 700; text-decoration: none; transition: all 0.3s; font-size: 0.9375rem; }
+        .card-link:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+
+        /* Main Content */
+        .main-content { padding: 2rem 2rem 5rem; }
+        .content-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; max-width: 1100px; margin: 0 auto; }
+
+        /* Contact Info */
+        .info-section h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .info-section > p { color: #6b7280; margin-bottom: 2rem; }
+        .info-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; padding: 1.25rem; background: white; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .info-icon { width: 48px; height: 48px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .info-item h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .info-item p, .info-item a { color: #6b7280; font-size: 0.9375rem; text-decoration: none; }
+        .info-item a:hover { color: #14b8a6; }
+
+        .hours-box { background: linear-gradient(135deg, #f0fdfa, #fff7ed); border-radius: 0.75rem; padding: 1.5rem; margin-top: 1.5rem; border: 1px solid #99f6e4; }
+        .hours-box h4 { font-size: 1.125rem; margin-bottom: 1rem; color: #0f766e; }
+        .hours-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9375rem; }
+        .hours-row span:first-child { color: #4b5563; }
+        .hours-row span:last-child { font-weight: 600; color: #1f2937; }
+        .badge-open { background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-top: 0.75rem; }
+
+        /* Contact Form */
+        .form-section { background: white; border-radius: 1.5rem; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .form-section h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .form-section > p { color: #6b7280; margin-bottom: 2rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: 600; color: #374151; margin-bottom: 0.5rem; font-size: 0.9375rem; }
+        .form-group label .req { color: #ef4444; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 2px solid #e5e7eb; border-radius: 0.5rem; font-size: 1rem; font-family: 'Source Sans Pro', sans-serif; transition: all 0.3s; background: #f9fafb; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #14b8a6; background: white; box-shadow: 0 0 0 3px rgba(20,184,166,0.1); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .submit-btn { width: 100%; padding: 1rem; background: linear-gradient(to right, #14b8a6, #f97316); color: white; border: none; border-radius: 0.75rem; font-size: 1.0625rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s; margin-top: 0.5rem; }
+        .submit-btn:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: translateY(-2px); }
+
+        /* Success Message */
+        .success-msg { display: none; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 2rem; border-radius: 1rem; text-align: center; }
+        .success-msg.show { display: block; }
+        .success-msg h3 { color: white; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .success-msg p { opacity: 0.9; }
+
+        /* Map Placeholder */
+        .map-section { padding: 0 2rem 5rem; }
+        .map-box { max-width: 1100px; margin: 0 auto; background: white; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .map-box h2 { padding: 1.5rem 2rem 1rem; font-size: 1.75rem; }
+        .map-placeholder { background: linear-gradient(135deg, #f0fdfa, #fff7ed); height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; color: #6b7280; border-top: 1px solid #e5e7eb; }
+        .map-placeholder i { color: #14b8a6; }
+        .map-placeholder h3 { font-size: 1.25rem; color: #1f2937; }
+        .map-placeholder p { font-size: 0.9375rem; }
+        .map-placeholder a { color: #14b8a6; font-weight: 600; text-decoration: none; }
+
+        /* FAQ */
+        .faq-section { padding: 0 2rem 5rem; }
+        .faq-section h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 900px; margin: 0 auto; }
+        .faq-item { background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .faq-item h4 { font-size: 1rem; margin-bottom: 0.5rem; color: #1f2937; }
+        .faq-item p { color: #6b7280; font-size: 0.9375rem; margin: 0; }
+
+        /* Footer */
+        footer { background: #111827; color: white; padding: 3rem 2rem 1.5rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        footer h4 { color: white; margin-bottom: 1rem; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 0.5rem; }
+        footer ul li a { color: #9ca3af; text-decoration: none; font-size: 0.9375rem; transition: color 0.3s; }
+        footer ul li a:hover { color: #14b8a6; }
+        .footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-brand h3 { color: white; font-size: 1.25rem; }
+        .footer-bottom { border-top: 1px solid #374151; padding-top: 1.5rem; text-align: center; color: #6b7280; font-size: 0.875rem; }
+
+        @media (max-width: 1024px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="scale" style="color:white;width:28px;height:28px;"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>NyayaNow</h1>
+                    <p>Legal & Compliance Solutions</p>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" style="color:#14b8a6;">Contact</a>
+                <a href="book-service.html" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-badge">
+            <i data-lucide="headphones" style="width:16px;height:16px;"></i>
+            We're Here to Help
+        </div>
+        <h1>Get in Touch <span>With Our Experts</span></h1>
+        <p>Have a question? Need advice? Our team of legal experts is ready to help you within 2 hours.</p>
+    </section>
+
+    <!-- Contact Cards -->
+    <div class="contact-cards">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="contact-card">
+                    <div class="card-icon" style="background:linear-gradient(135deg,#f0fdfa,#ccfbf1);">
+                        <i data-lucide="phone" style="width:28px;height:28px;color:#14b8a6;"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Talk directly to our legal experts. Available Mon-Sat, 10 AM - 7 PM</p>
+                    <a href="tel:+919632786767" class="card-link" style="background:linear-gradient(to right,#14b8a6,#0d9488);color:white;">
+                        <i data-lucide="phone" style="width:16px;height:16px;"></i>
+                        +91 96327 86767
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);">
+                        <i data-lucide="message-circle" style="width:28px;height:28px;color:#22c55e;"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Send us a message anytime. We reply within 30 minutes during business hours.</p>
+                    <a href="https://wa.me/919632786767" target="_blank" class="card-link" style="background:linear-gradient(to right,#22c55e,#16a34a);color:white;">
+                        <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);">
+                        <i data-lucide="mail" style="width:28px;height:28px;color:#f97316;"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us your query. We'll respond with detailed information within 24 hours.</p>
+                    <a href="mailto:info@nyayanow.com" class="card-link" style="background:linear-gradient(to right,#f97316,#c2410c);color:white;">
+                        <i data-lucide="mail" style="width:16px;height:16px;"></i>
+                        info@nyayanow.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content: Info + Form -->
+    <div class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Info -->
+                <div class="info-section">
+                    <h2>Contact Information</h2>
+                    <p>Reach out through any channel — we're always ready to help.</p>
+
+                    <div class="info-item">
+                        <div class="info-icon" style="background:linear-gradient(135deg,#f0fdfa,#ccfbf1);">
+                            <i data-lucide="phone" style="width:22px;height:22px;color:#14b8a6;"></i>
+                        </div>
+                        <div>
+                            <h4>Phone & WhatsApp</h4>
+                            <a href="tel:+919632786767">+91 96327 86767</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);">
+                            <i data-lucide="mail" style="width:22px;height:22px;color:#f97316;"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:info@nyayanow.com">info@nyayanow.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);">
+                            <i data-lucide="map-pin" style="width:22px;height:22px;color:#3b82f6;"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bangalore, Karnataka, India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon" style="background:linear-gradient(135deg,#fdf4ff,#e9d5ff);">
+                            <i data-lucide="globe" style="width:22px;height:22px;color:#a855f7;"></i>
+                        </div>
+                        <div>
+                            <h4>Service Area</h4>
+                            <p>All of Karnataka + Pan India (select services)</p>
+                        </div>
+                    </div>
+
+                    <div class="hours-box">
+                        <h4>🕐 Business Hours</h4>
+                        <div class="hours-row">
+                            <span>Monday – Friday</span>
+                            <span>10:00 AM – 7:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Saturday</span>
+                            <span>10:00 AM – 5:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </div>
+                        <span class="badge-open">✅ Currently Accepting Bookings</span>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="form-section">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill in the form below and we'll get back to you within 2 hours.</p>
+
+                    <form id="contactForm" action="https://formspree.io/f/PASTE_YOUR_FORM_ID_HERE" method="POST">
+                        <input type="hidden" name="_subject" value="📩 New Contact Message - NyayaNow">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_gotcha" style="display:none">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name <span class="req">*</span></label>
+                                <input type="text" name="Full Name" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number <span class="req">*</span></label>
+                                <input type="tel" name="Phone Number" required placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address <span class="req">*</span></label>
+                            <input type="email" name="Email Address" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject / Service Interested In</label>
+                            <select name="Subject">
+                                <option value="">-- Select a topic --</option>
+                                <option value="Company Registration">Company Registration</option>
+                                <option value="GST Registration">GST Registration</option>
+                                <option value="Trademark Registration">Trademark Registration</option>
+                                <option value="Legal Notice">Legal Notice</option>
+                                <option value="FSSAI License">FSSAI License</option>
+                                <option value="Income Tax Filing">Income Tax Filing</option>
+                                <option value="General Query">General Query</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Message <span class="req">*</span></label>
+                            <textarea name="Message" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i data-lucide="send" style="width:18px;height:18px;"></i>
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div class="success-msg" id="successMsg">
+                        <i data-lucide="check-circle" style="width:48px;height:48px;margin-bottom:1rem;"></i>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. Our expert will call you within 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Placeholder -->
+    <div class="map-section">
+        <div class="container">
+            <div class="map-box">
+                <h2 style="padding:1.5rem 2rem 0;">Find Us</h2>
+                <div class="map-placeholder">
+                    <i data-lucide="map-pin" style="width:48px;height:48px;"></i>
+                    <h3>Bangalore, Karnataka</h3>
+                    <p>Serving clients across all of Karnataka</p>
+                    <a href="https://maps.google.com/?q=Bangalore,Karnataka,India" target="_blank">
+                        Open in Google Maps →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How quickly will I get a response?</h4>
+                    <p>Our experts call you within 2 hours of submitting your inquiry, during business hours (Mon-Sat, 10 AM - 7 PM).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you serve clients outside Bangalore?</h4>
+                    <p>Yes! We serve clients across all of Karnataka. Many services are available pan-India as well.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I communicate in Kannada?</h4>
+                    <p>Absolutely! Our team is fluent in Kannada and English. You can communicate in your preferred language.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is my information kept confidential?</h4>
+                    <p>Yes. All your information and documents are handled with strict confidentiality. We never share your data with third parties.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is the best way to reach you urgently?</h4>
+                    <p>For urgent queries, call or WhatsApp us directly at +91 96327 86767. We prioritize urgent requests.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I book a service through the contact form?</h4>
+                    <p>The contact form is for general queries. To book a service, use our <a href="book-service.html" style="color:#14b8a6;font-weight:600;">booking form</a> for faster processing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon" style="width:40px;height:40px;">
+                            <i data-lucide="scale" style="color:white;width:24px;height:24px;"></i>
+                        </div>
+                        <h3>NyayaNow</h3>
+                    </div>
+                    <p style="color:#9ca3af;margin-bottom:1rem;">Karnataka's trusted legal and compliance platform</p>
+                    <p style="color:#9ca3af;">ಕರ್ನಾಟಕದ ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮತ್ತು ಅನುಸರಣೆ ವೇದಿಕೆ</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="service-page-template.html">Company Registration</a></li>
+                        <li><a href="gst-registration.html">GST & Tax</a></li>
+                        <li><a href="trademark-registration.html">Trademark & IP</a></li>
+                        <li><a href="legal-notice.html">Legal Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="book-service.html">Book Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 NyayaNow. All rights reserved. A technology platform for legal and compliance services.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
