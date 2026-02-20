@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GST Registration in Karnataka - Get GSTIN in 3-5 days. Starting at ₹999. Expert assistance from NyayaNow. Mandatory for businesses with turnover above ₹40 lakhs.">
+    <meta name="keywords" content="GST registration, GSTIN, GST registration Karnataka, GST registration Bangalore, GST online">
+    <title>GST Registration - Get GSTIN in 3-5 Days | ₹999 | NyayaNow</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #14b8a6, #f97316);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin: 0;
+        }
+        
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #14b8a6;
+        }
+        
+        .cta-button {
+            padding: 0.625rem 1.5rem;
+            background: linear-gradient(to right, #0d9488, #f97316);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Service Hero */
+        .service-hero {
+            padding: 120px 2rem 3rem;
+            background: linear-gradient(135deg, #eff6ff, #fff7ed);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: #0d9488;
+            text-decoration: none;
+        }
+        
+        .service-hero-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .service-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        
+        .kannada-title {
+            font-size: 1.125rem;
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .service-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .highlight-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .highlight-text h4 {
+            font-size: 1.125rem;
+            margin: 0;
+            color: #1f2937;
+        }
+        
+        .highlight-text p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Price Card */
+        .price-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .price-badge {
+            background: linear-gradient(135deg, #3b82f6, #f97316);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-note {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: #374151;
+        }
+        
+        .price-features i {
+            color: #3b82f6;
+        }
+        
+        .book-button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to right, #3b82f6, #f97316);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .book-button:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .call-button {
+            width: 100%;
+            padding: 1rem;
+            background: white;
+            color: #3b82f6;
+            border: 2px solid #3b82f6;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .call-button:hover {
+            background: #eff6ff;
+        }
+        
+        /* Content Sections */
+        .service-content {
+            padding: 3rem 2rem;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+        
+        .content-section p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .kannada-text {
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: #eff6ff;
+            border-radius: 0.5rem;
+        }
+        
+        .benefits-list i {
+            color: #3b82f6;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .alert-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .alert-box h4 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .alert-box p {
+            color: #78350f;
+            margin: 0;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #f97316);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 3px solid #3b82f6;
+            border-radius: 50%;
+        }
+        
+        .timeline-item h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        
+        .timeline-item p {
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .checklist li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+        }
+        
+        .checklist input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #3b82f6;
+        }
+        
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .pricing-table th,
+        .pricing-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .pricing-table th {
+            background: #f9fafb;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .pricing-table .total {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #3b82f6;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: #4b5563;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .sidebar-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .related-services {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .related-services li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem;
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #374151;
+            transition: all 0.3s;
+        }
+        
+        .related-services li a:hover {
+            background: #eff6ff;
+            color: #3b82f6;
+        }
+        
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #3b82f6, #f97316);
+            color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-box .cta-button {
+            background: white;
+            color: #3b82f6;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer h4 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: #14b8a6;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .service-hero-content,
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .price-card {
+                position: static;
+            }
+            
+            .service-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            
+            .service-title {
+                font-size: 1.75rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="scale" style="color: white; width: 28px; height: 28px;"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>NyayaNow</h1>
+                    <p>Legal & Compliance Solutions</p>
+                </div>
+            </a>
+            
+            <nav>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="book-service.html" class="cta-button">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                <a href="../services/">Services</a>
+                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                <span>GST Registration</span>
+            </div>
+            
+            <div class="service-hero-content">
+                <div>
+                    <h1 class="service-title">GST Registration</h1>
+                    <p class="service-subtitle">Get your GSTIN in 3-5 days</p>
+                    <p class="kannada-title">3-5 ದಿನಗಳಲ್ಲಿ GSTIN ಪಡೆಯಿರಿ</p>
+                    
+                    <div class="service-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i data-lucide="clock" style="color: white; width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>3-5 Days</h4>
+                                <p>Quick Registration</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i data-lucide="shield-check" style="color: white; width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Zero Fees</h4>
+                                <p>No Govt Charges</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i data-lucide="headphones" style="color: white; width: 24px; height: 24px;"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Expert Help</h4>
+                                <p>CA/Tax Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Price Card -->
+                <div class="price-card">
+                    <span class="price-badge">MOST POPULAR</span>
+                    <div class="price-amount">₹999</div>
+                    <p class="price-note">Professional assistance • Zero govt fees</p>
+                    
+                    <ul class="price-features">
+                        <li>
+                            <i data-lucide="check" style="width: 20px; height: 20px;"></i>
+                            <span>GST Registration Certificate</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width: 20px; height: 20px;"></i>
+                            <span>15-digit GSTIN</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width: 20px; height: 20px;"></i>
+                            <span>GST Portal Access</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width: 20px; height: 20px;"></i>
+                            <span>Login Credentials</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width: 20px; height: 20px;"></i>
+                            <span>Portal Training</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width: 20px; height: 20px;"></i>
+                            <span>1 Month Email Support</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="book-button">Register Now</button>
+                    <a href="tel:+919632786767" class="call-button">
+                        <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+                        Call Expert
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- What is it? -->
+                    <div class="content-section">
+                        <h2>What is GST Registration?</h2>
+                        <p>GST (Goods and Services Tax) registration is mandatory for businesses with turnover above ₹40 lakhs for goods (₹20 lakhs for services). GSTIN is a unique 15-digit identification number issued to every business registered under GST.</p>
+                        
+                        <p class="kannada-text">GST (ಸರಕು ಮತ್ತು ಸೇವೆ ತೆರಿಗೆ) ನೋಂದಣಿಯು ವಹಿವಾಟು ₹40 ಲಕ್ಷಗಳಿಗಿಂತ ಹೆಚ್ಚಿರುವ ವ್ಯವಹಾರಗಳಿಗೆ ಕಡ್ಡಾಯವಾಗಿದೆ.</p>
+                        
+                        <div class="alert-box">
+                            <h4>
+                                <i data-lucide="alert-circle" style="width: 20px; height: 20px;"></i>
+                                Important
+                            </h4>
+                            <p>Late registration penalty: ₹10,000 or 10% of tax due (whichever is higher). Register before you cross the threshold!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Who needs it? -->
+                    <div class="content-section">
+                        <h2>Who Needs GST Registration?</h2>
+                        <ul class="benefits-list">
+                            <li>
+                                <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                                <span><strong>High turnover businesses</strong> - Mandatory if turnover exceeds ₹40 lakhs (goods) or ₹20 lakhs (services)</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                                <span><strong>Inter-state suppliers</strong> - Mandatory regardless of turnover for interstate sales</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                                <span><strong>E-commerce sellers</strong> - Required for selling on Amazon, Flipkart, etc.</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                                <span><strong>Input Tax Credit seekers</strong> - Businesses wanting to claim ITC on purchases</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                                <span><strong>Companies & LLPs</strong> - Mandatory for all companies/LLPs regardless of turnover</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                                <span><strong>Reverse charge suppliers</strong> - Those receiving services from unregistered suppliers</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Process & Timeline -->
+                    <div class="content-section">
+                        <h2>Registration Process & Timeline</h2>
+                        <p>Get GSTIN in just 3-5 working days:</p>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Day 1: Document Collection & Application</h4>
+                                <p>• Collect all required documents<br>
+                                • Fill GST registration form (REG-01)<br>
+                                • Upload documents to GST portal<br>
+                                • Submit application online</p>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Day 2-3: GST Portal Processing</h4>
+                                <p>• Application Reference Number (ARN) provided immediately<br>
+                                • GST department verifies documents<br>
+                                • Automated processing by portal<br>
+                                • May request additional clarifications</p>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Day 4-5: GSTIN Issued</h4>
+                                <p>• GSTIN (15-digit number) allotted<br>
+                                • GST registration certificate issued digitally<br>
+                                • Portal login credentials provided<br>
+                                • Ready to start GST-compliant billing!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Documents Required -->
+                    <div class="content-section">
+                        <h2>Documents Required</h2>
+                        <p>Keep these documents ready for quick registration:</p>
+                        
+                        <ul class="checklist">
+                            <li>
+                                <input type="checkbox" id="doc1">
+                                <label for="doc1">PAN Card of business/owner</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="doc2">
+                                <label for="doc2">Aadhaar Card of business owner/authorized signatory</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="doc3">
+                                <label for="doc3">Business registration proof (incorporation certificate for company, partnership deed for firm)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="doc4">
+                                <label for="doc4">Address proof of business premises (rent agreement or sale deed)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="doc5">
+                                <label for="doc5">Bank account details (cancelled cheque or bank statement)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="doc6">
+                                <label for="doc6">Photographs of owner/authorized signatory (passport size)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="doc7">
+                                <label for="doc7">Electricity bill or property tax receipt of premises</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Pricing -->
+                    <div class="content-section">
+                        <h2>Transparent Pricing</h2>
+                        <p>Only professional assistance fees - zero government charges!</p>
+                        
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Government Fees</td>
+                                    <td>₹0 (Free)</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional Assistance</td>
+                                    <td>₹999</td>
+                                </tr>
+                                <tr>
+                                    <td>Portal Training</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td>Documentation Support</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td class="total">Total</td>
+                                    <td class="total">₹999</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Add-ons -->
+                    <div class="content-section">
+                        <h2>Add-on Services</h2>
+                        <table class="pricing-table">
+                            <tbody>
+                                <tr>
+                                    <td>GST Return Filing (Monthly)</td>
+                                    <td>₹499/month</td>
+                                </tr>
+                                <tr>
+                                    <td>GST Return Filing (Quarterly)</td>
+                                    <td>₹1,299/quarter</td>
+                                </tr>
+                                <tr>
+                                    <td>E-way Bill Generation Support</td>
+                                    <td>₹299/month</td>
+                                </tr>
+                                <tr>
+                                    <td>GST Consultation (1 hour)</td>
+                                    <td>₹999</td>
+                                </tr>
+                                <tr>
+                                    <td>GST Notice Reply</td>
+                                    <td>₹999 per notice</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- FAQs -->
+                    <div class="content-section">
+                        <h2>Frequently Asked Questions</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Is GST registration mandatory for my business?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                GST registration is mandatory if: (1) Your annual turnover exceeds ₹40 lakhs for goods or ₹20 lakhs for services, (2) You make inter-state sales (regardless of turnover), (3) You're registered as a company/LLP, (4) You're an e-commerce seller, or (5) You want to claim Input Tax Credit.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How long is GSTIN valid?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                GSTIN is valid as long as your business is operational. There is no renewal required. However, you must file regular GST returns (monthly/quarterly) to keep it active. If you stop your business, you should voluntarily cancel your GST registration.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I get GST without a physical office?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                Yes, you can use any address as your business address - even your home address. You need to provide valid address proof (rent agreement or property documents) and NOC from the owner if you're renting. Co-working spaces and virtual offices are also acceptable.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What is the penalty for late GST registration?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                The penalty for late registration is ₹10,000 or 10% of the tax due (whichever is higher) under CGST Act, and another ₹10,000 or 10% under SGST Act. This can add up to ₹20,000 minimum. It's crucial to register before crossing the turnover threshold.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I have multiple GSTIN for different locations?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                Yes, you need separate GST registration for each state where you have a business presence. Within the same state, you can have multiple registrations for different business locations. Each location will get a unique 15-digit GSTIN.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What is ARN and when will I get it?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                ARN (Application Reference Number) is a 15-digit number provided immediately after submitting your GST registration application. You can use this ARN to track your application status on the GST portal. The actual GSTIN is issued within 3-5 working days after ARN generation.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Do I need to file GST returns even with zero sales?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                Yes, GST return filing is mandatory even if you have zero sales (Nil returns). Failure to file returns can lead to penalties of ₹200 per day (₹100 under CGST + ₹100 under SGST) up to a maximum of ₹5,000. We offer monthly GST return filing at just ₹499/month.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I cancel my GST registration later?</span>
+                                <i data-lucide="chevron-down" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div class="faq-answer">
+                                Yes, you can voluntarily cancel your GST registration if you've discontinued your business, closed down, or your turnover has fallen below the threshold limit. The cancellation can be done online through the GST portal. We offer GST cancellation service at ₹999.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Related Services -->
+                    <div class="sidebar-card">
+                        <h3>Related Services</h3>
+                        <ul class="related-services">
+                            <li>
+                                <a href="gst-return-filing.html">
+                                    <span>GST Return Filing</span>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="company-registration.html">
+                                    <span>Company Registration</span>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="income-tax-filing.html">
+                                    <span>Income Tax Filing</span>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tds-filing.html">
+                                    <span>TDS Return Filing</span>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fssai-license.html">
+                                    <span>FSSAI License</span>
+                                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- CTA Box -->
+                    <div class="cta-box">
+                        <h3>Need Help?</h3>
+                        <p>Talk to our GST experts for free consultation</p>
+                        <a href="tel:+919632786767" class="cta-button">
+                            <i data-lucide="phone" style="width: 20px; height: 20px; color: #3b82f6;"></i>
+                            Call +91 96327 86767
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="sidebar-card">
+                        <h3>Why Trust NyayaNow?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                                <span>10,000+ GST Registrations</span>
+                            </li>
+                            <li>
+                                <i data-lucide="star" style="width: 20px; height: 20px;"></i>
+                                <span>4.9/5 Customer Rating</span>
+                            </li>
+                            <li>
+                                <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+                                <span>3-5 Day Guarantee</span>
+                            </li>
+                            <li>
+                                <i data-lucide="award" style="width: 20px; height: 20px;"></i>
+                                <span>Expert Tax Consultants</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon" style="width: 40px; height: 40px;">
+                            <i data-lucide="scale" style="color: white; width: 24px; height: 24px;"></i>
+                        </div>
+                        <h3>NyayaNow</h3>
+                    </div>
+                    <p style="color: #9ca3af; margin-bottom: 1rem;">Karnataka's trusted legal and compliance platform</p>
+                    <p style="color: #9ca3af;">ಕರ್ನಾಟಕದ ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮತ್ತು ಅನುಸರಣೆ ವೇದಿಕೆ</p>
+                </div>
+                
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="company-registration.html">Company Registration</a></li>
+                        <li><a href="gst-registration.html">GST Registration</a></li>
+                        <li><a href="trademark.html">Trademark</a></li>
+                        <li><a href="legal-services.html">Legal Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="../professional-onboarding.html">For Professionals</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../refund.html">Refund Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 NyayaNow. All rights reserved. A technology platform for legal and compliance services.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+        
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

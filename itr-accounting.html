@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Income Tax Return Filing & Accounting Services in Karnataka from ₹999. ITR filing, bookkeeping, GST returns, TDS filing. Expert CA services.">
+    <title>Income Tax Return Filing & Accounting | NyayaNow - Karnataka</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght:400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; line-height: 1.6; color: #1f2937; background: white; }
+        h1, h2, h3, h4 { font-family: 'Crimson Pro', serif; font-weight: 700; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+        
+        /* Header */
+        header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #14b8a6, #f97316); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .logo-text h1 { font-size: 1.5rem; color: #1f2937; margin: 0; }
+        .logo-text p { font-size: 0.75rem; color: #6b7280; margin: 0; }
+        nav { display: flex; align-items: center; gap: 2rem; }
+        nav a { text-decoration: none; color: #374151; font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: #14b8a6; }
+        .cta-button { padding: 0.625rem 1.5rem; background: linear-gradient(to right, #16a34a, #15803d); color: white; border-radius: 0.5rem; font-weight: 700; text-decoration: none; transition: all 0.3s; }
+        .cta-button:hover { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2); transform: translateY(-2px); }
+        
+        /* Hero */
+        .hero { padding: 140px 2rem 80px; background: white; position: relative; overflow: hidden; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .hero-badge { display: inline-block; background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #1f2937; }
+        .hero-highlight { color: #16a34a; }
+        .hero p { font-size: 1.125rem; color: #4b5563; margin-bottom: 2rem; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-primary { padding: 1rem 2rem; background: linear-gradient(to right, #16a34a, #15803d); color: white; border-radius: 0.75rem; font-weight: 700; font-size: 1.125rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s; }
+        .btn-primary:hover { box-shadow: 0 20px 40px -12px rgba(22,163,74,0.4); transform: translateY(-2px); }
+        .btn-secondary { padding: 1rem 2rem; background: white; color: #16a34a; border: 2px solid #16a34a; border-radius: 0.75rem; font-weight: 700; font-size: 1.125rem; text-decoration: none; transition: all 0.3s; }
+        .btn-secondary:hover { background: #f0fdf4; }
+        .hero-visual { background: white; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1); border: 2px solid #e5e7eb; }
+        .service-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+        .service-tab { text-align: center; padding: 1rem; background: #f0fdf4; border-radius: 0.75rem; border: 2px solid #22c55e; }
+        .service-tab h4 { font-size: 0.875rem; margin-bottom: 0.25rem; color: #166534; }
+        .service-tab .price { font-size: 1.5rem; font-weight: 700; color: #16a34a; }
+        .itr-list { padding: 1rem 0; }
+        .itr-list li { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0; font-size: 0.9375rem; }
+        .itr-list i { color: #16a34a; flex-shrink: 0; }
+        
+        /* Services Grid */
+        .services-section { padding: 5rem 2rem; background: #f9fafb; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.25rem; margin-bottom: 0.75rem; }
+        .section-title p { color: #6b7280; font-size: 1.125rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+        .service-card { background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 2px solid transparent; transition: all 0.3s; }
+        .service-card:hover { border-color: #16a34a; transform: translateY(-4px); }
+        .service-icon { width: 64px; height: 64px; border-radius: 1rem; background: linear-gradient(135deg, #dcfce7, #f0fdf4); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: #16a34a; }
+        .service-card .price { font-size: 1.75rem; font-weight: 700; color: #16a34a; margin-bottom: 1rem; }
+        .service-card p { color: #6b7280; font-size: 0.9375rem; margin-bottom: 1.5rem; }
+        .service-card ul { list-style: none; margin-bottom: 1.5rem; }
+        .service-card li { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.875rem; }
+        .service-card li i { color: #16a34a; flex-shrink: 0; margin-top: 0.125rem; }
+        .book-btn { width: 100%; padding: 0.875rem; background: linear-gradient(to right, #16a34a, #15803d); color: white; border: none; border-radius: 0.5rem; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+        .book-btn:hover { box-shadow: 0 8px 20px rgba(22,163,74,0.3); transform: translateY(-2px); }
+        
+        /* Benefits */
+        .benefits-section { padding: 5rem 2rem; background: white; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+        .benefit-item { display: flex; gap: 1rem; padding: 1.5rem; background: #f9fafb; border-radius: 1rem; border: 2px solid #e5e7eb; transition: all 0.3s; }
+        .benefit-item:hover { border-color: #16a34a; }
+        .benefit-icon { width: 48px; height: 48px; border-radius: 0.75rem; background: linear-gradient(135deg, #dcfce7, #f0fdf4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .benefit-item h4 { font-size: 1.0625rem; margin-bottom: 0.25rem; }
+        .benefit-item p { color: #6b7280; font-size: 0.9375rem; margin: 0; }
+        
+        /* ITR Types */
+        .itr-types-section { padding: 5rem 2rem; background: #f9fafb; }
+        .itr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .itr-card { background: white; padding: 2rem; border-radius: 1rem; border: 2px solid #e5e7eb; }
+        .itr-card h3 { color: #16a34a; margin-bottom: 1rem; font-size: 1.25rem; }
+        .itr-card .itr-price { font-size: 1.5rem; font-weight: 700; color: #16a34a; margin-bottom: 1rem; }
+        .itr-card ul { list-style: none; }
+        .itr-card li { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; }
+        .itr-card li i { color: #16a34a; flex-shrink: 0; margin-top: 0.125rem; }
+        
+        /* CTA */
+        .cta-section { background: white; padding: 5rem 2rem; text-align: center; border-top: 2px solid #16a34a; border-bottom: 2px solid #16a34a; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #1f2937; }
+        .cta-section p { font-size: 1.125rem; margin-bottom: 2rem; color: #4b5563; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        
+        /* Footer */
+        footer { background: #111827; color: white; padding: 3rem 2rem 1.5rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        footer h4 { color: white; margin-bottom: 1rem; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 0.5rem; }
+        footer ul li a { color: #9ca3af; text-decoration: none; transition: color 0.3s; }
+        footer ul li a:hover { color: #16a34a; }
+        .footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-brand h3 { color: white; font-size: 1.25rem; }
+        .footer-bottom { border-top: 1px solid #374151; padding-top: 1.5rem; text-align: center; color: #6b7280; font-size: 0.875rem; }
+        
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .itr-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .service-tabs { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="scale" style="color:white;width:28px;height:28px;"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>NyayaNow</h1>
+                    <p>Legal & Compliance Solutions</p>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="book-service.html" class="cta-button">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <span class="hero-badge">✓ CA-Assisted Tax & Accounting</span>
+                    <h1>Income Tax Return Filing & <span class="hero-highlight">Accounting Services</span></h1>
+                    <p>Complete ITR filing from ₹999, GST returns, bookkeeping, TDS filing. Expert CA services for individuals and businesses.</p>
+                    <div class="hero-buttons">
+                        <a href="book-service.html" class="btn-primary">
+                            <i data-lucide="arrow-right" style="width:20px;height:20px;"></i>
+                            File ITR Now
+                        </a>
+                        <a href="tel:+919632786767" class="btn-secondary">
+                            <i data-lucide="phone" style="width:20px;height:20px;"></i>
+                            Talk to CA
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="service-tabs">
+                        <div class="service-tab">
+                            <h4>ITR Filing</h4>
+                            <div class="price">₹999</div>
+                        </div>
+                        <div class="service-tab">
+                            <h4>GST Returns</h4>
+                            <div class="price">₹499/m</div>
+                        </div>
+                        <div class="service-tab">
+                            <h4>Bookkeeping</h4>
+                            <div class="price">₹2,999/m</div>
+                        </div>
+                    </div>
+                    <ul class="itr-list">
+                        <li>
+                            <i data-lucide="check" style="width:20px;height:20px;"></i>
+                            <span>All ITR forms (ITR-1 to ITR-7)</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width:20px;height:20px;"></i>
+                            <span>Maximum tax refund claim</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width:20px;height:20px;"></i>
+                            <span>Expert CA review</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width:20px;height:20px;"></i>
+                            <span>E-verification included</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check" style="width:20px;height:20px;"></i>
+                            <span>Notice handling support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Tax & Accounting Services</h2>
+                <p>Complete financial compliance solutions</p>
+            </div>
+            <div class="services-grid">
+                <!-- ITR Filing -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="file-text" style="width:32px;height:32px;color:#16a34a;"></i>
+                    </div>
+                    <h3>ITR Filing</h3>
+                    <div class="price">From ₹999</div>
+                    <p>Income tax return filing for salaried, business, and professionals</p>
+                    <ul>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> All ITR forms supported</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Maximum refund claims</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> CA-verified returns</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> E-verification included</li>
+                    </ul>
+                    <button class="book-btn" onclick="location.href='book-service.html'">File ITR</button>
+                </div>
+
+                <!-- GST Returns -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="receipt" style="width:32px;height:32px;color:#16a34a;"></i>
+                    </div>
+                    <h3>GST Returns</h3>
+                    <div class="price">₹499/month</div>
+                    <p>Monthly/Quarterly GST return filing with invoice reconciliation</p>
+                    <ul>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> GSTR-1, 3B filing</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Invoice reconciliation</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> ITC optimization</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Annual return (GSTR-9)</li>
+                    </ul>
+                    <button class="book-btn" onclick="location.href='book-service.html'">Start GST Filing</button>
+                </div>
+
+                <!-- Bookkeeping -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="book-open" style="width:32px;height:32px;color:#16a34a;"></i>
+                    </div>
+                    <h3>Bookkeeping</h3>
+                    <div class="price">₹2,999/month</div>
+                    <p>Complete accounting and bookkeeping services for businesses</p>
+                    <ul>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Daily transaction recording</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Bank reconciliation</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Financial statements</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Tally/QuickBooks support</li>
+                    </ul>
+                    <button class="book-btn" onclick="location.href='book-service.html'">Get Bookkeeping</button>
+                </div>
+
+                <!-- TDS Filing -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="percent" style="width:32px;height:32px;color:#16a34a;"></i>
+                    </div>
+                    <h3>TDS Filing</h3>
+                    <div class="price">₹999/quarter</div>
+                    <p>Quarterly TDS return filing and Form 16/16A issuance</p>
+                    <ul>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Form 24Q, 26Q, 27Q</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> TDS payment challan</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Form 16/16A generation</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> TDS reconciliation</li>
+                    </ul>
+                    <button class="book-btn" onclick="location.href='book-service.html'">File TDS</button>
+                </div>
+
+                <!-- Payroll -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="users" style="width:32px;height:32px;color:#16a34a;"></i>
+                    </div>
+                    <h3>Payroll Services</h3>
+                    <div class="price">₹199/employee</div>
+                    <p>Complete payroll management and salary processing</p>
+                    <ul>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Salary calculation</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Payslip generation</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> PF/ESI compliance</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Form 16 issuance</li>
+                    </ul>
+                    <button class="book-btn" onclick="location.href='book-service.html'">Get Payroll</button>
+                </div>
+
+                <!-- Tax Planning -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="trending-up" style="width:32px;height:32px;color:#16a34a;"></i>
+                    </div>
+                    <h3>Tax Planning</h3>
+                    <div class="price">₹4,999</div>
+                    <p>Annual tax planning consultation to minimize tax liability</p>
+                    <ul>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Tax optimization strategies</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Investment advice</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> Deduction planning</li>
+                        <li><i data-lucide="check" style="width:14px;height:14px;"></i> CA consultation included</li>
+                    </ul>
+                    <button class="book-btn" onclick="location.href='book-service.html'">Plan Tax</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ITR Types -->
+    <section class="itr-types-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>ITR Filing Packages</h2>
+                <p>Choose the right ITR form based on your income</p>
+            </div>
+            <div class="itr-grid">
+                <div class="itr-card">
+                    <h3>ITR-1 & ITR-4 (Individuals)</h3>
+                    <div class="itr-price">₹999</div>
+                    <ul>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> <strong>For:</strong> Salaried employees, pensioners</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Income from salary/pension</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> One house property</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Other sources (interest, etc.)</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Income up to ₹50 lakhs</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Simple filing process</li>
+                    </ul>
+                </div>
+                <div class="itr-card">
+                    <h3>ITR-2 (Capital Gains)</h3>
+                    <div class="itr-price">₹1,999</div>
+                    <ul>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> <strong>For:</strong> Individuals with capital gains</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Multiple house properties</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Share trading/investments</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Foreign income/assets</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Director of company</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Complex scenarios</li>
+                    </ul>
+                </div>
+                <div class="itr-card">
+                    <h3>ITR-3 (Business/Profession)</h3>
+                    <div class="itr-price">₹2,999</div>
+                    <ul>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> <strong>For:</strong> Professionals & businesses</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Business income</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Professional income</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Partnership firm partners</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Audit reports (if applicable)</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Detailed filing</li>
+                    </ul>
+                </div>
+                <div class="itr-card">
+                    <h3>ITR-5, 6, 7 (Business Entities)</h3>
+                    <div class="itr-price">₹4,999+</div>
+                    <ul>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> <strong>For:</strong> Firms, LLPs, companies</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Partnership firms (ITR-5)</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Companies (ITR-6)</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Trusts/NGOs (ITR-7)</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Complex filings with audits</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;"></i> Expert CA handling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose NyayaNow for Tax Filing?</h2>
+                <p>Expert CA services at affordable prices</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="shield-check" style="width:24px;height:24px;color:#16a34a;"></i>
+                    </div>
+                    <div>
+                        <h4>Qualified CAs</h4>
+                        <p>All returns reviewed and filed by qualified Chartered Accountants</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="trending-up" style="width:24px;height:24px;color:#16a34a;"></i>
+                    </div>
+                    <div>
+                        <h4>Maximum Refund</h4>
+                        <p>We ensure you claim all eligible deductions and get maximum refund</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="clock" style="width:24px;height:24px;color:#16a34a;"></i>
+                    </div>
+                    <div>
+                        <h4>Quick Processing</h4>
+                        <p>ITR filed within 48 hours of document submission</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="indian-rupee" style="width:24px;height:24px;color:#16a34a;"></i>
+                    </div>
+                    <div>
+                        <h4>Transparent Pricing</h4>
+                        <p>No hidden charges. All-inclusive pricing from ₹999</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="bell" style="width:24px;height:24px;color:#16a34a;"></i>
+                    </div>
+                    <div>
+                        <h4>Notice Support</h4>
+                        <p>Free support for handling income tax notices and queries</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="lock" style="width:24px;height:24px;color:#16a34a;"></i>
+                    </div>
+                    <div>
+                        <h4>Data Security</h4>
+                        <p>100% secure document handling with strict confidentiality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>File Your Income Tax Return Today!</h2>
+            <p>Last date: July 31st. Don't miss the deadline!</p>
+            <div class="cta-buttons">
+                <a href="book-service.html" class="btn-primary">
+                    <i data-lucide="arrow-right" style="width:20px;height:20px;"></i>
+                    File ITR Now - From ₹999
+                </a>
+                <a href="tel:+919632786767" class="btn-secondary">
+                    <i data-lucide="phone" style="width:20px;height:20px;"></i>
+                    Call CA - +91 96327 86767
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-icon" style="width:40px;height:40px;">
+                            <i data-lucide="scale" style="color:white;width:24px;height:24px;"></i>
+                        </div>
+                        <h3>NyayaNow</h3>
+                    </div>
+                    <p style="color:#9ca3af;margin-bottom:1rem;">Karnataka's trusted legal and compliance platform</p>
+                    <p style="color:#9ca3af;">ಕರ್ನಾಟಕದ ವಿಶ್ವಾಸಾರ್ಹ ಕಾನೂನು ಮತ್ತು ಅನುಸರಣೆ ವೇದಿಕೆ</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="service-page-template.html">Company Registration</a></li>
+                        <li><a href="gst-registration.html">GST & Tax</a></li>
+                        <li><a href="trademark-registration.html">Trademark & IP</a></li>
+                        <li><a href="legal-notice.html">Legal Services</a></li>
+                        <li><a href="licenses-registration.html">Licenses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="book-service.html">Book Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 NyayaNow. All rights reserved. A technology platform for legal and compliance services.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
