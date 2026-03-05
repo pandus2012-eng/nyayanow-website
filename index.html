@@ -2317,9 +2317,248 @@
         <i data-lucide="message-circle" style="width: 28px; height: 28px;"></i>
     </a>
 
+    <!-- Smart Service Finder & Calculator JavaScript -->
+    <script>
+        // ===== SMART SERVICE FINDER =====
+        let currentStep = 1;
+        const totalSteps = 3;
+        const quizAnswers = {};
+
+        const serviceRecommendations = {
+            business: {
+                new: { low: [{ name: 'Sole Proprietorship', price: '₹1,999' }, { name: 'MSME Registration', price: '₹999' }],
+                        medium: [{ name: 'Partnership Firm', price: '₹4,999' }, { name: 'LLP Registration', price: '₹6,999' }],
+                        high: [{ name: 'Private Limited Company', price: '₹9,999' }, { name: 'Trademark Registration', price: '₹4,999' }],
+                        flexible: [{ name: 'Private Limited Company', price: '₹9,999' }, { name: 'GST Registration', price: '₹999' }, { name: 'Trademark Registration', price: '₹4,999' }] },
+                existing: { low: [{ name: 'GST Return Filing', price: '₹999' }, { name: 'MSME Registration', price: '₹999' }],
+                            medium: [{ name: 'Company Compliance', price: '₹7,999' }, { name: 'ITR Filing', price: '₹999' }],
+                            high: [{ name: 'Company Compliance', price: '₹7,999' }, { name: 'Trademark Registration', price: '₹4,999' }],
+                            flexible: [{ name: 'Full Compliance Package', price: '₹14,999' }, { name: 'Trademark Registration', price: '₹4,999' }] },
+                partnership: { low: [{ name: 'Partnership Deed', price: '₹2,999' }, { name: 'GST Registration', price: '₹999' }],
+                               medium: [{ name: 'Partnership Firm Registration', price: '₹4,999' }, { name: 'PAN/TAN Application', price: '₹999' }],
+                               high: [{ name: 'LLP Registration', price: '₹6,999' }, { name: 'Trademark Registration', price: '₹4,999' }],
+                               flexible: [{ name: 'LLP Registration', price: '₹6,999' }, { name: 'GST Registration', price: '₹999' }, { name: 'Trademark', price: '₹4,999' }] },
+                solo: { low: [{ name: 'Sole Proprietorship', price: '₹1,999' }, { name: 'MSME Registration', price: '₹999' }],
+                        medium: [{ name: 'OPC Registration', price: '₹7,999' }, { name: 'GST Registration', price: '₹999' }],
+                        high: [{ name: 'OPC Registration', price: '₹7,999' }, { name: 'Trademark Registration', price: '₹4,999' }],
+                        flexible: [{ name: 'OPC Registration', price: '₹7,999' }, { name: 'Trademark', price: '₹4,999' }, { name: 'FSSAI License', price: '₹2,999' }] }
+            },
+            tax: {
+                new: { low: [{ name: 'GST Registration', price: '₹999' }, { name: 'ITR Filing', price: '₹999' }],
+                       medium: [{ name: 'GST Registration + Filing', price: '₹3,999' }, { name: 'Bookkeeping (3 months)', price: '₹2,999' }],
+                       high: [{ name: 'Full Tax Package', price: '₹9,999' }, { name: 'TDS Filing', price: '₹1,999' }],
+                       flexible: [{ name: 'Full Tax & Accounting Package', price: '₹14,999' }] },
+                existing: { low: [{ name: 'GST Return Filing', price: '₹999' }, { name: 'ITR Filing', price: '₹999' }],
+                             medium: [{ name: 'GST + ITR Filing', price: '₹2,999' }, { name: 'Bookkeeping', price: '₹999/month' }],
+                             high: [{ name: 'Full Tax Package', price: '₹9,999' }, { name: 'TDS Filing', price: '₹1,999' }],
+                             flexible: [{ name: 'Annual Tax Package', price: '₹14,999' }] },
+                partnership: { low: [{ name: 'Partnership ITR', price: '₹1,999' }, { name: 'GST Return', price: '₹999' }],
+                                medium: [{ name: 'Full GST + ITR Package', price: '₹4,999' }],
+                                high: [{ name: 'Full Tax Package', price: '₹9,999' }],
+                                flexible: [{ name: 'Annual Tax Package', price: '₹14,999' }] },
+                solo: { low: [{ name: 'ITR Filing', price: '₹999' }, { name: 'GST Registration', price: '₹999' }],
+                        medium: [{ name: 'GST + ITR Package', price: '₹2,999' }],
+                        high: [{ name: 'Full Tax Package', price: '₹9,999' }],
+                        flexible: [{ name: 'Annual Tax Package', price: '₹14,999' }] }
+            },
+            legal: {
+                new: { low: [{ name: 'Legal Notice', price: '₹1,999' }, { name: 'Contract Drafting', price: '₹2,999' }],
+                       medium: [{ name: 'Legal Consultation', price: '₹4,999' }, { name: 'Agreement Drafting', price: '₹3,999' }],
+                       high: [{ name: 'Legal Retainer (3 months)', price: '₹14,999' }],
+                       flexible: [{ name: 'Legal Retainer Package', price: '₹14,999' }, { name: 'Trademark', price: '₹4,999' }] },
+                existing: { low: [{ name: 'Legal Opinion', price: '₹1,999' }, { name: 'Legal Notice', price: '₹1,999' }],
+                             medium: [{ name: 'Contract Review', price: '₹3,999' }, { name: 'Legal Consultation', price: '₹2,999' }],
+                             high: [{ name: 'Legal Retainer', price: '₹14,999' }],
+                             flexible: [{ name: 'Legal Retainer Package', price: '₹19,999' }] },
+                partnership: { low: [{ name: 'Partnership Deed Review', price: '₹1,999' }],
+                                medium: [{ name: 'Partnership Deed + Legal Advice', price: '₹4,999' }],
+                                high: [{ name: 'Comprehensive Legal Support', price: '₹14,999' }],
+                                flexible: [{ name: 'Legal Retainer Package', price: '₹19,999' }] },
+                solo: { low: [{ name: 'Legal Consultation', price: '₹999' }, { name: 'Legal Notice', price: '₹1,999' }],
+                        medium: [{ name: 'Contract Drafting', price: '₹2,999' }, { name: 'Legal Opinion', price: '₹1,999' }],
+                        high: [{ name: 'Legal Package', price: '₹9,999' }],
+                        flexible: [{ name: 'Legal Retainer Package', price: '₹14,999' }] }
+            },
+            license: {
+                new: { low: [{ name: 'Shop & Establishment', price: '₹1,999' }, { name: 'MSME Registration', price: '₹999' }],
+                       medium: [{ name: 'FSSAI License', price: '₹2,999' }, { name: 'Trade License', price: '₹1,999' }],
+                       high: [{ name: 'Complete License Package', price: '₹9,999' }],
+                       flexible: [{ name: 'All Licenses Package', price: '₹14,999' }] },
+                existing: { low: [{ name: 'License Renewal', price: '₹1,499' }, { name: 'MSME Registration', price: '₹999' }],
+                             medium: [{ name: 'FSSAI + Shop License', price: '₹3,999' }],
+                             high: [{ name: 'Complete Compliance Package', price: '₹9,999' }],
+                             flexible: [{ name: 'All Licenses Package', price: '₹14,999' }] },
+                partnership: { low: [{ name: 'Partnership Licenses', price: '₹2,999' }],
+                                medium: [{ name: 'Full License Package', price: '₹5,999' }],
+                                high: [{ name: 'Complete License Bundle', price: '₹9,999' }],
+                                flexible: [{ name: 'Premium License Package', price: '₹14,999' }] },
+                solo: { low: [{ name: 'Shop License', price: '₹1,999' }, { name: 'MSME', price: '₹999' }],
+                        medium: [{ name: 'FSSAI License', price: '₹2,999' }, { name: 'Trade License', price: '₹1,999' }],
+                        high: [{ name: 'Complete License Package', price: '₹7,999' }],
+                        flexible: [{ name: 'All Licenses Package', price: '₹12,999' }] }
+            }
+        };
+
+        function selectOption(option) {
+            const step = option.closest('.quiz-step');
+            step.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+            option.classList.add('selected');
+            quizAnswers['step' + currentStep] = option.getAttribute('data-value');
+
+            const nextBtn = document.querySelector('.quiz-btn-next');
+            if (nextBtn) {
+                nextBtn.disabled = false;
+            }
+        }
+
+        function nextStep() {
+            if (!quizAnswers['step' + currentStep]) return;
+
+            if (currentStep < totalSteps) {
+                document.getElementById('quiz-step-' + currentStep).classList.remove('active');
+                currentStep++;
+                document.getElementById('quiz-step-' + currentStep).classList.add('active');
+
+                const backBtn = document.querySelector('.quiz-btn-back');
+                const nextBtn = document.querySelector('.quiz-btn-next');
+                if (backBtn) backBtn.style.display = 'block';
+                if (nextBtn) {
+                    nextBtn.disabled = !quizAnswers['step' + currentStep];
+                    nextBtn.textContent = currentStep === totalSteps ? 'Get Results →' : 'Next →';
+                }
+            } else {
+                showResults();
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                document.getElementById('quiz-step-' + currentStep).classList.remove('active');
+                currentStep--;
+                document.getElementById('quiz-step-' + currentStep).classList.add('active');
+
+                const backBtn = document.querySelector('.quiz-btn-back');
+                const nextBtn = document.querySelector('.quiz-btn-next');
+                if (backBtn) backBtn.style.display = currentStep === 1 ? 'none' : 'block';
+                if (nextBtn) {
+                    nextBtn.disabled = false;
+                    nextBtn.textContent = 'Next →';
+                }
+            }
+        }
+
+        function showResults() {
+            const need = quizAnswers['step1'] || 'business';
+            const structure = quizAnswers['step2'] || 'new';
+            const budget = quizAnswers['step3'] || 'medium';
+
+            const recs = (serviceRecommendations[need] && serviceRecommendations[need][structure] && serviceRecommendations[need][structure][budget])
+                ? serviceRecommendations[need][structure][budget]
+                : [{ name: 'Custom Legal Package', price: 'Contact Us' }];
+
+            const container = document.getElementById('recommended-services');
+            container.innerHTML = recs.map(r =>
+                `<div class="recommended-service">
+                    <span>✅ ${r.name}</span>
+                    <span class="service-price">${r.price}</span>
+                </div>`
+            ).join('');
+
+            for (let i = 1; i <= totalSteps; i++) {
+                const s = document.getElementById('quiz-step-' + i);
+                if (s) s.classList.remove('active');
+            }
+
+            document.getElementById('quiz-result').classList.add('active');
+            document.getElementById('quiz-buttons').style.display = 'none';
+        }
+
+        function resetQuiz() {
+            currentStep = 1;
+            Object.keys(quizAnswers).forEach(k => delete quizAnswers[k]);
+
+            for (let i = 1; i <= totalSteps; i++) {
+                const s = document.getElementById('quiz-step-' + i);
+                if (s) {
+                    s.classList.remove('active');
+                    s.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+                }
+            }
+
+            document.getElementById('quiz-step-1').classList.add('active');
+            document.getElementById('quiz-result').classList.remove('active');
+            document.getElementById('quiz-buttons').style.display = 'flex';
+
+            const backBtn = document.querySelector('.quiz-btn-back');
+            const nextBtn = document.querySelector('.quiz-btn-next');
+            if (backBtn) backBtn.style.display = 'none';
+            if (nextBtn) { nextBtn.disabled = true; nextBtn.textContent = 'Next →'; }
+        }
+
+        // ===== COST CALCULATOR =====
+        const businessPrices = {
+            'pvt-ltd': { name: 'Private Limited Company', price: 9999 },
+            'partnership': { name: 'Partnership Firm', price: 4999 },
+            'llp': { name: 'LLP Registration', price: 6999 },
+            'opc': { name: 'One Person Company', price: 7999 },
+            'trust': { name: 'Trust / NGO / Section 8', price: 8999 }
+        };
+
+        const additionalPrices = {
+            'gst': { name: 'GST Registration', price: 999 },
+            'trademark': { name: 'Trademark Registration', price: 4999 },
+            'fssai': { name: 'FSSAI License', price: 2999 },
+            'msme': { name: 'MSME Registration', price: 999 }
+        };
+
+        function calculateCost() {
+            const businessType = document.getElementById('calc-business-type').value;
+            const additionalSelect = document.getElementById('calc-additional');
+            const itr = document.getElementById('calc-itr').value;
+
+            if (!businessType) {
+                alert('Please select a business type first.');
+                return;
+            }
+
+            let total = 0;
+            let breakdown = [];
+
+            const biz = businessPrices[businessType];
+            total += biz.price;
+            breakdown.push({ name: biz.name, price: biz.price });
+
+            const selectedAdditional = Array.from(additionalSelect.selectedOptions).map(o => o.value);
+            selectedAdditional.forEach(val => {
+                const item = additionalPrices[val];
+                if (item) { total += item.price; breakdown.push({ name: item.name, price: item.price }); }
+            });
+
+            if (itr === 'yes') { total += 999; breakdown.push({ name: 'ITR Filing', price: 999 }); }
+
+            const breakdownEl = document.getElementById('cost-breakdown');
+            breakdownEl.innerHTML = breakdown.map(item =>
+                `<div class="cost-item">
+                    <span>${item.name}</span>
+                    <span style="font-weight:700;color:#0f766e;">₹${item.price.toLocaleString('en-IN')}</span>
+                </div>`
+            ).join('');
+
+            document.getElementById('cost-total-amount').textContent = '₹' + total.toLocaleString('en-IN');
+            document.getElementById('cost-result').classList.add('active');
+        }
+    </script>
+
     <!-- Initialize Lucide Icons -->
     <script>
         lucide.createIcons();
+
+        // Wire up quiz option clicks
+        document.querySelectorAll('.quiz-option').forEach(function(option) {
+            option.addEventListener('click', function() {
+                selectOption(this);
+            });
+        });
         
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
