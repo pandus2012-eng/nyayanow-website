@@ -82,6 +82,14 @@
             .trust-badges { grid-template-columns: 1fr; }
             .page-title h1 { font-size: 1.75rem; }
         }
+    
+        /* HOME + UP BUTTONS */
+        .text-nav-group { position: fixed; bottom: 120px; right: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; z-index: 999; }
+        .text-nav-btn { display: flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.9rem; border-radius: 999px; font-size: 0.82rem; font-weight: 700; cursor: pointer; border: none; text-decoration: none; box-shadow: 0 3px 10px rgba(0,0,0,0.18); opacity: 0; visibility: hidden; transform: translateX(20px); transition: all 0.3s ease; white-space: nowrap; }
+        .text-nav-btn.visible { opacity: 1; visibility: visible; transform: translateX(0); }
+        .text-nav-btn:hover { transform: translateX(-3px); }
+        .text-nav-home { background: #1f2937; color: #fff; }
+        .text-nav-up { background: linear-gradient(135deg, #14b8a6, #0d9488); color: white; }
     </style>
 </head>
 <body>
@@ -113,7 +121,7 @@
 
             <div class="booking-card">
                 <form action="https://formspree.io/f/mjgeronp" method="POST">
-    <input type="hidden" name="_next" value="https://your-site.com/thank-you.html">
+    <input type="hidden" name="_next" value="thank-you.html">
     <!-- Formspree Configuration - REPLACE WITH YOUR ENDPOINT -->
     <input type="hidden" name="_subject" value="🔔 New NyayaNow Booking">
     <input type="hidden" name="_template" value="box">
@@ -268,7 +276,7 @@
                         Book Service - Get Expert Callback
                     </button>
                 </form>
-                <input type="hidden" name="_next" value="https://your-site.com/thank-you.html">
+                <input type="hidden" name="_next" value="thank-you.html">
 
                 <!-- Success Message -->
                 <div class="success-message" id="successMessage">
@@ -399,6 +407,17 @@
             // Implementation for email service (e.g., SendGrid, AWS SES, etc.)
             console.log('Sending confirmation email to:', email);
         }
+    
+        const _h=document.getElementById('homeBtn'),_u=document.getElementById('upBtn');
+        window.addEventListener('scroll',function(){ if(window.scrollY>300){if(_h)_h.classList.add('visible');if(_u)_u.classList.add('visible');}else{if(_h)_h.classList.remove('visible');if(_u)_u.classList.remove('visible');}});
+        if(_u)_u.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
     </script>
+
+    <div class="text-nav-group">
+        <a href="index.html" class="text-nav-btn text-nav-home" id="homeBtn">← Home</a>
+        <button class="text-nav-btn text-nav-up" id="upBtn">↑ Back to Top</button>
+    </div>
+
 </body>
 </html>
